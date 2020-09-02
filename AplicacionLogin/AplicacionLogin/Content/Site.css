@@ -1,5 +1,4 @@
-﻿
-body {
+﻿body {
     background: linear-gradient(90deg, #028FCB, #05B3C6, #0BF5BD, #83EBAD);
     color: #fff;
     mix-blend-mode: normal;
@@ -44,6 +43,22 @@ body {
     width: 380px;
 }
 
+.select2 {
+    color: #fff;
+    background-color: transparent;
+    width: 80px;
+    border-radius: 3em;
+    border: 2px solid #fff;
+}
+
+.calcular {
+    color: #fff;
+    background-color: transparent;
+    width: 150px;
+    border-radius: 3em;
+    border: 3px solid #fff;
+}
+
 .input {
     color: #fff;
     background-color: transparent;
@@ -51,5 +66,3 @@ body {
     border-bottom: 1px solid #fff;
     width: 280px;
 }
-
-
