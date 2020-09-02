@@ -9,7 +9,7 @@ namespace AplicacionLogin.Controllers
     public class AvionController : Controller
     {
         // GET: Avion
-        public ActionResult Index()
+        public ActionResult Avion_pagina1()
         {
             return View();
         }

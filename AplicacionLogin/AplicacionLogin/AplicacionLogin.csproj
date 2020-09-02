@@ -365,11 +365,11 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Avion\Avion_pagina1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Auto\" />
-    <Folder Include="Views\Avion\" />
     <Folder Include="Views\Camion\" />
     <Folder Include="Views\Moto\" />
   </ItemGroup>

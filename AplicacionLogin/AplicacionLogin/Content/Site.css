@@ -1,24 +1,55 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿
+body {
+    background: linear-gradient(90deg, #028FCB, #05B3C6, #0BF5BD, #83EBAD);
+    color: #fff;
+    mix-blend-mode: normal;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+#num {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 41px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+
+.padre {
+    background: #117394;
+    height: 700px;
+    /*IMPORTANTE*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.hijo {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 50px;
 }
+
+.hijo2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.select {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 380px;
+}
+
+.input {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 280px;
+}
+
+
