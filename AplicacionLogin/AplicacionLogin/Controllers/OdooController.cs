@@ -13,5 +13,10 @@ namespace AplicacionLogin.Controllers
         {
             return View();
         }
+
+        public ActionResult PowerBI()
+        {
+            return View();
+        }
     }
 }
