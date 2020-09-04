@@ -79,7 +79,7 @@ namespace AplicacionLogin.Controllers
             ViewBag.carbono = carbono2;
             ViewBag.total = total;
 
-            return View("Avion_pagina1");
+            return View("Avion_pagina2");
         }
     }
 }
