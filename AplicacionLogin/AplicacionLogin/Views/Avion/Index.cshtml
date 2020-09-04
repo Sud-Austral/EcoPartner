@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    #Lista p, #Lista2 p {
+        margin-bottom: 0.5rem;
+        padding: 2px;
+    }
+
+        #Lista p:hover, #Lista2 p:hover {
+            background-color: #DCDCDC;
+            cursor: pointer;
+        }
+    
+</style>
+
+<div style="min-height: 500px; padding-top: 100px; background-color : #137394">
+    <form action="/Avion/BuscarAeropuertos" method="post">
+        <div class="row w-100 mx-0">
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">INICIO</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <input class="w-100" type="text" name="inicio" id="texto1" autocomplete="off" style="max-width: 500px !important;">
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <div id="Lista" class="w-100" style="overflow-y: scroll; height: 180px; display: none;"></div>
+            </div>
+            <div class="col-12"><p></p></div>
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">DESTINO</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <input class="w-100" type="text" name="destino" id="texto2" autocomplete="off" style="max-width: 500px !important;">
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <div id="Lista2" class="w-100" style="overflow-y: scroll; height: 180px; display: none;"></div>
+            </div>
+            <div class="col-12"><p></p></div>
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">Pasajeros</span>
+            </div>
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <select name="pasajeros">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="col-12"><p></p></div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 " style="color : white;">
+                <input class="recorrido" checked="checked" name="recorrido" type="radio" value="1"> Solo ida
+                <input class="recorrido" name="recorrido" type="radio" value="2"> Ida y vuelta
+            </div>
+            <div class="col-12"><p></p></div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">Tipo de Viaje</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <select name="tipoViaje">
+                    <option value="1">Económico</option>
+                    <option value="2">Negocios</option>
+                    <option value="3">Primera Clase</option>
+                </select>
+            </div>
+
+            <div class="col-12"><p></p></div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 pb-5">
+                <input style="background-color: transparent; border: 1px white solid; padding: 12px; color: white ;border-radius: 10px" type="submit" class="actualizar" value="Calcular">
+            </div>
+
+        </div>
+    </form>
+
+    @if (ViewBag.inicio != null && ViewBag.distancia != 0)
+    {
+    <div class="row pb-5">
+        <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+            <span style="color: white; font-size: 15px;">Distancia entre @ViewBag.inicio hasta @ViewBag.destino : @ViewBag.distancia Kilómetros</span>
+        </div>
+        <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+            <span style="color: white; font-size: 15px;">Carbono producido : @ViewBag.carbono</span>
+        </div>
+        <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+            <span style="color: white; font-size: 15px;">Total a Pagar : @ViewBag.total</span>
+        </div>
+        
+    </div>
+        
+
+    }
+
+</div>
+
+
+   
+
+
+
