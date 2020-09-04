@@ -371,12 +371,12 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Odoo\Index.cshtml" />
     <Content Include="Views\Avion\Index.cshtml" />
+    <Content Include="Views\Auto\Index.cshtml" />
+    <Content Include="Views\Moto\Index.cshtml" />
+    <Content Include="Views\Camion\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Auto\" />
-    <Folder Include="Views\Camion\" />
-    <Folder Include="Views\Moto\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="min-height: 500px; padding-top: 100px; background-color : #137394">
+    <form action="/Auto/CalculosAuto" method="post">
+        <div class="row w-100 mx-0">
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">Kilómetros recorridos</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <input class="w-100" type="text" name="kilometros" autocomplete="off" style="max-width: 500px !important;">
+            </div>
+           
+            <div class="col-12"><p></p></div>
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">Tipo de Auto</span>
+            </div>
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <select name="tipoAuto">
+                    <option value="peque">Pequeño</option>
+                    <option value="mediano">Mediano</option>
+                    <option value="grande">Grande</option>
+                    
+                </select>
+            </div>
+            <div class="col-12"><p></p></div>
+            
+            
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">Tipo de Combustible</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <select name="tipoCombustible">
+                    <option value="gasolina">Gasolina</option>
+                    <option value="diesel">Diesel</option>
+                    
+                </select>
+            </div>
+
+            <div class="col-12"><p></p></div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 pb-5">
+                <input style="background-color: transparent; border: 1px white solid; padding: 12px; color: white ;border-radius: 10px" type="submit" class="actualizar" value="Calcular">
+            </div>
+
+        </div>
+    </form>
+
+    @if (ViewBag.carbono != null)
+    {
+    <div class="row pb-5">
+        <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+            <span style="color: white; font-size: 15px;">Kilómetros recorridos @ViewBag.kilometros Kilómetros</span>
+        </div>
+        <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+            <span style="color: white; font-size: 15px;">Litros Combustible quemado : @ViewBag.litros</span>
+        </div>
+        <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+            <span style="color: white; font-size: 15px;">Carbono producido : @ViewBag.carbono</span>
+        </div>
+        <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+            <span style="color: white; font-size: 15px;">Total a Pagar : @ViewBag.total</span>
+        </div>
+
+    </div>
+
+
+    }
+
+</div>
+

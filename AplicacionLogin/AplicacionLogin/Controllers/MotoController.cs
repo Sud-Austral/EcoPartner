@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AplicacionLogin.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,5 +14,30 @@ namespace AplicacionLogin.Controllers
         {
             return View();
         }
+
+        public ActionResult CalculosMoto(string kilometros, string cilindrada)
+        {
+            Double num;
+            bool isNum = Double.TryParse(kilometros, out num);
+            if (isNum)
+            {
+                if (kilometros != "" && Convert.ToDouble(kilometros) > 0)
+                {
+                    CALCULOS ca = new CALCULOS();
+                    double litros = ca.CalcularLitrosMoto(kilometros, cilindrada);
+                    double carbono = ca.CalcularCO2Moto(litros);
+                    double total = ca.CalcularValorMoto(carbono);
+
+                    ViewBag.kilometros = kilometros;
+                    ViewBag.litros = litros;
+                    ViewBag.carbono = carbono;
+                    ViewBag.total = total;
+                }
+            }
+            
+            return View("Index");
+        }
+
+
     }
 }

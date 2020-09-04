@@ -17,6 +17,10 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
+        public ActionResult prueba()
+        {
+            return View();
+        }
         public ActionResult BuscarAeropuertos(string inicio, string destino, int recorrido, int pasajeros, int tipoViaje)
         {
             AEROPUERTO p1 = new AEROPUERTO();
