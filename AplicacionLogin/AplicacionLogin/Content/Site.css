@@ -107,3 +107,16 @@
 #pregunta input[type=radio]:checked + label {
     background: #FAFAFA;
     color: #04C3D7;
+}
+
+/*Mario*/
+#Lista p, #Lista2 p {
+    margin-bottom: 0.5rem;
+    padding: 2px;
+}
+
+    #Lista p:hover, #Lista2 p:hover {
+        background-color: #DCDCDC;
+        cursor: pointer;
+    }
+

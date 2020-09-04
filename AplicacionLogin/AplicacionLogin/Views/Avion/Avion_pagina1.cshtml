@@ -1,217 +1,310 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<!--
 <!doctype html>
 <html>
 <head>
-    <title>Prueba de Bootstrap 4</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
-</head>
+<title>Prueba de Bootstrap 4</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
 
-<body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.js"></script>
+-->
+<!-- </head>
 
+<body> -->
 
-    <div class="row" style="padding:1%">
-        <div class="col-sm-3" style="background-color:transparent;">
-            <div class="row">
-                <div class="col-sm-3" style="background-color:transparent;">
-                    <img style="padding:2%" src="~/Content/Img/Vector.png">
-                </div>
-                <div class="col-sm-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
-                    <p style="font-size:15px;">
-                        CALCULADORA
-                        <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
-                    </p>
-                </div>
+<div class="row" style="padding:1%">
+    <div class="col-sm-3" style="background-color:transparent;">
+        <div class="row">
+            <div class="col-sm-3" style="background-color:transparent;">
+                <img style="padding:2%" src="~/Content/Img/Vector.png">
             </div>
-        </div>
-        <div class="col-sm-6" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-                <div class="col-sm-6" style="background-color:#117394">
-                    <div class="row">
-                        <div class="col-sm-2" style="background-color:transparent;">
-                            <p id="num" style="padding-top:45%; padding-left:22%;">1</p>
-                        </div>
-                        <div class="col-sm-3" style="background-color:transparent;">
-                            <img src="~/Content/Img/Vector2.png" alt="Avion" />
-                        </div>
-                        <div class="col-sm-7" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:10%;">
-                            <p>
-                                Cuentanos sobre tu
-                                <span style="font-size:20px; font-weight: bold;">Vuelo</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2" style="background-color:#02AFC1;">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
-                </div>
-                <div class="col-sm-2" style="background-color:#04C3D7">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
-                </div>
-                <div class="col-sm-2" style="background-color:#0BEDBF">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
-                </div>
+            <div class="col-sm-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
+                <p style="font-size:15px;">
+                    CALCULADORA
+                    <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                </p>
             </div>
-        </div>
-        <div class="col-sm-3" style="background-color:transparent;">
         </div>
     </div>
+    <div class="col-sm-6" style="background-color:transparent;">
+        <div class="row" style="padding:2%;">
+            <div class="col-sm-6" style="background-color:#117394">
+                <div class="row">
+                    <div class="col-sm-2" style="background-color:transparent;">
+                        <p id="num" style="padding-top:45%; padding-left:22%;">1</p>
+                    </div>
+                    <div class="col-sm-3" style="background-color:transparent;">
+                        <img src="~/Content/Img/Vector2.png" alt="Avion" />
+                    </div>
+                    <div class="col-sm-7" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:10%;">
+                        <p>
+                            Cuentanos sobre tu
+                            <span style="font-size:20px; font-weight: bold;">Vuelo</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2" style="background-color:#02AFC1;">
+                <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+            </div>
+            <div class="col-sm-2" style="background-color:#04C3D7">
+                <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
+            </div>
+            <div class="col-sm-2" style="background-color:#0BEDBF">
+                <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3" style="background-color:transparent;">
+    </div>
+</div>
 
     <!-///////////////////////////////////////////////////////////////////////////->
 
-    <div class="row" style="margin-top: -2%; background-color:#117394">
-        <div class="col-sm-3" style="background-color:transparent;">
+<div class="row" style="margin-top: -2%; background-color:#117394">
+    <div class="col-sm-3" style="background-color:transparent;">
 
-        </div>
-        <div class="col-sm-6" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-                <div class="col-sm-2" style="background-color:#117394">
+    </div>
+    <div class="col-sm-6" style="background-color:transparent;">
+        <div class="row" style="padding:2%;">
+            <div class="col-sm-2" style="background-color:#117394">
 
-                </div>
-                <div class="col-sm-8" style="background-color:#117394;">
-                    <div class="hijo">
-                        <table style="width:100%">
-                            <tr>
-                                <th><p align="right">&nbsp&nbsp&nbsp&nbspDesde&nbsp&nbsp&nbsp </p></th>
+            </div>
+            <div class="col-sm-8" style="background-color:#117394;">
+                <div class="hijo">
+                    <table style="width:100%">
+                        <tr>
+                            <th><p align="right">&nbsp&nbsp&nbsp&nbspDesde&nbsp&nbsp&nbsp </p></th>
 
-                                <th>
-                                    <select class="select">
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
-                                    </select>
-                                </th>
+                            <th>
+                                <select class="select">
+                                    <option></option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
+                            </th>
 
-                            </tr>
-                            <tr>
-                                <th><p align="right">Hacia&nbsp&nbsp&nbsp </p></th>
-                                <th><select class="select"></select></th>
-                            </tr>
-                            <tr>
+                        </tr>
+                        <tr>
+                            <th><p align="right">Hacia&nbsp&nbsp&nbsp </p></th>
+                            <th><select class="select"></select></th>
+                        </tr>
+                        <tr>
 
-                        </table>
-                    </div>
-                </div>
-
-                <div class="col-sm-2" style="background-color:#117394">
-
+                    </table>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3" style="background-color:transparent;">
 
+            <div class="col-sm-2" style="background-color:#117394">
+
+            </div>
         </div>
     </div>
+    <div class="col-sm-3" style="background-color:transparent;">
+
+    </div>
+</div>
 
     <!-///////////////////////////////////////////////////////////////////////////->
 
-    <div class="row" style="margin-top: -33px; background-color:#117394">
-        <div class="col-sm-3" style="background-color:transparent;">
+<div class="row" style="margin-top: -33px; background-color:#117394">
+    <div class="col-sm-3" style="background-color:transparent;">
 
-        </div>
-        <div class="col-sm-6" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-                <div class="col-sm-2" style="background-color:#117394">
+    </div>
+    <div class="col-sm-6" style="background-color:transparent;">
+        <div class="row" style="padding:2%;">
+            <div class="col-sm-2" style="background-color:#117394">
 
-                </div>
-                <div class="col-sm-8" style="background-color:#117394;">
-                    <div class="hijo">
-
-
-                        <table style="width:100%">
-
-                            <tr>
-                                <th><p align="right">Nombre&nbsp&nbsp&nbsp</p></th>
-                                <th><input class="input" /></th>
-
-                            </tr>
-                            <tr>
-                                <th><p align="right">E-mail&nbsp&nbsp&nbsp</p></th>
-                                <th><input class="input"></th>
-                                <td>
-                                    <div class="hijo2">
-                                        <input class="recorrido" style="font-size: 11px" checked="checked" name="recorrido" type="radio" value="1" /> Solo ida </br>
-                                        <input class="recorrido" style="font-size: 11px" name="recorrido" type="radio" value="2" /> Ida y vuelta
-                                    </div>
-                                </td>
-
-                            </tr>
-                        </table>
+            </div>
+            <div class="col-sm-8" style="background-color:#117394;">
+                <div class="hijo">
 
 
-                    </div>
-                </div>
+                    <table style="width:100%">
 
-                <div class="col-sm-2" style="background-color:#117394">
+                        <tr>
+                            <th><p align="right">Nombre&nbsp&nbsp&nbsp</p></th>
+                            <th><input class="input" /></th>
+
+                        </tr>
+                        <tr>
+                            <th><p align="right">E-mail&nbsp&nbsp&nbsp</p></th>
+                            <th><input class="input"></th>
+                            <td>
+                                <div class="hijo2">
+                                    <input class="recorrido" style="font-size: 11px" checked="checked" name="recorrido" type="radio" value="1" /> Solo ida </br>
+                                    <input class="recorrido" style="font-size: 11px" name="recorrido" type="radio" value="2" /> Ida y vuelta
+                                </div>
+                            </td>
+
+                        </tr>
+                    </table>
+
 
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3" style="background-color:transparent;">
 
+            <div class="col-sm-2" style="background-color:#117394">
+
+            </div>
         </div>
     </div>
-    </br>
+    <div class="col-sm-3" style="background-color:transparent;">
+
+    </div>
+</div>
+<br>
 
 
     <!-///////////////////////////////////////////////////////////////////////////->
-    <div class="row" style="margin-top: -33px; background-color:#117394">
-        <div class="col-sm-3" style="background-color:transparent;">
+<div class="row" style="margin-top: -33px; background-color:#117394">
+    <div class="col-sm-3" style="background-color:transparent;">
 
-        </div>
-        <div class="col-sm-6" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-                <div class="col-sm-2" style="background-color:#117394">
+    </div>
+    <div class="col-sm-6" style="background-color:transparent;">
+        <div class="row" style="padding:2%;">
+            <div class="col-sm-2" style="background-color:#117394">
 
-                </div>
-                <div class="col-sm-8" style="background-color:#117394;">
-                    <div class="hijo">
-                        <table style="width:100%">
-                            <tr>
-                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDesde&nbsp&nbsp&nbsp</th>
-                                <th>
-                                    <select name="pasajeros" class="select2">
-                                        <option value="1" style="color:#fff; background:#117394;">1</option>
-                                        <option value="2" style="color:#fff; background:#117394;">2</option>
-                                        <option value="3" style="color:#fff; background:#117394;">3</option>
-                                        <option value="4" style="color:#fff; background:#117394;">4</option>
-                                        <option value="5" style="color:#fff; background:#117394;">5</option>
-                                        <option value="6" style="color:#fff; background:#117394;">6</option>
-                                        <option value="7" style="color:#fff; background:#117394;">7</option>
-                                        <option value="8" style="color:#fff; background:#117394;">8</option>
-                                        <option value="9" style="color:#fff; background:#117394;">9</option>
-                                        <option value="10" style="color:#fff; background:#117394;">10</option>
-                                    </select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+            </div>
+            <div class="col-sm-8" style="background-color:#117394;">
+                <div class="hijo">
+                    <table style="width:100%">
+                        <tr>
+                            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDesde&nbsp&nbsp&nbsp</th>
+                            <th>
+                                <select name="pasajeros" class="select2">
+                                    <option value="1" style="color:#fff; background:#117394;">1</option>
+                                    <option value="2" style="color:#fff; background:#117394;">2</option>
+                                    <option value="3" style="color:#fff; background:#117394;">3</option>
+                                    <option value="4" style="color:#fff; background:#117394;">4</option>
+                                    <option value="5" style="color:#fff; background:#117394;">5</option>
+                                    <option value="6" style="color:#fff; background:#117394;">6</option>
+                                    <option value="7" style="color:#fff; background:#117394;">7</option>
+                                    <option value="8" style="color:#fff; background:#117394;">8</option>
+                                    <option value="9" style="color:#fff; background:#117394;">9</option>
+                                    <option value="10" style="color:#fff; background:#117394;">10</option>
+                                </select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
 
-                                    <input class="calcular boton-color" name="actualizar" type="submit" value="Calcular">
-                                </th>
-                            </tr>
+                                <input class="calcular boton-color" name="actualizar" type="submit" value="Calcular">
+                            </th>
+                        </tr>
 
 
 
-                        </table>
-                    </div>
-                </div>
-
-                <div class="col-sm-2" style="background-color:#117394">
-
+                    </table>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3" style="background-color:transparent;">
 
+            <div class="col-sm-2" style="background-color:#117394">
+
+            </div>
         </div>
     </div>
+    <div class="col-sm-3" style="background-color:transparent;">
 
-    <button onclick="location.href='http://localhost:62106/Avion/Avion_pagina2'">Página 2</button>
-    <button onclick="location.href='http://localhost:62106/Avion/Avion_pagina3'">Página 3</button>
-    <button onclick="location.href='http://localhost:62106/Avion/Avion_pagina4'">Página 4</button>
+    </div>
+</div>
+
+<button onclick="location.href='http://localhost:62106/Avion/Avion_pagina2'">Página 2</button>
+<button onclick="location.href='http://localhost:62106/Avion/Avion_pagina3'">Página 3</button>
+<button onclick="location.href='http://localhost:62106/Avion/Avion_pagina4'">Página 4</button>
+
+
+
+
+
+<div style="min-height: 500px; padding-top: 100px; background-color : #137394">
+    <form action="/Avion/BuscarAeropuertos" method="post">
+        <div class="row w-100 mx-0">
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">INICIO</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <input class="w-100" type="text" name="inicio" id="texto1" autocomplete="off" style="max-width: 500px !important;">
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <div id="Lista" class="w-100" style="overflow-y: scroll; height: 180px; display: none;"></div>
+            </div>
+            <div class="col-12"><p></p></div>
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">DESTINO</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <input class="w-100" type="text" name="destino" id="texto2" autocomplete="off" style="max-width: 500px !important;">
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <div id="Lista2" class="w-100" style="overflow-y: scroll; height: 180px; display: none;"></div>
+            </div>
+            <div class="col-12"><p></p></div>
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">Pasajeros</span>
+            </div>
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <select name="pasajeros">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="col-12"><p></p></div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 " style="color : white;">
+                <input class="recorrido" checked="checked" name="recorrido" type="radio" value="1"> Solo ida
+                <input class="recorrido" name="recorrido" type="radio" value="2"> Ida y vuelta
+            </div>
+            <div class="col-12"><p></p></div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">Tipo de Viaje</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <select name="tipoViaje">
+                    <option value="1">Económico</option>
+                    <option value="2">Negocios</option>
+                    <option value="3">Primera Clase</option>
+                </select>
+            </div>
+
+            <div class="col-12"><p></p></div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 pb-5">
+                <input style="background-color: transparent; border: 1px white solid; padding: 12px; color: white ;border-radius: 10px" type="submit" class="actualizar" value="Calcular">
+            </div>
+
+        </div>
+    </form>
+
+    @if (ViewBag.inicio != null && ViewBag.distancia != 0)
+    {
+        <div class="row pb-5">
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Distancia entre @ViewBag.inicio hasta @ViewBag.destino : @ViewBag.distancia Kilómetros</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Carbono producido : @ViewBag.carbono</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Total a Pagar : @ViewBag.total</span>
+            </div>
+
+        </div>
+    }
+</div>
+<!--
 </body>
 </html>
-
+-->
