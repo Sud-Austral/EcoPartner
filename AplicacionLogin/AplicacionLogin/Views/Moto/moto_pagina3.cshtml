@@ -1,0 +1,261 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>Prueba de Bootstrap 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
+</head>
+
+<body>
+
+
+    <div class="row" style="padding:1%">
+        <div class="col-sm-3" style="background-color:transparent;">
+            <div class="row">
+                <div class="col-sm-3" style="background-color:transparent;">
+                    <img style="padding:2%" src="~/Content/Img/Vector.png">
+                </div>
+                <div class="col-sm-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
+                    <p style="font-size:15px;">
+                        CALCULADORA
+                        <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6" style="background-color:transparent;">
+            <div class="row" style="padding:2%;">
+                <div class="col-sm-2" style="background-color:#117394;">
+                    <p id="num" style="padding-top:18%; padding-left:22%;">1</p>
+                </div>
+                <div class="col-sm-2" style="background-color:#02AFC1;">
+                    <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+                </div>
+                <div class="col-sm-6" style="background-color:#04C3D7;">
+                    <div class="row">
+                        <div class="col-sm-2" style="background-color:transparent;">
+                            <p id="num" style="padding-top:45%; padding-left:22%;">3</p>
+                        </div>
+                        <div class="col-sm-3" style="background-color:transparent;  padding-top:5%;">
+                            <img src="~/Content/Img/Moto.png" alt="moto" />
+                        </div>
+                        <div class="col-sm-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
+                            <p style="font-size:12px;">
+                                <span style="font-size:30px; font-weight: bold;">Compensa</span>
+                                Tu emisión de CO2
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2" style="background-color:#0BEDBF">
+                    <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" style="background-color:transparent;">
+        </div>
+    </div>
+
+    <!-///////////////////////////////////////////////////////////////////////////-><div class="row" style="margin-top: -2%; background-color:#04C3D7">
+        <div class="col-sm-2" style="background-color:transparent;">
+
+        </div>
+        <div class="col-sm-8" style="background-color:transparent;">
+            <div class="row" style="padding:2%;">
+
+                <div class="col-sm-2" style="background-color:#04C3D7">
+
+                </div>
+                <div class="col-sm-8" style="background-color:#04C3D7;">
+                    <div class="hijo">
+                        <table style="width:100%">
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp</th>
+                                <th> <img style="padding:2%" src="~/Content/Img/nube.png"> </th>
+                                <th> <h1>1.3</h1></th>
+                                <th> <h1>t de CO2 = 85.000 $</h1> </th>
+
+                            </tr>
+
+                        </table>
+                        <table style="width:90%">
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                                <th>6.000 km recorridos</th>
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    <table>
+                        <tr>
+                            <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                            <th>Quiero compensar</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-sm-2" style="background-color:#04C3D7">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" style="background-color:transparent;">
+
+        </div>
+    </div>
+
+
+
+    <!-///////////////////////////////////////////////////////////////////////////->
+
+
+
+    <div class="row" style="margin-top: -20px; background-color:#04C3D7">
+
+        <div class="col-sm-3" style="background-color:transparent;">
+
+        </div>
+        <div class="col-sm-6" style="background-color:transparent;">
+            <div class="row" style="padding:2%;">
+
+                <div class="col-sm-2" style="background-color:#04C3D7">
+
+                </div>
+                <div class="col-sm-8" style="background-color:#04C3D7;">
+
+
+                    <table style="width:100%">
+
+                        <tr>
+                            <th>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            </th>
+                            <th>
+                                <div id="pregunta">
+                                    <img src="~/Content/Img/Frame1.png" alt="hoja">
+                                    <input type="radio" name="porsentaje" value="pregunta1" id="pregunta1">
+                                    <label for="pregunta1" style"">&nbsp&nbsp10%&nbsp </label>
+                                    <img src="~/Content/Img/Frame2.png" alt="hoja">
+                                    <input type="radio" name="porsentaje" value="pregunta2" id="pregunta2">
+                                    <label for="pregunta2">&nbsp&nbsp50%&nbsp </label>
+                                    <img src="~/Content/Img/Frame3.png" alt="hoja">
+                                    <input type="radio" name="porsentaje" value="pregunta3" id="pregunta3">
+                                    <label for="pregunta3">&nbsp100%&nbsp</label>
+
+                                </div>
+                            </th>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-sm-2" style="background-color:#04C3D7">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3" style="background-color:transparent;">
+
+    </div>
+    </div>
+
+    <!-///////////////////////////////////////////////////////////////////////////->
+
+
+
+
+    <div class="row" style="margin-top: -20px; background-color:#04C3D7">
+
+        <div class="col-sm-3" style="background-color:transparent;">
+
+        </div>
+        <div class="col-sm-6" style="background-color:transparent;">
+            <div class="row" style="padding:2%;">
+
+                <div class="col-sm-2" style="background-color:#04C3D7">
+
+                </div>
+                <div class="col-sm-8" style="background-color:#04C3D7;">
+
+
+                    <table style="width:100%">
+
+                        <tr>
+
+                            <th>
+                                <p align="center">Recuerda que trabajamos con precios justos para la gestión y conservación de los recursos naturales</p>
+                            </th>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-sm-2" style="background-color:#04C3D7">
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3" style="background-color:transparent;">
+
+    </div>
+    </div>
+
+    <!-///////////////////////////////////////////////////////////////////////////->
+
+
+
+    <div class="row" style="margin-top: -20px; background-color:#04C3D7">
+        <div class="col-sm-4" style="background-color:transparent;">
+
+        </div>
+        <div class="col-sm-4" style="background-color:transparent;">
+            <div class="row" style="padding:2%;">
+
+                <div class="col-sm-2" style="background-color:#04C3D7">
+
+                </div>
+                <div class="col-sm-8" style="background-color:#04C3D7;">
+                    <div class="hijo">
+                        <table style="width:100%">
+
+                            <tr>
+                                <th>&nbsp&nbsp&nbsp</th>
+                                <th><input class="calcular2 boton-color" name="actualizar" type="submit" value="QUIERO COMPENSAR"></th>
+
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-sm-2" style="background-color:#04C3D7">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3" style="background-color:transparent;">
+
+        </div>
+    </div>
+
+    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina1'">Página 1</button>
+    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina2'">Página 2</button>
+    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina4'">Página 4</button>
+</body>
+</html>
+
+

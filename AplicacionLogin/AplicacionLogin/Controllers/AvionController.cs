@@ -13,5 +13,20 @@ namespace AplicacionLogin.Controllers
         {
             return View();
         }
+
+        public ActionResult Avion_pagina2()
+        {
+            return View();
+        }
+
+        public ActionResult Avion_pagina3()
+        {
+            return View();
+        }
+
+        public ActionResult Avion_pagina4()
+        {
+            return View();
+        }
     }
 }

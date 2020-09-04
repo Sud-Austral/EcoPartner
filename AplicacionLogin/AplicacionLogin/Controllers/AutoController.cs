@@ -9,7 +9,22 @@ namespace AplicacionLogin.Controllers
     public class AutoController : Controller
     {
         // GET: Auto
-        public ActionResult Index()
+        public ActionResult auto_pagina1()
+        {
+            return View();
+        }
+
+        public ActionResult auto_pagina2()
+        {
+            return View();
+        }
+
+        public ActionResult auto_pagina3()
+        {
+            return View();
+        }
+
+        public ActionResult auto_pagina4()
         {
             return View();
         }

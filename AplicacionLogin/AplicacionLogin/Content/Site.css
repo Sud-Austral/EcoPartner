@@ -1,7 +1,6 @@
 ﻿body {
-    background: linear-gradient(90deg, #028FCB, #05B3C6, #0BF5BD, #83EBAD);
+    background: linear-gradient(90deg, #028FCB, #05B3C6, #07D0C2, #0BEDBF);
     color: #fff;
-    mix-blend-mode: normal;
 }
 
 #num {
@@ -23,8 +22,8 @@
 
 .hijo {
     font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
+    font-weight: normal;
+    font-size: 20px;
     line-height: 50px;
 }
 
@@ -40,7 +39,7 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #fff;
-    width: 380px;
+    width: 320px;
 }
 
 .select2 {
@@ -54,9 +53,15 @@
 .calcular {
     color: #fff;
     background-color: transparent;
-    width: 150px;
+    height: auto;
+    width: 130px;
     border-radius: 3em;
     border: 3px solid #fff;
+}
+
+.boton-color:hover {
+    background: #fff;
+    color: #117394
 }
 
 .input {
@@ -64,5 +69,41 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #fff;
-    width: 280px;
+    width: 220px;
 }
+
+
+
+.calcular2 {
+    color: #fff;
+    background-color: transparent;
+    font-size: 14px;
+    width: 200px;
+    border-radius: 3em;
+    border: 3px solid #fff;
+}
+
+#pregunta input {
+    display: none;
+    background-color: transparent;
+    border-radius: 3em;
+}
+
+#pregunta label {
+    border: solid 2px #ffffff;
+    border-radius: 3em;
+    margin: 5px;
+    padding: 5px;
+    background: #04C3D7;
+    color: #FAFAFA;
+    font-size: 12px;
+    font-family: Open Sans;
+}
+
+    #pregunta label:hover {
+        background: #117394;
+    }
+
+#pregunta input[type=radio]:checked + label {
+    background: #FAFAFA;
+    color: #04C3D7;
