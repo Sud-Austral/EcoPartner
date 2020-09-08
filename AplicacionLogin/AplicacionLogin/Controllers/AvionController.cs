@@ -1,6 +1,7 @@
 ﻿using AplicacionLogin.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -17,8 +18,14 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult prueba()
+        public ActionResult Prueba()
         {
+            return View();
+        }
+
+        public ActionResult Prueba2(double carbono)
+        {
+            ViewBag.carbono = carbono;
             return View();
         }
         public ActionResult BuscarAeropuertos(string inicio, string destino, int recorrido, int pasajeros, int tipoViaje)
@@ -38,14 +45,14 @@ namespace AplicacionLogin.Controllers
                 string values_r = values[1].Replace("\"", "");
 
                 if (inicio == values_r) {
-                    p1.LATITUD = Convert.ToDouble(values[6]);
-                    p1.LONGITUD = Convert.ToDouble(values[7]);
+                    p1.LATITUD = Convert.ToDouble(values[6], CultureInfo.InvariantCulture);
+                    p1.LONGITUD = Convert.ToDouble(values[7], CultureInfo.InvariantCulture);
                     
                 }
                 if (destino == values_r)
                 {
-                    p2.LATITUD = Convert.ToDouble(values[6]);
-                    p2.LONGITUD = Convert.ToDouble(values[7]);
+                    p2.LATITUD = Convert.ToDouble(values[6], CultureInfo.InvariantCulture);
+                    p2.LONGITUD = Convert.ToDouble(values[7], CultureInfo.InvariantCulture);
                     
                 }
             }
@@ -62,7 +69,7 @@ namespace AplicacionLogin.Controllers
             ViewBag.carbono = carbono2;
             ViewBag.total = total;
 
-            return View("Index");
+            return View("prueba");
         }
     }
 }

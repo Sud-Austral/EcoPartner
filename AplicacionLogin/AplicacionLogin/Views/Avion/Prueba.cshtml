@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "prueba";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>prueba</h2>
+
+@ViewBag.carbono
+
+
+
+<form action="/Avion/prueba2" method="post">
+    <input type="hidden" name="carbono" value="@ViewBag.carbono" />
+    <input type="submit" name="boton" value="pulsar" />
+</form>

@@ -374,6 +374,8 @@
     <Content Include="Views\Auto\Index.cshtml" />
     <Content Include="Views\Moto\Index.cshtml" />
     <Content Include="Views\Camion\Index.cshtml" />
+    <Content Include="Views\Avion\Prueba.cshtml" />
+    <Content Include="Views\Avion\Prueba2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
