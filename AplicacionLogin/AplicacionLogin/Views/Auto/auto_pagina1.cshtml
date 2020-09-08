@@ -1,8 +1,9 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!--
 <!doctype html>
 <html>
 <head>
@@ -14,8 +15,7 @@
 </head>
 
 <body>
-
-
+-->
     <div class="row" style="padding:1%">
         <div class="col-sm-3" style="background-color:transparent;">
             <div class="row">
@@ -32,18 +32,18 @@
         </div>
         <div class="col-sm-6" style="background-color:transparent;">
             <div class="row" style="padding:2%;">
-                <div class="col-sm-6" style="background-color:#117394">
+                <div class="col-sm-6" style="background-color:#117394;">
                     <div class="row">
                         <div class="col-sm-2" style="background-color:transparent;">
                             <p id="num" style="padding-top:45%; padding-left:22%;">1</p>
                         </div>
-                        <div class="col-sm-3" style="background-color:transparent; padding-top:5%;">
+                        <div class="col-sm-3" style="background-color:transparent;  padding-top:5%;">
                             <img src="~/Content/Img/Auto.png" alt="Auto" />
                         </div>
-                        <div class="col-sm-7" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:10%;">
-                            <p>
-                                Cuentanos sobre tu
-                                <span style="font-size:22px; font-weight: bold;">Automovil</span>
+                        <div class="col-sm-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
+                            <p style="font-size:12px;">
+                                <span style="font-size: 30px; font-weight: bold;">Resultado</span>
+                                El uso de tu auto genera
                             </p>
                         </div>
                     </div>
@@ -62,156 +62,270 @@
         <div class="col-sm-3" style="background-color:transparent;">
         </div>
     </div>
+<!--/////////////////////////////////////////////////////////////////////////-->
+<div class="container-fluid">
+    <form action="/Avion/BuscarAeropuertos/Avion_pagina2" method="post">
+        <div class="row" style="margin-top: -1.9%; background-color:#117394">
+            <div class="col-sm-2" style="background-color:transparent;">
 
-    <!-///////////////////////////////////////////////////////////////////////////->
-
-    <div class="row" style="margin-top: -2%; background-color:#117394">
-        <div class="col-sm-3" style="background-color:transparent;">
-
-        </div>
-        <div class="col-sm-6" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-                <div class="col-sm-2" style="background-color:#117394">
-
-                </div>
-                <div class="col-sm-8" style="background-color:#117394;">
-                    <div class="hijo">
-                        <table style="width:100%">
-                            <tr>
-                                <th><p align="right">&nbsp&nbsp&nbsp&nbspDesde&nbsp&nbsp&nbsp </p></th>
-
-                                <th>
-                                    <select class="select">
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
-                                    </select>
-                                </th>
-
-                            </tr>
-                            <tr>
-                                <th><p align="right">Hacia&nbsp&nbsp&nbsp </p></th>
-                                <th><select class="select"></select></th>
-                            </tr>
-                            <tr>
-
-                        </table>
-                    </div>
-                </div>
-
-                <div class="col-sm-2" style="background-color:#117394">
-
-                </div>
             </div>
-        </div>
-        <div class="col-sm-3" style="background-color:transparent;">
+            <div class="col-sm-8" style="background-color:transparent;">
 
-        </div>
-    </div>
+                <div class="row" style="padding:2%;">
+                    <div class="col-sm-2" style="background-color:#117394">
 
-    <!-///////////////////////////////////////////////////////////////////////////->
+                    </div>
+                    <div class="col-sm-8" style="background-color:#117394;">
 
-    <div class="row" style="margin-top: -33px; background-color:#117394">
-        <div class="col-sm-3" style="background-color:transparent;">
-
-        </div>
-        <div class="col-sm-6" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-                <div class="col-sm-2" style="background-color:#117394">
-
-                </div>
-                <div class="col-sm-8" style="background-color:#117394;">
-                    <div class="hijo">
+                        <div class="hijo">
 
 
-                        <table style="width:100%">
+                            <table>
+                                <tr>
 
-                            <tr>
-                                <th><p align="right">Nombre&nbsp&nbsp&nbsp</p></th>
-                                <th><input class="input" /></th>
+                                    <th style="width:18%">
+                                        <span>&nbsp&nbsp&nbsp&nbspDesde&nbsp&nbsp&nbsp</span>
+                                    </th>
+                                    <th>
+                                        <div>
+                                            <input class="w-100 col-md-12 col-sm-10    select" type="text" name="inicio" id="texto1" autocomplete="off">
+                                        </div>
+                                        <div>
+                                            <div id="Lista" class="w-100 col-md-12 col-sm-10    select" style="overflow-y: scroll; height: 180px; display: none;"></div>
+                                        </div>
 
-                            </tr>
-                            <tr>
-                                <th><p align="right">E-mail&nbsp&nbsp&nbsp</p></th>
-                                <th><input class="input"></th>
-                                <td>
-                                    <div class="hijo2">
-                                        <input class="recorrido" style="font-size: 11px" checked="checked" name="recorrido" type="radio" value="1" /> Solo ida </br>
-                                        <input class="recorrido" style="font-size: 11px" name="recorrido" type="radio" value="2" /> Ida y vuelta
-                                    </div>
-                                </td>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th style="width:18%">
+                                        <span> &nbsp&nbsp&nbsp&nbsp&nbspHasta&nbsp&nbsp&nbsp </span>
+                                    </th>
+                                    <th>
+                                        <div>
+                                            <input class="w-100 col-md-12 col-sm-10    select" type="text" name="destino" id="texto2" autocomplete="off">
+                                        </div>
+                                        <div>
+                                            <div id="Lista2" class="w-100 select" style="overflow-y: scroll; height: 180px; display: none;"></div>
+                                        </div>
+                                        <div><p></p></div>
+                                    </th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
 
-                            </tr>
-                        </table>
-
+                    <div class="col-sm-2" style="background-color:#117394">
 
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-2" style="background-color:transparent;">
 
-                <div class="col-sm-2" style="background-color:#117394">
-
-                </div>
             </div>
         </div>
-        <div class="col-sm-3" style="background-color:transparent;">
 
-        </div>
-    </div>
-    </br>
+        <!-///////////////////////////////////////////////////////////////////////////->
 
+        <div class="row" style="margin-top: -33px; background-color:#117394">
+            <div class="col-sm-2" style="background-color:transparent;">
 
-    <!-///////////////////////////////////////////////////////////////////////////->
-    <div class="row" style="margin-top: -33px; background-color:#117394">
-        <div class="col-sm-3" style="background-color:transparent;">
+            </div>
+            <div class="col-sm-8" style="background-color:transparent;">
+                <div class="row" style="padding:2%;">
+                    <div class="col-sm-2" style="background-color:#117394">
 
-        </div>
-        <div class="col-sm-6" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-                <div class="col-sm-2" style="background-color:#117394">
-
-                </div>
-                <div class="col-sm-8" style="background-color:#117394;">
-                    <div class="hijo">
-                        <table style="width:100%">
-                            <tr>
-                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDesde&nbsp&nbsp&nbsp</th>
-                                <th>
-                                    <select name="pasajeros" class="select2">
-                                        <option value="1" style="color:#fff; background:#117394;">1</option>
-                                        <option value="2" style="color:#fff; background:#117394;">2</option>
-                                        <option value="3" style="color:#fff; background:#117394;">3</option>
-                                        <option value="4" style="color:#fff; background:#117394;">4</option>
-                                        <option value="5" style="color:#fff; background:#117394;">5</option>
-                                        <option value="6" style="color:#fff; background:#117394;">6</option>
-                                        <option value="7" style="color:#fff; background:#117394;">7</option>
-                                        <option value="8" style="color:#fff; background:#117394;">8</option>
-                                        <option value="9" style="color:#fff; background:#117394;">9</option>
-                                        <option value="10" style="color:#fff; background:#117394;">10</option>
-                                    </select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
-
-                                    <input class="calcular boton-color" name="actualizar" type="submit" value="Calcular">
-                                </th>
-                            </tr>
+                    </div>
+                    <div class="col-sm-8" style="background-color:#117394;">
+                        <div class="hijo">
 
 
+                            <table>
 
-                        </table>
+                                <tr>
+                                    <th style="width:18%">
+                                        <span>&nbspNombre&nbsp&nbsp&nbsp</span>
+                                    </th>
+                                    <th><input class="w-100 col-md-12 col-sm-10    input" /></th>
+
+                                </tr>
+                                <tr>
+                                    <th style="width:18%">
+                                        <span>&nbsp&nbsp&nbsp&nbspE-mail</span>
+                                    </th>
+                                    <th><input class="w-100 col-md-12 col-sm-10    input" /></th>
+
+                                    <td>
+                                        <div class="hijo2">
+                                            <samp>&nbsp&nbsp&nbsp</samp>
+                                            <input class="recorrido" style="font-size: 11px" checked="checked" name="recorrido" type="radio" value="1" /> Solo ida </br>
+                                            <samp>&nbsp&nbsp&nbsp</samp>
+                                            <input class="recorrido" style="font-size: 11px" name="recorrido" type="radio" value="2" /> Ida y vuelta
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2" style="background-color:#117394">
+
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-2" style="background-color:transparent;">
 
-                <div class="col-sm-2" style="background-color:#117394">
-
-                </div>
             </div>
         </div>
-        <div class="col-sm-3" style="background-color:transparent;">
+        <br>
+
+
+        <!-///////////////////////////////////////////////////////////////////////////->
+        <div class="row" style="margin-top: -33px; background-color:#117394">
+            <div class="col-sm-2" style="background-color:transparent;">
+
+            </div>
+            <div class="col-sm-8" style="background-color:transparent;">
+                <div class="row" style="padding:2%;">
+                    <div class="col-sm-2" style="background-color:#117394">
+
+                    </div>
+                    <div class="col-sm-8" style="background-color:#117394;">
+                        <div class="hijo">
+                            <table>
+                                <tr>
+                                    <th>Pasajeros&nbsp&nbsp&nbsp</th>
+                                    <th>
+                                        <select name="pasajeros" class=" select2 ">
+                                            <option value="1" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp1</option>
+                                            <option value="2" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp2</option>
+                                            <option value="3" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp3</option>
+                                            <option value="4" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp4</option>
+                                            <option value="5" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp5</option>
+                                            <option value="6" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp6</option>
+                                            <option value="7" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp7</option>
+                                            <option value="8" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp8</option>
+                                            <option value="9" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp9</option>
+                                            <option value="10" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp10</option>
+                                        </select>
+
+                                    </th>
+
+
+                                </tr>
+                                <tr style="margin-top:-10%">
+                                    <th>Pasajeros&nbsp&nbsp&nbsp</th>
+                                    <th>
+                                        <select name="tipoViaje" class="select3">
+                                            <option value="1" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbspEconómico</option>
+                                            <option value="2" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNegocio</option>
+                                            <option value="3" style="color:#fff; background:#117394;">&nbsp&nbspPrimera Clase</option>
+                                        </select>
+                                    </th>
+                                </tr>
+
+
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2" style="background-color:#117394">
+                        <div class="hijo">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <input type="submit" class="calcular" value="Calcular" ">
+                                    </th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2" style="background-color:transparent;">
+
+            </div>
+        </div>
+    </form>
+</div>
+
+<button onclick="location.href='http://localhost:62106/Auto/auto_pagina2'">Página 2</button>
+<button onclick="location.href='http://localhost:62106/Auto/auto_pagina3'">Página 3</button>
+<button onclick="location.href='http://localhost:62106/Auto/auto_pagina4'">Página 4</button>
+
+<div style="min-height: 500px; padding-top: 100px; background-color : #137394">
+    <form action="/Auto/CalculosAuto" method="post">
+        <div class="row w-100 mx-0">
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">Kilómetros recorridos</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <input class="w-100" type="text" name="kilometros" autocomplete="off" style="max-width: 500px !important;">
+            </div>
+
+            <div class="col-12"><p></p></div>
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">Tipo de Auto</span>
+            </div>
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <select name="tipoAuto">
+                    <option value="peque">Pequeño</option>
+                    <option value="mediano">Mediano</option>
+                    <option value="grande">Grande</option>
+
+                </select>
+            </div>
+            <div class="col-12"><p></p></div>
+
+
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <span style="color : white; font-size: 16px">Tipo de Combustible</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
+                <select name="tipoCombustible">
+                    <option value="gasolina">Gasolina</option>
+                    <option value="diesel">Diesel</option>
+
+                </select>
+            </div>
+
+            <div class="col-12"><p></p></div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 pb-5">
+                <input style="background-color: transparent; border: 1px white solid; padding: 12px; color: white ;border-radius: 10px" type="submit" class="actualizar" value="Calcular">
+            </div>
 
         </div>
-    </div>
+    </form>
 
-    <button onclick="location.href='http://localhost:62106/Auto/auto_pagina2'">Página 2</button>
-    <button onclick="location.href='http://localhost:62106/Auto/auto_pagina3'">Página 3</button>
-    <button onclick="location.href='http://localhost:62106/Auto/auto_pagina4'">Página 4</button>
+    @if (ViewBag.carbono != null)
+    {
+        <div class="row pb-5">
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Kilómetros recorridos @ViewBag.kilometros Kilómetros</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Litros Combustible quemado : @ViewBag.litros</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Carbono producido : @ViewBag.carbono</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Total a Pagar : @ViewBag.total</span>
+            </div>
+
+        </div>
+
+
+    }
+
+</div>
+<!--
 </body>
 </html>
-
+-->

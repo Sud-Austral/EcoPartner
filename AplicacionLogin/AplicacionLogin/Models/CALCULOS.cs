@@ -7,6 +7,7 @@ namespace AplicacionLogin.Models
 {
     public class CALCULOS
     {
+        //CALCULOS AVIÓN
         public double CalcularDistancia(AEROPUERTO p1, AEROPUERTO p2)
         {
             double salida = 0;
@@ -51,5 +52,99 @@ namespace AplicacionLogin.Models
         {
             return CalcularValor(CalcularCO2(CalcularDistancia(p1, p2)));
         }
+
+        //CALCULOS Moto
+
+        public double CalcularLitrosMoto(string kilometros, string cilindrada)
+        {
+            double litros = 0;
+            switch (cilindrada)
+            {
+                case "1":
+                    litros = Convert.ToDouble(kilometros) / 34.2;
+                    break;
+                case "2":
+                    litros = Convert.ToDouble(kilometros) / 23.2;
+                    break;
+                case "3":
+                    litros = Convert.ToDouble(kilometros) / 18.7;
+                    break;
+            }
+            return litros;
+
+        }
+
+        public double CalcularCO2Moto(double litros)
+        {
+            double CO2 = 0;
+            CO2 = litros * 2.37;
+
+            return Math.Round(CO2 / 1000, 3);
+        }
+
+        public double CalcularValorMoto(double CO2)
+        {
+            return Math.Round(CO2 * 80, 2);
+        }
+
+        //CALCULOS AUTO
+
+        public double CalcularLitrosAuto(string kilometros, string tipoAuto)
+        {
+            double litros = 0;
+            switch (tipoAuto)
+            {
+                case "peque":
+                    litros = Convert.ToDouble(kilometros) / 16.1;
+                    break;
+                case "mediano":
+                    litros = Convert.ToDouble(kilometros) / 14;
+                    break;
+                case "grande":
+                    litros = Convert.ToDouble(kilometros) / 10.2;
+                    break;
+            }
+            return litros;
+
+        }
+
+        public double CalcularCO2Auto(double litros, string tipoCombustible)
+        {
+            double CO2 = 0;
+            switch (tipoCombustible)
+            {
+                case "gasolina":
+                    CO2 = litros * 2.37;
+                    break;
+                case "diesel":
+                    CO2 = litros * 2.65;
+                    break;
+
+            }
+            return Math.Round(CO2 / 1000, 3);
+        }
+
+        public double CalcularValorAuto(double CO2)
+        {
+            return Math.Round(CO2 * 80, 2);
+        }
+
+        //CALCULOS CAMIÓN
+
+        public double CalcularCO2Camion(string kilometros, string toneladasCarga)
+        {
+            double CO2 = 0;
+            CO2 = Convert.ToDouble(kilometros) * Convert.ToDouble(toneladasCarga);
+            CO2 = CO2 * 118;
+            return Math.Round(CO2 / 1000000, 3);
+        }
+
+        public double CalcularValorCamion(double CO2)
+        {
+            return Math.Round(CO2 * 80, 2);
+        }
+
+
+
     }
 }
