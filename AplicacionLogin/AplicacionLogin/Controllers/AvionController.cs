@@ -27,8 +27,13 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult Avion_pagina3()
+        public ActionResult Avion_pagina3(double recorrido, double toneladas, double total)
         {
+
+            ViewBag.recorrido = recorrido;
+            ViewBag.toneladas = toneladas;
+            ViewBag.total = total;
+
             return View();
         }
 
@@ -75,11 +80,13 @@ namespace AplicacionLogin.Controllers
 
             ViewBag.inicio = inicio;
             ViewBag.destino = destino;
-            ViewBag.distancia = distancia;
+            ViewBag.distancia = Math.Round(distancia, 2);
             ViewBag.carbono = carbono2;
             ViewBag.total = total;
 
             return View("Avion_pagina2");
         }
+
+       
     }
 }

@@ -51,7 +51,7 @@ namespace AplicacionLogin.Controllers
             }
 
 
-            return View("auto_pagina1");
+            return View("auto_pagina2");
         }
     }
 }

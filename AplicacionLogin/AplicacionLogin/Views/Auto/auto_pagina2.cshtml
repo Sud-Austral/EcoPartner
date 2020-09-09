@@ -80,7 +80,7 @@
                             <tr>
                                 <th> &nbsp&nbsp&nbsp</th>
                                 <th> <img style="padding:2%" src="~/Content/Img/nube.png"> </th>
-                                <th> <h1>1.3</h1></th>
+                                <th> <h1>@ViewBag.carbono</h1></th>
                                 <th> <h1>toneladas de CO2</h1> </th>
 
                             </tr>
@@ -121,7 +121,7 @@
                                 <th><p align="right"> De acuerdo a los &nbsp&nbsp</p></th>
                                 <th> <p> <img style="padding:2%" src="~/Content/Img/Recorrido.png"></p> </th>
                                 <th>&nbsp&nbsp&nbsp</th>
-                                <th> <p> 6.000 km recorridos </p> </th>
+                                <th> <p>@ViewBag.kilometros km recorridos </p> </th>
                                 <th>&nbsp&nbsp&nbsp</th>
 
                             </tr>
@@ -183,6 +183,26 @@
     <button onclick="location.href='http://localhost:62106/Auto/auto_pagina3'">Página 3</button>
     <button onclick="location.href='http://localhost:62106/Auto/auto_pagina4'">Página 4</button>
 
+    @if (ViewBag.carbono != null)
+    {
+        <div class="row pb-5">
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Kilómetros recorridos @ViewBag.kilometros Kilómetros</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Litros Combustible quemado : @ViewBag.litros</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Carbono producido : @ViewBag.carbono</span>
+            </div>
+            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
+                <span style="color: white; font-size: 15px;">Total a Pagar : @ViewBag.total</span>
+            </div>
+
+        </div>
+
+
+    }
 </body>
 </html>
 

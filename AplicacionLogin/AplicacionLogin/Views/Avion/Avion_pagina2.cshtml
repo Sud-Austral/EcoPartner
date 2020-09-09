@@ -161,7 +161,16 @@
                             <table style="width:100%">
 
                                 <tr>
-                                    <th><input class="calcular2 boton-color" name="actualizar" type="submit" value="CALCULAR COMPENSACION"></th>
+
+                                   
+                                    <th>
+                                        <form method="post" action="/Avion/Avion_pagina3">
+                                            <input type="hidden" name="recorrido" value="@ViewBag.distancia"/>
+                                            <input type="hidden" name="toneladas" value="@ViewBag.carbono"/>
+                                            <input type="hidden" name="total" value="@ViewBag.total"/>
+                                            <input class="calcular2 boton-color" name="actualizar" type="submit" value="CALCULAR COMPENSACION">
+                                        </form>
+                                    </th>
 
                                 </tr>
 
@@ -186,22 +195,7 @@
         <button onclick="location.href='http://localhost:62106/Avion/Avion_pagina3'">Página 3</button>
         <button onclick="location.href='http://localhost:62106/Avion/Avion_pagina4'">Página 4</button>
 
-        Resultados
-        @if (ViewBag.inicio != null && ViewBag.distancia != 0)
-        {
-            <div class="row pb-5">
-                <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
-                    <span style="color: white; font-size: 15px;">Distancia entre @ViewBag.inicio hasta @ViewBag.destino : @ViewBag.distancia Kilómetros</span>
-                </div>
-                <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
-                    <span style="color: white; font-size: 15px;">Carbono producido : @ViewBag.carbono</span>
-                </div>
-                <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
-                    <span style="color: white; font-size: 15px;">Total a Pagar : @ViewBag.total</span>
-                </div>
-
-            </div>
-        }
+       
 
         <!---</body>
     </html>-->

@@ -66,12 +66,12 @@
     </div>
 <!--/////////////////////////////////////////////////////////////////////////-->
 <div class="container-fluid">
-    <form action="/Avion/BuscarAeropuertos/Avion_pagina2" method="post">
+    <form action="/Camion/CalculosCamion" method="post">
         <div class="row" style="margin-top: -1.9%; background-color:#117394">
-            <div class="col-sm-2" style="background-color:transparent;">
+            <div class="col-sm-1" style="background-color:transparent;">
 
             </div>
-            <div class="col-sm-8" style="background-color:transparent;">
+            <div class="col-sm-10" style="background-color:transparent;">
 
                 <div class="row" style="padding:2%;">
                     <div class="col-sm-2" style="background-color:#117394">
@@ -81,38 +81,36 @@
 
                         <div class="hijo">
 
-
                             <table>
+
                                 <tr>
-
-                                    <th style="width:18%">
-                                        <span>&nbsp&nbsp&nbsp&nbspDesde&nbsp&nbsp&nbsp</span>
+                                    <th style="width:50%">
+                                        <span>&nbsp&nbsp&nbsp&nbsp&nbspKilometros recorridos</span>
                                     </th>
-                                    <th>
-                                        <div>
-                                            <input class="w-100 col-md-12 col-sm-10    select" type="text" name="inicio" id="texto1" autocomplete="off">
-                                        </div>
-                                        <div>
-                                            <div id="Lista" class="w-100 col-md-12 col-sm-10    select" style="overflow-y: scroll; height: 180px; display: none;"></div>
-                                        </div>
+                                    <th><input class="w-100 col-md-12 col-sm-10    input" type="text" name="kilometros" autocomplete="off" style="max-width: 500px !important;"></th>
 
-                                    </th>
                                 </tr>
                                 <tr>
-                                    <th style="width:18%">
-                                        <span> &nbsp&nbsp&nbsp&nbsp&nbspHasta&nbsp&nbsp&nbsp </span>
+                                    <th style="width:50%">
+                                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPseso de la carga</span>
                                     </th>
-                                    <th>
-                                        <div>
-                                            <input class="w-100 col-md-12 col-sm-10    select" type="text" name="destino" id="texto2" autocomplete="off">
-                                        </div>
-                                        <div>
-                                            <div id="Lista2" class="w-100 select" style="overflow-y: scroll; height: 180px; display: none;"></div>
-                                        </div>
-                                        <div><p></p></div>
+                                    <th><input type="text" name="toneladasCarga" class="w-100 col-md-12 col-sm-10    input" autocomplete="off" style="max-width: 500px !important;" /></th>
+
+
+
+                                </tr>
+
+                                <tr>
+                                    <th style="width:50%">
+                                        <span>&nbspAhora ingresa tus datos</span>
                                     </th>
+                                    <th></th>
+
+
+
                                 </tr>
                             </table>
+
                         </div>
                     </div>
 
@@ -121,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2" style="background-color:transparent;">
+            <div class="col-sm-1" style="background-color:transparent;">
 
             </div>
         </div>
@@ -144,25 +142,19 @@
                             <table>
 
                                 <tr>
-                                    <th style="width:18%">
-                                        <span>&nbspNombre&nbsp&nbsp&nbsp</span>
+                                    <th style="width:43%">
+                                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre&nbsp&nbsp&nbsp</span>
                                     </th>
-                                    <th><input class="w-100 col-md-12 col-sm-10    input" /></th>
+                                    <th><input type="text" name="nombre" class="w-100 col-md-12 col-sm-10    input" /></th>
 
                                 </tr>
                                 <tr>
                                     <th style="width:18%">
-                                        <span>&nbsp&nbsp&nbsp&nbspE-mail</span>
+                                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</span>
                                     </th>
-                                    <th><input class="w-100 col-md-12 col-sm-10    input" /></th>
+                                    <th><input type="email" name="coreeo" class="w-100 col-md-12 col-sm-10    input" /></th>
 
                                     <td>
-                                        <div class="hijo2">
-                                            <samp>&nbsp&nbsp&nbsp</samp>
-                                            <input class="recorrido" style="font-size: 11px" checked="checked" name="recorrido" type="radio" value="1" /> Solo ida </br>
-                                            <samp>&nbsp&nbsp&nbsp</samp>
-                                            <input class="recorrido" style="font-size: 11px" name="recorrido" type="radio" value="2" /> Ida y vuelta
-                                        </div>
                                     </td>
 
                                 </tr>
@@ -197,53 +189,21 @@
                     <div class="col-sm-8" style="background-color:#117394;">
                         <div class="hijo">
                             <table>
+
                                 <tr>
-                                    <th>Pasajeros&nbsp&nbsp&nbsp</th>
-                                    <th>
-                                        <select name="pasajeros" class=" select2 ">
-                                            <option value="1" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp1</option>
-                                            <option value="2" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp2</option>
-                                            <option value="3" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp3</option>
-                                            <option value="4" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp4</option>
-                                            <option value="5" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp5</option>
-                                            <option value="6" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp6</option>
-                                            <option value="7" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp7</option>
-                                            <option value="8" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp8</option>
-                                            <option value="9" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp9</option>
-                                            <option value="10" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp10</option>
-                                        </select>
-
+                                    <th style="width:80%">
+                                        <SAMP>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</SAMP>
                                     </th>
-
-
-                                </tr>
-                                <tr style="margin-top:-10%">
-                                    <th>Pasajeros&nbsp&nbsp&nbsp</th>
                                     <th>
-                                        <select name="tipoViaje" class="select3">
-                                            <option value="1" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbspEconómico</option>
-                                            <option value="2" style="color:#fff; background:#117394;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNegocio</option>
-                                            <option value="3" style="color:#fff; background:#117394;">&nbsp&nbspPrimera Clase</option>
-                                        </select>
+                                        <input type="submit" name="calcular" class="calcular" value="Calcular" ">
                                     </th>
                                 </tr>
-
-
-
                             </table>
                         </div>
                     </div>
 
                     <div class="col-sm-2" style="background-color:#117394">
-                        <div class="hijo">
-                            <table>
-                                <tr>
-                                    <th>
-                                        <input type="submit" class="calcular" value="Calcular" ">
-                                    </th>
-                                </tr>
-                            </table>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

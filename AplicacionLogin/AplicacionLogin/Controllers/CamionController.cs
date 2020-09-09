@@ -50,7 +50,7 @@ namespace AplicacionLogin.Controllers
                 }
             }
 
-            return View("camion_pagina1");
+            return View("camion_pagina2");
         }
 
     }
