@@ -20,8 +20,13 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult moto_pagina3()
+        public ActionResult moto_pagina3(double recorrido, double toneladas, double total)
         {
+
+            ViewBag.recorrido = recorrido;
+            ViewBag.toneladas = toneladas;
+            ViewBag.total = total;
+    
             return View();
         }
 

@@ -103,7 +103,7 @@
     <!-///////////////////////////////////////////////////////////////////////////->
 
 
-    <div class="row" style="margin-top: -20px; background-color:#02AFC1">
+    <div class="row " style="margin-top: -20px; background-color:#02AFC1">
         <div class="col-sm-2" style="background-color:transparent;">
 
         </div>
@@ -118,10 +118,10 @@
                         <table style="width:100%">
 
                             <tr>
-                                <th><p align="right"> De acuerdo a los &nbsp&nbsp</p></th>
+                                <th><p  class="spam" align="right"> De acuerdo a los &nbsp&nbsp</p></th>
                                 <th> <p> <img style="padding:2%" src="~/Content/Img/Recorrido.png"></p> </th>
                                 <th>&nbsp&nbsp&nbsp</th>
-                                <th> <p> @ViewBag.kilometros km recorridos </p> </th>
+                                <th> <p  class="spam"> @ViewBag.kilometros km recorridos </p> </th>
                                 <th>&nbsp&nbsp&nbsp</th>
 
                             </tr>
@@ -159,7 +159,15 @@
                         <table style="width:100%">
 
                             <tr>
-                                <th><input class="calcular2 boton-color" name="actualizar" type="submit" value="CALCULAR COMPENSACION"></th>
+                                <th>
+                                    <form method="post" action="/Moto/moto_pagina3">
+                                        <input type="hidden" name="recorrido" value="@ViewBag.kilometros" />
+                                        <input type="hidden" name="toneladas" value="@ViewBag.carbono" />
+                                        <input type="hidden" name="total" value="@ViewBag.total" />
+                                        <input class="calcular2 boton-color" name="actualizar" type="submit" value="CALCULAR COMPENSACION">
+                                    </form>
+
+</th>
 
                             </tr>
 
@@ -183,26 +191,7 @@
     <button onclick="location.href='http://localhost:62106/Moto/moto_pagina3'">Página 3</button>
     <button onclick="location.href='http://localhost:62106/Moto/moto_pagina4'">Página 4</button>
 
-    @if (ViewBag.carbono != null)
-    {
-        <div class="row pb-5">
-            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
-                <span style="color: white; font-size: 15px;">Kilómetros recorridos @ViewBag.kilometros Kilómetros</span>
-            </div>
-            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
-                <span style="color: white; font-size: 15px;">Litros Combustible quemado : @ViewBag.litros</span>
-            </div>
-            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
-                <span style="color: white; font-size: 15px;">Carbono producido : @ViewBag.carbono</span>
-            </div>
-            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0">
-                <span style="color: white; font-size: 15px;">Total a Pagar : @ViewBag.total</span>
-            </div>
-
-        </div>
-
-
-    }
+   
 </body>
 </html>
 

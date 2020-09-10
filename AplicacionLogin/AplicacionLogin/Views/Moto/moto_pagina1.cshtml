@@ -84,37 +84,41 @@
                             <table>
 
                                 <tr>
-                                    <th style="width:50%">
-                                        <span>&nbsp&nbsp&nbsp&nbsp&nbspKilometros recorridos&nbsp&nbsp</span>
+                                    <th>
+                                        <div>
+                                            <spam class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspKilometros recorridos&nbsp&nbsp</spam>
+                                        </div>
                                     </th>
-                                    <th><input name="kilometros" class="w-100 col-md-12 col-sm-10    input" /></th>
+                                    <th><input name="kilometros" style="margin-left:-23%;" class="input2" autocomplete="off" /></th>
 
                                 </tr>
                                 <tr>
                                     <th style="width:50%">
-                                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCilindrada</span>
+                                        <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCilindrada</span>
                                     </th>
                                     <th>
-                                        <select name="cilindrada" class="      select">
-                                            <option value="1">Menor o igual a 250 cc</option>
-                                            <option value="2">Mayor a 250 cc y menor o igual a 600 cc</option>
-                                            <option value="3">Mayor a 600 cc</option>
+                                        <select name="cilindrada" style="margin-left:-23%" class="w-100 col-md-12 col-sm-10 input">
+                                            <option style="color:#fff; background:#117394;" value="1">Menor o igual a 250 cc</option>
+                                            <option style="color:#fff; background:#117394;" value="2">Mayor a 250 cc y menor o igual a 600 cc</option>
+                                            <option style="color:#fff; background:#117394;" value="3">Mayor a 600 cc</option>
                                         </select>
                                     </th>
 
 
 
+
                                 </tr>
 
                                 <tr>
                                     <th style="width:50%">
-                                        <span>&nbspAhora ingresa tus datos</span>
+                                        <span>&nbsp&nbsp&nbspAhora ingresa tus datos</span>
                                     </th>
-                                    <th></th>
+
 
 
 
                                 </tr>
+
                             </table>
                         </div>
                     </div>
@@ -148,16 +152,16 @@
 
                                 <tr>
                                     <th style="width:43%">
-                                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre&nbsp&nbsp&nbsp</span>
+                                        <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre&nbsp&nbsp&nbsp</span>
                                     </th>
-                                    <th><input type="text" name="nombre" class="w-100 col-md-12 col-sm-10    input" /></th>
+                                    <th><input type="text" name="nombre" style="margin-left:-10%" class="    input2" /></th>
 
                                 </tr>
                                 <tr>
                                     <th style="width:18%">
-                                        <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</span>
+                                        <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</span>
                                     </th>
-                                    <th><input type="email" name="coreeo" class="w-100 col-md-12 col-sm-10    input" /></th>
+                                    <th><input type="email" name="coreeo" style="margin-left:-10%" class="    input2" /></th>
 
                                     <td>
                                     </td>
@@ -223,43 +227,6 @@
 <button onclick="location.href='http://localhost:62106/Moto/moto_pagina3'">Página 3</button>
 <button onclick="location.href='http://localhost:62106/Moto/moto_pagina4'">Página 4</button>
 
-<div style="min-height: 500px; padding-top: 100px; background-color : #137394">
-    <form action="/Moto/CalculosMoto" method="post">
-        <div class="row w-100 mx-0">
-
-            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
-                <span style="color : white; font-size: 16px">Kilómetros recorridos</span>
-            </div>
-            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
-                <input class="w-100" type="text" name="kilometros" autocomplete="off" style="max-width: 500px !important;">
-            </div>
-
-            <div class="col-12"><p></p></div>
-
-            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
-                <span style="color : white; font-size: 16px">Cilindrada</span>
-            </div>
-
-            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 ">
-                <select name="cilindrada">
-                    <option value="1">Menor o igual a 250 cc</option>
-                    <option value="2">Mayor a 250 cc y menor o igual a 600 cc</option>
-                    <option value="3">Mayor a 600 cc</option>
-
-                </select>
-            </div>
-            <div class="col-12"><p></p></div>
-
-            <div class="col-md-4 col-sm-10 offset-md-4 offset-sm-0 pb-5">
-                <input style="background-color: transparent; border: 1px white solid; padding: 12px; color: white ;border-radius: 10px" type="submit" class="actualizar" value="Calcular">
-            </div>
-
-        </div>
-    </form>
-
-   
-
-</div>
 
 
 <!--

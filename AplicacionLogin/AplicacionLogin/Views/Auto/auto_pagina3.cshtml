@@ -82,16 +82,16 @@
                                 <tr>
                                     <th> &nbsp&nbsp&nbsp</th>
                                     <th> <img style="padding:2%" src="~/Content/Img/nube.png"> </th>
-                                    <th> <h1>1.3</h1></th>
-                                    <th> <h1>t de CO2 = 85.000 $</h1> </th>
+                                    <th> <h1> @ViewBag.toneladas</h1></th>
+                                    <th> <h1>t de CO2 = @ViewBag.total $</h1> </th>
 
                                 </tr>
 
                             </table>
                             <table style="width:90%">
                                 <tr>
-                                    <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                                    <th>6.000 km recorridos</th>
+                                    <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                                    <th><spam class="spam">@ViewBag.recorrido km recorridos</spam></th>
 
                                 </tr>
 
@@ -101,7 +101,7 @@
                         <table>
                             <tr>
                                 <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                                <th>Quiero compensar</th>
+                                <th><spam class="spam">Quiero compensar</spam></th>
                             </tr>
                         </table>
                     </div>
@@ -189,7 +189,7 @@
                             <tr>
 
                                 <th>
-                                    <p align="center">Recuerda que trabajamos con precios justos para la gestión y conservación de los recursos naturales</p>
+                                    <p class="spam" align="center">Recuerda que trabajamos con precios justos para la gestión y conservación de los recursos naturales</p>
                                 </th>
 
                             </tr>
@@ -243,6 +243,7 @@
             </div>
         </div>
     </div>
+
 
 
     <button onclick="location.href='http://localhost:62106/Auto/auto_pagina1'">Página 1</button>
