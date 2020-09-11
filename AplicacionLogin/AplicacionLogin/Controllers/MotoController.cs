@@ -30,8 +30,9 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult moto_pagina4()
+        public ActionResult moto_pagina4(float porsentaje)
         {
+            ViewBag.porcentaje = porsentaje;
             return View();
         }
 
