@@ -33,7 +33,8 @@ namespace AplicacionLogin.Controllers
         public ActionResult moto_pagina4(double porsentaje, double total)
         {
             CALCULOS ca = new CALCULOS();
-            double totalf = ca.Calculartotalf(porsentaje, total);
+            //double totalf = ca.Calculartotalf(porsentaje, total);
+            double totalf = ca.Calculartotalf(total, porsentaje);
 
             ViewBag.totalf = totalf;
 

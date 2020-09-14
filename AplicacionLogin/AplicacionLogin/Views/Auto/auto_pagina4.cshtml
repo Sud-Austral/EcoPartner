@@ -14,59 +14,61 @@
 </head>
 
 <body>
-<div class="container-fluid">
-    <div class="row" style="padding:1%">
-        <div class="col-md-3" style="background-color:transparent;">
-            <div class="row">
-                <div class="col-md-3" style="background-color:transparent;">
-                    <img style="padding:2%" src="~/Content/Img/Vector.png">
-                </div>
-                <div class="col-md-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
-                    <p style="font-size:15px;">
-                        CALCULADORA
-                        <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
-                    </p>
+    <div class="container-fluid">
+        <div class="row" style="padding:1%">
+            <div class="col-md-3" style="background-color:transparent;">
+                <div class="row">
+                    <div class="col-md-3" style="background-color:transparent;">
+                        <img style="padding:2%" src="~/Content/Img/Vector.png">
+                    </div>
+                    <div class="col-md-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
+                        <p style="font-size:15px;">
+                            CALCULADORA
+                            <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-                <div class="col-md-2" style="background-color:#117394;">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">1</p>
-                </div>
-                <div class="col-md-2" style="background-color:#02AFC1">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
-                </div>
-                <div class="col-md-2" style="background-color:#04C3D7">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
-                </div>
-                <div class="col-md-6" style="background-color:#0BEDBF">
-                    <div class="row">
-                        <div class="col-md-2" style="background-color:transparent;">
-                            <p id="num" style="padding-top:45%; padding-left:22%;">4</p>
-                        </div>
-                        <div class="col-md-3" style="background-color:transparent;  padding-top:5%;">
-                            <img src="~/Content/Img/Auto.png" alt="Auto" />
-                        </div>
-                        <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:1%; padding-left:10%;">
-                            <p style="font-size:12px;">
-                                <span style="font-size:30px; font-weight: bold;">Pago</span> <br>
-                                Compensa lo contaminado
-                            </p>
+            <div class="col-md-6" style="background-color:transparent;">
+                <div class="row" style="padding:2%;">
+                    <div class="col-md-2" style="background-color:#117394;">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">1</p>
+                    </div>
+                    <div class="col-md-2" style="background-color:#02AFC1">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+                    </div>
+                    <div class="col-md-2" style="background-color:#04C3D7">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
+                    </div>
+                    <div class="col-md-6" style="background-color:#0BEDBF">
+                        <div class="row">
+                            <div class="col-md-2" style="background-color:transparent;">
+                                <p id="num" style="padding-top:45%; padding-left:22%;">4</p>
+                            </div>
+                            <div class="col-md-3" style="background-color:transparent;  padding-top:5%;">
+                                <img src="~/Content/Img/Auto.png" alt="Auto" />
+                            </div>
+                            <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:1%; padding-left:10%;">
+                                <p style="font-size:12px;">
+                                    <span style="font-size:30px; font-weight: bold;">Pago</span> <br>
+                                    Compensa lo contaminado
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3" style="background-color:transparent;">
+            <div class="col-md-3" style="background-color:transparent;">
+            </div>
         </div>
     </div>
-</div>
     <button onclick="location.href='http://localhost:62106/Auto/auto_pagina1'">Página 1</button>
     <button onclick="location.href='http://localhost:62106/Auto/auto_pagina2'">Página 2</button>
     <button onclick="location.href='http://localhost:62106/Auto/auto_pagina3'">Página 3</button>
 
     <button onclick="location.href='http://localhost:62106/Moto/moto_pagina1'">Moto</button>
+
+    <input name="calculo" value="@ViewBag.totalf" />
 </body>
 </html>
 

@@ -87,14 +87,23 @@
                                     <th style="width:50%">
                                         <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbspKilómetros recorridos</span>
                                     </th>
-                                    <th><input class="w-100 col-md-12 col-sm-10    input2" type="text" name="kilometros" autocomplete="off" style="max-width: 500px !important;"></th>
+                                    <th><input class="w-100 col-md-12 col-sm-10    input2" 
+                                               
+                                               type="number"
+                                               min="1"
+                                               step="0.1"
+                                               name="kilometros" autocomplete="off" style="max-width: 500px !important;"></th>
 
                                 </tr>
                                 <tr>
                                     <th style="width:50%">
                                         <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPeso de la carga</span>
                                     </th>
-                                    <th><input type="text" name="toneladasCarga" class="w-100 col-md-12 col-sm-10    input2" autocomplete="off" style="max-width: 500px !important;" /></th>
+                                    <th><input 
+                                               type="number"
+                                               min="0"
+                                               step="0.001"
+                                               name="toneladasCarga" class="w-100 col-md-12 col-sm-10    input2" autocomplete="off" style="max-width: 500px !important;" /></th>
 
 
 

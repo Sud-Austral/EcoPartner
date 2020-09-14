@@ -90,17 +90,34 @@ namespace AplicacionLogin.Models
 
         public double Calculartotalf(double total, double porsentaje)
         {
-           
-                Convert.ToString(porsentaje);
-                double porciento = 0;
-                if (porsentaje == '1')
-                {
-                    porciento = 0.10;
-                }
-                double totalf = porciento * total;
-                return Math.Round(totalf);
-                
-            
+            /*
+            Convert.ToString(porsentaje);
+            double porciento = 0;
+            if (porsentaje == '1')
+            {
+                porciento = 0.10;
+            }
+            */
+
+            //double totalf = porciento * total;
+            //return Math.Round(totalf);
+            double factor = 0;
+            switch (porsentaje)
+            {
+                case 1:
+                    factor = 0.1;
+                    break;
+                case 2:
+                    factor = 0.5;
+                    break;
+                case 3:
+                    factor = 1;
+                    break;
+                default:
+                    break;
+            }
+            //return Math.Round(1.0);
+            return total * factor;
         }
 
         //CALCULOS AUTO

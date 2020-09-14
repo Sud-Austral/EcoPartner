@@ -30,8 +30,16 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult auto_pagina4()
+        
+
+        public ActionResult auto_pagina4(double porsentaje, double total)
         {
+            CALCULOS ca = new CALCULOS();
+            //double totalf = ca.Calculartotalf(porsentaje, total);
+            double totalf = ca.Calculartotalf(total, porsentaje);
+
+            ViewBag.totalf = totalf;
+
             return View();
         }
 

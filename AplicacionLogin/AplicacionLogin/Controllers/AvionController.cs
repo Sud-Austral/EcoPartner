@@ -37,8 +37,20 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
+        /*
         public ActionResult Avion_pagina4()
         {
+            return View();
+        }
+        */
+        public ActionResult Avion_pagina4(double porsentaje, double total)
+        {
+            CALCULOS ca = new CALCULOS();
+            //double totalf = ca.Calculartotalf(porsentaje, total);
+            double totalf = ca.Calculartotalf(total, porsentaje);
+
+            ViewBag.totalf = totalf;
+
             return View();
         }
 
