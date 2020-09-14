@@ -42,6 +42,11 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
+        public ActionResult Avion_pagina4_2()
+        {
+            return View();
+        }
+
         public ActionResult BuscarAeropuertos(string inicio, string destino, int recorrido, int pasajeros, int tipoViaje)
         {
             AEROPUERTO p1 = new AEROPUERTO();
