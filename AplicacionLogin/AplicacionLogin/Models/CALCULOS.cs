@@ -87,6 +87,22 @@ namespace AplicacionLogin.Models
             return Math.Round(CO2 * 80, 2);
         }
 
+
+        public double Calculartotalf(double total, double porsentaje)
+        {
+           
+                Convert.ToString(porsentaje);
+                double porciento = 0;
+                if (porsentaje == '1')
+                {
+                    porciento = 0.10;
+                }
+                double totalf = porciento * total;
+                return Math.Round(totalf);
+                
+            
+        }
+
         //CALCULOS AUTO
 
         public double CalcularLitrosAuto(string kilometros, string tipoAuto)
