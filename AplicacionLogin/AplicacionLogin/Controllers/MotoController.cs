@@ -41,6 +41,18 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
+        public ActionResult moto_pagina4_1()
+        {
+
+            return View();
+        }
+
+        public ActionResult moto_pagina4_2()
+        {
+
+            return View();
+        }
+
         public ActionResult CalculosMoto(string kilometros, string cilindrada)
         {
             Double num;
