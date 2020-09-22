@@ -1,0 +1,259 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>Prueba de Bootstrap 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" style="padding:1%">
+            <div class="col-md-3" style="background-color:transparent;">
+                <div class="row">
+                    <div class="col-md-3" style="background-color:transparent;">
+                        <img style="padding:2%" src="~/Content/Img/Vector.png">
+                    </div>
+                    <div class="col-md-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
+                        <p style="font-size:15px;">
+                            CALCULADORA
+                            <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="background-color:transparent;">
+                <div class="row" style="padding:2%;">
+                    <div class="col-md-2" style="background-color:#117394;">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">1</p>
+                    </div>
+                    <div class="col-md-2" style="background-color:#02AFC1">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+                    </div>
+                    <div class="col-md-2" style="background-color:#04C3D7">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
+                    </div>
+                    <div class="col-md-6" style="background-color:#0BEDBF">
+                        <div class="row">
+                            <div class="col-md-2" style="background-color:transparent;">
+                                <p id="num" style="padding-top:45%; padding-left:22%;">4</p>
+                            </div>
+                            <div class="col-md-3" style="background-color:transparent;">
+                                <img src="~/Content/Img/Vector2.png" alt="Avion" />
+                            </div>
+                            <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:1%; padding-left:10%;">
+                                <p style="font-size:12px;">
+                                    <span style="font-size:30px; font-weight: bold;">Pago</span> <br>
+                                    Compensa lo contaminado
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" style="background-color:transparent;">
+            </div>
+        </div>
+    </div>
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////-->
+
+    <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
+        <div class="col-sm-1" style="background-color:transparent;">
+
+        </div>
+        <div class="col-sm-10" style="background-color:transparent; ">
+            <div class="row" style="padding:2%;">
+
+
+                <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
+
+
+                </div>
+
+                <div class="col-sm-2" style="background-color: #ffff; color: #117394">
+                    <div><span>&nbsp&nbsp</span></div>
+                    <span style="font-weight: bold;">Producto</span>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <span>Carbono x @ViewBag.toneladas</span>
+                    <div><span>&nbsp&nbsp</span></div>
+
+                </div>
+                <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
+                    <div><span>&nbsp&nbsp</span></div>
+                    <span style="font-weight: bold">Producto</span>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <span>Carbono x @ViewBag.toneladas</span>
+                    <div><span>&nbsp&nbsp</span></div>
+
+                </div>
+                <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
+                    <div><span>&nbsp&nbsp</span></div>
+                    <span style="font-weight: bold">Producto</span>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <span>Carbono x @ViewBag.toneladas</span>
+                    <div><span>&nbsp&nbsp</span></div>
+
+                </div>
+                <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
+
+
+
+                </div>
+                <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
+                    <div><span>&nbsp&nbsp</span></div>
+                    <span style="font-weight: bold">Subtotal</span>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <span>$ @ViewBag.total</span>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <input style="margin-top:2%; " class="calcular4 boton-color" name="actualizar" type="submit" value="Actualizar Carrito">
+                    <div><span>&nbsp&nbsp</span></div>
+                    <div><span style="font-weight: bold; margin-left:-30%">Total del carrito</span></div>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ @ViewBag.total</span></div>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ @ViewBag.total</span></div>
+                    <div><span>&nbsp&nbsp</span></div>
+
+                    <form action="/Moto/moto_pagina4_paypal" method="post">
+                        <input type="hidden" name="total" value="@ViewBag.total" />
+                        <input type="hidden" name="ton" value="@ViewBag.toneladas" />
+                        <input style="margin-top:2%; width:150px " class="calcular3 boton-color" name="actualizar" type="submit" value="Finalizar Compra">
+                    </form>
+
+                    <div id="smart-button-container" style="margin-top:-80%; margin-left:-30%">
+                        <div style="text-align: center"><label for="description"> </label><input type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
+                        <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+                        <div style="text-align: center"><label for="amount"> </label><input name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
+                        <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+                        <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
+                        <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+                        <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <button onclick="location.href='http://localhost:62106/Avion/Avion_pagina2'">Página 2</button>
+    <button onclick="location.href='http://localhost:62106/Avion/Avion_pagina3'">Página 3</button>
+    <button onclick="location.href='http://localhost:62106/Avion/Avion_pagina1'">Página 1</button>
+
+    <button onclick="location.href='http://localhost:62106/Auto/Auto_pagina1'">Auto</button>
+    <input name="calculo" value="@ViewBag.totalf" />
+</body>
+</html>
+
+<script src="https://www.paypal.com/sdk/js?client-id=ARkGHnn3-mtjesDGtCGY5NGv6f6fsIiLfMaw6P2OTRDPNnjNdTmBpj5YKAWP36SAkeCKiNfpVlSi2U--&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+    function initPayPalButton() {
+        var description = document.querySelector('#smart-button-container #description');
+        var amount = document.querySelector('#smart-button-container #amount');
+        var descriptionError = document.querySelector('#smart-button-container #descriptionError');
+        var priceError = document.querySelector('#smart-button-container #priceLabelError');
+        var invoiceid = document.querySelector('#smart-button-container #invoiceid');
+        var invoiceidError = document.querySelector('#smart-button-container #invoiceidError');
+        var invoiceidDiv = document.querySelector('#smart-button-container #invoiceidDiv');
+
+        var elArr = [description, amount];
+
+        if (invoiceidDiv.firstChild.innerHTML.length > 1) {
+            invoiceidDiv.style.display = "block";
+        }
+
+        var purchase_units = [];
+        purchase_units[0] = {};
+        purchase_units[0].amount = {};
+
+        function validate(event) {
+            //alert(event.value.length >= 0);
+            return event.value.length > 0;
+        }
+
+        paypal.Buttons({
+            style: {
+                color: 'gold',
+                shape: 'rect',
+                label: 'paypal',
+                layout: 'vertical',
+
+            },
+
+            onInit: function (data, actions) {
+                actions.disable();
+                //actions.enable();
+
+                if (invoiceidDiv.style.display === "block") {
+                    elArr.push(invoiceid);
+                }
+
+                elArr.forEach(function (item) {
+                    item.addEventListener('keyup', function (event) {
+                        var result = elArr.every(validate);
+                        if (result) {
+                            actions.enable();
+                        } else {
+                            actions.disable();
+                        }
+                    });
+                });
+            },
+
+            onClick: function () {
+                if (description.value.length < 1) {
+                    descriptionError.style.visibility = "visible";
+                } else {
+                    descriptionError.style.visibility = "hidden";
+                }
+
+                if (amount.value.length < 1) {
+                    priceError.style.visibility = "visible";
+                } else {
+                    priceError.style.visibility = "hidden";
+                }
+
+                if (invoiceid.value.length < 1 && invoiceidDiv.style.display === "block") {
+                    invoiceidError.style.visibility = "visible";
+                } else {
+                    invoiceidError.style.visibility = "hidden";
+                }
+
+                purchase_units[0].description = description.value;
+                purchase_units[0].amount.value = amount.value;
+
+                if (invoiceid.value !== '') {
+                    purchase_units[0].invoice_id = invoiceid.value;
+                }
+            },
+
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: purchase_units,
+                });
+            },
+
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            },
+
+            onError: function (err) {
+                console.log(err);
+            }
+        }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+</script>

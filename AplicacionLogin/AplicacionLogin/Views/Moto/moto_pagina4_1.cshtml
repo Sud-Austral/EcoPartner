@@ -52,7 +52,7 @@
                                 <p style="font-size:12px;">
                                     <span style="font-size:30px; font-weight: bold;">Pago</span> <br>
                                     Compensa lo contaminado
-                                </p>
+                                </p>                                        
                             </div>
                         </div>
                     </div>
@@ -64,53 +64,65 @@
     </div>
 
     <!-- ///////////////////////////////////////////////////////////////////////////////////-->
+    <form name="calculos" method="post" action="/Moto/moto_pagina4_2">
+        <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
+            <div class="col-sm-1" style="background-color:transparent;">
 
-    <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
-        <div class="col-sm-1" style="background-color:transparent;">
+            </div>
+            <div class="col-sm-10" style="background-color:transparent; ">
+                <div class="row" style="padding:2%;">
 
-        </div>
-        <div class="col-sm-10" style="background-color:transparent; ">
-            <div class="row" style="padding:2%;">
+                    <div class="col-sm-12" style=" background-color: #ffff; border-radius: 1em; color:#117394">
 
-                <div class="col-sm-12" style=" background-color: #ffff; border-radius: 1em; color:#117394">
+                        <table style="width:100%; margin-top:2%;" border="1">
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp&nbspProducto</th>
+                                <th><spam style="margin-left:80%">&nbsp&nbsp&nbsp&nbspSubtotal</spam></th>
 
-                    <table style="width:100%; margin-top:2%; border-radius:1em; border-color:#117394; border-width:1px;"  >
-                        <tr>
-                            <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre</th>
+                            </tr>
+                            <tr>
+                                <td><spam>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCarbono x @ViewBag.toneladas</spam></td>
+                                <td><spam style="margin-left:80%">&nbsp&nbsp&nbsp&nbsp @ViewBag.total $</spam></td>
 
-                        </tr>
-                        <tr>
-                            <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspApellidos</th>
+                            </tr>
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSubtotal</th>
+                                <td><spam style="margin-left:80%">&nbsp&nbsp&nbsp&nbsp @ViewBag.total $</spam></td>
 
-                        </tr>
-                        <tr>
-                            <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspnombre de la empresa</th>
+                            </tr>
+                            <tr>
+                                <th> <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTotal</span></th>
+                                <th><spam style="margin-left:80%">&nbsp&nbsp&nbsp&nbsp @ViewBag.total $</spam></th>
+                            </tr>
 
-                        </tr>
-                        <tr>
-                            <th> <span>&nbsp</span></th>
+                        </table>
+                        <div>
 
-                        </tr>
-
-                    </table>
+                            <input type="hidden" name="toneladas" value=" @ViewBag.toneladas" />
+                            <input type="hidden" name="total" value="@ViewBag.total" />
+                            <input onclick="location.href='http://localhost:62106/Moto/moto_pagina4_2'" style="margin-top:2%; margin-left:90%" class="calcular3 boton-color" name="actualizar" type="submit" value="ADELANTE">
+                        </div>
+                        <div>
+                            <samp>&nbsp</samp>
+                        </div>
+                    </div>
 
                 </div>
-                
+            </div>
+            <div class="col-sm-1" style="background-color:transparent;">
+
             </div>
         </div>
-        <div class="col-sm-1" style="background-color:transparent;">
-
-        </div>
-    </div>
 
 
 
-    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina1'">Página 1</button>
-    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina2'">Página 2</button>
-    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina3'">Página 3</button>
+        <button onclick="location.href='http://localhost:62106/Moto/moto_pagina1'">Página 1</button>
+        <button onclick="location.href='http://localhost:62106/Moto/moto_pagina2'">Página 2</button>
+        <button onclick="location.href='http://localhost:62106/Moto/moto_pagina3'">Página 3</button>
 
-    <button onclick="location.href='http://localhost:62106/camion/camion_pagina1'">Camion</button>
-    <input name="calculo" value="@ViewBag.totalf" />
+        <button onclick="location.href='http://localhost:62106/camion/camion_pagina1'">Camion</button>
+        <input name="calculo" value="@ViewBag.totalf" />
+    </form>
 </body>
 </html>
 

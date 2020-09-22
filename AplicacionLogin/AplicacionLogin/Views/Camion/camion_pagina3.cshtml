@@ -117,7 +117,7 @@
         </div>
     </div>
     <!-///////////////////////////////////////////////////////////////////////////->
-    <form name="calculos" method="post" action="/Camion/Camion_pagina4">
+    <form name="calculos" method="post" action="/Camion/camion_pagina4">
         <div class="container-fluid">
             <div class="row" style="margin-top: -20px; background-color:#04C3D7">
 
@@ -227,7 +227,14 @@
 
                                     <tr>
                                         <th>&nbsp&nbsp&nbsp</th>
-                                        <th><input class="calcular2 boton-color" name="actualizar" type="submit" value="QUIERO COMPENSAR"></th>
+                                        <th>
+                                            <input name="total" type="hidden" value="@ViewBag.total" />
+                                            <input name="ton" type="hidden" value="@ViewBag.toneladas" />
+                                            
+                                            <input name="nombre" type="hidden" value="@ViewBag.nombre" />
+                                            <input name="correo" type="hidden" value="@ViewBag.correo" />
+                                            <input class="calcular2 boton-color" name="actualizar" type="submit" value="QUIERO COMPENSAR">
+                                        </th>
 
                                     </tr>
 

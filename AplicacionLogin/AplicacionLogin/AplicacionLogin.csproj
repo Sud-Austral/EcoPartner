@@ -397,6 +397,11 @@
     <Content Include="Views\Camion\camion_pagina4.cshtml" />
     <Content Include="Views\Moto\moto_pagina4_1.cshtml" />
     <Content Include="Views\Moto\moto_pagina4_2.cshtml" />
+    <Content Include="Views\Moto\moto_pagina4_paypal.cshtml" />
+    <Content Include="Views\Auto\auto_pagina4_2.cshtml" />
+    <Content Include="Views\Camion\camion_pagina4_1.cshtml" />
+    <Content Include="Views\Auto\auto_pagina4_1.cshtml" />
+    <Content Include="Views\Avion\Avion_pagina4_1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

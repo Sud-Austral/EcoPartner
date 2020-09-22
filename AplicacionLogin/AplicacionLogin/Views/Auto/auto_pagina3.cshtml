@@ -152,6 +152,7 @@
                                             <input type="radio" name="porsentaje" value="3" id="pregunta3">
                                             <label for="pregunta3">&nbsp100%&nbsp</label>
                                             <input name="total" type="hidden" value="@ViewBag.total" />
+                                          
 
                                         </div>
                                     </th>
@@ -229,7 +230,12 @@
 
                                     <tr>
                                         <th>&nbsp&nbsp&nbsp</th>
-                                        <th><input class="calcular2 boton-color" name="actualizar" type="submit" value="QUIERO COMPENSAR"></th>
+                                        <th>
+                                            <input name="ton" type="hidden" value="@ViewBag.toneladas" />
+                                            <input name="nombre" type="hidden" value="@ViewBag.nombre">
+                                            <input name="correo" type="hidden" value="@ViewBag.correo">
+                                            <input class="calcular2 boton-color" name="actualizar" type="submit" value="QUIERO COMPENSAR">
+                                        </th>
 
                                     </tr>
 

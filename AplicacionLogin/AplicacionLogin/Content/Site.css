@@ -138,6 +138,15 @@ body {
     border: 3px solid #fff;
 }
 
+.calcular4 {
+    color: #808080;
+    background: #fff;
+    font-size: 18px;
+    width: 150px;
+    border-radius: 3em;
+    border: 3px solid #808080;
+}
+
 #pregunta input {
     display: none;
     background-color: transparent;

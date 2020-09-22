@@ -62,12 +62,180 @@
             </div>
         </div>
     </div>
+
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////-->
+    <form name="calculos" method="post" action="/Camion/camion_pagina4_1">
+        <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
+            <div class="col-sm-1" style="background-color:transparent;">
+
+            </div>
+            <div class="col-sm-10" style="background-color:transparent; ">
+                <div class="row" style="padding:2%;">
+
+                    <div class="col-sm-3" style=" background-color: #ffff; border-top-left-radius: 1em; color:#117394">
+
+                        <table style="width:100%; margin-top:10%">
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre</th>
+
+                            </tr>
+                            <tr>
+                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspApellidos</th>
+
+                            </tr>
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspnombre de la empresa</th>
+
+                            </tr>
+                            <tr>
+                                <th> <span>&nbsp</span></th>
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    <div class="col-sm-3" style="background-color:#ffff; color:#117394">
+                        <table style="width:100%; margin-top:8%">
+                            <tr>
+                                <th> <input type="text" name="nombre" value="@ViewBag.nombre" class="    input3" autocomplete="off" /></th>
+
+                            </tr>
+                            <tr>
+                                <th> <input type="text" name="apellido" class="    input3" autocomplete="off" /></th>
+
+                            </tr>
+                            <tr>
+                                <th> <input type="text" name="empresa" class="    input3" autocomplete="off" /></th>
+
+                            </tr>
+                            <tr>
+                                <th> <span>&nbsp</span></th>
+
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div class="col-sm-3" style="background-color:#ffff; color:#117394">
+
+                        <table style="width:100%; margin-top:10%">
+                            <tr>
+                                <th> &nbsp&nbspPais/Region</th>
+
+                            </tr>
+                            <tr>
+                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTelefono</th>
+
+                            </tr>
+                            <tr>
+                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</th>
+
+                            </tr>
+                            <tr>
+                                <th> <span>&nbsp</span></th>
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    <div class="col-sm-3" style="background-color: #ffff; border-top-right-radius: 1em; color:#117394">
+
+                        <table style="width:100%; margin-top:8%">
+                            <tr>
+                                <th> <input type="text" name="pais" style="margin-left:-65%" class="input3" autocomplete="off" /></th>
+
+                            </tr>
+                            <tr>
+                                <th> <input type="text" name="region" style="margin-left:-65%" class="input3" autocomplete="off" /></th>
+
+                            </tr>
+                            <tr>
+                                <th> <input type="text" name="e-mail" value="@ViewBag.correo" style="margin-left:-65%" class="input3" autocomplete="off" /></th>
+
+                            </tr>
+                            <tr>
+                                <th> <span>&nbsp</span></th>
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1" style="background-color:transparent;">
+
+            </div>
+        </div>
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////-->
+
+        <div class="row w-100" style=" margin-top: -3.5%; background-color: #0BEDBF; ">
+            <div class="col-sm-1" style="background-color:transparent;">
+
+            </div>
+            <div class="col-sm-10" style=" background-color: transparent;">
+                <div class="row" style="padding:2%;">
+
+                    <div class="col-sm-5" style=" background-color: #ffff; color:#117394">
+
+
+
+                    </div>
+                    <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
+
+                        <table>
+                            <tr>
+                                <th>
+                                    <span>&nbsp&nbsp</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input class="calcular3 boton-color" name="actualizar" type="submit" value="ADELANTE">
+                                    <input type="hidden" name="calculo" value="@ViewBag.totalf" />
+                                    <input type="hidden" name="ton" value="@ViewBag.toneladas" />
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>&nbsp&nbsp</span>
+                                </th>
+                            </tr>
+
+
+                        </table>
+
+
+
+                    </div>
+                    <div class="col-sm-5" style=" background-color: #ffff; color:#117394">
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-1" style="background-color:transparent;">
+
+            </div>
+        </div>
+
+
+    </form>
+
     <button onclick="location.href='http://localhost:62106/camion/camion_pagina1'">Página 1</button>
     <button onclick="location.href='http://localhost:62106/camion/camion_pagina2'">Página 2</button>
     <button onclick="location.href='http://localhost:62106/camion/camion_pagina3'">Página 3</button>
 
     <button onclick="location.href='http://localhost:62106/Avion/Avion_pagina1'">Avion</button>
     <input name="calculo" value="@ViewBag.totalf" />
+    <input type="hidden" name="toneladas" value="@ViewBag.toneladas" />
 </body>
 </html>
 

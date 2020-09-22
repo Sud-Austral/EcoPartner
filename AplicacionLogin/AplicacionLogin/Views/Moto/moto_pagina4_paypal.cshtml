@@ -3,7 +3,7 @@
     Layout = null;
 }
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Prueba de Bootstrap 4</title>
@@ -62,9 +62,7 @@
             </div>
         </div>
     </div>
-
-    <!-- ///////////////////////////////////////////////////////////////////////////////////-->
-
+    <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
     <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
         <div class="col-sm-1" style="background-color:transparent;">
 
@@ -72,91 +70,29 @@
         <div class="col-sm-10" style="background-color:transparent; ">
             <div class="row" style="padding:2%;">
 
-                
-                    <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
 
-
-                    </div>
-
-                    <div class="col-sm-2" style="background-color: #ffff; color: #117394">
-                        <div><span>&nbsp&nbsp</span></div>
-                        <span style="font-weight: bold;">Producto</span>
-                        <div><span>&nbsp&nbsp</span></div>
-                        <span>Carbono x @ViewBag.toneladas</span>
-                        <div><span>&nbsp&nbsp</span></div>
-
-                    </div>
-                    <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
-                        <div><span>&nbsp&nbsp</span></div>
-                        <span style="font-weight: bold">Producto</span>
-                        <div><span>&nbsp&nbsp</span></div>
-                        <span>Carbono x @ViewBag.toneladas</span>
-                        <div><span>&nbsp&nbsp</span></div>
-
-                    </div>
-                    <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
-                        <div><span>&nbsp&nbsp</span></div>
-                        <span style="font-weight: bold">Producto</span>
-                        <div><span>&nbsp&nbsp</span></div>
-                        <span>Carbono x @ViewBag.toneladas</span>
-                        <div><span>&nbsp&nbsp</span></div>
-
-                    </div>
-                    <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
+                <div id="smart-button-container">
+                    <div style="text-align: center"><label for="description"> </label><input type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
+                    <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+                    <div style="text-align: center"><label for="amount"> </label><input name="amountInput" type="number" id="amount" value="@ViewBag.total"><span> USD</span></div>
+                    <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+                    <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
+                    <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+                    <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+                </div>
 
 
 
-                    </div>
-                    <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
-                        <div><span>&nbsp&nbsp</span></div>
-                        <span style="font-weight: bold">Subtotal</span>
-                        <div><span>&nbsp&nbsp</span></div>
-                        <span>$ @ViewBag.total</span>
-                        <div><span>&nbsp&nbsp</span></div>
-                        <input style="margin-top:2%; " class="calcular4 boton-color" name="actualizar" type="submit" value="Actualizar Carrito">
-                        <div><span>&nbsp&nbsp</span></div>
-                        <div><span style="font-weight: bold; margin-left:-30%">Total del carrito</span></div>
-                        <div><span>&nbsp&nbsp</span></div>
-                        <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ @ViewBag.total</span></div>
-                        <div><span>&nbsp&nbsp</span></div>
-                        <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ @ViewBag.total</span></div>
-                        <div><span>&nbsp&nbsp</span></div>
-
-                        <form action="/Moto/moto_pagina4_paypal" method="post">
-                            <input type="hidden" name="total" value="@ViewBag.total" />
-                            <input type="hidden" name="ton" value="@ViewBag.toneladas" />
-                            <input style="margin-top:2%; width:150px " class="calcular3 boton-color" name="actualizar" type="submit" value="Finalizar Compra">
-                        </form>
-
-                        <div id="smart-button-container" style="margin-top:-80%; margin-left:-30%">
-                            <div style="text-align: center"><label for="description"> </label><input type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
-                            <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
-                            <div style="text-align: center"><label for="amount"> </label><input name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
-                            <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
-                            <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
-                            <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
-                            <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
-                        </div>
-
-                    </div>
-                
-                
 
             </div>
         </div>
+        <div class="col-sm-1" style="background-color:transparent;">
+
+        </div>
     </div>
 
-    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina1'">Página 1</button>
-    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina2'">Página 2</button>
-    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina3'">Página 3</button>
-    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina4'">Página 4</button>
-    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina4_1'">Página 4_1</button>
 
-    <button onclick="location.href='http://localhost:62106/camion/camion_pagina1'">Camion</button>
-    
-</body>
-</html>
-
+   
     <script src="https://www.paypal.com/sdk/js?client-id=ARkGHnn3-mtjesDGtCGY5NGv6f6fsIiLfMaw6P2OTRDPNnjNdTmBpj5YKAWP36SAkeCKiNfpVlSi2U--&currency=USD" data-sdk-integration-source="button-factory"></script>
     <script>
         function initPayPalButton() {
@@ -258,4 +194,3 @@
         }
         initPayPalButton();
     </script>
-

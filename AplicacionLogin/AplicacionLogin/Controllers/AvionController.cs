@@ -27,34 +27,38 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult Avion_pagina3(double recorrido, double toneladas, double total)
+        public ActionResult Avion_pagina3(double recorrido, double toneladas, double total, string nombre, string correo)
         {
 
             ViewBag.recorrido = recorrido;
             ViewBag.toneladas = toneladas;
             ViewBag.total = total;
+            ViewBag.nombre = nombre;
+            ViewBag.correo = correo;
 
             return View();
         }
 
-        /*
-        public ActionResult Avion_pagina4()
-        {
-            return View();
-        }
-        */
-        public ActionResult Avion_pagina4(double porsentaje, double total)
+        public ActionResult Avion_pagina4(double porsentaje, double total, double ton, string nombre, string correo)
         {
             CALCULOS ca = new CALCULOS();
             //double totalf = ca.Calculartotalf(porsentaje, total);
             double totalf = ca.Calculartotalf(total, porsentaje);
-
+            ViewBag.toneladas = ton;
             ViewBag.totalf = totalf;
-
+            ViewBag.nombre = nombre;
+            ViewBag.correo = correo;
             return View();
         }
 
-        public ActionResult BuscarAeropuertos(string inicio, string destino, int recorrido, int pasajeros, int tipoViaje)
+        public ActionResult Avion_pagina4_1(double calculo, double ton)
+        {
+            ViewBag.total = calculo;
+            ViewBag.toneladas = ton;
+            return View();
+        }
+
+        public ActionResult BuscarAeropuertos(string inicio, string destino, int recorrido, int pasajeros, int tipoViaje, string nombre, string correo)
         {
             AEROPUERTO p1 = new AEROPUERTO();
             AEROPUERTO p2 = new AEROPUERTO();
@@ -95,6 +99,8 @@ namespace AplicacionLogin.Controllers
             ViewBag.distancia = Math.Round(distancia, 2);
             ViewBag.carbono = carbono2;
             ViewBag.total = total;
+            ViewBag.nombre = nombre;
+            ViewBag.correo = correo;
 
             return View("Avion_pagina2");
         }

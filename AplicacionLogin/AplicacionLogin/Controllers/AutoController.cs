@@ -20,30 +20,41 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult auto_pagina3(double recorrido, double toneladas, double total)
+        public ActionResult auto_pagina3(double recorrido, double toneladas, double total, string nombre, string correo)
         {
 
             ViewBag.recorrido = recorrido;
             ViewBag.toneladas = toneladas;
             ViewBag.total = total;
+            ViewBag.nombre = nombre;
+            ViewBag.correo = correo;
 
             return View();
         }
 
-        
 
-        public ActionResult auto_pagina4(double porsentaje, double total)
+
+        public ActionResult auto_pagina4(double porsentaje, double total, double ton, string nombre, string correo)
         {
             CALCULOS ca = new CALCULOS();
             //double totalf = ca.Calculartotalf(porsentaje, total);
             double totalf = ca.Calculartotalf(total, porsentaje);
-
+            ViewBag.toneladas = ton;
             ViewBag.totalf = totalf;
+            ViewBag.nombre = nombre;
+            ViewBag.correo = correo;
 
             return View();
         }
 
-        public ActionResult CalculosAuto(string kilometros, string tipoAuto, string tipoCombustible)
+        public ActionResult auto_pagina4_1(double calculo, double ton)
+        {
+            ViewBag.total = calculo;
+            ViewBag.toneladas = ton;
+            return View();
+        }
+
+        public ActionResult CalculosAuto(string kilometros, string tipoAuto, string tipoCombustible, string nombre, string correo )
         {
             Double num;
             bool isNum = Double.TryParse(kilometros, out num);
@@ -60,6 +71,8 @@ namespace AplicacionLogin.Controllers
                     ViewBag.litros = litros;
                     ViewBag.carbono = carbono;
                     ViewBag.total = total;
+                    ViewBag.nombre = nombre;
+                    ViewBag.correo = correo;
                 }
             }
 
