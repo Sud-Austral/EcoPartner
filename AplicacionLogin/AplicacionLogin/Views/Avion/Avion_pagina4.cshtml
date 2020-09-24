@@ -98,11 +98,11 @@
                     <div class="col-sm-3" style="background-color:#0BEDBF; color:#117394">
                         <table style="width:100%; margin-top:8%">
                             <tr>
-                                <th> <input type="text" required name="nombre" value="@ViewBag.nombre" class="    input3" autocomplete="off" /></th>
+                                <th> <input type="text" required name="nombre" value="@ViewBag.nombre" class="    input3" autocomplete="off" readonly /></th>
 
                             </tr>
                             <tr>
-                                <th> <input type="text"  name="telefono" class=" input3" autocomplete="off" /></th>
+                                <th> <input type="text"  name="telefono" class=" input3" autocomplete="off"  onkeypress="return validaNumericos(event)" required /></th>
 
                             </tr>
                             <tr>
@@ -141,12 +141,12 @@
 
                         <table style="width:100%; margin-top:8%">
                             <tr>
-                                <th> <input type="text"  name="pais" style="margin-left:-65%" class="input3" autocomplete="off" /></th>
+                                <th> <input type="text"  name="pais" style="margin-left:-65%" class="input3" autocomplete="off" required /></th>
 
                             </tr>
 
                             <tr>
-                                <th> <input type="text"  name="e-mail" value="@ViewBag.correo" style="margin-left:-65%" class="input3" autocomplete="off" /></th>
+                                <th> <input type="text"  name="e-mail" value="@ViewBag.correo" style="margin-left:-65%" class="input3" autocomplete="off" readonly /></th>
 
                             </tr>
                             <tr>
@@ -188,7 +188,7 @@
                             </tr>
                             <tr>
                                 <th>
-                                    <input onclick="location.href='http://localhost:62106/Moto/moto_pagina4_1'" class="calcular3 boton-color" name="actualizar" type="submit" value="ADELANTE">
+                                    <input class="calcular3 boton-color" name="actualizar" type="submit" value="ADELANTE">
                                     <input type="hidden" name="calculo" value="@ViewBag.totalf" />
                                     <input type="hidden" name="ton" value="@ViewBag.toneladas" />
 
@@ -227,3 +227,11 @@
 </html>
 
 
+<script>
+    function validaNumericos(event) {
+        if (event.charCode >= 48 && event.charCode <= 57) {
+            return true;
+        }
+        return false;
+    }
+</script>
