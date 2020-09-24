@@ -3,65 +3,55 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!--
-<!doctype html>
-<html>
-<head>
-    <title>Prueba de Bootstrap 4</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
-</head>
-
-<body>
--->
-    <div class="row" style="padding:1%">
-        <div class="col-sm-3" style="background-color:transparent;">
-            <div class="row">
-                <div class="col-sm-3" style="background-color:transparent;">
-                    <img style="padding:2%" src="~/Content/Img/Vector.png">
-                </div>
-                <div class="col-sm-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
-                    <p style="font-size:15px;">
-                        CALCULADORA
-                        <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
-                    </p>
-                </div>
+<div class="container-fluid">
+<div class="row" style="padding:1%">
+    <div class="col-sm-3" style="background-color:transparent;">
+        <div class="row">
+            <div class="col-sm-3" style="background-color:transparent;">
+                <img style="padding:2%" src="~/Content/Img/Vector.png">
             </div>
-        </div>
-        <div class="col-sm-6" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-                <div class="col-sm-6" style="background-color:#117394;">
-                    <div class="row">
-                        <div class="col-sm-2" style="background-color:transparent;">
-                            <p id="num" style="padding-top:45%; padding-left:22%;">1</p>
-                        </div>
-                        <div class="col-sm-3" style="background-color:transparent;  padding-top:5%;">
-                            <img src="~/Content/Img/Auto.png" alt="Auto" />
-                        </div>
-                        <div class="col-sm-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
-                            <p style="font-size:12px;">
-                                <span style="font-size: 30px; font-weight: bold;">Resultado</span>
-                                El uso de tu auto genera
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2" style="background-color:#02AFC1;">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
-                </div>
-                <div class="col-sm-2" style="background-color:#04C3D7">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
-                </div>
-                <div class="col-sm-2" style="background-color:#0BEDBF">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
-                </div>
+            <div class="col-sm-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
+                <p style="font-size:15px;">
+                    CALCULADORA
+                    <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                </p>
             </div>
-        </div>
-        <div class="col-sm-3" style="background-color:transparent;">
         </div>
     </div>
+    <div class="col-sm-6" style="background-color:transparent;">
+        <div class="row" style="padding:2%;">
+            <div class="col-sm-6" style="background-color:#117394;">
+                <div class="row">
+                    <div class="col-sm-2" style="background-color:transparent;">
+                        <p id="num" style="padding-top:45%; padding-left:22%;">1</p>
+                    </div>
+                    <div class="col-sm-3" style="background-color:transparent;  padding-top:5%;">
+                        <img src="~/Content/Img/Auto.png" alt="Auto" />
+                    </div>
+                    <div class="col-sm-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
+                        <p>
+                            Cuentanos sobre tu
+                            <span style="font-size:20px; font-weight: bold;">Automóvil</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2" style="background-color:#02AFC1;">
+                <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+            </div>
+            <div class="col-sm-2" style="background-color:#04C3D7">
+                <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
+            </div>
+            <div class="col-sm-2" style="background-color:#0BEDBF">
+                <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3" style="background-color:transparent;">
+    </div>
+</div>
+    </div>
+
 <!--/////////////////////////////////////////////////////////////////////////-->
 <div class="container-fluid">
     <form action="/Auto/CalculosAuto" method="post">
@@ -86,11 +76,15 @@
                                     <th style="width:50%">
                                         <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbspKilómetros recorridos&nbsp&nbsp</span>
                                     </th>
-                                    <th><input name="kilometros" class="w-100 col-md-12 col-sm-10   input2" 
-                                               type="number"
+                                    <th>
+                                        <input name="kilometros" class="w-100 col-md-12 col-sm-10   input2" onkeypress="return validaNumericos(event)"
+                                               type="text"
                                                min="1"
+                                               placeholder="Kilómetros"
                                                step="0.1"
-                                               autocomplete="off" /></th>
+                                               autocomplete="off"
+                                               required />
+                                    </th>
 
                                 </tr>
                                 <tr>
@@ -165,16 +159,16 @@
 
                                 <tr>
                                     <th style="width:43%">
-                                        <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre&nbsp&nbsp&nbsp</span>
+                                        <span class="spam">Nombre Completo</span>
                                     </th>
-                                    <th><input type="text" name="nombre" class="w-100 col-md-12 col-sm-10    input" /></th>
+                                    <th><input type="text" name="nombre" class="w-100 col-md-12 col-sm-10    input" required /></th>
 
                                 </tr>
                                 <tr>
                                     <th style="width:18%">
                                         <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</span>
                                     </th>
-                                    <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-10    input" /></th>
+                                    <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-10    input" required /></th>
 
                                     <td>
                                     </td>
@@ -217,11 +211,11 @@
                                         <SAMP>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</SAMP>
                                     </th>
                                     <th>
-                                        
 
-                                            <input type="submit" name="calcular" class="calcular" value="Calcular" >
-                                        
-                                     </th>
+
+                                        <input type="submit" name="calcular" class="calcular" value="Calcular">
+
+                                    </th>
                                 </tr>
                             </table>
                         </div>
@@ -237,13 +231,11 @@
     </form>
 </div>
 
-<button onclick="location.href='http://localhost:62106/Auto/auto_pagina2'">Página 2</button>
-<button onclick="location.href='http://localhost:62106/Auto/auto_pagina3'">Página 3</button>
-<button onclick="location.href='http://localhost:62106/Auto/auto_pagina4'">Página 4</button>
-
-
-
-<!--
-</body>
-</html>
--->
+<script>
+    function validaNumericos(event) {
+        if (event.charCode >= 48 && event.charCode <= 57) {
+            return true;
+        }
+        return false;
+    }
+</script>

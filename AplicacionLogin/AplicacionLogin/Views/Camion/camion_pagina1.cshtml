@@ -87,22 +87,30 @@
                                     <th style="width:50%">
                                         <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbspKilómetros recorridos</span>
                                     </th>
-                                    <th><input class="w-100 col-md-12 col-sm-10    input2"                                                
-                                               type="number"
+                                    <th>
+                                        <input class="w-100 col-md-12 col-sm-10    input2" onkeypress="return validaNumericos(event)"
+                                               type="text"
                                                min="1"
+                                               placeholder="Kilómetros"
                                                step="0.1"
-                                               name="kilometros" autocomplete="off" style="max-width: 500px !important;"></th>
+                                               name="kilometros" autocomplete="off" style="max-width: 500px !important;">
+
+                                    </th>
 
                                 </tr>
                                 <tr>
                                     <th style="width:50%">
                                         <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPeso de la carga</span>
                                     </th>
-                                    <th><input 
-                                               type="number"
+                                    <th>
+                                        <input onkeypress="return validaNumericos(event)"
+                                               type="text"
                                                min="0"
+                                               placeholder="Toneladas"
                                                step="0.001"
-                                               name="toneladasCarga" class="w-100 col-md-12 col-sm-10    input2" autocomplete="off" style="max-width: 500px !important;" /></th>
+                                               name="toneladasCarga" class="w-100 col-md-12 col-sm-10    input2" autocomplete="off" style="max-width: 500px !important;" />
+
+                                    </th>
 
 
 
@@ -151,16 +159,16 @@
 
                                 <tr>
                                     <th style="width:43%">
-                                        <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre&nbsp&nbsp&nbsp</span>
+                                        <span class="spam">Nombre Completo</span>
                                     </th>
-                                    <th><input type="text" name="nombre" class="w-100 col-md-12 col-sm-12   input2" /></th>
+                                    <th><input type="text" name="nombre" class="w-100 col-md-12 col-sm-10    input" required /></th>
 
                                 </tr>
                                 <tr>
                                     <th style="width:18%">
-                                        <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</span>
+                                        <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</span>
                                     </th>
-                                    <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-12   input2" /></th>
+                                    <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-10    input" required /></th>
 
                                     <td>
                                     </td>
@@ -211,7 +219,7 @@
                     </div>
 
                     <div class="col-sm-2" style="background-color:#117394">
-                        
+
                     </div>
                 </div>
             </div>
@@ -221,11 +229,15 @@
         </div>
     </form>
 </div>
-<button onclick="location.href='http://localhost:62106/camion/camion_pagina2'">Página 2</button>
-<button onclick="location.href='http://localhost:62106/camion/camion_pagina3'">Página 3</button>
-<button onclick="location.href='http://localhost:62106/camion/camion_pagina4'">Página 4</button>
 
-
+<script>
+    function validaNumericos(event) {
+        if (event.charCode >= 48 && event.charCode <= 57) {
+            return true;
+        }
+        return false;
+    }
+</script>
 
 
 <!--

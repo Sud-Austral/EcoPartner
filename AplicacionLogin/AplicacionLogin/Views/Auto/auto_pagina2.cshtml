@@ -15,183 +15,180 @@
 
 <body>
 
-
-    <div class="row" style="padding:1%">
-        <div class="col-sm-3" style="background-color:transparent;">
-            <div class="row">
-                <div class="col-sm-3" style="background-color:transparent;">
-                    <img style="padding:2%" src="~/Content/Img/Vector.png">
-                </div>
-                <div class="col-sm-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
-                    <p style="font-size:15px;">
-                        CALCULADORA
-                        <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
-                    </p>
+    <div class="container-fluid">
+        <div class="row" style="padding:1%">
+            <div class="col-sm-3" style="background-color:transparent;">
+                <div class="row">
+                    <div class="col-sm-3" style="background-color:transparent;">
+                        <img style="padding:2%" src="~/Content/Img/Vector.png">
+                    </div>
+                    <div class="col-sm-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
+                        <p style="font-size:15px;">
+                            CALCULADORA
+                            <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-                <div class="col-sm-2" style="background-color:#117394;">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">1</p>
-                </div>
-                <div class="col-sm-6" style="background-color:#02AFC1;">
-                    <div class="row">
-                        <div class="col-sm-2" style="background-color:transparent;">
-                            <p id="num" style="padding-top:45%; padding-left:22%;">2</p>
+            <div class="col-sm-6" style="background-color:transparent;">
+                <div class="row" style="padding:2%;">
+                    <div class="col-sm-2" style="background-color:#117394;">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">1</p>
+                    </div>
+                    <div class="col-sm-6" style="background-color:#02AFC1;">
+                        <div class="row">
+                            <div class="col-sm-2" style="background-color:transparent;">
+                                <p id="num" style="padding-top:45%; padding-left:22%;">2</p>
+                            </div>
+                            <div class="col-sm-3" style="background-color:transparent;  padding-top:5%;">
+                                <img src="~/Content/Img/Auto.png" alt="Auto" />
+                            </div>
+                            <div class="col-sm-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
+                                <p style="font-size:12px;">
+                                    <span style="font-size: 30px; font-weight: bold;">Resultado</span>
+                                    El uso de tu auto genera
+                                </p>
+                            </div>
                         </div>
-                        <div class="col-sm-3" style="background-color:transparent;  padding-top:5%;">
-                            <img src="~/Content/Img/Auto.png" alt="Auto" />
+                    </div>
+                    <div class="col-sm-2" style="background-color:#04C3D7">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
+                    </div>
+                    <div class="col-sm-2" style="background-color:#0BEDBF">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="background-color:transparent;">
+            </div>
+        </div>
+    </div>
+    <!-///////////////////////////////////////////////////////////////////////////->
+    <div class="container-fluid">
+        <div class="row" style="margin-top: -2%; background-color:#02AFC1">
+            <div class="col-sm-2" style="background-color:transparent;">
+
+            </div>
+            <div class="col-sm-8" style="background-color:transparent;">
+                <div class="row" style="padding:2%;">
+
+                    <div class="col-sm-2" style="background-color:#02AFC1">
+
+                    </div>
+                    <div class="col-sm-8" style="background-color:#02AFC1;">
+                        <div class="hijo">
+                            <table style="width:100%">
+                                <tr>
+                                    <th> &nbsp&nbsp&nbsp</th>
+                                    <th> <img style="padding:2%" src="~/Content/Img/nube.png"> </th>
+                                    <th> <h1>@ViewBag.carbono</h1></th>
+                                    <th> <h1>toneladas de CO2</h1> </th>
+
+                                </tr>
+
+                            </table>
+
                         </div>
-                        <div class="col-sm-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
-                            <p style="font-size:12px;">
-                                <span style="font-size: 30px; font-weight: bold;">Resultado</span>
-                                El uso de tu auto genera
-                            </p>
+                    </div>
+
+                    <div class="col-sm-2" style="background-color:#02AFC1">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="background-color:transparent;">
+
+            </div>
+        </div>
+
+        <!-///////////////////////////////////////////////////////////////////////////->
+
+
+        <div class="row" style="margin-top: -20px; background-color:#02AFC1">
+            <div class="col-sm-2" style="background-color:transparent;">
+
+            </div>
+            <div class="col-sm-8" style="background-color:transparent;">
+                <div class="row" style="padding:2%;">
+
+                    <div class="col-sm-2" style="background-color:#02AFC1">
+
+                    </div>
+                    <div class="col-sm-8" style="background-color:#02AFC1;">
+                        <div class="hijo">
+                            <table style="width:100%">
+
+                                <tr>
+                                    <th><p class="spam" align="right"> De acuerdo a los &nbsp&nbsp</p></th>
+                                    <th> <p> <img style="padding:2%" src="~/Content/Img/Recorrido.png"></p> </th>
+                                    <th>&nbsp&nbsp&nbsp</th>
+                                    <th> <p class="spam">@ViewBag.kilometros km recorridos </p> </th>
+                                    <th>&nbsp&nbsp&nbsp</th>
+
+                                </tr>
+
+                            </table>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-2" style="background-color:#04C3D7">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
-                </div>
-                <div class="col-sm-2" style="background-color:#0BEDBF">
-                    <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="background-color:transparent;">
-        </div>
-    </div>
 
-    <!-///////////////////////////////////////////////////////////////////////////->
-    <div class="row" style="margin-top: -2%; background-color:#02AFC1">
-        <div class="col-sm-2" style="background-color:transparent;">
-
-        </div>
-        <div class="col-sm-8" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-
-                <div class="col-sm-2" style="background-color:#02AFC1">
-
-                </div>
-                <div class="col-sm-8" style="background-color:#02AFC1;">
-                    <div class="hijo">
-                        <table style="width:100%">
-                            <tr>
-                                <th> &nbsp&nbsp&nbsp</th>
-                                <th> <img style="padding:2%" src="~/Content/Img/nube.png"> </th>
-                                <th> <h1>@ViewBag.carbono</h1></th>
-                                <th> <h1>toneladas de CO2</h1> </th>
-
-                            </tr>
-
-                        </table>
+                    <div class="col-sm-2" style="background-color:#02AFC1">
 
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-3" style="background-color:transparent;">
 
-                <div class="col-sm-2" style="background-color:#02AFC1">
-
-                </div>
             </div>
         </div>
-        <div class="col-sm-3" style="background-color:transparent;">
 
-        </div>
-    </div>
-
-    <!-///////////////////////////////////////////////////////////////////////////->
+        <!-///////////////////////////////////////////////////////////////////////////->
 
 
-    <div class="row" style="margin-top: -20px; background-color:#02AFC1">
-        <div class="col-sm-2" style="background-color:transparent;">
 
-        </div>
-        <div class="col-sm-8" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
+        <div class="row" style="margin-top: -20px; background-color:#02AFC1">
+            <div class="col-sm-4" style="background-color:transparent;">
 
-                <div class="col-sm-2" style="background-color:#02AFC1">
+            </div>
+            <div class="col-sm-4" style="background-color:transparent;">
+                <div class="row" style="padding:2%;">
 
-                </div>
-                <div class="col-sm-8" style="background-color:#02AFC1;">
-                    <div class="hijo">
-                        <table style="width:100%">
+                    <div class="col-sm-2" style="background-color:#02AFC1">
 
-                            <tr>
-                                <th><p class="spam" align="right"> De acuerdo a los &nbsp&nbsp</p></th>
-                                <th> <p> <img style="padding:2%" src="~/Content/Img/Recorrido.png"></p> </th>
-                                <th>&nbsp&nbsp&nbsp</th>
-                                <th> <p class="spam">@ViewBag.kilometros km recorridos </p> </th>
-                                <th>&nbsp&nbsp&nbsp</th>
+                    </div>
+                    <div class="col-sm-8" style="background-color:#02AFC1;">
+                        <div class="hijo">
+                            <table style="width:100%">
 
-                            </tr>
+                                <tr>
+                                    <th>
+                                        <form method="post" action="/Auto/Auto_pagina3">
+                                            <input type="hidden" name="recorrido" value="@ViewBag.kilometros" />
+                                            <input type="hidden" name="toneladas" value="@ViewBag.carbono" />
+                                            <input type="hidden" name="total" value="@ViewBag.total" />
+                                            <input type="hidden" name="nombre" value="@ViewBag.nombre" />
+                                            <input type="hidden" name="correo" value="@ViewBag.correo" />
 
-                        </table>
+                                            <input class="calcular2 boton-color" name="actualizar" type="submit" value="CALCULAR COMPENSACIÓN">
+                                        </form>
+                                    </th>
+
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2" style="background-color:#02AFC1">
+
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-3" style="background-color:transparent;">
 
-                <div class="col-sm-2" style="background-color:#02AFC1">
-
-                </div>
             </div>
         </div>
-        <div class="col-sm-3" style="background-color:transparent;">
-
-        </div>
     </div>
-
     <!-///////////////////////////////////////////////////////////////////////////->
-
-
-
-    <div class="row" style="margin-top: -20px; background-color:#02AFC1">
-        <div class="col-sm-4" style="background-color:transparent;">
-
-        </div>
-        <div class="col-sm-4" style="background-color:transparent;">
-            <div class="row" style="padding:2%;">
-
-                <div class="col-sm-2" style="background-color:#02AFC1">
-
-                </div>
-                <div class="col-sm-8" style="background-color:#02AFC1;">
-                    <div class="hijo">
-                        <table style="width:100%">
-
-                            <tr>
-                                <th>
-                                    <form method="post" action="/Auto/Auto_pagina3">
-                                        <input type="hidden" name="recorrido" value="@ViewBag.kilometros" />
-                                        <input type="hidden" name="toneladas" value="@ViewBag.carbono" />
-                                        <input type="hidden" name="total" value="@ViewBag.total" />
-                                        <input type="hidden" name="nombre" value="@ViewBag.nombre" />
-                                        <input type="hidden" name="correo" value="@ViewBag.correo" />
-
-                                        <input class="calcular2 boton-color" name="actualizar" type="submit" value="CALCULAR COMPENSACIÓN">
-                                    </form>
-                                </th>
-
-                            </tr>
-
-                        </table>
-                    </div>
-                </div>
-
-                <div class="col-sm-2" style="background-color:#02AFC1">
-
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3" style="background-color:transparent;">
-
-        </div>
-    </div>
-
-    <!-///////////////////////////////////////////////////////////////////////////->
-
-    <button onclick="location.href='http://localhost:62106/Auto/auto_pagina1'">Página 1</button>
-    <button onclick="location.href='http://localhost:62106/Auto/auto_pagina3'">Página 3</button>
-    <button onclick="location.href='http://localhost:62106/Auto/auto_pagina4'">Página 4</button>
 
    
 </body>

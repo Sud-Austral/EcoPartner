@@ -49,8 +49,8 @@
                                 <img src="~/Content/Img/Auto.png" alt="Auto" />
                             </div>
                             <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:1%; padding-left:10%;">
-                                <p style="font-size:12px;">
-                                    <span style="font-size:30px; font-weight: bold;">Pago</span> <br>
+                                <p style="font-size:11px;">
+                                    <span style="font-size:28px; font-weight: bold;">Pago</span> <br>
                                     Compensa lo contaminado
                                 </p>
                             </div>
@@ -72,19 +72,19 @@
             <div class="col-sm-10" style="background-color:transparent; ">
                 <div class="row" style="padding:2%;">
 
-                    <div class="col-sm-3" style=" background-color: #ffff; border-top-left-radius: 1em; color:#117394">
+                    <div class="col-sm-3" style=" background-color: #0BEDBF; border-top-left-radius: 1em; color:#117394">
 
                         <table style="width:100%; margin-top:10%">
                             <tr>
-                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre</th>
+                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre*</th>
 
                             </tr>
                             <tr>
-                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspApellidos</th>
+                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTeléfono*</th>
 
                             </tr>
                             <tr>
-                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspnombre de la empresa</th>
+                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre de la empresa</th>
 
                             </tr>
                             <tr>
@@ -95,14 +95,14 @@
                         </table>
 
                     </div>
-                    <div class="col-sm-3" style="background-color:#ffff; color:#117394">
+                    <div class="col-sm-3" style="background-color:#0BEDBF; color:#117394">
                         <table style="width:100%; margin-top:8%">
                             <tr>
-                                <th> <input type="text" name="nombre" value="@ViewBag.nombre" class="    input3" autocomplete="off" /></th>
+                                <th> <input type="text" required name="nombre" value="@ViewBag.nombre" class="    input3" autocomplete="off" readonly /></th>
 
                             </tr>
                             <tr>
-                                <th> <input type="text" name="apellido" class="    input3" autocomplete="off" /></th>
+                                <th> <input type="text" name="telefono" class=" input3" autocomplete="off" onkeypress="return validaNumericos(event)" required /></th>
 
                             </tr>
                             <tr>
@@ -117,19 +117,16 @@
                         </table>
                     </div>
 
-                    <div class="col-sm-3" style="background-color:#ffff; color:#117394">
+                    <div class="col-sm-3" style="background-color:#0BEDBF; color:#117394">
 
                         <table style="width:100%; margin-top:10%">
                             <tr>
-                                <th> &nbsp&nbspPais/Region</th>
+                                <th> &nbsp&nbspPais/Region*</th>
 
                             </tr>
-                            <tr>
-                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTelefono</th>
 
-                            </tr>
                             <tr>
-                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</th>
+                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail*</th>
 
                             </tr>
                             <tr>
@@ -140,19 +137,16 @@
                         </table>
 
                     </div>
-                    <div class="col-sm-3" style="background-color: #ffff; border-top-right-radius: 1em; color:#117394">
+                    <div class="col-sm-3" style="background-color: #0BEDBF; border-top-right-radius: 1em; color:#117394">
 
                         <table style="width:100%; margin-top:8%">
                             <tr>
-                                <th> <input type="text" name="pais" style="margin-left:-65%" class="input3" autocomplete="off" /></th>
+                                <th> <input type="text" name="pais" style="margin-left:-65%" class="input3" autocomplete="off" required /></th>
 
                             </tr>
-                            <tr>
-                                <th> <input type="text" name="region" style="margin-left:-65%" class="input3" autocomplete="off" /></th>
 
-                            </tr>
                             <tr>
-                                <th> <input type="text" name="e-mail" value="@ViewBag.correo" style="margin-left:-65%" class="input3" autocomplete="off" /></th>
+                                <th> <input type="text" name="e-mail" value="@ViewBag.correo" style="margin-left:-65%" class="input3" autocomplete="off" readonly /></th>
 
                             </tr>
                             <tr>
@@ -170,7 +164,7 @@
             </div>
         </div>
 
-        <!- ///////////////////////////////////////////////////////////////////////////////////->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////-->
 
         <div class="row w-100" style=" margin-top: -3.5%; background-color: #0BEDBF; ">
             <div class="col-sm-1" style="background-color:transparent;">
@@ -179,12 +173,12 @@
             <div class="col-sm-10" style=" background-color: transparent;">
                 <div class="row" style="padding:2%;">
 
-                    <div class="col-sm-5" style=" background-color: #ffff; color:#117394">
+                    <div class="col-sm-5" style=" background-color: #0BEDBF; color:#117394">
 
 
 
                     </div>
-                    <div class="col-sm-2" style=" background-color: #ffff; color:#117394">
+                    <div class="col-sm-2" style=" background-color: #0BEDBF; color:#117394">
 
                         <table>
                             <tr>
@@ -194,11 +188,9 @@
                             </tr>
                             <tr>
                                 <th>
-                                    <input onclick="location.href='http://localhost:62106/Auto/auto_pagina4_1'" class="calcular3 boton-color" name="actualizar" type="submit" value="ADELANTE">
+                                    <input class="calcular3 boton-color" name="actualizar" type="submit" value="ADELANTE">
                                     <input type="hidden" name="calculo" value="@ViewBag.totalf" />
                                     <input type="hidden" name="ton" value="@ViewBag.toneladas" />
-                                    <input type="hidden" name="nombre" value="@ViewBag.nombre" />
-                                    <input type="hidden" name="correo" value="@ViewBag.correo" />
 
                                 </th>
                             </tr>
@@ -214,7 +206,7 @@
 
 
                     </div>
-                    <div class="col-sm-5" style=" background-color: #ffff; color:#117394">
+                    <div class="col-sm-5" style=" background-color: #0BEDBF; color:#117394">
 
 
 
@@ -230,14 +222,18 @@
 
     </form>
 
-    <button onclick="location.href='http://localhost:62106/Auto/auto_pagina1'">Página 1</button>
-    <button onclick="location.href='http://localhost:62106/Auto/auto_pagina2'">Página 2</button>
-    <button onclick="location.href='http://localhost:62106/Auto/auto_pagina3'">Página 3</button>
-
-    <button onclick="location.href='http://localhost:62106/Moto/moto_pagina1'">Moto</button>
-
-    <input name="calculo" value="@ViewBag.totalf" />
+    <!--<input name="calculo" value="@ViewBag.totalf" />-->
 </body>
 </html>
+
+
+<script>
+    function validaNumericos(event) {
+        if (event.charCode >= 48 && event.charCode <= 57) {
+            return true;
+        }
+        return false;
+    }
+</script>
 
 
