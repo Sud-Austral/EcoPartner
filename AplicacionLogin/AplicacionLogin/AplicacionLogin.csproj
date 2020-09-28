@@ -189,6 +189,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MotoController.cs" />
+    <Compile Include="Controllers\PruebasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -402,6 +403,8 @@
     <Content Include="Views\Camion\camion_pagina4_1.cshtml" />
     <Content Include="Views\Auto\auto_pagina4_1.cshtml" />
     <Content Include="Views\Avion\Avion_pagina4_1.cshtml" />
+    <Content Include="Views\Pruebas\formulario.cshtml" />
+    <Content Include="Views\Pruebas\boton.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

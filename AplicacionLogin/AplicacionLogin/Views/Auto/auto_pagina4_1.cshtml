@@ -160,7 +160,7 @@
 
         function validate(event) {
             //alert(event.value.length >= 0);
-            return event.value.length > 0;
+            return event.value.length >= 0;
         }
 
         paypal.Buttons({
@@ -173,8 +173,8 @@
             },
 
             onInit: function (data, actions) {
-                actions.disable();
-                //actions.enable();
+                //actions.disable();
+                actions.enable();
 
                 if (invoiceidDiv.style.display === "block") {
                     elArr.push(invoiceid);
