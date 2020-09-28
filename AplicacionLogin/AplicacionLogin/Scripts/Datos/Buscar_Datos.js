@@ -20,13 +20,15 @@ function mostrarLista(texto, lista) {
 
         $.each(lines, function (n, elem) {
             var col = elem.split(',"');
-            if (col[1] != "" && typeof col[1] != 'undefined') {
+            if (col[1] != "" && typeof col[1] != 'undefined' && col[2] != "" && typeof col[2] != 'undefined') {
                 var column = col[1].replace('"', '');
+                var column2 = col[2].replace('"', '');
                 var columna = column.toLowerCase();
+                var columna2 = column2.toLowerCase();
 
 
                 if ($(texto).val().length >= 2 && columna != valor) {
-                    if (columna.startsWith(valor)) {
+                    if (columna.startsWith(valor) || columna2.startsWith(valor)) {
                         $(lista).show();
 
                         //$(lista).append('<option value="' + column + '">');
