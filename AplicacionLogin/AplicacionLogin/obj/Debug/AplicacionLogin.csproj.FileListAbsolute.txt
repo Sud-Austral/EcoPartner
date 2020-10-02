@@ -450,3 +450,8 @@ C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\ob
 C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Debug\AplicacionLogin.csproj.CopyComplete
 C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Debug\AplicacionLogin.dll
 C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Debug\AplicacionLogin.pdb
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Debug\AplicacionLogin.dll.config
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\Microsoft.Web.Services3.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\MQTTnet.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\Transbank.dll

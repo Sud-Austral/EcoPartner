@@ -1,9 +1,11 @@
 ﻿using AplicacionLogin.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Transbank.Webpay;
 
 namespace AplicacionLogin.Controllers
 {
@@ -51,7 +53,29 @@ namespace AplicacionLogin.Controllers
         {
             ViewBag.total = calculo;
             ViewBag.toneladas = ton;
+
+
+            var transaction = new Webpay(Transbank.Webpay.Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
+            var monto = 10;
+            var orden = "primera orden";
+            var secion = "dies";
+
+            string paguno = "http://localhost:62106/Auto/return";
+            string pagdos = "http://localhost:62106/Auto/final";
+
+            var initResult = transaction.initTransaction(monto, orden, secion, paguno, pagdos);
+
+            var tokenWs = initResult.token;
+            var formAction = initResult.url;
+
+            ViewBag.Monto = monto;
+            ViewBag.BuyOrder = orden;
+            ViewBag.Tokenws = tokenWs;
+            ViewBag.Formaction = formAction;
             return View();
+
+
         }
 
         public ActionResult CalculosAuto(string kilometros, string tipoAuto, string tipoCombustible, string nombre, string correo )
@@ -75,6 +99,8 @@ namespace AplicacionLogin.Controllers
                     ViewBag.correo = correo;
                 }
             }
+
+           
 
 
             return View("auto_pagina2");

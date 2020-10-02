@@ -1,6 +1,6 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!doctype html>
@@ -114,10 +114,19 @@
                         <div style="text-align: center"><label for="amount"> </label><input hidden name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
                         <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
                         <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
-                        <p id="invoiceidError" style="        visibility: hidden;
-        color: red;
-        text-align: center;">Please enter an Invoice ID</p>
+                        <p id="invoiceidError" style=" visibility: hidden; color: red; text-align: center;">Please enter an Invoice ID</p>
                         <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+                    </div>
+
+                    <div>
+                        <p>@ViewBag.Monto</p>
+                        <p>@ViewBag.BuyOrder</p>
+                        <p>@ViewBag.Tokenws</p>
+                        <p>@ViewBag.Formaction</p>
+                        <form action="@ViewBag.Formaction">
+                            <button type="submit"></button>
+                            <input type="hidden" name="token_ws" value="@ViewBag.Tokenws" />
+                        </form>
                     </div>
 
                 </div>
