@@ -1,0 +1,7 @@
+openssl genrsa -out 36025948.key 2048
+
+openssl req -new -key 36025948.key -out 36025948.csr
+
+openssl x509 -req -days 1460 -in 36025948.csr -signkey 36025948.key -out 36025948.crt
+
+openssl pkcs12 -export -out 36025948.pfx -inkey 36025948.key -in 36025948.crt
