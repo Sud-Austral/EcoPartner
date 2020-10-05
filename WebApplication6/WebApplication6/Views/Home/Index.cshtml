@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <form action="@ViewBag.form" method="post">
+        <input type="hidden" name="token_ws" value="@ViewBag.token" />
+        <button type="submit">Now</button>
+    </form>    
+    
+    </div>
