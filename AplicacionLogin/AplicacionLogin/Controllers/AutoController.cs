@@ -1,11 +1,13 @@
 ﻿using AplicacionLogin.Models;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Transbank.Webpay;
+
 
 namespace AplicacionLogin.Controllers
 {
@@ -17,10 +19,12 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
+
         public ActionResult auto_pagina2()
         {
             return View();
         }
+
 
         public ActionResult auto_pagina3(double recorrido, double toneladas, double total, string nombre, string correo)
         {
@@ -48,35 +52,65 @@ namespace AplicacionLogin.Controllers
 
             return View();
         }
+        public ActionResult indexauto()
+        {
+            
+            return View();
+        }
 
         public ActionResult auto_pagina4_1(double calculo, double ton)
         {
             ViewBag.total = calculo;
             ViewBag.toneladas = ton;
+            Session["toneladas"] = ton;
 
 
-            var transaction = new Webpay(Transbank.Webpay.Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
-            var monto = 10;
-            var orden = "primera orden";
-            var secion = "dies";
 
-            string paguno = "http://localhost:62106/Auto/return";
-            string pagdos = "http://localhost:62106/Auto/final";
+            //var configuration = new Configuration();
+            //configuration.Environment = "PRODUCCION";
+            //configuration.CommerceCode = "597036025948";
+            //Conf.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Cert\36025948.pfx";
+            //configuration.PrivateCertPfxPath = @"C:\Users\limc_\source\repos\WebApplication6\WebApplication6\Content\Cert\597036025948.pfx";
 
-            var initResult = transaction.initTransaction(monto, orden, secion, paguno, pagdos);
+            //configuration.Password = "1234";
+            //configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+
+            //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
+            //var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+
+            //Convert.ToInt16(calculo);
+
+
+            //decimal valor = Convert.ToDecimal(calculo);
+            var monto = Convert.ToInt32(calculo); 
+            var orden = "1234567";
+            var id = "1234456";
+
+            string returnUrl = "http://localhost:62106/Auto/Retorno";
+            string returnFinal = "http://localhost:62106/Auto/Final";
+
+            var initResult = transaction.initTransaction(monto, orden, id, returnUrl, returnFinal);
+
 
             var tokenWs = initResult.token;
             var formAction = initResult.url;
 
             ViewBag.Monto = monto;
-            ViewBag.BuyOrder = orden;
-            ViewBag.Tokenws = tokenWs;
-            ViewBag.Formaction = formAction;
+            ViewBag.Orden = orden;
+            ViewBag.token = tokenWs;
+            ViewBag.form = formAction;
+
+
             return View();
+
+           
 
 
         }
+
 
         public ActionResult CalculosAuto(string kilometros, string tipoAuto, string tipoCombustible, string nombre, string correo )
         {
@@ -104,6 +138,80 @@ namespace AplicacionLogin.Controllers
 
 
             return View("auto_pagina2");
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
+
+
+            return View();
+
+
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+
+            return View();
+
+
+        }
+
+        public ActionResult Final()
+        {
+            ViewBag.Message = "Your contact page.";
+            //ViewBag.toneladas = Response.Write Session("toneladas");
+            //var ton = Session["toneladas"];
+            ViewBag.tonelada = Session["toneladas"];
+            //ViewBag.tonelada = ton;
+
+
+            return View();
+
+
+        }
+
+        public ActionResult Index()
+        {
+
+
+            return View();
+
+        }
+
+        public ActionResult prueba()
+        {
+
+
+            return View();
+
+
+        }
+
+        public ActionResult Retorno()
+        {
+            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+            string tokenWs = Request.Form["token_ws"];
+            var result = transaction.getTransactionResult(tokenWs);
+
+            var output = result.detailOutput[0];
+            if(output.responseCode == 0)
+            {
+                ViewBag.redirect = result.urlRedirection;
+                ViewBag.Token = tokenWs;
+                ViewBag.Response = output.responseCode;
+                ViewBag.monto = output.amount;
+                ViewBag.auto = output.authorizationCode;
+
+            }
+            ViewBag.Message = "Your application description page.";
+            
+            return View();
+
+
         }
     }
 }

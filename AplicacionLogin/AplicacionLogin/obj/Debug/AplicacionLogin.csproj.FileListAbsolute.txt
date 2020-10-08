@@ -455,3 +455,12 @@ C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bi
 C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\Microsoft.Web.Services3.dll
 C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\MQTTnet.dll
 C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\Transbank.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.IO.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Net.Security.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Net.WebSockets.Client.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Net.WebSockets.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Runtime.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.Algorithms.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.Encoding.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.Primitives.dll
+C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.X509Certificates.dll

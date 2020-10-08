@@ -105,10 +105,10 @@
                     <form action="/Moto/moto_pagina4_paypal" method="post">
                         <input type="hidden" name="total" value="@ViewBag.total" />
                         <input type="hidden" name="ton" value="@ViewBag.toneladas" />
-                        
+
                     </form>
 
-                    <div id="smart-button-container" style="margin-top:-80%; margin-left:-55%">
+                    <div id="smart-button-container" style="margin-top:-70%; margin-left:-55%">
                         <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
                         <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
                         <div style="text-align: center"><label for="amount"> </label><input hidden name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
@@ -116,18 +116,26 @@
                         <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
                         <p id="invoiceidError" style=" visibility: hidden; color: red; text-align: center;">Please enter an Invoice ID</p>
                         <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+
+
+                        <div style="margin-left: 13%">
+
+                            <form action="@ViewBag.form" method="post">
+                                <input hidden type="text" name="token_ws" value="@ViewBag.token" />
+                                <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
+                                <!--<button type="submit">Now</button>-->
+                                <input type="image" src="~/Content/Img/webpay.png" height="150" width="300" />
+                            </form>
+                            <!--4051885600446623-->
+
+
+                        </div>
+
                     </div>
 
-                    <div>
-                        <p>@ViewBag.Monto</p>
-                        <p>@ViewBag.BuyOrder</p>
-                        <p>@ViewBag.Tokenws</p>
-                        <p>@ViewBag.Formaction</p>
-                        <form action="@ViewBag.Formaction">
-                            <button type="submit"></button>
-                            <input type="hidden" name="token_ws" value="@ViewBag.Tokenws" />
-                        </form>
-                    </div>
+                    
+
+                    
 
                 </div>
 

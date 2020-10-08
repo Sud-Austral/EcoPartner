@@ -52,6 +52,11 @@ namespace WebApplication6.Controllers
             return View();
         }
 
+        public ActionResult prueba()
+            {
+        return View();
+                }
+
         public ActionResult Retorno()
         {
             var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
