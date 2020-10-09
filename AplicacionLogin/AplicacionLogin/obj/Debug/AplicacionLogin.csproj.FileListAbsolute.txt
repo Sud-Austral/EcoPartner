@@ -464,3 +464,17 @@ C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bi
 C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.Encoding.dll
 C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.Primitives.dll
 C:\Users\new user\Documents\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.X509Certificates.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\Microsoft.Web.Services3.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\MQTTnet.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.IO.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Net.Security.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Net.WebSockets.Client.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Net.WebSockets.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Runtime.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.Algorithms.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.Encoding.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.Primitives.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\System.Security.Cryptography.X509Certificates.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\bin\Transbank.dll
+D:\GitHub\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Debug\AplicacionLogin.dll.config
