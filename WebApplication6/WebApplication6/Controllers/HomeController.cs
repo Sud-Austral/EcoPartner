@@ -13,10 +13,10 @@ namespace WebApplication6.Controllers
         {
             var configuration = new Configuration();
             configuration.Environment = "PRODUCCION";
-            configuration.CommerceCode = "5790 36025948";
-            //Conf.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Cert\36025948.pfx";
-            configuration.PrivateCertPfxPath = @"C:\Users\limc_\source\repos\WebApplication6\WebApplication6\Content\Cert\36025948.pfx";
-            
+            configuration.CommerceCode = "597036025948";
+            configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Cert\597036025948.pfx";
+            //configuration.PrivateCertPfxPath = @"D:\GitHub\EcoPartner\WebApplication6\WebApplication6\Content\Cert\597036025948.pfx";
+            //configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Cert\597036025948.pfx";
             configuration.Password = "1234";
             configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
 
@@ -31,26 +31,29 @@ namespace WebApplication6.Controllers
 
             string returnUrl = "http://localhost:63928/Home/Retorno";
             string returnFinal = "http://localhost:63928/Home/Final";
-            /*
+
             try
             {
                 var initResult = transaction.initTransaction(monto, orden, id, returnUrl, returnFinal);
+                var tokenWs = initResult.token;
+                var formAction = initResult.url;
+
+                ViewBag.Monto = monto;
+                ViewBag.Orden = orden;
+                ViewBag.token = tokenWs;
+                ViewBag.form = formAction;
             }
             catch (Exception e)
             {
-                var Hola = e;
+
+                ViewBag.Mensaje = e.Message;
             }
-            */
-            var initResult = transaction.initTransaction(monto, orden, id, returnUrl, returnFinal);
-
-
-            var tokenWs = initResult.token;
-            var formAction = initResult.url;
             
-            ViewBag.Monto = monto;
-            ViewBag.Orden = orden;
-            ViewBag.token = tokenWs;
-            ViewBag.form = formAction;
+            
+            //var initResult = transaction.initTransaction(monto, orden, id, returnUrl, returnFinal);
+
+
+            
             
             return View();
         }

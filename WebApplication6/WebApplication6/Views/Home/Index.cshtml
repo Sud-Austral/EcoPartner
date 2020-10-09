@@ -2,6 +2,8 @@
     ViewBag.Title = "Home Page";
 }
 
+
+<h1>@ViewBag.Mensaje</h1>
 <div>
     <form action="@ViewBag.form" method="post">
         <input type="hidden" name="token_ws" value="@ViewBag.token" />

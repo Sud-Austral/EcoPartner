@@ -183,8 +183,8 @@ D:\GitHub\EcoPartner\WebApplication6\WebApplication6\bin\es\System.Web.Razor.res
 D:\GitHub\EcoPartner\WebApplication6\WebApplication6\bin\es\System.Web.WebPages.resources.dll
 D:\GitHub\EcoPartner\WebApplication6\WebApplication6\bin\es\System.Web.WebPages.Deployment.resources.dll
 D:\GitHub\EcoPartner\WebApplication6\WebApplication6\bin\es\System.Web.WebPages.Razor.resources.dll
-D:\GitHub\EcoPartner\WebApplication6\WebApplication6\obj\Debug\WebApplication6.csprojAssemblyReference.cache
 D:\GitHub\EcoPartner\WebApplication6\WebApplication6\obj\Debug\WebApplication6.csproj.CoreCompileInputs.cache
 D:\GitHub\EcoPartner\WebApplication6\WebApplication6\obj\Debug\WebApplication6.csproj.CopyComplete
 D:\GitHub\EcoPartner\WebApplication6\WebApplication6\obj\Debug\WebApplication6.dll
 D:\GitHub\EcoPartner\WebApplication6\WebApplication6\obj\Debug\WebApplication6.pdb
+D:\GitHub\EcoPartner\WebApplication6\WebApplication6\obj\Debug\WebApplication6.csprojAssemblyReference.cache
