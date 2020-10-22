@@ -474,6 +474,10 @@
     <Content Include="Views\Auto\Index.cshtml" />
     <Content Include="Views\Auto\Prueba.cshtml" />
     <Content Include="Views\Auto\Retorno.cshtml" />
+    <Content Include="Views\Camion\About_camion.cshtml" />
+    <Content Include="Views\Camion\Contact_camion.cshtml" />
+    <Content Include="Views\Camion\Final_camion.cshtml" />
+    <Content Include="Views\Camion\Retorno_camion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
