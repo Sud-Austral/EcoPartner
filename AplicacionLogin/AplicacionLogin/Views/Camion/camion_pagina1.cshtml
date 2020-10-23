@@ -78,6 +78,34 @@
 
                     </div>
                     <div class="col-sm-8" style="background-color:#117394;">
+                        <style>
+                            km:-ms-input-placeholder {
+                                color: #ffff;
+                            }
+                        </style>
+
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+
+
+
+                                $('#kilometros').change(function () {
+                                    var valor = $(this).val();
+                                    $(this).val(valor + ' km');
+                                });
+
+                                $('#toneladas').change(function () {
+                                    var valor = $(this).val();
+                                    $(this).val(valor + ' T');
+                                });
+
+                                
+
+                            });
+                        </script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
                         <div class="hijo">
 
@@ -88,7 +116,7 @@
                                         <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbspKilómetros recorridos</span>
                                     </th>
                                     <th>
-                                        <input class="w-100 col-md-12 col-sm-10    input2" onkeypress="return validaNumericos(event)"
+                                        <input id="" class="w-100 col-md-12 col-sm-10    input2" onkeypress="return validaNumericos(event)"
                                                type="text"
                                                min="1"
                                                placeholder="Kilómetros"
@@ -103,7 +131,7 @@
                                         <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPeso de la carga</span>
                                     </th>
                                     <th>
-                                        <input onkeypress="return validaNumericos(event)"
+                                        <input id="" onkeypress="return validaNumericos(event)"
                                                type="text"
                                                min="0"
                                                placeholder="Toneladas"

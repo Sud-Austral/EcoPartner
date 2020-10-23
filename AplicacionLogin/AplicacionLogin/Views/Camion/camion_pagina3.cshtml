@@ -83,7 +83,7 @@
                                     <th> &nbsp&nbsp&nbsp</th>
                                     <th> <img style="padding:2%" src="~/Content/Img/nube.png"> </th>
                                     <th> <h1> @ViewBag.toneladas</h1></th>
-                                    <th> <h1>t de CO2 = @ViewBag.total $</h1> </th>
+                                    <th> <h1>T de CO2 = $ @ViewBag.total USD</h1> </th>
 
                                 </tr>
 
@@ -210,10 +210,27 @@
             </div>
         </div>
         <!-///////////////////////////////////////////////////////////////////////////->
+
+
+        <!-///////////////////////////////////////////////////////////////////////////->
         <div class="container-fluid">
             <div class="row" style="margin-top: -20px; background-color:#04C3D7">
-                <div class="col-md-4" style="background-color:transparent;">
+                <div class="col-md-1" style="background-color:transparent;">
 
+                </div>
+                <div class="col-md-3" style="background-color:transparent;">
+                    <table style="width:100%">
+
+                        <tr>
+                            <th>&nbsp&nbsp&nbsp</th>
+                            <th>
+                                <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
+
+                            </th>
+
+                        </tr>
+
+                    </table>
                 </div>
                 <div class="col-md-4" style="background-color:transparent;">
                     <div class="row" style="padding:2%;">
@@ -230,7 +247,7 @@
                                         <th>
                                             <input name="total" type="hidden" value="@ViewBag.total" />
                                             <input name="ton" type="hidden" value="@ViewBag.toneladas" />
-                                            
+
                                             <input name="nombre" type="hidden" value="@ViewBag.nombre" />
                                             <input name="correo" type="hidden" value="@ViewBag.correo" />
                                             <input class="calcular2 boton-color" name="actualizar" type="submit" value="QUIERO COMPENSAR">
@@ -252,6 +269,7 @@
             </div>
         </div>
     </form>
+
 
 </body>
 </html>

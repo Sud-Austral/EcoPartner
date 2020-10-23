@@ -204,7 +204,7 @@ namespace AplicacionLogin.Controllers
                 ViewBag.Token = tokenWs;
                 ViewBag.Response = output.responseCode;
                 ViewBag.monto = output.amount;
-                ViewBag.camion = output.authorizationCode;
+                ViewBag.auto = output.authorizationCode;
 
             }
             ViewBag.Message = "Your application description page.";

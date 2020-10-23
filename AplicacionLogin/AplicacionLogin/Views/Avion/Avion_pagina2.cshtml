@@ -111,7 +111,7 @@
                                     <th><p class="spam" align="right"> De acuerdo a los &nbsp&nbsp</p></th>
                                     <th> <p> <img style="padding:2%" src="~/Content/Img/Recorrido.png"></p> </th>
                                     <th>&nbsp&nbsp&nbsp</th>
-                                    <th> <p class="spam"> @ViewBag.distancia km recorridos </pclass="spam"> </th>
+                                    <th> <p class="spam"> @ViewBag.distancia km recorridos </p> </th>
                                     <th>&nbsp&nbsp&nbsp</th>
 
                                 </tr>
@@ -135,8 +135,27 @@
 
 
         <div class="row" style="margin-top: -20px; background-color:#02AFC1">
-            <div class="col-md-4" style="background-color:transparent;">
+            <div class="col-md-1" style="background-color:transparent;">
 
+            </div>
+            <div class="col-md-3" style="background-color:transparent;">
+                <table style="width:100%">
+
+                    <tr>
+                        <th>&nbsp&nbsp&nbsp</th>
+                        
+
+                    </tr> 
+                    <tr>
+                        <th>&nbsp&nbsp&nbsp</th>
+                        <th>
+                            <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
+
+                        </th>
+
+                    </tr>
+
+                </table>
             </div>
             <div class="col-md-4" style="background-color:transparent;">
                 <div class="row" style="padding:2%;">
@@ -150,14 +169,14 @@
 
                                 <tr>
 
-                                   
+
                                     <th>
                                         <form method="post" action="/Avion/Avion_pagina3">
-                                            <input type="hidden" name="recorrido" value="@ViewBag.distancia"/>
-                                            <input type="hidden" name="toneladas" value="@ViewBag.carbono"/>
-                                            <input type="hidden" name="total" value="@ViewBag.total"/>
-                                            <input type="hidden" name="nombre" value="@ViewBag.nombre"/>
-                                            <input type="hidden" name="correo" value="@ViewBag.correo"/>
+                                            <input type="hidden" name="recorrido" value="@ViewBag.distancia" />
+                                            <input type="hidden" name="toneladas" value="@ViewBag.carbono" />
+                                            <input type="hidden" name="total" value="@ViewBag.total" />
+                                            <input type="hidden" name="nombre" value="@ViewBag.nombre" />
+                                            <input type="hidden" name="correo" value="@ViewBag.correo" />
                                             <input class="calcular2 boton-color" name="actualizar" type="submit" value="CALCULAR COMPENSACIÓN">
                                         </form>
                                     </th>

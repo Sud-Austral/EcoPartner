@@ -80,8 +80,8 @@ namespace AplicacionLogin.Controllers
             var orden = "1234567";
             var id = "1234456";
 
-            string returnUrl = "http://localhost:62106/Auto/Retorno";
-            string returnFinal = "http://localhost:62106/Auto/Final";
+            string returnUrl = "http://localhost:62106/Camion/Retorno_camion";
+            string returnFinal = "http://localhost:62106/Camion/Final_camion";
 
             var initResult = transaction.initTransaction(monto, orden, id, returnUrl, returnFinal);
 

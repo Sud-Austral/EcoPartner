@@ -80,8 +80,15 @@
                     <div><span>&nbsp&nbsp</span></div>
                     <span style="font-weight: bold;">Producto</span>
                     <div><span>&nbsp&nbsp</span></div>
-                    <span>Carbono x @ViewBag.toneladas t</span>
+                    <span>Carbono x @ViewBag.toneladas T</span>
                     <div><span>&nbsp&nbsp</span></div>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <div><span>&nbsp&nbsp</span></div>
+                    <div><span>&nbsp&nbsp</span></div>
+
+                    <a href="javascript: history.go(-1)" style="margin-left:-40%"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
 
                 </div>
 
@@ -94,9 +101,9 @@
                     <div><span>&nbsp&nbsp</span></div>
                     <div><span>&nbsp&nbsp</span></div>
                     <div><span>&nbsp&nbsp</span></div>
-                    <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ @ViewBag.total</span></div>
+                    <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ @ViewBag.total USD</span></div>
                     <div><span>&nbsp&nbsp</span></div>
-                    <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ @ViewBag.total</span></div>
+                    <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ @ViewBag.total USD</span></div>
                     <div><span>&nbsp&nbsp</span></div>
                     <div><span>&nbsp&nbsp</span></div>
                     <form action="/Moto/moto_pagina4_paypal" method="post">
@@ -104,10 +111,10 @@
                         <input type="hidden" name="ton" value="@ViewBag.toneladas" />
 
                     </form>
-                   <!-- <span>
-                        <img src="~/Content/Img/Frame1.png" alt="hoja">
-                        <img src="~/Content/Img/frames.gif" alt="hoja">
-                    </span> -->
+                    <!-- <span>
+         <img src="~/Content/Img/Frame1.png" alt="hoja">
+         <img src="~/Content/Img/frames.gif" alt="hoja">
+     </span> -->
 
                     <div id="smart-button-container" style="margin-top:-80%; margin-left:-55%">
                         <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
@@ -117,6 +124,19 @@
                         <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
                         <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
                         <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+                    </div>
+
+                    <div style="margin-left: 13%">
+
+                        <form action="@ViewBag.form" method="post">
+                            <input hidden type="text" name="token_ws" value="@ViewBag.token" />
+                            <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
+                            <!--<button type="submit">Now</button>-->
+                            <input type="image" src="~/Content/Img/webpay.png" height="150" width="300" />
+                        </form>
+                        <!--4051885600446623-->
+
+
                     </div>
 
                 </div>
@@ -233,4 +253,9 @@
         }).render('#paypal-button-container');
     }
     initPayPalButton();
+</script>
+
+<script>
+        //window.localStorage.clear();
+        window.localStorage.setItem("toneladas_moto",@ViewBag.toneladas)
 </script>

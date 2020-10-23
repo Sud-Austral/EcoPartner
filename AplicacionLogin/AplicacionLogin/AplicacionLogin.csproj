@@ -478,6 +478,14 @@
     <Content Include="Views\Camion\Contact_camion.cshtml" />
     <Content Include="Views\Camion\Final_camion.cshtml" />
     <Content Include="Views\Camion\Retorno_camion.cshtml" />
+    <Content Include="Views\Avion\About_avion.cshtml" />
+    <Content Include="Views\Avion\Contact_avion.cshtml" />
+    <Content Include="Views\Avion\Final_avion.cshtml" />
+    <Content Include="Views\Avion\Retorno_avion.cshtml" />
+    <Content Include="Views\Moto\About_moto.cshtml" />
+    <Content Include="Views\Moto\Contact_moto.cshtml" />
+    <Content Include="Views\Moto\Final_moto.cshtml" />
+    <Content Include="Views\Moto\Retorno_moto.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
