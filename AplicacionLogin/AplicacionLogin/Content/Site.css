@@ -98,6 +98,14 @@ body {
     width: 220px;
 }
 
+.inputmoneda {
+    color: #117394;
+    background-color: transparent;
+    border: none;
+    font-size:18px;
+    width: 100px;
+}
+
 .input2 {
     color: #fff;
     background-color: transparent;
@@ -148,6 +156,15 @@ body {
     width: 150px;
     border-radius: 3em;
     border: 3px solid #808080;
+}
+
+.moneda {
+    color: #fff;
+    background: linear-gradient(90deg, #0BEDBF, #07D0C2, #05B3C6, #028FCB );
+    font-size: 18px;
+    width: 60px;
+    border-radius: 3em;
+    border: 3px solid #fff;
 }
 
 #pregunta input {

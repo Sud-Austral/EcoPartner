@@ -99,15 +99,15 @@
                     <div class="col-sm-3" style="background-color:#0BEDBF; color:#117394">
                         <table style="width:100%; margin-top:8%">
                             <tr>
-                                <th> <input type="text" required name="nombre" value="@ViewBag.nombre" class="    input3" autocomplete="off" readonly /></th>
+                                <th> <input type="text" required name="nombre" value="@ViewBag.nombre" class="    input3" autocomplete="on" readonly /></th>
 
                             </tr>
                             <tr>
-                                <th> <input type="text" name="telefono" class=" input3" autocomplete="off" onkeypress="return validaNumericos(event)" required /></th>
+                                <th> <input type="text" name="telefono" class=" input3" maxlength="12" autocomplete="on" onkeypress="formatar_mascara(this, '## #-###-###'); return validaNumericos(event)"  required /></th>
 
                             </tr>
                             <tr>
-                                <th> <input type="text" name="empresa" class="    input3" autocomplete="off" /></th>
+                                <th> <input type="text" name="empresa" class="    input3" autocomplete="on" /></th>
 
                             </tr>
                             <tr>
@@ -142,12 +142,12 @@
 
                         <table style="width:100%; margin-top:8%">
                             <tr>
-                                <th> <input type="text" name="pais" style="margin-left:-65%" class="input3" autocomplete="off" required /></th>
+                                <th> <input type="text" name="pais" style="margin-left:-65%" class="input3" autocomplete="on" required /></th>
 
                             </tr>
 
                             <tr>
-                                <th> <input type="text" name="e-mail" value="@ViewBag.correo" style="margin-left:-65%" class="input3" autocomplete="off" readonly /></th>
+                                <th> <input type="text" name="e-mail" value="@ViewBag.correo" style="margin-left:-65%" class="input3" autocomplete="on" readonly /></th>
 
                             </tr>
                             <tr>
@@ -261,3 +261,13 @@
     }
 </script>
 
+<script type="text/javascript">
+    function formatar_mascara(src, mascara) {
+        var campo = src.value.length;
+        var saida = mascara.substring(0, 1);
+        var texto = mascara.substring(campo);
+        if (texto.substring(0, 1) != saida) {
+            src.value += texto.substring(0, 1);
+        }
+    }
+</script>

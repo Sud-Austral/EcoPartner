@@ -54,7 +54,7 @@ namespace AplicacionLogin.Controllers
             ViewBag.total = calculo;
             ViewBag.toneladas = ton;
             Session["toneladas_camion"] = ton;
-
+            var clp = calculo * 800;
 
 
 
@@ -76,7 +76,7 @@ namespace AplicacionLogin.Controllers
 
 
             //decimal valor = Convert.ToDecimal(calculo);
-            var monto = Convert.ToInt32(calculo);
+            var monto = Convert.ToInt32(clp);
             var orden = "1234567";
             var id = "1234456";
 
