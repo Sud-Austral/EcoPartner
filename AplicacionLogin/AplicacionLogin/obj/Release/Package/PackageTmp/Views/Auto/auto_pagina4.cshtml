@@ -1,0 +1,263 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>Prueba de Bootstrap 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" style="padding:1%">
+            <div class="col-md-3" style="background-color:transparent;">
+                <div class="row">
+                    <div class="col-md-3" style="background-color:transparent;">
+                        <img style="padding:2%" src="~/Content/Img/Vector.png">
+                    </div>
+                    <div class="col-md-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
+                        <p style="font-size:15px;">
+                            CALCULADORA
+                            <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="background-color:transparent;">
+                <div class="row" style="padding:2%;">
+                    <div class="col-md-2" style="background-color:#117394;">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">1</p>
+                    </div>
+                    <div class="col-md-2" style="background-color:#02AFC1">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+                    </div>
+                    <div class="col-md-2" style="background-color:#04C3D7">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
+                    </div>
+                    <div class="col-md-6" style="background-color:#0BEDBF">
+                        <div class="row">
+                            <div class="col-md-2" style="background-color:transparent;">
+                                <p id="num" style="padding-top:45%; padding-left:22%;">4</p>
+                            </div>
+                            <div class="col-md-3" style="background-color:transparent;  padding-top:5%;">
+                                <img src="~/Content/Img/Auto.png" alt="Auto" />
+                            </div>
+                            <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:1%; padding-left:10%;">
+                                <p style="font-size:11px;">
+                                    <span style="font-size:28px; font-weight: bold;">Pago</span> <br>
+                                    Compensa lo contaminado
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" style="background-color:transparent;">
+            </div>
+        </div>
+    </div>
+
+    <!-/////////////////////////////////////////////////////////////////////////////////////->
+    <form name="calculos" method="post" action="/Auto/auto_pagina4_1">
+        <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
+            <div class="col-sm-1" style="background-color:transparent;">
+
+            </div>
+            <div class="col-sm-10" style="background-color:transparent; ">
+                <div class="row" style="padding:2%;">
+
+                    <div class="col-sm-3" style=" background-color: #0BEDBF; border-top-left-radius: 1em; color:#117394">
+
+                        <table style="width:100%; margin-top:10%">
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre*</th>
+
+                            </tr>
+                            <tr>
+                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTeléfono*</th>
+
+                            </tr>
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre de la empresa</th>
+
+                            </tr>
+                            <tr>
+                                <th> <span>&nbsp</span></th>
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    <div class="col-sm-3" style="background-color:#0BEDBF; color:#117394">
+                        <table style="width:100%; margin-top:8%">
+                            <tr>
+                                <th> <input type="text" required name="nombre" value="@ViewBag.nombre" class="    input3" autocomplete="off" readonly /></th>
+
+                            </tr>
+                            <tr>
+                                <th> <input type="text" name="telefono" class=" input3" autocomplete="off" onkeypress="return validaNumericos(event)" required /></th>
+
+                            </tr>
+                            <tr>
+                                <th> <input type="text" name="empresa" class="    input3" autocomplete="off" /></th>
+
+                            </tr>
+                            <tr>
+                                <th> <span>&nbsp</span></th>
+
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div class="col-sm-3" style="background-color:#0BEDBF; color:#117394">
+
+                        <table style="width:100%; margin-top:10%">
+                            <tr>
+                                <th> &nbsp&nbspPaís/Region*</th>
+
+                            </tr>
+
+                            <tr>
+                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail*</th>
+
+                            </tr>
+                            <tr>
+                                <th> <span>&nbsp</span></th>
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+                    <div class="col-sm-3" style="background-color: #0BEDBF; border-top-right-radius: 1em; color:#117394">
+
+                        <table style="width:100%; margin-top:8%">
+                            <tr>
+                                <th> <input type="text" name="pais" style="margin-left:-65%" class="input3" autocomplete="off" required /></th>
+
+                            </tr>
+
+                            <tr>
+                                <th> <input type="text" name="e-mail" value="@ViewBag.correo" style="margin-left:-65%" class="input3" autocomplete="off" readonly /></th>
+
+                            </tr>
+                            <tr>
+                                <th> <span>&nbsp</span></th>
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1" style="background-color:transparent;">
+
+            </div>
+        </div>
+
+        <!-- ///////////////////////////////////////////////////////////////////////////////////-->
+        <!-- ///////////////////////////////////////////////////////////////////////////////////-->
+
+        <div class="row w-100" style=" margin-top: -3.5%; background-color: #0BEDBF; ">
+            <div class="col-sm-1" style="background-color:transparent;">
+
+            </div>
+            <div class="col-sm-10" style=" background-color: transparent;">
+                <div class="row" style="padding:2%;">
+
+                    <div class="col-sm-5" style=" background-color: #0BEDBF; color:#117394">
+                        <table>
+                            <tr>
+                                <th>
+                                    <span>&nbsp&nbsp</span>
+
+                                </th>
+                            </tr>
+                            <tr>
+
+                                <th>
+                                    <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>&nbsp&nbsp</span>
+                                </th>
+                            </tr>
+
+
+                        </table>
+
+
+                    </div>
+                    <div class="col-sm-2" style=" background-color: #0BEDBF; color:#117394">
+
+                        <table>
+                            <tr>
+                                <th>
+                                    <span>&nbsp&nbsp</span>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <input class="calcular3 boton-color" name="actualizar" type="submit" value="ADELANTE">
+                                    <input type="hidden" name="calculo" value="@ViewBag.totalf" />
+                                    <input type="hidden" name="ton" value="@ViewBag.toneladas" />
+
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span>&nbsp&nbsp</span>
+                                </th>
+                            </tr>
+
+
+                        </table>
+
+
+
+                    </div>
+                    <div class="col-sm-5" style=" background-color: #0BEDBF; color:#117394">
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-1" style="background-color:transparent;">
+
+            </div>
+        </div>
+
+
+    </form>
+
+
+
+    <!--<input name="calculo" value="@ViewBag.totalf" />-->
+</body>
+</html>
+
+
+<script>
+    function validaNumericos(event) {
+        if (event.charCode >= 48 && event.charCode <= 57) {
+            return true;
+        }
+        return false;
+    }
+</script>
+
+
