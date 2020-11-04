@@ -112,9 +112,9 @@
 
                     </form>
                     <!-- <span>
-         <img src="~/Content/Img/Frame1.png" alt="hoja">
-         <img src="~/Content/Img/frames.gif" alt="hoja">
-     </span> -->
+                        <img src="~/Content/Img/Frame1.png" alt="hoja">
+                        <img src="~/Content/Img/frames.gif" alt="hoja">
+                    </span> -->
 
                     <div id="smart-button-container" style="margin-top:-80%; margin-left:-55%">
                         <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
@@ -153,7 +153,10 @@
 </body>
 </html>
 
-<script src="https://www.paypal.com/sdk/js?client-id=ARkGHnn3-mtjesDGtCGY5NGv6f6fsIiLfMaw6P2OTRDPNnjNdTmBpj5YKAWP36SAkeCKiNfpVlSi2U--&currency=USD" data-sdk-integration-source="button-factory"></script>
+@*
+    <script src="https://www.paypal.com/sdk/js?client-id=ARkGHnn3-mtjesDGtCGY5NGv6f6fsIiLfMaw6P2OTRDPNnjNdTmBpj5YKAWP36SAkeCKiNfpVlSi2U--&currency=USD" data-sdk-integration-source="button-factory"></script>
+*@
+<script src="https://www.paypal.com/sdk/js?client-id=AUtWDW27C_dQFZbr3GjPakxfvvS-GUBFJywU95gNqqX-OaC80-vay1DCz6lBXJc-cUez-2AkjUC1znzf&currency=USD" data-sdk-integration-source="button-factory"></script>
 <script>
     function initPayPalButton() {
         var description = document.querySelector('#smart-button-container #description');
