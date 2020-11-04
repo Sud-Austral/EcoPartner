@@ -15,17 +15,19 @@ namespace AplicacionLogin.Controllers
         // GET: Moto
         public ActionResult moto_pagina1()
         {
+            ViewBag.Title = "Compensación de carbono para Moto";
             return View();
         }
 
         public ActionResult moto_pagina2()
         {
+            ViewBag.Title = "Compensación de carbono para Moto";
             return View();
         }
 
         public ActionResult moto_pagina3(double recorrido, double toneladas, double total, string name, string mail)
         {
-
+            ViewBag.Title = "Compensación de carbono para Moto";
             ViewBag.recorrido = recorrido;
             ViewBag.toneladas = toneladas;
             ViewBag.total = total;
@@ -37,6 +39,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult moto_pagina4(double porsentaje, double total, double ton, string name, string mail)
         {
+            ViewBag.Title = "Compensación de carbono para Moto";
             CALCULOS ca = new CALCULOS();
             //double totalf = ca.Calculartotalf(porsentaje, total);
             double totalf = ca.Calculartotalf(total, porsentaje);
@@ -51,6 +54,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult moto_pagina4_1(double calculo, double ton)
         {
+            ViewBag.Title = "Compensación de carbono para Moto";
             ViewBag.total = calculo;
             ViewBag.toneladas = ton;
            
@@ -59,6 +63,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult moto_pagina4_2(double calculo, double ton)
         {
+            ViewBag.Title = "Compensación de carbono para Moto";
             ViewBag.total = calculo;
             ViewBag.toneladas = ton;
             Session["toneladas_moto"] = ton;
@@ -106,6 +111,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult moto_pagina4_paypal(double total, double ton)
         {
+            ViewBag.Title = "Compensación de carbono para Moto";
             ViewBag.total = total;
             ViewBag.toneladas = ton;
             return View();
@@ -113,6 +119,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult CalculosMoto(string kilometros, string cilindrada, string nombre, string correo)
         {
+            ViewBag.Title = "Compensación de carbono para Moto";
             Double num;
             bool isNum = Double.TryParse(kilometros, out num);
             if (isNum)
@@ -140,7 +147,7 @@ namespace AplicacionLogin.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-
+            ViewBag.Title = "Compensación de carbono para Moto";
             return View();
 
 
@@ -149,7 +156,7 @@ namespace AplicacionLogin.Controllers
         public ActionResult Contact_moto()
         {
             ViewBag.Message = "Your contact page.";
-
+            ViewBag.Title = "Compensación de carbono para Moto";
 
             return View();
 
@@ -164,7 +171,7 @@ namespace AplicacionLogin.Controllers
             ViewBag.tonelada = Session["toneladas_moto"];
             //ViewBag.tonelada = ton;
 
-
+            ViewBag.Title = "Compensación de carbono para Moto";
             return View();
 
 
@@ -172,6 +179,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult Retorno_moto()
         {
+            ViewBag.Title = "Compensación de carbono para Moto";
             var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
             string tokenWs = Request.Form["token_ws"];
             var result = transaction.getTransactionResult(tokenWs);

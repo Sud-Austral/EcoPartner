@@ -15,17 +15,19 @@ namespace AplicacionLogin.Controllers
         // GET: Camion
         public ActionResult camion_pagina1()
         {
+            ViewBag.Title = "Compensación de carbono para Camión";
             return View();
         }
 
         public ActionResult camion_pagina2()
         {
+            ViewBag.Title = "Compensación de carbono para Camión";
             return View();
         }
 
         public ActionResult camion_pagina3(double recorrido, double toneladas, double total, string nombre, string correo)
         {
-
+            ViewBag.Title = "Compensación de carbono para Camión";
             ViewBag.recorrido = recorrido;
             ViewBag.toneladas = toneladas;
             ViewBag.total = total;
@@ -37,6 +39,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult camion_pagina4(double porsentaje, double total, double ton, string nombre, string correo)
         {
+            ViewBag.Title = "Compensación de carbono para Camión";
             CALCULOS ca = new CALCULOS();
             //double totalf = ca.Calculartotalf(porsentaje, total);
             double totalf = ca.Calculartotalf(total, porsentaje);
@@ -51,7 +54,8 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult camion_pagina4_1(double calculo, double ton)
         {
-            ViewBag.total = calculo;
+            ViewBag.Title = "Compensación de carbono para Camión";
+            ViewBag.total = Math.Round(calculo,2);
             ViewBag.toneladas = ton;
             Session["toneladas_camion"] = ton;
             var clp = calculo * 800;
@@ -98,6 +102,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult CalculosCamion(string kilometros, string toneladasCarga, string nombre, string correo)
         {
+            ViewBag.Title = "Compensación de carbono para Camión";
             Double num;
             bool isNum = Double.TryParse(kilometros, out num);
             bool isNum2 = Double.TryParse(toneladasCarga, out num);
@@ -125,7 +130,7 @@ namespace AplicacionLogin.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-
+            ViewBag.Title = "Compensación de carbono para Camión";
             return View();
 
 
@@ -134,7 +139,7 @@ namespace AplicacionLogin.Controllers
         public ActionResult Contact_camion()
         {
             ViewBag.Message = "Your contact page.";
-
+            ViewBag.Title = "Compensación de carbono para Camión";
 
             return View();
 
@@ -143,6 +148,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult Final_camion()
         {
+            ViewBag.Title = "Compensación de carbono para Camión";
             ViewBag.Message = "Your contact page.";
             //ViewBag.toneladas = Response.Write Session("toneladas");
             //var ton = Session["toneladas"];
@@ -157,6 +163,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult Retorno_camion()
         {
+            ViewBag.Title = "Compensación de carbono para Camión";
             var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
             string tokenWs = Request.Form["token_ws"];
             var result = transaction.getTransactionResult(tokenWs);

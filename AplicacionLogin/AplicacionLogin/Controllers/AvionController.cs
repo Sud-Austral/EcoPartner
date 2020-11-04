@@ -15,22 +15,25 @@ namespace AplicacionLogin.Controllers
         // GET: Avion
         public ActionResult Avion_pagina1()
         {
+            ViewBag.Title = "Compensación de carbono para Avión";
             return View();
         }
 
         public ActionResult Avion_pagina()
         {
+            ViewBag.Title = "Compensación de carbono para Avión";
             return View();
         }
 
         public ActionResult Avion_pagina2()
         {
+            ViewBag.Title = "Compensación de carbono para Avión";
             return View();
         }
 
         public ActionResult Avion_pagina3(double recorrido, double toneladas, double total, string nombre, string correo)
         {
-
+            ViewBag.Title = "Compensación de carbono para Avión";
             ViewBag.recorrido = recorrido;
             ViewBag.toneladas = toneladas;
             ViewBag.total = total;
@@ -42,6 +45,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult Avion_pagina4(double porsentaje, double total, double ton, string nombre, string correo)
         {
+            ViewBag.Title = "Compensación de carbono para Avión";
             CALCULOS ca = new CALCULOS();
             //double totalf = ca.Calculartotalf(porsentaje, total);
             double totalf = ca.Calculartotalf(total, porsentaje);
@@ -54,6 +58,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult Avion_pagina4_1(double calculo, double ton)
         {
+            ViewBag.Title = "Compensación de carbono para Avión";
             ViewBag.total = calculo;
             ViewBag.toneladas = ton;
             Session["toneladas_avion"] = ton;
@@ -101,6 +106,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult BuscarAeropuertos(string inicio, string destino, int recorrido, int pasajeros, int tipoViaje, string nombre, string correo)
         {
+            ViewBag.Title = "Compensación de carbono para Avión";
             AEROPUERTO p1 = new AEROPUERTO();
             AEROPUERTO p2 = new AEROPUERTO();
             HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://raw.githubusercontent.com/Sud-Austral/Calculadora/master/BaseDatos/airports.dat");
@@ -150,7 +156,7 @@ namespace AplicacionLogin.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
-
+            ViewBag.Title = "Compensación de carbono para Avión";
             return View();
 
 
@@ -159,7 +165,7 @@ namespace AplicacionLogin.Controllers
         public ActionResult Contact_avion()
         {
             ViewBag.Message = "Your contact page.";
-
+            ViewBag.Title = "Compensación de carbono para Avión";
 
             return View();
 
@@ -168,6 +174,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult Final_avion()
         {
+            ViewBag.Title = "Compensación de carbono para Avión";
             ViewBag.Message = "Your contact page.";
             //ViewBag.toneladas = Response.Write Session("toneladas");
             //var ton = Session["toneladas"];
@@ -182,6 +189,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult Retorno_avion()
         {
+            ViewBag.Title = "Compensación de carbono para Avión";
             var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
             string tokenWs = Request.Form["token_ws"];
             var result = transaction.getTransactionResult(tokenWs);
