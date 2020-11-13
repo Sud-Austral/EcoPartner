@@ -84,7 +84,7 @@ namespace AplicacionLogin.Controllers
 
 
             //decimal valor = Convert.ToDecimal(calculo);
-            var monto = Convert.ToInt32(calculo);
+            var monto = Convert.ToInt32(calculo * 100);
             var orden = "1234567";
             var id = "1234456";
 
@@ -97,7 +97,7 @@ namespace AplicacionLogin.Controllers
             var tokenWs = initResult.token;
             var formAction = initResult.url;
 
-            ViewBag.Monto = monto;
+            ViewBag.Monto = monto / 100;
             ViewBag.Orden = orden;
             ViewBag.token = tokenWs;
             ViewBag.form = formAction;

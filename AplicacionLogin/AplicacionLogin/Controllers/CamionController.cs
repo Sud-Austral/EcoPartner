@@ -55,7 +55,7 @@ namespace AplicacionLogin.Controllers
         public ActionResult camion_pagina4_1(double calculo, double ton)
         {
             ViewBag.Title = "Compensación de carbono para Camión";
-            ViewBag.total = Math.Round(calculo,2);
+            ViewBag.total = Math.Round(calculo * 100,2);
             ViewBag.toneladas = ton;
             Session["toneladas_camion"] = ton;
             var clp = calculo * 800;
@@ -93,7 +93,7 @@ namespace AplicacionLogin.Controllers
             var tokenWs = initResult.token;
             var formAction = initResult.url;
 
-            ViewBag.Monto = monto;
+            ViewBag.Monto = monto / 100;
             ViewBag.Orden = orden;
             ViewBag.token = tokenWs;
             ViewBag.form = formAction;
