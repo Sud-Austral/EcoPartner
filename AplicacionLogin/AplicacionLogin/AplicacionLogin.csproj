@@ -250,6 +250,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MotoController.cs" />
+    <Compile Include="Controllers\PruebaController.cs" />
     <Compile Include="Controllers\PruebasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -486,6 +487,9 @@
     <Content Include="Views\Moto\Contact_moto.cshtml" />
     <Content Include="Views\Moto\Final_moto.cshtml" />
     <Content Include="Views\Moto\Retorno_moto.cshtml" />
+    <Content Include="Views\Prueba\Index.cshtml" />
+    <Content Include="Views\Prueba\retorno.cshtml" />
+    <Content Include="Views\Prueba\Final.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
