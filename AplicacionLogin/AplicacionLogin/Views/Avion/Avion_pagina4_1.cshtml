@@ -177,30 +177,24 @@
                         <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
                     </div>
                     <form name="convertidor">
-                        <div id="clpm">
-
+                        <div  id="clpm">
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" name="usd" value="@ViewBag.total" /> USD</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" name="usdtot" value="@ViewBag.total" />  USD</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span>&nbsp&nbsp</span></div>
-
-
-
                         </div>
+                       
                         <div id="usdm" style="display:none">
-
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" name="clp" /> CLP</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" name="clptot" />  CLP</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span>&nbsp&nbsp</span></div>
-
-
-
                         </div>
+
                     </form>
                     <form action="/Moto/moto_pagina4_paypal" method="post">
                         <input type="hidden" name="total" value="@ViewBag.total" />

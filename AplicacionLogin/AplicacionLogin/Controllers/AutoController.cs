@@ -91,8 +91,10 @@ namespace AplicacionLogin.Controllers
             var orden = "1234567";
             var id = "1234456";
 
-            string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
-            string returnFinal = "https://ecopartnerbank.azurewebsites.net/Auto/Final";
+            string returnUrl = "http://localhost:62106/Auto/Retorno";
+            string returnFinal = "http://localhost:62106/Auto/Final";
+            //string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
+           // string returnFinal = "https://ecopartnerbank.azurewebsites.net/Auto/Final";
 
             var initResult = transaction.initTransaction(monto, orden, id, returnUrl, returnFinal);
 
@@ -203,6 +205,7 @@ namespace AplicacionLogin.Controllers
             var result = transaction.getTransactionResult(tokenWs);
 
             var output = result.detailOutput[0];
+            int aux = output.responseCode;
             if(output.responseCode == 0)
             {
                 ViewBag.redirect = result.urlRedirection;
@@ -212,11 +215,28 @@ namespace AplicacionLogin.Controllers
                 ViewBag.auto = output.authorizationCode;
 
             }
+            
+            else
+            {
+                ViewBag.redirect = result.urlRedirection;
+                ViewBag.monto = "La transacción fue rechazada";
+                ViewBag.Token = tokenWs;
+                return View("Error");
+            }
             ViewBag.Message = "Your application description page.";
             
             return View();
 
 
         }
+        public ActionResult Error()
+        {
+            return View();
+        }
+        public ActionResult ErrorT()
+        {
+            return View();
+        }
+
     }
 }
