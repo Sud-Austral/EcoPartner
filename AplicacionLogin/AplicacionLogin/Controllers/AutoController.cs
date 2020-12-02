@@ -95,13 +95,13 @@ namespace AplicacionLogin.Controllers
            // string returnFinal = "http://localhost:62106/Auto/Final";
             string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
             string returnFinal = "https://ecopartnerbank.azurewebsites.net/Auto/Final";
-
-            var initResult = transaction.initTransaction(monto, orden, id, returnUrl, returnFinal);
+            int montotrans = Convert.ToInt32(calculo * 800); 
+            var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
 
 
             var tokenWs = initResult.token;
             var formAction = initResult.url;
-
+            ViewBag.Montotrans = montotrans;
             ViewBag.Monto = monto / 100;
             ViewBag.Orden = orden;
             ViewBag.token = tokenWs;
