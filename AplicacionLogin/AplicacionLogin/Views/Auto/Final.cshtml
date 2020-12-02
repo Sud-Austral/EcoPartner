@@ -136,6 +136,9 @@
                             document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
                             document.getElementById("respuesta").innerHTML = window.localStorage.getItem("response");
                             document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas");
+                            if (window.localStorage.getItem("response") === null) {
+                                location.href = "/Auto/ErrorT";  
+                            }
                         </script>
 
 
