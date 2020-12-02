@@ -490,6 +490,8 @@
     <Content Include="Views\Prueba\Index.cshtml" />
     <Content Include="Views\Prueba\retorno.cshtml" />
     <Content Include="Views\Prueba\Final.cshtml" />
+    <Content Include="Views\Auto\Error.cshtml" />
+    <Content Include="Views\Auto\ErrorT.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
