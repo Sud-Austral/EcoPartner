@@ -273,14 +273,19 @@
     <Content Include="Content\Img\Auto.png" />
     <Content Include="Content\Img\Avion.png" />
     <Content Include="Content\Img\Camion.png" />
+    <Content Include="Content\Img\flecha.png" />
     <Content Include="Content\Img\Frame1.png" />
     <Content Include="Content\Img\Frame2.png" />
     <Content Include="Content\Img\Frame3.png" />
+    <Content Include="Content\Img\hoja.png" />
     <Content Include="Content\Img\Moto.png" />
+    <Content Include="Content\Img\nfh.png" />
     <Content Include="Content\Img\nube.png" />
     <Content Include="Content\Img\Recorrido.png" />
+    <Content Include="Content\Img\sobre.png" />
     <Content Include="Content\Img\Vector.png" />
     <Content Include="Content\Img\Vector2.png" />
+    <Content Include="Content\Img\webpay.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -309,6 +314,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="libman.json" />
+    <Content Include="Content\Img\nubw-flecha-hoja.psd" />
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - Web Deploy.pubxml" />

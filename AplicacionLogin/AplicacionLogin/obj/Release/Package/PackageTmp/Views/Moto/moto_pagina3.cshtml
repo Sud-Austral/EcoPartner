@@ -77,22 +77,31 @@
                     <div class="col-md-2" style="background-color:#04C3D7">
 
                     </div>
-                    <div class="col-md-8" style="background-color:#04C3D7;">
+                    <!--
+                                  <div class="row">
+                        <div class="columna col d-block d-sm-none"></div>
+                        <div class="columna col d-none d-sm-block d-md-none">SM - Small</div>
+                        <div class="columna col d-none d-md-block d-lg-none">MD - Medium</div>
+                        <div class="columna col d-none d-lg-block d-xl-none">LG - Large</div>
+                        <div class="columna col d-none d-xl-block">XL - Extra Large</div>
+                    </div>-->
+
+                    <div class="col-md-8 d-none d-xl-block" style="background-color:#04C3D7;">
                         <div class="hijo">
                             <table style="width:100%">
                                 <tr>
                                     <th> &nbsp&nbsp&nbsp</th>
                                     <th> <img style="padding:2%" src="~/Content/Img/nube.png"> </th>
-                                    <th> <h1>@ViewBag.toneladas</h1></th>
-                                    <th> <h1>T de CO2 = $ @ViewBag.total USD</h1> </th>
+                                    <th> <h2> @ViewBag.toneladas</h2></th>
+                                    <th> <h2>T de CO2 = $ @ViewBag.total USD</h2> </th>
 
                                 </tr>
 
                             </table>
                             <table style="width:90%">
                                 <tr>
-                                    <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                                    <th> @ViewBag.recorrido km recorridos</th>
+                                    <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                                    <th><spam class="spam">@ViewBag.recorrido km recorridos</spam></th>
 
                                 </tr>
 
@@ -102,12 +111,42 @@
                         <table>
                             <tr>
                                 <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                                <th class="spam">Quiero compensar</th>
+                                <th><spam class="spam">Quiero compensar</spam></th>
                             </tr>
                         </table>
                     </div>
 
-                    <div class="col-md-2" style="background-color:#04C3D7">
+
+                    <div class="col-md-8 d-block d-xl-none" style="background-color:#04C3D7;">
+                        <div class="hijo">
+                            <table style="width:100%">
+                                <tr>
+                                    <th> </th>
+                                    <th> <img style="" src="~/Content/Img/nube.png"> </th>
+                                    <th> <h3> @ViewBag.toneladas</h3></th>
+                                    <th> <h3>T de CO2 = $ @ViewBag.total USD</h3> </th>
+
+                                </tr>
+
+                            </table>
+                            <table style="width:90%">
+                                <tr>
+                                    <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                                    <th><spam class="spam">@ViewBag.recorrido km recorridos</spam></th>
+
+                                </tr>
+
+                            </table>
+
+                        </div>
+                        <table>
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                                <th><spam class="spam">Quiero compensar</spam></th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-2" style="backg6++round-color:#04C3D7">
 
                     </div>
                 </div>
@@ -256,7 +295,7 @@
                                     </tr>
 
                                 </table>
-                               
+
                             </div>
                         </div>
 
@@ -272,7 +311,7 @@
     </form>
 
 
-      
+
 </body>
 </html>
 

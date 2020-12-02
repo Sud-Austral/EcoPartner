@@ -73,12 +73,10 @@
         <div class="col-sm-8" style="background-color:transparent; ">
             <div class="row" style="padding:2%;">
 
-
                 <div class="col-sm-2" style=" background-color: #0BEDBF; padding-top:3%; padding-left:8%; color:#117394">
                     <img src="~/Content/Img/nube.png" alt="nube">
                 </div>
-
-                <div class="col-sm-6" style="background-color: #0BEDBF; color: #117394">
+                <div class="col-sm-5" style="background-color: #0BEDBF; color: #117394">
                     <div><span>&nbsp&nbsp</span></div>
                     <span style="font-weight: bold;">Producto</span>
                     <div><span>&nbsp&nbsp</span></div>
@@ -92,28 +90,123 @@
 
                     <a href="javascript: history.go(-1)" style="margin-left:-40%"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
 
-                </div>
-
-
-                <div class="col-sm-1" style=" background-color: #0BEDBF; color:#117394">
-
 
 
                 </div>
+
+                <div class="col-sm-2" style=" background-color: #0BEDBF; color:#117394">
+
+
+
+                </div>
+
                 <div class="col-sm-3" style=" background-color: #0BEDBF; color:#117394">
-                    <div><span>&nbsp&nbsp</span></div>
-                    <div><span>&nbsp&nbsp</span></div>
-                    <div><span>&nbsp&nbsp</span></div>
-                    <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ @ViewBag.total USD</span></div>
-                    <div><span>&nbsp&nbsp</span></div>
-                    <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ @ViewBag.total USD</span></div>
+
+                    <script type="text/javascript">
+
+                        $('#mclp').Click(function () {
+                            if ($('#musd').css('display') == none) {
+                                $('#musd').css('display', 'block');
+                            }
+                            else {
+                                $('#musd').css('display', 'none');
+                            }
+                        })
+
+                    </script>
+                    <script type="text/javascript">
+                        function mostrarDiv() {
+                            document.getElementById('musd').style.display = "block";
+                            document.getElementById('mclp').style.display = "none";
+                            //document.getElementById('menos').style.display = "block";
+                            document.getElementById('clpm').style.display = "none";
+                            document.getElementById('usdm').style.display = "block";
+
+                        }
+
+                        function ocultarDiv() {
+                            document.getElementById('mclp').style.display = "block";
+                            document.getElementById('musd').style.display = "none";
+                            //document.getElementById('menos').style.display = "none";
+                            document.getElementById('clpm').style.display = "block";
+                            document.getElementById('usdm').style.display = "none";
+
+                        }
+
+
+                    </script>
+                    <script type="text/javascript">
+                        function monedaclp() {
+
+                            var valor = (document.convertidor.usd.value) * 1;
+                            var tot = valor * 800;
+                            tot = tot.toFixed(2);
+
+                            document.convertidor.clp.value = tot;
+                            document.convertidor.clptot.value = tot;
+
+                        }
+
+                    </script>
+                    <script type="text/javascript">
+                        function monedausd() {
+
+                            var valor = (document.convertidor.clp.value) * 1;
+                            var tot = valor / 800;
+                            tot = tot.toFixed(2);
+
+                            document.convertidor.usd.value = tot;
+                            document.convertidor.usdtot.value = tot;
+
+                        }
+
+                    </script>
                     <div><span>&nbsp&nbsp</span></div>
 
+                    <div id="mclp">
+                        <span style="font-weight: bold; margin-left:-15%">Moneda</span>
+                        <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
+
+                    </div>
+                    <div id="musd" style="display:none;">
+                        <span style="font-weight: bold; margin-left:-15%">Moneda</span>
+                        <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
+                    </div>
+                    <form name="convertidor">
+                        <div id="clpm">
+
+                            <div><span>&nbsp&nbsp</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" name="usd" value="@ViewBag.total" /> USD</span></div>
+                            <div><span>&nbsp&nbsp</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" name="usdtot" value="@ViewBag.total" />  USD</span></div>
+                            <div><span>&nbsp&nbsp</span></div>
+                            <div><span>&nbsp&nbsp</span></div>
+
+
+
+                        </div>
+                        <div id="usdm" style="display:none">
+
+                            <div><span>&nbsp&nbsp</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" name="clp" /> CLP</span></div>
+                            <div><span>&nbsp&nbsp</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" name="clptot" />  CLP</span></div>
+                            <div><span>&nbsp&nbsp</span></div>
+                            <div><span>&nbsp&nbsp</span></div>
+
+
+
+                        </div>
+                    </form>
                     <form action="/Moto/moto_pagina4_paypal" method="post">
                         <input type="hidden" name="total" value="@ViewBag.total" />
                         <input type="hidden" name="ton" value="@ViewBag.toneladas" />
 
                     </form>
+                    <!--    <span>
+                    <img src="~/Content/Img/Frame1.png" alt="hoja">
+                    <img src="~/Content/Img/frames.gif" alt="hoja">
+                </span>-->
 
                     <div id="smart-button-container" style="margin-top:-70%; margin-left:-55%">
                         <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
@@ -126,14 +219,14 @@
 
 
                         <div style="margin-left: 13%">
-
+                            
                             <form action="@ViewBag.form" method="post">
                                 <input hidden type="text" name="token_ws" value="@ViewBag.token" />
                                 <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
-                                <!--<button type="submit">Now</button>-->
-                                <input type="image" src="~/Content/Img/webpay.png" height="150" width="300" />
-                            </form>
-                            <!--4051885600446623-->
+
+                        <input type="image" src="~/Content/Img/webpay.png" height="150" width="300" />
+                        </form>
+                        <!--4051885600446623-->
 
 
                         </div>
