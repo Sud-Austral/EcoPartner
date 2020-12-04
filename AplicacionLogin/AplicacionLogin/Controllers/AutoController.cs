@@ -88,13 +88,13 @@ namespace AplicacionLogin.Controllers
 
             //decimal valor = Convert.ToDecimal(calculo);
             var monto = Convert.ToInt32(calculo * 100); 
-            var orden = Guid.NewGuid().ToString();
-            var id = Guid.NewGuid().ToString(); ;
+            var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
+            var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
-           //string returnUrl = "http://localhost:62106/Auto/Retorno";
-           //string returnFinal = "http://localhost:62106/Auto/Final";
-           string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
-           string returnFinal = "https://ecopartnerbank.azurewebsites.net/Auto/Final";
+           string returnUrl = "http://localhost:62106/Auto/Retorno";
+           string returnFinal = "http://localhost:62106/Auto/Final";
+           //string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
+           //string returnFinal = "https://ecopartnerbank.azurewebsites.net/Auto/Final";
             int montotrans = Convert.ToInt32(calculo * 800); 
             var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
 
