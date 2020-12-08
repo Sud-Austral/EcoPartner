@@ -87,7 +87,7 @@ namespace AplicacionLogin.Controllers
            // string returnUrl = "http://localhost:62106/Camion/Retorno_camion";
            // string returnFinal = "http://localhost:62106/Camion/Final_camion";
             string returnUrl = "https://ecopartnerbank.azurewebsites.net/Camion/Retorno_camion";
-            string returnFinal = https://ecopartnerbank.azurewebsites.net/Camion/Final_camion";
+            string returnFinal = "https://ecopartnerbank.azurewebsites.net/Camion/Final_camion";
 
             int montotrans = Convert.ToInt32(calculo * 800);
             var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
