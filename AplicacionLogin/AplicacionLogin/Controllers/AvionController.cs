@@ -88,10 +88,10 @@ namespace AplicacionLogin.Controllers
             var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
-            string returnUrl = "http://localhost:62106/Avion/Retorno_avion";
-            string returnFinal = "http://localhost:62106/Avion/Final_avion";
-            //  string returnUrl = "https://ecopartnerbank.azurewebsites.net/Avion/Retorno_avion";
-            //  string returnFinal = "https://ecopartnerbank.azurewebsites.net/Avion/Final_avion";
+            //string returnUrl = "http://localhost:62106/Avion/Retorno_avion";
+            //string returnFinal = "http://localhost:62106/Avion/Final_avion";
+             string returnUrl = "https://ecopartnerbank.azurewebsites.net/Avion/Retorno_avion";
+             string returnFinal = "https://ecopartnerbank.azurewebsites.net/Avion/Final_avion";
 
             int montotrans = Convert.ToInt32(calculo * 800);
             var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
