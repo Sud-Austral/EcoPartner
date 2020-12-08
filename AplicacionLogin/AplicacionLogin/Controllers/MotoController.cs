@@ -68,20 +68,20 @@ namespace AplicacionLogin.Controllers
             ViewBag.toneladas = ton;
             Session["toneladas_moto"] = ton;
 
-
-
-
-            //var configuration = new Configuration();
-            //configuration.Environment = "PRODUCCION";
-            //configuration.CommerceCode = "597036025948";
-            //Conf.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Cert\36025948.pfx";
+            var configuration = new Configuration();
+            configuration.Environment = "PRODUCCION";
+            configuration.CommerceCode = "597036300078";
+            configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
             //configuration.PrivateCertPfxPath = @"C:\Users\limc_\source\repos\WebApplication6\WebApplication6\Content\Cert\597036025948.pfx";
 
-            //configuration.Password = "1234";
-            //configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+            configuration.Password = "a";
+            configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
 
             //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();
-            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
+            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
+            var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
 
             //var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
 
@@ -95,8 +95,8 @@ namespace AplicacionLogin.Controllers
 
            // string returnUrl = "http://localhost:62106/Moto/Retorno_moto";
            // string returnFinal = "http://localhost:62106/Moto/Final_moto";
-            string returnUrl = "https://ecopartnerbank.azurewebsites.net/Moto/Retorno_moto";
-            string returnFinal = "https://ecopartnerbank.azurewebsites.net/Moto/Final_moto";
+           string returnUrl = "https://ecopartnerbank.azurewebsites.net/Moto/Retorno_moto";
+           string returnFinal = "https://ecopartnerbank.azurewebsites.net/Moto/Final_moto";
 
             int montotrans = Convert.ToInt32(calculo * 800);
             var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
@@ -182,7 +182,21 @@ namespace AplicacionLogin.Controllers
         public ActionResult Retorno_moto()
         {
             ViewBag.Title = "Compensación de carbono para Moto";
-            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+            var configuration = new Configuration();
+            configuration.Environment = "PRODUCCION";
+            configuration.CommerceCode = "597036300078";
+            configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
+            //configuration.PrivateCertPfxPath = @"C:\Users\limc_\source\repos\WebApplication6\WebApplication6\Content\Cert\597036025948.pfx";
+
+            configuration.Password = "a";
+            configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+
+            //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+
+            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
+            var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
             string tokenWs = Request.Form["token_ws"];
             var result = transaction.getTransactionResult(tokenWs);
 

@@ -168,7 +168,21 @@ namespace AplicacionLogin.Controllers
         public ActionResult Retorno_camion()
         {
             ViewBag.Title = "Compensación de carbono para Camión";
-            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+            var configuration = new Configuration();
+            configuration.Environment = "PRODUCCION";
+            configuration.CommerceCode = "597036300078";
+            configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
+            //configuration.PrivateCertPfxPath = @"C:\Users\limc_\source\repos\WebApplication6\WebApplication6\Content\Cert\597036025948.pfx";
+
+            configuration.Password = "a";
+            configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+
+            //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+
+            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
+            var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
             string tokenWs = Request.Form["token_ws"];
             var result = transaction.getTransactionResult(tokenWs);
 
