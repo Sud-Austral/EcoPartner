@@ -62,19 +62,20 @@ namespace AplicacionLogin.Controllers
 
 
 
-            //var configuration = new Configuration();
-            //configuration.Environment = "PRODUCCION";
-            //configuration.CommerceCode = "597036025948";
-            //Conf.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Cert\36025948.pfx";
+            var configuration = new Configuration();
+            configuration.Environment = "PRODUCCION";
+            configuration.CommerceCode = "597036300078";
+            configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
             //configuration.PrivateCertPfxPath = @"C:\Users\limc_\source\repos\WebApplication6\WebApplication6\Content\Cert\597036025948.pfx";
 
-            //configuration.Password = "1234";
-            //configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+            configuration.Password = "a";
+            configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
 
             //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();
-            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
-            //var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
+            var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
 
             //Convert.ToInt16(calculo);
 
