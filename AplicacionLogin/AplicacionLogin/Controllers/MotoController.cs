@@ -90,14 +90,16 @@ namespace AplicacionLogin.Controllers
 
             //decimal valor = Convert.ToDecimal(calculo);
             var monto = Convert.ToInt32(calculo * 100);
-            var orden = "1234567";
-            var id = "1234456";
+            var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
+            var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
             string returnUrl = "http://localhost:62106/Moto/Retorno_moto";
             string returnFinal = "http://localhost:62106/Moto/Final_moto";
+            // string returnUrl = "https://ecopartnerbank.azurewebsites.net/Moto/Retorno_moto";
+            // string returnFinal = "https://ecopartnerbank.azurewebsites.net/Moto/Final_moto";
 
-            var initResult = transaction.initTransaction(monto, orden, id, returnUrl, returnFinal);
-
+            int montotrans = Convert.ToInt32(calculo * 800);
+            var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
 
             var tokenWs = initResult.token;
             var formAction = initResult.url;
@@ -185,6 +187,7 @@ namespace AplicacionLogin.Controllers
             var result = transaction.getTransactionResult(tokenWs);
 
             var output = result.detailOutput[0];
+            int aux = output.responseCode;
             if (output.responseCode == 0)
             {
                 ViewBag.redirect = result.urlRedirection;
@@ -194,11 +197,26 @@ namespace AplicacionLogin.Controllers
                 ViewBag.moto = output.authorizationCode;
 
             }
+            else
+            {
+                ViewBag.redirect = result.urlRedirection;
+                ViewBag.monto = "La transacción fue rechazada";
+                ViewBag.Token = tokenWs;
+                return View("Error");
+            }
             ViewBag.Message = "Your application description page.";
 
             return View();
 
 
+        }
+        public ActionResult Error()
+        {
+            return View();
+        }
+        public ActionResult ErrorT()
+        {
+            return View();
         }
     }
 }

@@ -498,6 +498,12 @@
     <Content Include="Views\Prueba\Final.cshtml" />
     <Content Include="Views\Auto\Error.cshtml" />
     <Content Include="Views\Auto\ErrorT.cshtml" />
+    <Content Include="Views\Moto\Error.cshtml" />
+    <Content Include="Views\Camion\Error.cshtml" />
+    <Content Include="Views\Avion\Error.cshtml" />
+    <Content Include="Views\Moto\ErrorT.cshtml" />
+    <Content Include="Views\Camion\ErrorT.cshtml" />
+    <Content Include="Views\Avion\ErrorT.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
