@@ -41,7 +41,7 @@
                         <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
                         <div class="col-md-2" style="background-color:transparent; color:#ffff; height: 5px; margin-top:-7%; ">
                             <p style="font-size:11px;">
-                   
+
                             </p>
                         </div>
                     </div>
@@ -177,24 +177,30 @@
                         <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
                     </div>
                     <form name="convertidor">
-                        <div  id="clpm">
+                        <div id="clpm">
+
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" name="usd" value="@ViewBag.total" /> USD</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" name="usdtot" value="@ViewBag.total" />  USD</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span>&nbsp&nbsp</span></div>
+
+
+
                         </div>
-                       
                         <div id="usdm" style="display:none">
+
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" name="clp" /> CLP</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" name="clptot" />  CLP</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span>&nbsp&nbsp</span></div>
-                        </div>
 
+
+
+                        </div>
                     </form>
                     <form action="/Moto/moto_pagina4_paypal" method="post">
                         <input type="hidden" name="total" value="@ViewBag.total" />
@@ -206,29 +212,34 @@
                         <img src="~/Content/Img/frames.gif" alt="hoja">
                     </span>-->
 
-                    <div id="smart-button-container" style="margin-top:-80%; margin-left:-55%">
+                    <div id="smart-button-container" style="margin-top:-70%; margin-left:-55%">
                         <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
                         <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
                         <div style="text-align: center"><label for="amount"> </label><input hidden name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
                         <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
                         <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
-                        <p id="invoiceidError" style="visibility: hidden; color:red; text-align: center;">Please enter an Invoice ID</p>
+                        <p id="invoiceidError" style=" visibility: hidden; color: red; text-align: center;">Please enter an Invoice ID</p>
                         <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
+
+
+                        <div style="margin-left: 13%">
+
+                            <form action="@ViewBag.form" method="post">
+                                <input hidden type="text" name="token_ws" value="@ViewBag.token" />
+                                <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
+
+                                <input type="image" src="~/Content/Img/webpay.png" height="150" width="300" />
+                            </form>
+                            <!--4051885600446623-->
+
+
+                        </div>
+
                     </div>
 
-                    <div style="margin-left: -40%">
-
-                        <!-- <form action="@ViewBag.form" method="post">
-                        <input hidden type="text" name="token_ws" value="@ViewBag.token" />
-                        <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
-
-                                       <input type="image" src="~/Content/Img/webpay.png" height="150" width="300" />
-                                       </form>
-                                       <!--4051885600446623-->
-                 
 
 
-                    </div>
+
 
                 </div>
 
