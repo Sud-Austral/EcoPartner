@@ -55,33 +55,38 @@ namespace AplicacionLogin.Controllers
         public ActionResult camion_pagina4_1(double calculo, double ton)
         {
             ViewBag.Title = "Compensación de carbono para Camión";
-            ViewBag.total = Math.Round(calculo * 100,2);
+            ViewBag.total = calculo;
+       
             ViewBag.toneladas = ton;
             Session["toneladas_camion"] = ton;
             var clp = calculo * 800;
 
 
 
+            //*********************************************************************************
+            //                                     Ambiente de producción
+            //*********************************************************************************
             var configuration = new Configuration();
             configuration.Environment = "PRODUCCION";
             configuration.CommerceCode = "597036300078";
             configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
-            //configuration.PrivateCertPfxPath = @"C:\Users\limc_\source\repos\WebApplication6\WebApplication6\Content\Cert\597036025948.pfx";
 
             configuration.Password = "a";
             configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
-
-            //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();
-
+            var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+            //*********************************************************************************
+            //                                     Ambiente de prueba
+            //*********************************************************************************
             //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
-            var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+
+
 
             //Convert.ToInt16(calculo);
 
 
             //decimal valor = Convert.ToDecimal(calculo);
-            var monto = Convert.ToInt32(clp);
+            var monto = Convert.ToInt32(calculo * 100);
             var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
@@ -168,21 +173,22 @@ namespace AplicacionLogin.Controllers
         public ActionResult Retorno_camion()
         {
             ViewBag.Title = "Compensación de carbono para Camión";
-            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+            //*********************************************************************************
+            //                                     Ambiente de producción
+            //*********************************************************************************
             var configuration = new Configuration();
             configuration.Environment = "PRODUCCION";
             configuration.CommerceCode = "597036300078";
             configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
-            //configuration.PrivateCertPfxPath = @"C:\Users\limc_\source\repos\WebApplication6\WebApplication6\Content\Cert\597036025948.pfx";
 
             configuration.Password = "a";
             configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
-
-            //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();
-
-            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
-
             var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+            //*********************************************************************************
+            //                                     Ambiente de prueba
+            //*********************************************************************************
+           // var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
             string tokenWs = Request.Form["token_ws"];
             var result = transaction.getTransactionResult(tokenWs);
 

@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
+    <link rel="shortcut icon" href="~/Content/Img/favicon-32x32.png">
 </head>
 
 <body>
@@ -164,21 +165,21 @@
                     <div><span>&nbsp&nbsp</span></div>
 
                     <div id="mclp">
-                        <span style="font-weight: bold; margin-left:-15%">Moneda</span>
+                        <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
                         <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
 
                     </div>
                     <div id="musd" style="display:none;">
-                        <span style="font-weight: bold; margin-left:-15%">Moneda</span>
+                        <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
                         <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
                     </div>
                     <form name="convertidor">
                         <div id="clpm">
 
                             <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" name="usd" value="@ViewBag.total" /> USD</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="usd" value="@ViewBag.total" /> USD</span></div>
                             <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" name="usdtot" value="@ViewBag.total" />  USD</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" disabled="disabled" name="usdtot" value="@ViewBag.total" />  USD</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span>&nbsp&nbsp</span></div>
 
@@ -188,9 +189,9 @@
                         <div id="usdm" style="display:none">
 
                             <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" name="clp" /> CLP</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="clp" /> CLP</span></div>
                             <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" name="clptot" />  CLP</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" disabled="disabled" name="clptot" />  CLP</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span>&nbsp&nbsp</span></div>
 
@@ -204,10 +205,10 @@
 
                     </form>
                     <!--    <span>
-                    <img src="~/Content/Img/Frame1.png" alt="hoja">
-                    <img src="~/Content/Img/frames.gif" alt="hoja">
-                </span>-->
-
+        <img src="~/Content/Img/Frame1.png" alt="hoja">
+        <img src="~/Content/Img/frames.gif" alt="hoja">
+    </span>-->
+                    <p style="font-weight: bold; margin-left:-25%">Elige tu método de pago</p>
                     <div id="smart-button-container" style="margin-top:-70%; margin-left:-55%">
                         <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
                         <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
@@ -218,15 +219,15 @@
                         <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
 
 
-                        <div style="margin-left: 13%">
-                            
+                        <div style="margin-left:-2%">
+
                             <form action="@ViewBag.form" method="post">
                                 <input hidden type="text" name="token_ws" value="@ViewBag.token" />
                                 <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
 
-                        <input type="image" src="~/Content/Img/webpay.png" height="150" width="300" />
-                        </form>
-                        <!--4051885600446623-->
+                                <input type="image" src="~/Content/Img/webpay.svg" height="150" width="300" />
+                            </form>
+                            <!--4051885600446623-->
 
 
                         </div>

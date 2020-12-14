@@ -286,9 +286,14 @@
     <Content Include="Content\Certificados\Img\Vector.png" />
     <Content Include="Content\Certificados\Img\Vector2.png" />
     <Content Include="Content\Certificados\Img\webpay.png" />
+    <Content Include="Content\Img\android-chrome-192x192.png" />
+    <Content Include="Content\Img\android-chrome-512x512.png" />
+    <Content Include="Content\Img\apple-touch-icon.png" />
     <Content Include="Content\Img\Auto.png" />
     <Content Include="Content\Img\Avion.png" />
     <Content Include="Content\Img\Camion.png" />
+    <Content Include="Content\Img\favicon-16x16.png" />
+    <Content Include="Content\Img\favicon-32x32.png" />
     <Content Include="Content\Img\flecha.png" />
     <Content Include="Content\Img\Frame1.png" />
     <Content Include="Content\Img\Frame2.png" />
@@ -301,7 +306,9 @@
     <Content Include="Content\Img\sobre.png" />
     <Content Include="Content\Img\Vector.png" />
     <Content Include="Content\Img\Vector2.png" />
+    <Content Include="Content\Img\webpay img.svg" />
     <Content Include="Content\Img\webpay.png" />
+    <Content Include="Content\Img\webpay.svg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -524,6 +531,8 @@
     <Content Include="Views\Moto\ErrorT.cshtml" />
     <Content Include="Views\Camion\ErrorT.cshtml" />
     <Content Include="Views\Avion\ErrorT.cshtml" />
+    <Content Include="Views\Prueba\Error.cshtml" />
+    <Content Include="Views\Prueba\ErrorT.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
