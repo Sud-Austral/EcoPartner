@@ -79,7 +79,7 @@
                         <div><spam style="font-size:35px; font-weight:bold">&nbsp&nbsp&nbsp&nbsp  <font id="toneladas"></font> TONELADAS DE CO2!</spam></div>
                         <div><span style="font-size:18px; margin-left:11%">Tú eres parte del cambio que podemos hacer</span></div>
                         <div><span>&nbsp&nbsp</span></div>
-                     
+
 
                         <div>
                             <table style="margin-left:6%">
@@ -105,7 +105,7 @@
                         </div>
 
                         <div><span>&nbsp&nbsp</span></div>
-                      
+
                         <div align="center" style="margin-left:-25%">
                             <span style="font-size:14px">Nos puedes escribir también a</span><br />
                             <span style="font-size:14px">epb@ecopartnersbank.org</span>
@@ -127,14 +127,15 @@
 
 
                         <script>
-                            document.getElementById("code").innerHTML = window.localStorage.getItem("token");
-                            document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
-                            document.getElementById("respuesta").innerHTML = window.localStorage.getItem("response");
-                            document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_moto");
                             if (window.localStorage.getItem("response") === null) {
                                 location.href = "/Moto/ErrorT";
                             }
                         </script>
+
+                        document.getElementById("code").innerHTML = window.localStorage.getItem("token");
+                        document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
+                        document.getElementById("respuesta").innerHTML = window.localStorage.getItem("response");
+                        document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_moto");
 
 
                     </div>

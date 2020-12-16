@@ -35,9 +35,10 @@ namespace AplicacionLogin.Controllers
             var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
-            string returnUrl = "http://localhost:62106/Prueba/Retorno";
-            string returnFinal = "http://localhost:62106/Prueba/Final";
-
+           // string returnUrl = "http://localhost:62106/Prueba/Retorno";
+           // string returnFinal = "http://localhost:62106/Prueba/Final";
+               string returnUrl = "https://ecopartnerbank.azurewebsites.net/Prueba/Retorno";
+             string returnFinal = "https://ecopartnerbank.azurewebsites.net/Prueba/Final";
             var initResult = transaction.initTransaction(monto, orden, id, returnUrl, returnFinal);
 
 
