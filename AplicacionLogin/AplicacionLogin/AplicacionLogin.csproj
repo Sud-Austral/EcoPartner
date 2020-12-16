@@ -299,6 +299,9 @@
     <Content Include="Content\Img\Frame2.png" />
     <Content Include="Content\Img\Frame3.png" />
     <Content Include="Content\Img\hoja.png" />
+    <Content Include="Content\Img\logoEPB %281%29 %281%29.png" />
+    <Content Include="Content\Img\logoEPB_m2.PNG" />
+    <Content Include="Content\Img\logoEPB_Mini.PNG" />
     <Content Include="Content\Img\Moto.png" />
     <Content Include="Content\Img\nfh.png" />
     <Content Include="Content\Img\nube.png" />
