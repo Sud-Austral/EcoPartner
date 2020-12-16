@@ -6,15 +6,15 @@
 @if (ViewBag.Response == 0)
 {
     <form action="@ViewBag.redirect" method="post" id="returnForm">
-        <input type="hidden" name="token_ws" value="@ViewBag.Token" />
+       <input type="hidden" name="token_ws" value="@ViewBag.Token" />
 
     </form>
 
     <script>
         //window.localStorage.clear();
 
-        window.localStorage.setItem("token",@ViewBag.Token);
-        window.localStorage.setItem("orden",@ViewBag.orden);
+        window.localStorage.setItem("token","@ViewBag.Token");
+        window.localStorage.setItem("orden","@ViewBag.orden");
         window.localStorage.setItem("monto",@ViewBag.monto);
         window.localStorage.setItem("response",@ViewBag.Response);
         document.getElementById("returnForm").submit();

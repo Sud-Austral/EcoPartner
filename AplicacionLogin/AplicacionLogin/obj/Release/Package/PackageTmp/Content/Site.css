@@ -4,6 +4,19 @@ body {
     color: #fff;
 }
 
+::-webkit-input-placeholder {
+    color: #A0A0A0;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #A0A0A0;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #A0A0A0;
+}
+:-ms-input-placeholder {
+    color: #A0A0A0;
+}
+
 #num {
     font-style: normal;
     font-weight: bold;
