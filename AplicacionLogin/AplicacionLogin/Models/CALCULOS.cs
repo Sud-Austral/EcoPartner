@@ -38,7 +38,8 @@ namespace AplicacionLogin.Models
 
         public double CalculosAdicionales(double CO2, int recorrido, int pasajeros, int tipoViaje)
         {
-            if (tipoViaje == 3) { tipoViaje = 2; }
+            //if (tipoViaje == 3) { tipoViaje = 2; }
+            //int aux = tipoViaje;
             double total = ((CO2 * recorrido) * pasajeros) * tipoViaje;
             return Math.Round(total, 2);
         }

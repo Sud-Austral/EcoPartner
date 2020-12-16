@@ -27,6 +27,7 @@ namespace AplicacionLogin.Controllers
 
         public ActionResult Avion_pagina2()
         {
+            int recorrido = ViewBag.recorrido;
             ViewBag.Title = "Compensación de carbono para Avión";
             return View();
         }
@@ -140,7 +141,7 @@ namespace AplicacionLogin.Controllers
 
                 }
             }
-
+            ViewBag.recorrido = recorrido;
             CALCULOS ca = new CALCULOS();
             double distancia = ca.CalcularDistancia(p1, p2);
             double carbono1 = ca.CalcularCO2(distancia);
@@ -149,6 +150,10 @@ namespace AplicacionLogin.Controllers
 
             ViewBag.inicio = inicio;
             ViewBag.destino = destino;
+            if(recorrido == 2)
+            {
+                distancia = distancia * 2;
+            }
             ViewBag.distancia = Math.Round(distancia, 2);
             ViewBag.carbono = carbono2;
             ViewBag.total = total;
