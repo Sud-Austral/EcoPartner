@@ -129,14 +129,15 @@
 
 
                         <script>
-                            document.getElementById("code").innerHTML = window.localStorage.getItem("tpken");
-                            document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
-                            document.getElementById("response").innerHTML = window.localStorage.getItem("response");
-                            document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_camion");
                             if (window.localStorage.getItem("response") === null) {
                                 location.href = "/camion/ErrorT";
                             }
                         </script>
+                            document.getElementById("code").innerHTML = window.localStorage.getItem("tpken");
+                            document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
+                            document.getElementById("response").innerHTML = window.localStorage.getItem("response");
+                            document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_camion");
+
 
 
                     </div>
