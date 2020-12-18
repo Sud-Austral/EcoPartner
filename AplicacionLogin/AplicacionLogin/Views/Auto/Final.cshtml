@@ -80,9 +80,20 @@
                         <div><span style="font-size:18px; margin-left:11%">Tú eres parte del cambio que podemos hacer</span></div>
                         <div><span>&nbsp&nbsp</span></div>
 
+                       
+                        <div><span style="font-size:18px; margin-left:11%">Nombre : @ViewBag.nombre</span></div>
 
+                        <div><span style="font-size:18px; margin-left:11%">Teléfono : @ViewBag.telefono</span></div>
 
+                        <div><span style="font-size:18px; margin-left:11%">Nombre Empresa : @ViewBag.empresa</span></div>
 
+                        <div><span style="font-size:18px; margin-left:11%">País : @ViewBag.pais</span></div>
+
+                        <div><span style="font-size:18px; margin-left:11%">Correo : @ViewBag.correo</span></div>
+
+                        <div><span style="font-size:18px; margin-left:11%">Toneladas : @ViewBag.tonelada T de CO2</span></div>
+
+                        <div><span style="font-size:18px; margin-left:11%">Compensación : $@ViewBag.total USD</span></div>
 
                         <div>
                             <table style="margin-left:6%">
@@ -136,10 +147,10 @@
                             }
                         </script>
 
-                        document.getElementById("code").innerHTML = window.localStorage.getItem("token");
+                        @*document.getElementById("code").innerHTML = window.localStorage.getItem("token");
                         document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
                         document.getElementById("respuesta").innerHTML = window.localStorage.getItem("response");
-                        document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas");
+                        document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas");*@
 
 
                     </div>
