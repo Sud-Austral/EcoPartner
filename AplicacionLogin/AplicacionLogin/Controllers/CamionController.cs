@@ -58,7 +58,7 @@ namespace AplicacionLogin.Controllers
             ViewBag.total = calculo;
        
             ViewBag.toneladas = ton;
-
+            
             Session["nombre"] = nombre;
             Session["telefono"] = telefono;
             Session["empresa"] = empresa;
@@ -97,6 +97,7 @@ namespace AplicacionLogin.Controllers
             var monto = Convert.ToInt32(calculo * 100);
             var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
+            Session["id"] = id;
 
             string returnUrl = "http://localhost:62106/Camion/Retorno_camion";
             string returnFinal = "http://localhost:62106/Camion/Final_camion";
@@ -172,6 +173,7 @@ namespace AplicacionLogin.Controllers
             // ViewBag.tonelada = Session["toneladas_camion"];
             //ViewBag.tonelada = ton;
 
+            ViewBag.id = Session["id"];
             ViewBag.nombre = Session["nombre"];
             ViewBag.telefono = Session["telefono"];
             ViewBag.empresa = Session["empresa"];

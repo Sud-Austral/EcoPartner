@@ -65,6 +65,7 @@ namespace AplicacionLogin.Controllers
             ViewBag.Title = "Compensación de carbono para Autos";
             ViewBag.total = calculo;
             ViewBag.toneladas = ton;
+            
             Session["nombre"] = nombre;
             Session["telefono"] = telefono;
             Session["empresa"] = empresa;
@@ -99,7 +100,7 @@ namespace AplicacionLogin.Controllers
             var monto = Convert.ToInt32(calculo * 100);
             var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
-
+            Session["id"] = id;
             string returnUrl = "http://localhost:62106/Auto/Retorno";
             string returnFinal = "http://localhost:62106/Auto/Final";
            //string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
@@ -181,6 +182,7 @@ namespace AplicacionLogin.Controllers
             ViewBag.Message = "Your contact page.";
             //ViewBag.toneladas = Response.Write Session("toneladas");
             //var ton = Session["toneladas"];
+            ViewBag.id = Session["id"];
             ViewBag.nombre = Session["nombre"];
             ViewBag.telefono = Session["telefono"];
             ViewBag.empresa = Session["empresa"];
