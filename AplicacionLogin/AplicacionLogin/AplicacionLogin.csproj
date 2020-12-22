@@ -99,6 +99,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
@@ -247,6 +248,7 @@
     <Compile Include="Controllers\AutoController.cs" />
     <Compile Include="Controllers\AvionController.cs" />
     <Compile Include="Controllers\CamionController.cs" />
+    <Compile Include="Controllers\COMPENSACIONsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MotoController.cs" />
@@ -258,8 +260,26 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AEROPUERTO.cs" />
     <Compile Include="Models\CALCULOS.cs" />
+    <Compile Include="Models\COMPENSACION.cs">
+      <DependentUpon>Model11.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Model11.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model11.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model11.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model11.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -314,6 +334,16 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Model11.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model11.edmx</DependentUpon>
+      <LastGenOutput>Model11.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model11.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model11.edmx</DependentUpon>
+      <LastGenOutput>Model11.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -344,6 +374,13 @@
     <Content Include="Content\Certificados\597036300078.csr" />
     <Content Include="Content\Certificados\597036300078.pfx" />
     <Content Include="Content\Certificados\Img\nubw-flecha-hoja.psd" />
+    <EntityDeploy Include="Models\Model11.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model11.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model11.edmx.diagram">
+      <DependentUpon>Model11.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - Web Deploy.pubxml" />
@@ -535,6 +572,11 @@
     <Content Include="Views\Avion\ErrorT.cshtml" />
     <Content Include="Views\Prueba\Error.cshtml" />
     <Content Include="Views\Prueba\ErrorT.cshtml" />
+    <Content Include="Views\COMPENSACIONs\Create.cshtml" />
+    <Content Include="Views\COMPENSACIONs\Delete.cshtml" />
+    <Content Include="Views\COMPENSACIONs\Details.cshtml" />
+    <Content Include="Views\COMPENSACIONs\Edit.cshtml" />
+    <Content Include="Views\COMPENSACIONs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -547,6 +589,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
