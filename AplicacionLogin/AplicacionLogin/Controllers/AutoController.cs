@@ -59,7 +59,7 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult auto_pagina4_1(double calculo, double ton)
+        public ActionResult auto_pagina4_1(double calculo, double ton, string nombre, string telefono, string empresa, string pais, string email)
         {
             ViewBag.Title = "Compensación de carbono para Autos";
             ViewBag.total = calculo;
@@ -108,11 +108,11 @@ namespace AplicacionLogin.Controllers
             //*****************************************************************
             COMPENSACION cOMPENSACION = new COMPENSACION();
             cOMPENSACION.id = db.COMPENSACION.Count() + 1;
-            //cOMPENSACION.nombre =
-            //cOMPENSACION.telefono =
-            //cOMPENSACION.nombreEmpresa =
-            //cOMPENSACION.pais =
-            //cOMPENSACION.mail =
+            cOMPENSACION.nombre = nombre;
+            cOMPENSACION.telefono = telefono;
+            cOMPENSACION.nombreEmpresa = empresa;
+            cOMPENSACION.pais = pais;
+            cOMPENSACION.mail = email;
             cOMPENSACION.toneladas = ton.ToString();
             cOMPENSACION.compensacion1 = montotrans.ToString();
             cOMPENSACION.id_codigo = id;

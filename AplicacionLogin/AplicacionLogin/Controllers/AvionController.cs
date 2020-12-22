@@ -12,6 +12,7 @@ namespace AplicacionLogin.Controllers
 {
     public class AvionController : Controller
     {
+        private ecopartnerEntities db = new ecopartnerEntities();
         // GET: Avion
         public ActionResult Avion_pagina1()
         {
@@ -57,7 +58,7 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult Avion_pagina4_1(double calculo, double ton)
+        public ActionResult Avion_pagina4_1(double calculo, double ton, string nombre, string telefono, string empresa, string pais, string email)
         {
             ViewBag.Title = "Compensación de carbono para Avión";
             ViewBag.total = calculo;
@@ -100,6 +101,24 @@ namespace AplicacionLogin.Controllers
             int montotrans = Convert.ToInt32(calculo * 800);
             var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
 
+            //*****************************************************************
+            //          Insercion en la base de datos
+            //*****************************************************************
+            COMPENSACION cOMPENSACION = new COMPENSACION();
+            cOMPENSACION.id = db.COMPENSACION.Count() + 1;
+            cOMPENSACION.nombre = nombre;
+            cOMPENSACION.telefono = telefono;
+            cOMPENSACION.nombreEmpresa = empresa;
+            cOMPENSACION.pais = pais;
+            cOMPENSACION.mail = email;
+            cOMPENSACION.toneladas = ton.ToString();
+            cOMPENSACION.compensacion1 = montotrans.ToString();
+            cOMPENSACION.id_codigo = id;
+            db.COMPENSACION.Add(cOMPENSACION);
+            db.SaveChanges();
+            //*****************************************************************
+            //          Fin de Insercion en la base de datos
+            //*****************************************************************
 
             var tokenWs = initResult.token;
             var formAction = initResult.url;

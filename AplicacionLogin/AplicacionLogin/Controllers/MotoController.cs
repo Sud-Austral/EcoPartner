@@ -12,6 +12,7 @@ namespace AplicacionLogin.Controllers
 {
     public class MotoController : Controller
     {
+        private ecopartnerEntities db = new ecopartnerEntities();
         // GET: Moto
         public ActionResult moto_pagina1()
         {
@@ -61,7 +62,7 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult moto_pagina4_2(double calculo, double ton)
+        public ActionResult moto_pagina4_2(double calculo, double ton, string nombre, string telefono, string empresa, string pais, string email)
         {
             ViewBag.Title = "Compensación de carbono para Moto";
             ViewBag.total = calculo;
@@ -71,18 +72,18 @@ namespace AplicacionLogin.Controllers
             //*********************************************************************************
             //                                     Ambiente de producción
           //  //*********************************************************************************
-           var configuration = new Configuration();
-            configuration.Environment = "PRODUCCION";
-            configuration.CommerceCode = "597036300078";
-            configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
+           //var configuration = new Configuration();
+           // configuration.Environment = "PRODUCCION";
+           // configuration.CommerceCode = "597036300078";
+           // configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
 
-            configuration.Password = "a";
-            configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
-            var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+           // configuration.Password = "a";
+           // configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+           // var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-          //  var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
             //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();
 
@@ -99,13 +100,32 @@ namespace AplicacionLogin.Controllers
             var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
-          // string returnUrl = "http://localhost:62106/Moto/Retorno_moto";
-          // string returnFinal = "http://localhost:62106/Moto/Final_moto";
-           string returnUrl = "https://ecopartnerbank.azurewebsites.net/Moto/Retorno_moto";
-           string returnFinal = "https://ecopartnerbank.azurewebsites.net/Moto/Final_moto";
+            string returnUrl = "http://localhost:62106/Moto/Retorno_moto";
+            string returnFinal = "http://localhost:62106/Moto/Final_moto";
+           // string returnUrl = "https://ecopartnerbank.azurewebsites.net/Moto/Retorno_moto";
+           //string returnFinal = "https://ecopartnerbank.azurewebsites.net/Moto/Final_moto";
 
             int montotrans = Convert.ToInt32(calculo * 800);
             var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
+
+            //*****************************************************************
+            //          Insercion en la base de datos
+            //*****************************************************************
+            COMPENSACION cOMPENSACION = new COMPENSACION();
+            cOMPENSACION.id = db.COMPENSACION.Count() + 1;
+            cOMPENSACION.nombre = nombre;
+            cOMPENSACION.telefono = telefono;
+            cOMPENSACION.nombreEmpresa = empresa;
+            cOMPENSACION.pais = pais;
+            cOMPENSACION.mail = email;
+            cOMPENSACION.toneladas = ton.ToString();
+            cOMPENSACION.compensacion1 = montotrans.ToString();
+            cOMPENSACION.id_codigo = id;
+            db.COMPENSACION.Add(cOMPENSACION);
+            db.SaveChanges();
+            //*****************************************************************
+            //          Fin de Insercion en la base de datos
+            //*****************************************************************
 
             var tokenWs = initResult.token;
             var formAction = initResult.url;
@@ -192,18 +212,18 @@ namespace AplicacionLogin.Controllers
             //*********************************************************************************
             //                                     Ambiente de producción
             //*********************************************************************************
-            var configuration = new Configuration();
-            configuration.Environment = "PRODUCCION";
-            configuration.CommerceCode = "597036300078";
-            configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
+            //var configuration = new Configuration();
+            //configuration.Environment = "PRODUCCION";
+            //configuration.CommerceCode = "597036300078";
+            //configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
 
-            configuration.Password = "a";
-            configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
-            var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+            //configuration.Password = "a";
+            //configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+            //var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
             string tokenWs = Request.Form["token_ws"];
             var result = transaction.getTransactionResult(tokenWs);
