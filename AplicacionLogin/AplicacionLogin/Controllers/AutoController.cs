@@ -74,14 +74,15 @@ namespace AplicacionLogin.Controllers
             configuration.Environment = "PRODUCCION";
             configuration.CommerceCode = "597036300078";
             configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
-           
+
             configuration.Password = "a";
             configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
             var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-           //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+           // var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
             //Convert.ToInt16(calculo);
 
@@ -213,10 +214,11 @@ namespace AplicacionLogin.Controllers
             configuration.Password = "a";
             configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
             var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-         //   var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+           // var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
           
             
             //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();

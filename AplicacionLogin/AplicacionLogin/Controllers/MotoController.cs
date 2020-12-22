@@ -70,8 +70,8 @@ namespace AplicacionLogin.Controllers
 
             //*********************************************************************************
             //                                     Ambiente de producción
-            //*********************************************************************************
-            var configuration = new Configuration();
+          //  //*********************************************************************************
+           var configuration = new Configuration();
             configuration.Environment = "PRODUCCION";
             configuration.CommerceCode = "597036300078";
             configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
@@ -82,7 +82,7 @@ namespace AplicacionLogin.Controllers
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+          //  var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
             //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();
 

@@ -19,15 +19,15 @@
         <div class="row" style="padding:1%">
             <div class="col-md-3" style="background-color:transparent;">
                 <div class="row">
-                    
+
                 </div>
             </div>
             <div class="col-md-6" style="background-color:transparent;">
                 <div class="row" style="padding:2%;">
-                    
-                    
-                    
-                    
+
+
+
+
                 </div>
             </div>
             <div class="col-md-3" style="background-color:transparent;">
@@ -118,29 +118,29 @@
                         <div><span>&nbsp&nbsp</span></div>
 
                         <!--   <h2>Final</h2>
-    <p>Token</p>
-    <font id="code"></font>
-    <br />
-    <p>Monto</p>
-    <font id="monto"></font>
-    <br />
-    <p>Respuesta</p>
-    <font id="respuesta"></font>
-    <br />
-    <p>Toneladas</p>-->
+                        <p>Token</p>
+                        <font id="code"></font>
+                        <br />
+                        <p>Monto</p>
+                        <font id="monto"></font>
+                        <br />
+                        <p>Respuesta</p>
+                        <font id="respuesta"></font>
+                        <br />
+                        <p>Toneladas</p>-->
 
 
                         <script>
                             if (window.localStorage.getItem("response") === null) {
                                 location.href = "/Auto/ErrorT";
                             }
+
+
+                            document.getElementById("code").innerHTML = window.localStorage.getItem("token");
+                            document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
+                            document.getElementById("respuesta").innerHTML = window.localStorage.getItem("response");
+                            document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas");
                         </script>
-
-                        document.getElementById("code").innerHTML = window.localStorage.getItem("token");
-                        document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
-                        document.getElementById("respuesta").innerHTML = window.localStorage.getItem("response");
-                        document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas");
-
 
                     </div>
 
@@ -164,7 +164,7 @@
         </div>
     </div>
 
-
+    
 </body>
 </html>
 
