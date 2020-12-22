@@ -132,12 +132,12 @@
                             if (window.localStorage.getItem("response") === null) {
                                 location.href = "/camion/ErrorT";
                             }
-                        </script>
-                        document.getElementById("code").innerHTML = window.localStorage.getItem("tpken");
-                        document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
-                        document.getElementById("response").innerHTML = window.localStorage.getItem("response");
-                        document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_camion");
 
+                            document.getElementById("code").innerHTML = window.localStorage.getItem("tpken");
+                            document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
+                            document.getElementById("response").innerHTML = window.localStorage.getItem("response");
+                            document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_camion");
+                        </script>
 
 
                     </div>
@@ -162,23 +162,7 @@
         </div>
     </div>
 
-    <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4" style="background-color:transparent">
-                </div>
-                <div class="col-lg-4" style="background-color:transparent">
-
-                    <img style="margin-left:25%" src="~/Content/Img/logooEPB.png" />
-
-                </div>
-                <div class="col-lg-4" style="background-color:transparent">
-
-                </div>
-            </div>
-
-        </div>
-    </footer>
+   }
 </body>
 </html>
 
