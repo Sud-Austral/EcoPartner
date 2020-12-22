@@ -116,28 +116,28 @@
                         <div><span>&nbsp&nbsp</span></div>
 
                         <!--   <h2>Final</h2>
-       <p>Codigo</p>
-       <font id="Token"></font>
-       <br />
-       <p>Monto</p>
-       <font id="monto"></font>
-       <br />
-       <p>Respuesta</p>
-       <font id="response"></font>
-       <br />
-       <p>Toneladas</p>-->
+                        <p>Codigo</p>
+                        <font id="Token"></font>
+                        <br />
+                        <p>Monto</p>
+                        <font id="monto"></font>
+                        <br />
+                        <p>Respuesta</p>
+                        <font id="response"></font>
+                        <br />
+                        <p>Toneladas</p>-->
 
 
                         <script>
                             if (window.localStorage.getItem("response") === null) {
                                 location.href = "/camion/ErrorT";
                             }
-                        </script>
+
                             document.getElementById("code").innerHTML = window.localStorage.getItem("tpken");
                             document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
                             document.getElementById("response").innerHTML = window.localStorage.getItem("response");
                             document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_camion");
-
+                        </script>
 
 
                     </div>
@@ -162,7 +162,7 @@
         </div>
     </div>
 
-
+   }
 </body>
 </html>
 

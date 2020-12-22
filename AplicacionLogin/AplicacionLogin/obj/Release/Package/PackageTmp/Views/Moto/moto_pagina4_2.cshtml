@@ -191,7 +191,7 @@
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" name="clp" disabled="disabled" /> CLP</span></div>
                             <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" name="clptot" disabled="disabled"/>  CLP</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" name="clptot" disabled="disabled" />  CLP</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span>&nbsp&nbsp</span></div>
 
@@ -205,9 +205,9 @@
 
                     </form>
                     <!--    <span>
-        <img src="~/Content/Img/Frame1.png" alt="hoja">
-        <img src="~/Content/Img/frames.gif" alt="hoja">
-    </span>-->
+                        <img src="~/Content/Img/Frame1.png" alt="hoja">
+                        <img src="~/Content/Img/frames.gif" alt="hoja">
+                    </span>-->
                     <p style="font-weight: bold; margin-left:-25%">Elige tu método de pago</p>
                     <div id="smart-button-container" style="margin-top:-70%; margin-left:-55%">
                         <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
@@ -247,9 +247,25 @@
         <div class="col-sm-2" style="background-color:transparent;">
 
         </div>
-       
-    </div>
 
+    </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4" style="background-color:transparent">
+                </div>
+                <div class="col-lg-4" style="background-color:transparent">
+
+                    <img style="margin-left:25%" src="~/Content/Img/logooEPB.png" />
+
+                </div>
+                <div class="col-lg-4" style="background-color:transparent">
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
 </body>
 </html>
 
@@ -359,6 +375,6 @@
 </script>
 
 <script>
-        //window.localStorage.clear();
+        window.localStorage.clear();
         window.localStorage.setItem("toneladas_moto",@ViewBag.toneladas)
 </script>
