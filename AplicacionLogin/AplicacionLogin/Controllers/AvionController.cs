@@ -78,7 +78,7 @@ namespace AplicacionLogin.Controllers
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-           // var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+          //  var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
            
 
 
@@ -93,7 +93,7 @@ namespace AplicacionLogin.Controllers
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
           //  string returnUrl = "http://localhost:62106/Avion/Retorno_avion";
-           // string returnFinal = "http://localhost:62106/Avion/Final_avion";
+          //  string returnFinal = "http://localhost:62106/Avion/Final_avion";
              string returnUrl = "https://ecopartnerbank.azurewebsites.net/Avion/Retorno_avion";
              string returnFinal = "https://ecopartnerbank.azurewebsites.net/Avion/Final_avion";
 
@@ -188,9 +188,9 @@ namespace AplicacionLogin.Controllers
             ViewBag.Title = "Compensación de carbono para Avión";
             ViewBag.Message = "Your contact page.";
             //ViewBag.toneladas = Response.Write Session("toneladas");
-            //var ton = Session["toneladas"];
+         //   var ton = Session["toneladas"];
             ViewBag.tonelada = Session["toneladas_avion"];
-            //ViewBag.tonelada = ton;
+          //  ViewBag.tonelada = ton;
 
 
             return View();
@@ -215,7 +215,7 @@ namespace AplicacionLogin.Controllers
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-          //  var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+           // var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
 
             string tokenWs = Request.Form["token_ws"];
