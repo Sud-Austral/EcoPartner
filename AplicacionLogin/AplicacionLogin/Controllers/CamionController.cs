@@ -67,18 +67,18 @@ namespace AplicacionLogin.Controllers
             //*********************************************************************************
             //                                     Ambiente de producción
             //*********************************************************************************
-           var configuration = new Configuration();
-            configuration.Environment = "PRODUCCION";
-            configuration.CommerceCode = "597036300078";
-            configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
+           //var configuration = new Configuration();
+           // configuration.Environment = "PRODUCCION";
+           // configuration.CommerceCode = "597036300078";
+           // configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
 
-            configuration.Password = "a";
-            configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
-            var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction; 
+           // configuration.Password = "a";
+           // configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+           // var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction; 
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-           // var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+           var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
 
 
@@ -91,29 +91,38 @@ namespace AplicacionLogin.Controllers
             var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
-           // string returnUrl = "http://localhost:62106/Camion/Retorno_camion";
-           // string returnFinal = "http://localhost:62106/Camion/Final_camion";
-            string returnUrl = "https://ecopartnerbank.azurewebsites.net/Camion/Retorno_camion";
-            string returnFinal = "https://ecopartnerbank.azurewebsites.net/Camion/Final_camion";
+            string returnUrl = "http://localhost:62106/Camion/Retorno_camion";
+            string returnFinal = "http://localhost:62106/Camion/Final_camion";
+            //string returnUrl = "https://ecopartnerbank.azurewebsites.net/Camion/Retorno_camion";
+            //string returnFinal = "https://ecopartnerbank.azurewebsites.net/Camion/Final_camion";
 
             int montotrans = Convert.ToInt32(calculo * 800);
             var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
 
+            ViewBag.toneladas = ton;
+            ViewBag.nombre = nombre;
+            ViewBag.telefono = telefono;
+            ViewBag.empresa = empresa;
+            ViewBag.pais = pais;
+            ViewBag.email = email;
+            ViewBag.total = montotrans;
+            ViewBag.id = id;
+
             //*****************************************************************
             //          Insercion en la base de datos
             //*****************************************************************
-            COMPENSACION cOMPENSACION = new COMPENSACION();
-            cOMPENSACION.id = db.COMPENSACION.Count() + 1;
-            cOMPENSACION.nombre = nombre;
-            cOMPENSACION.telefono = telefono;
-            cOMPENSACION.nombreEmpresa = empresa;
-            cOMPENSACION.pais = pais;
-            cOMPENSACION.mail = email;
-            cOMPENSACION.toneladas = ton.ToString();
-            cOMPENSACION.compensacion1 = montotrans.ToString();
-            cOMPENSACION.id_codigo = id;
-            db.COMPENSACION.Add(cOMPENSACION);
-            db.SaveChanges();
+            //COMPENSACION cOMPENSACION = new COMPENSACION();
+            //cOMPENSACION.id = db.COMPENSACION.Count() + 1;
+            //cOMPENSACION.nombre = nombre;
+            //cOMPENSACION.telefono = telefono;
+            //cOMPENSACION.nombreEmpresa = empresa;
+            //cOMPENSACION.pais = pais;
+            //cOMPENSACION.mail = email;
+            //cOMPENSACION.toneladas = ton.ToString();
+            //cOMPENSACION.compensacion1 = montotrans.ToString();
+            //cOMPENSACION.id_codigo = id;
+            //db.COMPENSACION.Add(cOMPENSACION);
+            //db.SaveChanges();
             //*****************************************************************
             //          Fin de Insercion en la base de datos
             //*****************************************************************
@@ -189,24 +198,54 @@ namespace AplicacionLogin.Controllers
 
         }
 
+        public void GuardarDatos(string toneladas, string nombre, string telefono, string empresa, string pais, string email, string total, string id)
+        {
+            //*****************************************************************
+            //          Insercion en la base de datos
+            //*****************************************************************
+            var validarReplica = db.COMPENSACION.Where(od => od.id_codigo == id).ToList();
+
+            if (validarReplica.Count() == 0)
+            {
+                COMPENSACION cOMPENSACION = new COMPENSACION();
+                cOMPENSACION.id = db.COMPENSACION.Count() + 1;
+                cOMPENSACION.nombre = nombre;
+                cOMPENSACION.telefono = telefono;
+                cOMPENSACION.nombreEmpresa = empresa;
+                cOMPENSACION.pais = pais;
+                cOMPENSACION.mail = email;
+                cOMPENSACION.toneladas = toneladas;
+                cOMPENSACION.compensacion1 = total;
+                cOMPENSACION.id_codigo = id;
+                db.COMPENSACION.Add(cOMPENSACION);
+                db.SaveChanges();
+
+            }
+
+            //*****************************************************************
+            //          Fin de Insercion en la base de datos
+            //*****************************************************************
+        }
+
+
         public ActionResult Retorno_camion()
         {
             ViewBag.Title = "Compensación de carbono para Camión";
             //*********************************************************************************
             //                                     Ambiente de producción
             //*********************************************************************************
-            var configuration = new Configuration();
-            configuration.Environment = "PRODUCCION";
-            configuration.CommerceCode = "597036300078";
-            configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
+            //var configuration = new Configuration();
+            //configuration.Environment = "PRODUCCION";
+            //configuration.CommerceCode = "597036300078";
+            //configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
 
-            configuration.Password = "a";
-            configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
-            var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+            //configuration.Password = "a";
+            //configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+            //var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-           // var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
             string tokenWs = Request.Form["token_ws"];
             var result = transaction.getTransactionResult(tokenWs);

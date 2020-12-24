@@ -63,7 +63,7 @@ namespace AplicacionLogin.Controllers
         {
             ViewBag.Title = "Compensación de carbono para Autos";
             ViewBag.total = calculo;
-            ViewBag.toneladas = ton;
+            
             Session["toneladas"] = ton;
 
 
@@ -103,21 +103,29 @@ namespace AplicacionLogin.Controllers
             var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
 
 
+            ViewBag.toneladas = ton;
+            ViewBag.nombre = nombre;
+            ViewBag.telefono = telefono;
+            ViewBag.empresa = empresa;
+            ViewBag.pais = pais;
+            ViewBag.email = email;
+            ViewBag.total = montotrans;
+            ViewBag.id = id;
             //*****************************************************************
             //          Insercion en la base de datos
             //*****************************************************************
-            COMPENSACION cOMPENSACION = new COMPENSACION();
-            cOMPENSACION.id = db.COMPENSACION.Count() + 1;
-            cOMPENSACION.nombre = nombre;
-            cOMPENSACION.telefono = telefono;
-            cOMPENSACION.nombreEmpresa = empresa;
-            cOMPENSACION.pais = pais;
-            cOMPENSACION.mail = email;
-            cOMPENSACION.toneladas = ton.ToString();
-            cOMPENSACION.compensacion1 = montotrans.ToString();
-            cOMPENSACION.id_codigo = id;
-            db.COMPENSACION.Add(cOMPENSACION);
-            db.SaveChanges();
+            //COMPENSACION cOMPENSACION = new COMPENSACION();
+            //cOMPENSACION.id = db.COMPENSACION.Count() + 1;
+            //cOMPENSACION.nombre = nombre;
+            //cOMPENSACION.telefono = telefono;
+            //cOMPENSACION.nombreEmpresa = empresa;
+            //cOMPENSACION.pais = pais;
+            //cOMPENSACION.mail = email;
+            //cOMPENSACION.toneladas = ton.ToString();
+            //cOMPENSACION.compensacion1 = montotrans.ToString();
+            //cOMPENSACION.id_codigo = id;
+            //db.COMPENSACION.Add(cOMPENSACION);
+            //db.SaveChanges();
             //*****************************************************************
             //          Fin de Insercion en la base de datos
             //*****************************************************************
@@ -200,6 +208,35 @@ namespace AplicacionLogin.Controllers
             return View();
 
 
+        }
+
+        public void GuardarDatos(string toneladas, string nombre, string telefono, string empresa, string pais, string email, string total, string id)
+        {
+            //*****************************************************************
+            //          Insercion en la base de datos
+            //*****************************************************************
+            var validarReplica = db.COMPENSACION.Where(od => od.id_codigo == id).ToList();
+            
+            if (validarReplica.Count() == 0)
+            {
+                COMPENSACION cOMPENSACION = new COMPENSACION();
+                cOMPENSACION.id = db.COMPENSACION.Count() + 1;
+                cOMPENSACION.nombre = nombre;
+                cOMPENSACION.telefono = telefono;
+                cOMPENSACION.nombreEmpresa = empresa;
+                cOMPENSACION.pais = pais;
+                cOMPENSACION.mail = email;
+                cOMPENSACION.toneladas = toneladas;
+                cOMPENSACION.compensacion1 = total;
+                cOMPENSACION.id_codigo = id;
+                db.COMPENSACION.Add(cOMPENSACION);
+                db.SaveChanges();
+                
+            }
+
+            //*****************************************************************
+            //          Fin de Insercion en la base de datos
+            //*****************************************************************
         }
 
         public ActionResult Index()

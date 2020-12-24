@@ -286,9 +286,9 @@ C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLo
 C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLogin\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLogin\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLogin\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Release\AplicacionLogin.csprojAssemblyReference.cache
 C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Release\AplicacionLogin.dll.config
 C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Release\AplicacionLogin.csproj.CoreCompileInputs.cache
 C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Release\AplicacionLogin.csproj.CopyComplete
 C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Release\AplicacionLogin.dll
 C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Release\AplicacionLogin.pdb
+C:\Users\mario1\Documents\GitHub\pruebas\EcoPartner\AplicacionLogin\AplicacionLogin\obj\Release\AplicacionLogin.csprojAssemblyReference.cache

@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
+    <script type="text/javascript" src="~/Scripts/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -132,10 +133,31 @@
                                     location.href = "/Moto/ErrorT";
                                 }
 
-                                document.getElementById("code").innerHTML = window.localStorage.getItem("token");
-                                document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
-                                document.getElementById("respuesta").innerHTML = window.localStorage.getItem("response");
-                                document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_moto");
+                                //document.getElementById("code").innerHTML = window.localStorage.getItem("token");
+                                //document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
+                                //document.getElementById("respuesta").innerHTML = window.localStorage.getItem("response");
+                                //document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_moto");
+
+                                $(document).ready(function(){
+                               
+                                    var toneladas = window.localStorage.getItem("toneladas");
+                                    var nombre = window.localStorage.getItem("nombre");
+                                    var telefono= window.localStorage.getItem("telefono");
+                                    var empresa = window.localStorage.getItem("empresa");
+                                    var pais = window.localStorage.getItem("pais");
+                                    var email = window.localStorage.getItem("email");
+                                    var total = window.localStorage.getItem("total");
+                                    var id = window.localStorage.getItem("id");
+                                
+                                    $.get('@Url.Action("GuardarDatos", "Moto")',
+                                        { toneladas: toneladas, nombre: nombre, telefono: telefono, empresa: empresa, pais: pais, email: email, total: total, id: id},
+                                        function (response) {
+                                            
+                                        
+                                        });
+
+
+                                });
                             </script>
 
                         </div>
