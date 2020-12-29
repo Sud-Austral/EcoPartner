@@ -114,17 +114,19 @@
                         </div>
                         <div><span>&nbsp&nbsp</span></div>
 
-                        <!--   <h2>Final</h2>
-    <p>Token</p>
-                     <font id="code"></font>
-                     <br />
-                     <p>Monto</p>
-                     <font id="monto"></font>
-                     <br />
-                     <p>Respuesta</p>
-                     <font id="respuesta"></font>
-                     <br />
-                     <p>Toneladas</p>-->
+                        <div hidden>
+                            <h2>Final</h2>
+                            <p>Codigo</p>
+                            <font id="Token"></font>
+                            <br />
+                            <p>Monto</p>
+                            <font id="monto"></font>
+                            <br />
+                            <p>Respuesta</p>
+                            <font id="response"></font>
+                            <br />
+                            <p>Toneladas</p>
+                        </div>
 
                         <div>
                             <script>
@@ -133,13 +135,13 @@
                                     location.href = "/Moto/ErrorT";
                                 }
 
-                                //document.getElementById("code").innerHTML = window.localStorage.getItem("token");
-                                //document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
-                                //document.getElementById("respuesta").innerHTML = window.localStorage.getItem("response");
-                                //document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_moto");
-
+//                                document.getElementById("code").innerHTML = window.localStorage.getItem("token");
+//                              document.getElementById("monto").innerHTML = window.localStorage.getItem("monto");
+//                                document.getElementById("respuesta").innerHTML = window.localStorage.getItem("response");
+                               // document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas_moto");
+                                document.getElementById("toneladas").innerHTML = window.localStorage.getItem("toneladas");
                                 $(document).ready(function(){
-                               
+
                                     var toneladas = window.localStorage.getItem("toneladas");
                                     var nombre = window.localStorage.getItem("nombre");
                                     var telefono= window.localStorage.getItem("telefono");
@@ -148,12 +150,12 @@
                                     var email = window.localStorage.getItem("email");
                                     var total = window.localStorage.getItem("total");
                                     var id = window.localStorage.getItem("id");
-                                
+
                                     $.get('@Url.Action("GuardarDatos", "Moto")',
                                         { toneladas: toneladas, nombre: nombre, telefono: telefono, empresa: empresa, pais: pais, email: email, total: total, id: id},
                                         function (response) {
-                                            
-                                        
+
+
                                         });
 
 
