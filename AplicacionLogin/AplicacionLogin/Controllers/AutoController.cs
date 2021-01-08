@@ -84,6 +84,7 @@ namespace AplicacionLogin.Controllers
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
+
             //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
             //Convert.ToInt16(calculo);
@@ -94,8 +95,8 @@ namespace AplicacionLogin.Controllers
             var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
-           // string returnUrl = "http://localhost:62106/Auto/Retorno";
-           // string returnFinal = "http://localhost:62106/Auto/Final";
+           //string returnUrl = "http://localhost:62106/Auto/Retorno";
+           //string returnFinal = "http://localhost:62106/Auto/Final";
            string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
            string returnFinal = "https://ecopartnerbank.azurewebsites.net/Auto/Final";
 
@@ -109,7 +110,7 @@ namespace AplicacionLogin.Controllers
             ViewBag.empresa = empresa;
             ViewBag.pais = pais;
             ViewBag.email = email;
-            ViewBag.total = montotrans;
+            ViewBag.total = calculo;  //montotrans;
             ViewBag.id = id;
             //*****************************************************************
             //          Insercion en la base de datos

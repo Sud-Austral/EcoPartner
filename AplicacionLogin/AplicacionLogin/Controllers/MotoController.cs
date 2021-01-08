@@ -114,7 +114,7 @@ namespace AplicacionLogin.Controllers
             ViewBag.empresa = empresa;
             ViewBag.pais = pais;
             ViewBag.email = email;
-            ViewBag.total = montotrans;
+            ViewBag.total = calculo;  //montotrans;
             ViewBag.id = id;
 
             //*****************************************************************

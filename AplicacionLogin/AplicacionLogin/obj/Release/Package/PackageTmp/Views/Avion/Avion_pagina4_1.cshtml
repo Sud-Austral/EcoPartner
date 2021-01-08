@@ -167,51 +167,53 @@
 
                     </script>
                     <div><span>&nbsp&nbsp</span></div>
+                   
+    <div id="mclp">
+        <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
+        <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
 
-                    <div id="mclp">
-                        <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
-                        <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
+    </div>
+    <div id="musd" style="display:none;">
+        <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
+        <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
+    </div>
 
-                    </div>
-                    <div id="musd" style="display:none;">
-                        <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
-                        <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
-                    </div>
-                    <form name="convertidor">
-                        <div id="clpm">
+    <form name="convertidor">
+        <div id="clpm">
 
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="usd" value="@ViewBag.total" /> USD</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" disabled="disabled" class="inputmoneda" name="usdtot" value="@ViewBag.total" />  USD</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-
-
-
-                        </div>
-                        <div id="usdm" style="display:none">
-
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" disabled="disabled" class="inputmoneda" name="clp" /> CLP</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" disabled="disabled" class="inputmoneda" name="clptot" />  CLP</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
+            <div><span>&nbsp&nbsp</span></div>
+            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="usd" value="@ViewBag.total" /> USD</span></div>
+            <div><span>&nbsp&nbsp</span></div>
+            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" disabled="disabled" class="inputmoneda" name="usdtot" value="@ViewBag.total" />  USD</span></div>
+            <div><span>&nbsp&nbsp</span></div>
+            <div><span>&nbsp&nbsp</span></div>
 
 
 
-                        </div>
-                    </form>
+        </div>
+        <div id="usdm" style="display:none">
+
+            <div><span>&nbsp&nbsp</span></div>
+            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" disabled="disabled" class="inputmoneda" name="clp" /> CLP</span></div>
+            <div><span>&nbsp&nbsp</span></div>
+            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" disabled="disabled" class="inputmoneda" name="clptot" />  CLP</span></div>
+            <div><span>&nbsp&nbsp</span></div>
+            <div><span>&nbsp&nbsp</span></div>
+
+
+
+        </div>
+    </form>
+       
                     <form action="/Moto/moto_pagina4_paypal" method="post">
                         <input type="hidden" name="total" value="@ViewBag.total" />
                         <input type="hidden" name="ton" value="@ViewBag.toneladas" />
 
                     </form>
                     <!--    <span>
-                        <img src="~/Content/Img/Frame1.png" alt="hoja">
-                        <img src="~/Content/Img/frames.gif" alt="hoja">
-                    </span>-->
+        <img src="~/Content/Img/Frame1.png" alt="hoja">
+        <img src="~/Content/Img/frames.gif" alt="hoja">
+    </span>-->
                     <p style="font-weight: bold; margin-left:-25%">Elige tu método de pago</p>
                     <div id="smart-button-container" style="margin-top:-70%; margin-left:-55%">
                         <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
