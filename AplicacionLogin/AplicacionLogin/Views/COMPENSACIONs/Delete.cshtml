@@ -1,0 +1,96 @@
+﻿@model AplicacionLogin.Models.COMPENSACION
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>COMPENSACION</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.nombre)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nombre)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.telefono)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.telefono)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.nombreEmpresa)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nombreEmpresa)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.pais)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.pais)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.mail)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.mail)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.toneladas)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.toneladas)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.compensacion1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.compensacion1)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.id_codigo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.id_codigo)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

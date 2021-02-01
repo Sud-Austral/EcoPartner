@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Retorno_camion";
+}
+
+<h2>Retorno</h2>
+@if (ViewBag.Response == 0)
+{
+    <form action="@ViewBag.redirect" method="post" id="returnForm">
+        <input type="hidden" name="token_ws" value="@ViewBag.Token" />
+
+    </form>
+
+    <script>
+        //window.localStorage.clear();
+        window.localStorage.setItem("token","@ViewBag.Token")
+        window.localStorage.setItem("code",@ViewBag.camion)
+        window.localStorage.setItem("monto",@ViewBag.monto)
+        window.localStorage.setItem("response",@ViewBag.Response)
+        document.getElementById("returnForm").submit();
+    </script>
+}
+
+<p>
+    @ViewBag.redirect;
+    @ViewBag.Token;
+    @ViewBag.Response;
+    @ViewBag.monto;
+    @ViewBag.camion;
+</p>

@@ -1,0 +1,146 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>Prueba de Bootstrap 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" style="padding:1%">
+            <div class="col-md-3" style="background-color:transparent;">
+                <div class="row">
+                    <div class="col-md-3" style="background-color:transparent;">
+                        <img style="padding:2%" src="~/Content/Img/Vector.png">
+                    </div>
+                    <div class="col-md-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
+                        <p style="font-size:15px;">
+                            CALCULADORA
+                            <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="background-color:transparent;">
+                <div class="row" style="padding:2%;">
+                    <div class="col-md-2" style="background-color:#117394;">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">1</p>
+                    </div>
+                    <div class="col-md-2" style="background-color:#02AFC1">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+                    </div>
+                    <div class="col-md-2" style="background-color:#04C3D7">
+                        <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
+                    </div>
+                    <div class="col-md-6" style="background-color:#0BEDBF">
+                        <div class="row">
+                            <div class="col-md-2" style="background-color:transparent;">
+                                <p id="num" style="padding-top:45%; padding-left:22%;">4</p>
+                            </div>
+                            <div class="col-md-3" style="background-color:transparent;  padding-top:5%;">
+                                <img src="~/Content/Img/Moto.png" alt="Moto" />
+                            </div>
+                            <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:1%; padding-left:10%;">
+                                <p style="font-size:11px;">
+                                    <span style="font-size:28px; font-weight: bold;">Pago</span> <br>
+                                    Compensa lo contaminado
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" style="background-color:transparent;">
+            </div>
+        </div>
+    </div>
+
+    <!-- ///////////////////////////////////////////////////////////////////////////////////-->
+    <form name="calculos" method="post" action="/Moto/moto_pagina4_2">
+        <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
+            <div class="col-sm-1" style="background-color:transparent;">
+
+            </div>
+            <div class="col-sm-10" style="background-color:transparent; ">
+                <div class="row" style="padding:2%;">
+
+                    <div class="col-sm-12" style=" background-color: #ffff; border-radius: 1em; color:#117394">
+
+                        <table style="width:100%; margin-top:2%;" border="1">
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp&nbspProducto</th>
+                                <th><spam style="margin-left:80%">&nbsp&nbsp&nbsp&nbspSubtotal</spam></th>
+
+                            </tr>
+                            <tr>
+                                <td><spam>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCarbono x @ViewBag.toneladas</spam></td>
+                                <td><spam style="margin-left:80%">&nbsp&nbsp&nbsp&nbsp @ViewBag.total $</spam></td>
+
+                            </tr>
+                            <tr>
+                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSubtotal</th>
+                                <td><spam style="margin-left:80%">&nbsp&nbsp&nbsp&nbsp @ViewBag.total $</spam></td>
+
+                            </tr>
+                            <tr>
+                                <th> <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTotal</span></th>
+                                <th><spam style="margin-left:80%">&nbsp&nbsp&nbsp&nbsp @ViewBag.total $</spam></th>
+                            </tr>
+
+                        </table>
+                        <div>
+
+                            <input type="hidden" name="toneladas" value=" @ViewBag.toneladas" />
+                            <input type="hidden" name="total" value="@ViewBag.total" />
+                            <input onclick="location.href='http://localhost:62106/Moto/moto_pagina4_2'" style="margin-top:2%; margin-left:90%" class="calcular3 boton-color" name="actualizar" type="submit" value="ADELANTE">
+                        </div>
+                        <div>
+                            <samp>&nbsp</samp>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-1" style="background-color:transparent;">
+
+            </div>
+        </div>
+
+
+
+        <button onclick="location.href='http://localhost:62106/Moto/moto_pagina1'">Página 1</button>
+        <button onclick="location.href='http://localhost:62106/Moto/moto_pagina2'">Página 2</button>
+        <button onclick="location.href='http://localhost:62106/Moto/moto_pagina3'">Página 3</button>
+
+        <button onclick="location.href='http://localhost:62106/camion/camion_pagina1'">Camion</button>
+        <input name="calculo" value="@ViewBag.totalf" />
+    </form>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4" style="background-color:transparent">
+                </div>
+                <div class="col-lg-4" style="background-color:transparent">
+
+                    <img style="margin-left:25%" src="~/Content/Img/logooEPB.png" />
+
+                </div>
+                <div class="col-lg-4" style="background-color:transparent">
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
+
+

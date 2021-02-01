@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.NET.Test.Sdk.16.7.1\build\net40\Microsoft.NET.Test.Sdk.props" Condition="Exists('..\packages\Microsoft.NET.Test.Sdk.16.7.1\build\net40\Microsoft.NET.Test.Sdk.props')" />
+  <Import Project="..\packages\Microsoft.CodeCoverage.16.7.1\build\netstandard1.0\Microsoft.CodeCoverage.props" Condition="Exists('..\packages\Microsoft.CodeCoverage.16.7.1\build\netstandard1.0\Microsoft.CodeCoverage.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -15,7 +17,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AplicacionLogin</RootNamespace>
     <AssemblyName>AplicacionLogin</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -27,6 +29,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,19 +50,89 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.CodeCoverage.Shim, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeCoverage.16.7.1\lib\net45\Microsoft.VisualStudio.CodeCoverage.Shim.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Services3.3.0.0.0\lib\net20\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="MQTTnet, Version=3.0.8.0, Culture=neutral, PublicKeyToken=b69712f52770c0a7, processorArchitecture=MSIL">
+      <HintPath>..\packages\MQTTnet.3.0.8\lib\net461\MQTTnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security, Version=4.0.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Security.4.3.2\lib\net46\System.Net.Security.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.WebSockets.4.3.0\lib\net46\System.Net.WebSockets.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.WebSockets.Client.4.3.2\lib\net46\System.Net.WebSockets.Client.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -101,8 +174,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Transbank, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TransbankSDK.2.4.0\lib\net452\Transbank.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -116,15 +190,6 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Formatting">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.WebHost">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -171,9 +236,6 @@
     <Reference Include="Microsoft.Owin.Security.OAuth">
       <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -186,16 +248,39 @@
     <Compile Include="Controllers\AutoController.cs" />
     <Compile Include="Controllers\AvionController.cs" />
     <Compile Include="Controllers\CamionController.cs" />
+    <Compile Include="Controllers\COMPENSACIONsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MotoController.cs" />
     <Compile Include="Controllers\OdooController.cs" />
+    <Compile Include="Controllers\PruebaController.cs" />
+    <Compile Include="Controllers\PruebasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AEROPUERTO.cs" />
+    <Compile Include="Models\CALCULOS.cs" />
+    <Compile Include="Models\COMPENSACION.cs">
+      <DependentUpon>Model11.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Model11.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model11.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model11.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model11.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model11.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -206,13 +291,65 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Certificados\Img\Auto.png" />
+    <Content Include="Content\Certificados\Img\Avion.png" />
+    <Content Include="Content\Certificados\Img\Camion.png" />
+    <Content Include="Content\Certificados\Img\flecha.png" />
+    <Content Include="Content\Certificados\Img\Frame1.png" />
+    <Content Include="Content\Certificados\Img\Frame2.png" />
+    <Content Include="Content\Certificados\Img\Frame3.png" />
+    <Content Include="Content\Certificados\Img\hoja.png" />
+    <Content Include="Content\Certificados\Img\Moto.png" />
+    <Content Include="Content\Certificados\Img\nfh.png" />
+    <Content Include="Content\Certificados\Img\nube.png" />
+    <Content Include="Content\Certificados\Img\Recorrido.png" />
+    <Content Include="Content\Certificados\Img\sobre.png" />
+    <Content Include="Content\Certificados\Img\Vector.png" />
+    <Content Include="Content\Certificados\Img\Vector2.png" />
+    <Content Include="Content\Certificados\Img\webpay.png" />
+    <Content Include="Content\Img\android-chrome-192x192.png" />
+    <Content Include="Content\Img\android-chrome-512x512.png" />
+    <Content Include="Content\Img\apple-touch-icon.png" />
+    <Content Include="Content\Img\Auto.png" />
+    <Content Include="Content\Img\Avion.png" />
+    <Content Include="Content\Img\Camion.png" />
+    <Content Include="Content\Img\favicon-16x16.png" />
+    <Content Include="Content\Img\favicon-32x32.png" />
+    <Content Include="Content\Img\flecha.png" />
+    <Content Include="Content\Img\Frame1.png" />
+    <Content Include="Content\Img\Frame2.png" />
+    <Content Include="Content\Img\Frame3.png" />
+    <Content Include="Content\Img\hoja.png" />
+    <Content Include="Content\Img\logoEPB %281%29 %281%29.png" />
+    <Content Include="Content\Img\logooEPB.png" />
+    <Content Include="Content\Img\Moto.png" />
+    <Content Include="Content\Img\nfh.png" />
+    <Content Include="Content\Img\nube.png" />
+    <Content Include="Content\Img\Recorrido.png" />
+    <Content Include="Content\Img\sobre.png" />
+    <Content Include="Content\Img\Vector.png" />
+    <Content Include="Content\Img\Vector2.png" />
+    <Content Include="Content\Img\webpay img.svg" />
+    <Content Include="Content\Img\webpay.png" />
+    <Content Include="Content\Img\webpay.svg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Model11.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model11.edmx</DependentUpon>
+      <LastGenOutput>Model11.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model11.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model11.edmx</DependentUpon>
+      <LastGenOutput>Model11.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Datos\Buscar_Datos.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -232,6 +369,19 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="libman.json" />
+    <Content Include="Content\Img\nubw-flecha-hoja.psd" />
+    <Content Include="Content\Certificados\597036300078.crt" />
+    <Content Include="Content\Certificados\597036300078.csr" />
+    <Content Include="Content\Certificados\597036300078.pfx" />
+    <Content Include="Content\Certificados\Img\nubw-flecha-hoja.psd" />
+    <EntityDeploy Include="Models\Model11.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model11.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model11.edmx.diagram">
+      <DependentUpon>Model11.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - Web Deploy.pubxml" />
@@ -368,13 +518,71 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Odoo\Index.cshtml" />
     <Content Include="Views\Odoo\PowerBI.cshtml" />
+    <Content Include="Views\Avion\Avion_pagina1.cshtml" />
+    <Content Include="Views\Avion\Avion_pagina2.cshtml" />
+    <Content Include="Views\Avion\Avion_pagina3.cshtml" />
+    <Content Include="Views\Avion\Avion_pagina4.cshtml" />
+    <Content Include="Views\Auto\auto_pagina1.cshtml" />
+    <Content Include="Views\Auto\auto_pagina2.cshtml" />
+    <Content Include="Views\Auto\auto_pagina3.cshtml" />
+    <Content Include="Views\Auto\auto_pagina4.cshtml" />
+    <Content Include="Views\Moto\moto_pagina1.cshtml" />
+    <Content Include="Views\Moto\moto_pagina2.cshtml" />
+    <Content Include="Views\Moto\moto_pagina3.cshtml" />
+    <Content Include="Views\Moto\moto_pagina4.cshtml" />
+    <Content Include="Views\Camion\camion_pagina1.cshtml" />
+    <Content Include="Views\Camion\camion_pagina2.cshtml" />
+    <Content Include="Views\Camion\camion_pagina3.cshtml" />
+    <Content Include="Views\Camion\camion_pagina4.cshtml" />
+    <Content Include="Views\Moto\moto_pagina4_1.cshtml" />
+    <Content Include="Views\Moto\moto_pagina4_2.cshtml" />
+    <Content Include="Views\Moto\moto_pagina4_paypal.cshtml" />
+    <Content Include="Views\Auto\auto_pagina4_2.cshtml" />
+    <Content Include="Views\Camion\camion_pagina4_1.cshtml" />
+    <Content Include="Views\Auto\auto_pagina4_1.cshtml" />
+    <Content Include="Views\Avion\Avion_pagina4_1.cshtml" />
+    <Content Include="Views\Pruebas\formulario.cshtml" />
+    <Content Include="Views\Pruebas\boton.cshtml" />
+    <Content Include="Views\Auto\indexauto.cshtml" />
+    <Content Include="Views\Auto\About.cshtml" />
+    <Content Include="Views\Auto\Contact.cshtml" />
+    <Content Include="Views\Auto\Final.cshtml" />
+    <Content Include="Views\Auto\Index.cshtml" />
+    <Content Include="Views\Auto\Prueba.cshtml" />
+    <Content Include="Views\Auto\Retorno.cshtml" />
+    <Content Include="Views\Camion\About_camion.cshtml" />
+    <Content Include="Views\Camion\Contact_camion.cshtml" />
+    <Content Include="Views\Camion\Final_camion.cshtml" />
+    <Content Include="Views\Camion\Retorno_camion.cshtml" />
+    <Content Include="Views\Avion\About_avion.cshtml" />
+    <Content Include="Views\Avion\Contact_avion.cshtml" />
+    <Content Include="Views\Avion\Final_avion.cshtml" />
+    <Content Include="Views\Avion\Retorno_avion.cshtml" />
+    <Content Include="Views\Moto\About_moto.cshtml" />
+    <Content Include="Views\Moto\Contact_moto.cshtml" />
+    <Content Include="Views\Moto\Final_moto.cshtml" />
+    <Content Include="Views\Moto\Retorno_moto.cshtml" />
+    <Content Include="Views\Prueba\Index.cshtml" />
+    <Content Include="Views\Prueba\retorno.cshtml" />
+    <Content Include="Views\Prueba\Final.cshtml" />
+    <Content Include="Views\Auto\Error.cshtml" />
+    <Content Include="Views\Auto\ErrorT.cshtml" />
+    <Content Include="Views\Moto\Error.cshtml" />
+    <Content Include="Views\Camion\Error.cshtml" />
+    <Content Include="Views\Avion\Error.cshtml" />
+    <Content Include="Views\Moto\ErrorT.cshtml" />
+    <Content Include="Views\Camion\ErrorT.cshtml" />
+    <Content Include="Views\Avion\ErrorT.cshtml" />
+    <Content Include="Views\Prueba\Error.cshtml" />
+    <Content Include="Views\Prueba\ErrorT.cshtml" />
+    <Content Include="Views\COMPENSACIONs\Create.cshtml" />
+    <Content Include="Views\COMPENSACIONs\Delete.cshtml" />
+    <Content Include="Views\COMPENSACIONs\Details.cshtml" />
+    <Content Include="Views\COMPENSACIONs\Edit.cshtml" />
+    <Content Include="Views\COMPENSACIONs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Auto\" />
-    <Folder Include="Views\Avion\" />
-    <Folder Include="Views\Camion\" />
-    <Folder Include="Views\Moto\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -384,6 +592,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -418,8 +627,16 @@
     <PropertyGroup>
       <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeCoverage.16.7.1\build\netstandard1.0\Microsoft.CodeCoverage.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeCoverage.16.7.1\build\netstandard1.0\Microsoft.CodeCoverage.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeCoverage.16.7.1\build\netstandard1.0\Microsoft.CodeCoverage.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeCoverage.16.7.1\build\netstandard1.0\Microsoft.CodeCoverage.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NET.Test.Sdk.16.7.1\build\net40\Microsoft.NET.Test.Sdk.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NET.Test.Sdk.16.7.1\build\net40\Microsoft.NET.Test.Sdk.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.NET.Test.Sdk.16.7.1\build\net40\Microsoft.NET.Test.Sdk.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.NET.Test.Sdk.16.7.1\build\net40\Microsoft.NET.Test.Sdk.targets'))" />
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <Import Project="..\packages\Microsoft.CodeCoverage.16.7.1\build\netstandard1.0\Microsoft.CodeCoverage.targets" Condition="Exists('..\packages\Microsoft.CodeCoverage.16.7.1\build\netstandard1.0\Microsoft.CodeCoverage.targets')" />
+  <Import Project="..\packages\Microsoft.NET.Test.Sdk.16.7.1\build\net40\Microsoft.NET.Test.Sdk.targets" Condition="Exists('..\packages\Microsoft.NET.Test.Sdk.16.7.1\build\net40\Microsoft.NET.Test.Sdk.targets')" />
+  <Import Project="..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

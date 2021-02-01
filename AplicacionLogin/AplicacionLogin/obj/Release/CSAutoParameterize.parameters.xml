@@ -3,4 +3,7 @@
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="data source=sud-austral.database.windows.net;initial catalog=ecopartner;persist security info=True;user id=sudaustral;password=Sud123456789;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="D:\\GitHub\\EcoPartner\\AplicacionLogin\\AplicacionLogin\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
+  <parameter name="ecopartnerEntities-Web.config Connection String" description="ecopartnerEntities Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="metadata=res://*/Models.Model11.csdl|res://*/Models.Model11.ssdl|res://*/Models.Model11.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=sud-austral.database.windows.net;initial catalog=ecopartner;user id=sudaustral;password=Sud123456789;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\GitHub\\EcoPartner\\AplicacionLogin\\AplicacionLogin\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ecopartnerEntities']/@connectionString" />
+  </parameter>
 </parameters>

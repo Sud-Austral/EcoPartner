@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Producto de prueba $ 50</h1>
+    </div>
+    <div>
+        <form action="@ViewBag.form" method="post">
+            <input hidden type="text" name="token_ws" value="@ViewBag.token" />
+            <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
+
+            <input type="image" src="~/Content/Img/webpay.png" height="150" width="300" />
+        </form>
+    </div>
+    <script>
+        window.localStorage.clear();
+        window.localStorage.setItem("token","@ViewBag.token");
+        window.localStorage.setItem("orden","@ViewBag.Orden");
+
+    </script>
+</body>
+</html>

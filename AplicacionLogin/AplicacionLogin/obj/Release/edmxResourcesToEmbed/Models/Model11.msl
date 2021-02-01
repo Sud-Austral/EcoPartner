@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ecopartnerModelStoreContainer" CdmEntityContainer="ecopartnerEntities">
+    <EntitySetMapping Name="COMPENSACION">
+      <EntityTypeMapping TypeName="ecopartnerModel.COMPENSACION">
+        <MappingFragment StoreEntitySet="COMPENSACION">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="nombreEmpresa" ColumnName="nombreEmpresa" />
+          <ScalarProperty Name="pais" ColumnName="pais" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="toneladas" ColumnName="toneladas" />
+          <ScalarProperty Name="compensacion1" ColumnName="compensacion" />
+          <ScalarProperty Name="id_codigo" ColumnName="id_codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
