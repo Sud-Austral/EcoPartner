@@ -387,6 +387,7 @@
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\AplicacionLogin20210205125716 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\EcoPartnerBank - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
