@@ -213,6 +213,7 @@ namespace AplicacionLogin.Controllers
 
         public void GuardarDatos(string toneladas, string nombre, string telefono, string empresa, string pais, string email, string total, string id)
         {
+            Correo.SendEmailAsync(email, nombre, total, toneladas);
             //*****************************************************************
             //          Insercion en la base de datos
             //*****************************************************************

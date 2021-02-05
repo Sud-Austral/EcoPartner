@@ -249,6 +249,7 @@
     <Compile Include="Controllers\AvionController.cs" />
     <Compile Include="Controllers\CamionController.cs" />
     <Compile Include="Controllers\COMPENSACIONsController.cs" />
+    <Compile Include="Controllers\CorreoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MotoController.cs" />
@@ -264,6 +265,7 @@
     <Compile Include="Models\COMPENSACION.cs">
       <DependentUpon>Model11.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Correo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Model11.Context.cs">
@@ -583,6 +585,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Correo\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
