@@ -64,11 +64,10 @@ namespace AplicacionLogin.Controllers
 
 
 
-            //*********************************************************************************
+             //*********************************************************************************
             //                                     Ambiente de producción
             //*********************************************************************************
-            /*
-            var configuration = new Configuration();
+           var configuration = new Configuration();
             configuration.Environment = "PRODUCCION";
             configuration.CommerceCode = "597036300078";
             configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
@@ -76,11 +75,10 @@ namespace AplicacionLogin.Controllers
             configuration.Password = "a";
             configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
             var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
-            */
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+          // var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
 
 
@@ -93,10 +91,10 @@ namespace AplicacionLogin.Controllers
             var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
-            string returnUrl = "http://localhost:62106/Camion/Retorno_camion";
-            string returnFinal = "http://localhost:62106/Camion/Final_camion";
-            //string returnUrl = "https://ecopartnerbank.azurewebsites.net/Camion/Retorno_camion";
-            //string returnFinal = "https://ecopartnerbank.azurewebsites.net/Camion/Final_camion";
+//            string returnUrl = "http://localhost:62106/Camion/Retorno_camion";
+  //          string returnFinal = "http://localhost:62106/Camion/Final_camion";
+            string returnUrl = "https://ecopartnerbank.azurewebsites.net/Camion/Retorno_camion";
+            string returnFinal = "https://ecopartnerbank.azurewebsites.net/Camion/Final_camion";
 
             int montotrans = Convert.ToInt32(calculo * 800);
             var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
@@ -234,11 +232,10 @@ namespace AplicacionLogin.Controllers
         public ActionResult Retorno_camion()
         {
             ViewBag.Title = "Compensación de carbono para Camión";
-            //*********************************************************************************
+          //*********************************************************************************
             //                                     Ambiente de producción
             //*********************************************************************************
-            /*
-            var configuration = new Configuration();
+           var configuration = new Configuration();
             configuration.Environment = "PRODUCCION";
             configuration.CommerceCode = "597036300078";
             configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
@@ -246,12 +243,10 @@ namespace AplicacionLogin.Controllers
             configuration.Password = "a";
             configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
             var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
-            */
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
-
+          // var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
             string tokenWs = Request.Form["token_ws"];
             var result = transaction.getTransactionResult(tokenWs);
 
