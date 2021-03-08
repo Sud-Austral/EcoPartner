@@ -4,13 +4,8 @@
     "\\AplicacionLogin",
     "\\AplicacionLogin\\AplicacionLogin",
     "\\AplicacionLogin\\AplicacionLogin\\Controllers",
-    "\\AplicacionLogin\\AplicacionLogin\\Views",
-    "\\WebApplication6",
-    "\\WebApplication6\\WebApplication6",
-    "\\WebApplication6\\WebApplication6\\Controllers",
-    "\\WebApplication6\\WebApplication6\\Views",
-    "\\WebApplication6\\WebApplication6\\Views\\Home"
+    "\\AplicacionLogin\\AplicacionLogin\\Views"
   ],
-  "SelectedNode": "\\WebApplication6\\WebApplication6\\Views\\Home\\Index.cshtml",
+  "SelectedNode": "\\AplicacionLogin\\AplicacionLogin\\AplicacionLogin.csproj",
   "PreviewInSolutionExplorer": false
 }

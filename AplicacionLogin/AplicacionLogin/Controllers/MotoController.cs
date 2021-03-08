@@ -20,6 +20,12 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
+        public ActionResult moto_pagina1EN()
+        {
+            ViewBag.Title = "Compensación de carbono para Moto";
+            return View();
+        }
+
         public ActionResult moto_pagina2()
         {
             ViewBag.Title = "Compensación de carbono para Moto";

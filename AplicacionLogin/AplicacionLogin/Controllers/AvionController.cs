@@ -19,6 +19,12 @@ namespace AplicacionLogin.Controllers
             ViewBag.Title = "Compensación de carbono para Avión";
             return View();
         }
+        public ActionResult Avion_pagina1EN()
+        {
+            ViewBag.Title = "Compensación de carbono para Avión";
+            return View();
+        }
+
 
         public ActionResult Avion_pagina()
         {
@@ -32,6 +38,7 @@ namespace AplicacionLogin.Controllers
             ViewBag.Title = "Compensación de carbono para Avión";
             return View();
         }
+
 
         public ActionResult Avion_pagina3(double recorrido, double toneladas, double total, string nombre, string correo)
         {

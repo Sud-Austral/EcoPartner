@@ -20,8 +20,19 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
+        public ActionResult auto_pagina1EN()
+        {
+            ViewBag.Title = "Compensación de carbono para Autos";
+            return View();
+        }
 
         public ActionResult auto_pagina2()
+        {
+            ViewBag.Title = "Compensación de carbono para Autos";
+            return View();
+        }
+
+        public ActionResult auto_pagina2EN()
         {
             ViewBag.Title = "Compensación de carbono para Autos";
             return View();
@@ -39,9 +50,33 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
+        public ActionResult auto_pagina3EN(double recorrido, double toneladas, double total, string nombre, string correo)
+        {
+            ViewBag.Title = "Compensación de carbono para Autos";
+            ViewBag.recorrido = recorrido;
+            ViewBag.toneladas = toneladas;
+            ViewBag.total = total;
+            ViewBag.nombre = nombre;
+            ViewBag.correo = correo;
+            return View();
+        }
+
 
 
         public ActionResult auto_pagina4(double porsentaje, double total, double ton, string nombre, string correo)
+        {
+            ViewBag.Title = "Compensación de carbono para Autos";
+            CALCULOS ca = new CALCULOS();
+            //double totalf = ca.Calculartotalf(porsentaje, total);
+            double totalf = ca.Calculartotalf(total, porsentaje);
+            ViewBag.toneladas = ton;
+            ViewBag.totalf = totalf;
+            ViewBag.nombre = nombre;
+            ViewBag.correo = correo;
+            return View();
+        }
+
+        public ActionResult auto_pagina4EN(double porsentaje, double total, double ton, string nombre, string correo)
         {
             ViewBag.Title = "Compensación de carbono para Autos";
             CALCULOS ca = new CALCULOS();

@@ -50,6 +50,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -190,12 +196,6 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -582,6 +582,22 @@
     <Content Include="Views\COMPENSACIONs\Details.cshtml" />
     <Content Include="Views\COMPENSACIONs\Edit.cshtml" />
     <Content Include="Views\COMPENSACIONs\Index.cshtml" />
+    <Content Include="Views\Auto\auto_pagina3EN.cshtml" />
+    <Content Include="Views\Auto\auto_pagina4EN.cshtml" />
+    <Content Include="Views\Auto\auto_pagina1EN.cshtml" />
+    <Content Include="Views\Auto\auto_pagina2EN.cshtml" />
+    <Content Include="Views\Avion\Avion_pagina1EN.cshtml" />
+    <Content Include="Views\Avion\Avion_pagina2EN.cshtml" />
+    <Content Include="Views\Avion\Avion_pagina3EN.cshtml" />
+    <Content Include="Views\Avion\Avion_pagina4EN.cshtml" />
+    <Content Include="Views\Camion\camion_pagina1EN.cshtml" />
+    <Content Include="Views\Camion\camion_pagina2EN.cshtml" />
+    <Content Include="Views\Camion\camion_pagina3EN.cshtml" />
+    <Content Include="Views\Camion\camion_pagina4EN.cshtml" />
+    <Content Include="Views\Moto\moto_pagina1EN.cshtml" />
+    <Content Include="Views\Moto\moto_pagina2EN.cshtml" />
+    <Content Include="Views\Moto\moto_pagina3EN.cshtml" />
+    <Content Include="Views\Moto\moto_pagina4EN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
