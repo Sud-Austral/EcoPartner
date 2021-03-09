@@ -178,6 +178,90 @@ namespace AplicacionLogin.Controllers
 
         }
 
+        public ActionResult auto_pagina4_1EN(double calculo, double ton, string nombre, string telefono, string empresa, string pais, string email)
+        {
+            ViewBag.Title = "Compensación de carbono para Autos";
+            ViewBag.total = calculo;
+
+            Session["toneladas"] = ton;
+
+
+
+            //*********************************************************************************
+            //                                     Ambiente de producción
+            //*********************************************************************************
+            //var configuration = new Configuration();
+            //configuration.Environment = "PRODUCCION";
+            //configuration.CommerceCode = "597036300078";
+            //configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
+
+            //configuration.Password = "a";
+            //configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+            //var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+            //*********************************************************************************
+            //                                     Ambiente de prueba
+            //*********************************************************************************
+            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
+            //Convert.ToInt16(calculo);
+
+
+            //decimal valor = Convert.ToDecimal(calculo);
+            var monto = Convert.ToInt32(calculo * 100);
+            var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
+            var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
+
+            string returnUrl = "http://localhost:62106/Auto/Retorno";
+            string returnFinal = "http://localhost:62106/Auto/Final";
+            //  string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
+            //  string returnFinal = "https://ecopartnerbank.azurewebsites.net/Auto/Final";
+
+            int montotrans = Convert.ToInt32(calculo * 800);
+            var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
+
+
+            ViewBag.toneladas = ton;
+            ViewBag.nombre = nombre;
+            ViewBag.telefono = telefono;
+            ViewBag.empresa = empresa;
+            ViewBag.pais = pais;
+            ViewBag.email = email;
+            ViewBag.total = calculo;  //montotrans;
+            ViewBag.id = id;
+            //*****************************************************************
+            //          Insercion en la base de datos
+            //*****************************************************************
+            //COMPENSACION cOMPENSACION = new COMPENSACION();
+            //cOMPENSACION.id = db.COMPENSACION.Count() + 1;
+            //cOMPENSACION.nombre = nombre;
+            //cOMPENSACION.telefono = telefono;
+            //cOMPENSACION.nombreEmpresa = empresa;
+            //cOMPENSACION.pais = pais;
+            //cOMPENSACION.mail = email;
+            //cOMPENSACION.toneladas = ton.ToString();
+            //cOMPENSACION.compensacion1 = montotrans.ToString();
+            //cOMPENSACION.id_codigo = id;
+            //db.COMPENSACION.Add(cOMPENSACION);
+            //db.SaveChanges();
+            //*****************************************************************
+            //          Fin de Insercion en la base de datos
+            //*****************************************************************
+            var tokenWs = initResult.token;
+            var formAction = initResult.url;
+            ViewBag.Montotrans = montotrans;
+            ViewBag.Monto = monto / 100;
+            ViewBag.Orden = orden;
+            ViewBag.token = tokenWs;
+            ViewBag.form = formAction;
+
+
+            return View();
+
+
+
+
+        }
+
 
         public ActionResult CalculosAuto(string kilometros, string tipoAuto, string tipoCombustible, string nombre, string correo )
         {
@@ -206,6 +290,35 @@ namespace AplicacionLogin.Controllers
 
 
             return View("auto_pagina2");
+        }
+
+        public ActionResult CalculosAutoEN(string kilometros, string tipoAuto, string tipoCombustible, string nombre, string correo)
+        {
+            ViewBag.Title = "Compensación de carbono para Autos";
+            Double num;
+            bool isNum = Double.TryParse(kilometros, out num);
+            if (isNum)
+            {
+                if (kilometros != "" && Convert.ToDouble(kilometros) > 0)
+                {
+                    CALCULOS ca = new CALCULOS();
+                    double litros = ca.CalcularLitrosAuto(kilometros, tipoAuto);
+                    double carbono = ca.CalcularCO2Auto(litros, tipoCombustible);
+                    double total = ca.CalcularValorAuto(carbono);
+
+                    ViewBag.kilometros = kilometros;
+                    ViewBag.litros = litros;
+                    ViewBag.carbono = carbono;
+                    ViewBag.total = total;
+                    ViewBag.nombre = nombre;
+                    ViewBag.correo = correo;
+                }
+            }
+
+
+
+
+            return View("auto_pagina2EN");
         }
 
         public ActionResult About()

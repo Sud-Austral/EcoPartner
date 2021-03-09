@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-md-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
                         <p style="font-size:15px;">
-                            CALCULADORA
+                            CALCULATOR
                             <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
                         </p>
                     </div>
@@ -51,8 +51,8 @@
                             </div>
                             <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:1%; padding-left:10%;">
                                 <p style="font-size:11px;">
-                                    <span style="font-size:28px; font-weight: bold;">Pago</span> <br>
-                                    Compensa lo contaminado
+                                    <span style="font-size:28px; font-weight: bold;">Payment</span> <br>
+                                    Compensate your pollution
                                 </p>
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="col-sm-5" style="background-color: #0BEDBF; color: #117394">
                     <div><span>&nbsp&nbsp</span></div>
-                    <span style="font-weight: bold;">Producto</span>
+                    <span style="font-weight: bold;">Product</span>
                     <div><span>&nbsp&nbsp</span></div>
                     <span>Carbono x @ViewBag.toneladas T</span>
                     <div><span>&nbsp&nbsp</span></div>
@@ -89,7 +89,7 @@
                     <div><span>&nbsp&nbsp</span></div>
                     <div><span>&nbsp&nbsp</span></div>
 
-                    <a href="javascript: history.go(-1)" style="margin-left:-40%"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
+                    <a href="javascript: history.go(-1)" style="margin-left:-40%"><input class="calcular3 boton-color" name="" type="button" value="<-- Go back"></a>
 
 
 
@@ -163,17 +163,17 @@
 
                     </script>
                     <div><span>&nbsp&nbsp</span></div>
-                    
-    <div id="mclp">
-        <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
-        <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
 
-    </div>
-    <div id="musd" style="display:none;">
-        <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
-        <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
-    </div>
-        
+                    <div id="mclp">
+                        <span style="font-weight: bold; margin-left:-25%">Choose your currency</span>
+                        <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
+
+                    </div>
+                    <div id="musd" style="display:none;">
+                        <span style="font-weight: bold; margin-left:-25%">Choose your currency</span>
+                        <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
+                    </div>
+
                     <form name="convertidor">
                         <div id="clpm">
 
@@ -205,10 +205,10 @@
                         <input type="hidden" name="ton" value="@ViewBag.toneladas" />
                     </form>
                     <!--    <span>
-        <img src="~/Content/Img/Frame1.png" alt="hoja">
-        <img src="~/Content/Img/frames.gif" alt="hoja">
-    </span>-->
-                    <p style="font-weight: bold; margin-left:-25%">Elige tu método de pago</p>
+                        <img src="~/Content/Img/Frame1.png" alt="hoja">
+                        <img src="~/Content/Img/frames.gif" alt="hoja">
+                    </span>-->
+                    <p style="font-weight: bold; margin-left:-25%">Choose your payment method</p>
                     <div id="smart-button-container" style="margin-top:-70%; margin-left:-55%">
                         <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
                         <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
@@ -216,7 +216,7 @@
                         <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
                         <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
                         <p id="invoiceidError" style=" visibility: hidden; color: red; text-align: center;">Please enter an Invoice ID</p>
-                        <div style="text-align: center; margin-top: 1.625rem;" id="paypal-button-container"></div>
+                        <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
 
 
                         <div style="margin-left:-2%">
@@ -252,7 +252,7 @@
 
 
     <!--<input name="calculo" value="@ViewBag.totalf" />-->
-   
+
 </body>
 </html>
 
@@ -366,7 +366,7 @@
 
 <script>
     window.localStorage.clear();
-    
+
     window.localStorage.setItem("nombre",'@ViewBag.nombre')
     window.localStorage.setItem("toneladas", '@ViewBag.toneladas')
     window.localStorage.setItem("telefono", '@ViewBag.telefono')
@@ -376,5 +376,5 @@
     window.localStorage.setItem("total", '@ViewBag.total')
     window.localStorage.setItem("id",'@ViewBag.id')
     window.localStorage.setItem("token","@ViewBag.token")
-        
+
 </script>

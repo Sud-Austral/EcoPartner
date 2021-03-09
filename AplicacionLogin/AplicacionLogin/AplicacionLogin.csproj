@@ -598,6 +598,7 @@
     <Content Include="Views\Moto\moto_pagina2EN.cshtml" />
     <Content Include="Views\Moto\moto_pagina3EN.cshtml" />
     <Content Include="Views\Moto\moto_pagina4EN.cshtml" />
+    <Content Include="Views\Auto\auto_pagina4_1EN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
