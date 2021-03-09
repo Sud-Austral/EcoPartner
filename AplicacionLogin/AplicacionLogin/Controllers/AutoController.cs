@@ -71,6 +71,7 @@ namespace AplicacionLogin.Controllers
              //*********************************************************************************
             //                                     Ambiente de producción
             //*********************************************************************************
+            /*
            var configuration = new Configuration();
             configuration.Environment = "PRODUCCION";
             configuration.CommerceCode = "597036300078";
@@ -79,10 +80,11 @@ namespace AplicacionLogin.Controllers
             configuration.Password = "a";
             configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
             var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+            */
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************
-          // var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
 
             //Convert.ToInt16(calculo);
 
