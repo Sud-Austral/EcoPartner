@@ -20,12 +20,6 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
-        public ActionResult auto_pagina1EN()
-        {
-            ViewBag.Title = "Compensación de carbono para Autos";
-            return View();
-        }
-
         public ActionResult auto_pagina2()
         {
             ViewBag.Title = "Compensación de carbono para Autos";
@@ -106,7 +100,7 @@ namespace AplicacionLogin.Controllers
              //*********************************************************************************
             //                                     Ambiente de producción
             //*********************************************************************************
-           //var configuration = new Configuration();
+            //var configuration = new Configuration();
             //configuration.Environment = "PRODUCCION";
             //configuration.CommerceCode = "597036300078";
             //configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
@@ -129,8 +123,8 @@ namespace AplicacionLogin.Controllers
 
            string returnUrl = "http://localhost:62106/Auto/Retorno";
            string returnFinal = "http://localhost:62106/Auto/Final";
-         //  string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
-         //  string returnFinal = "https://ecopartnerbank.azurewebsites.net/Auto/Final";
+           //  string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
+           //  string returnFinal = "https://ecopartnerbank.azurewebsites.net/Auto/Final";
 
             int montotrans = Convert.ToInt32(calculo * 800);
             var initResult = transaction.initTransaction(montotrans, orden, id, returnUrl, returnFinal);
@@ -186,7 +180,7 @@ namespace AplicacionLogin.Controllers
             Session["toneladas"] = ton;
 
 
-
+            // Para probar las vistas de pagos, hay que dejar comentado el ambiente de produccion y las urls de dominio, tanto en la vista de la pagina como en la vista de retorno.
             //*********************************************************************************
             //                                     Ambiente de producción
             //*********************************************************************************
@@ -211,8 +205,8 @@ namespace AplicacionLogin.Controllers
             var orden = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
             var id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 8);
 
-            string returnUrl = "http://localhost:62106/Auto/Retorno";
-            string returnFinal = "http://localhost:62106/Auto/Final";
+            string returnUrl = "http://localhost:62106/Auto/RetornoEN";
+            string returnFinal = "http://localhost:62106/Auto/FinalEN";
             //  string returnUrl = "https://ecopartnerbank.azurewebsites.net/Auto/Retorno";
             //  string returnFinal = "https://ecopartnerbank.azurewebsites.net/Auto/Final";
 
@@ -356,6 +350,21 @@ namespace AplicacionLogin.Controllers
 
         }
 
+        public ActionResult FinalEN()
+        {
+            ViewBag.Title = "Compensación de carbono para Autos";
+            ViewBag.Message = "Your contact page.";
+            //ViewBag.toneladas = Response.Write Session("toneladas");
+            //var ton = Session["toneladas"];
+            ViewBag.tonelada = Session["toneladas"];
+            //ViewBag.tonelada = ton;
+
+
+            return View();
+
+
+        }
+
         public void GuardarDatos(string toneladas, string nombre, string telefono, string empresa, string pais, string email, string total, string id)
         {
             Correo.SendEmailAsync(email, nombre, total, toneladas);
@@ -458,7 +467,68 @@ namespace AplicacionLogin.Controllers
 
 
         }
+
+        public ActionResult RetornoEN()
+        {
+            ViewBag.Title = "Compensación de carbono para Autos";
+
+            //*********************************************************************************
+            //                                     Ambiente de producción
+            //*********************************************************************************
+            /*  var configuration = new Configuration();
+               configuration.Environment = "PRODUCCION";
+               configuration.CommerceCode = "597036300078";
+               configuration.PrivateCertPfxPath = @"D:\home\site\wwwroot\Content\Certificados\597036300078.pfx";
+
+               configuration.Password = "a";
+               configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+               var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
+            */
+            //*********************************************************************************
+            //                                     Ambiente de prueba
+            //*********************************************************************************
+            var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
+            //Conf.WebpayCertPath = Configuration.GetProductionPublicCertPath();
+
+            //var transaction = new Webpay(Configuration.ForTestingWebpayPlusNormal()).NormalTransaction;
+
+
+            string tokenWs = Request.Form["token_ws"];
+            var result = transaction.getTransactionResult(tokenWs);
+
+            var output = result.detailOutput[0];
+            int aux = output.responseCode;
+
+            if (output.responseCode == 0)
+            {
+                ViewBag.redirect = result.urlRedirection;
+                ViewBag.Token = tokenWs;
+                ViewBag.Response = output.responseCode;
+                ViewBag.monto = output.amount;
+                ViewBag.auto = output.authorizationCode;
+
+            }
+
+            else
+            {
+                ViewBag.redirect = result.urlRedirection;
+                ViewBag.monto = "The transaction was rejected";
+                ViewBag.Token = tokenWs;
+                return View("ErrorEN");
+            }
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+
+
+        }
         public ActionResult Error()
+        {
+            return View();
+        }
+
+        public ActionResult ErrorEN()
         {
             return View();
         }

@@ -1,6 +1,6 @@
 ﻿
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
 
 <!doctype html>
@@ -47,11 +47,11 @@
                                 <p id="num" style="padding-top:45%; padding-left:22%;">4</p>
                             </div>
                             <div class="col-md-3" style="background-color:transparent;  padding-top:5%;">
-                                <img src="~/Content/Img/Auto.png" alt="Auto" />
+                                <img src="~/Content/Img/Camion.png" alt="Camion" />
                             </div>
                             <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:1%; padding-left:10%;">
-                                <p style="font-size:11px;">
-                                    <span style="font-size:28px; font-weight: bold;">Payment</span> <br>
+                                <p style="font-size:11px; padding-left:3px; padding-top:1px;">
+                                    <span style="font-size:28px; font-weight: bold;">Pago</span> <br>
                                     Compensate your pollution
                                 </p>
                             </div>
@@ -63,7 +63,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- ///////////////////////////////////////////////////////////////////////////////////-->
 
@@ -81,7 +80,7 @@
                     <div><span>&nbsp&nbsp</span></div>
                     <span style="font-weight: bold;">Product</span>
                     <div><span>&nbsp&nbsp</span></div>
-                    <span>Carbon x @ViewBag.toneladas T</span>
+                    <span>Carbono x @ViewBag.toneladas T</span>
                     <div><span>&nbsp&nbsp</span></div>
                     <div><span>&nbsp&nbsp</span></div>
                     <div><span>&nbsp&nbsp</span></div>
@@ -173,12 +172,11 @@
                         <span style="font-weight: bold; margin-left:-25%">Choose your currency</span>
                         <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
                     </div>
-
                     <form name="convertidor">
                         <div id="clpm">
 
                             <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="usd" value="@ViewBag.total" /> USD</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" disabled="disabled" type="text" class="inputmoneda" name="usd" value="@ViewBag.total" /> USD</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" disabled="disabled" name="usdtot" value="@ViewBag.total" />  USD</span></div>
                             <div><span>&nbsp&nbsp</span></div>
@@ -192,7 +190,7 @@
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="clp" /> CLP</span></div>
                             <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" disabled="disabled" name="clptot" />  CLP</span></div>
+                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" disabled="disabled" class="inputmoneda" name="clptot" />  CLP</span></div>
                             <div><span>&nbsp&nbsp</span></div>
                             <div><span>&nbsp&nbsp</span></div>
 
@@ -203,6 +201,7 @@
                     <form action="/Moto/moto_pagina4_paypal" method="post">
                         <input type="hidden" name="total" value="@ViewBag.total" />
                         <input type="hidden" name="ton" value="@ViewBag.toneladas" />
+
                     </form>
                     <!--    <span>
                         <img src="~/Content/Img/Frame1.png" alt="hoja">
@@ -219,7 +218,7 @@
                         <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
 
 
-                        <div style="margin-left:-2%">
+                        <div style="margin-left: 1%">
 
                             <form action="@ViewBag.form" method="post">
                                 <input hidden type="text" name="token_ws" value="@ViewBag.token" />
@@ -248,11 +247,23 @@
 
         </div>
     </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4" style="background-color:transparent">
+                </div>
+                <div class="col-lg-4" style="background-color:transparent">
 
+                    <img style="margin-left:25%" src="~/Content/Img/logooEPB.png" />
 
+                </div>
+                <div class="col-lg-4" style="background-color:transparent">
 
-    <!--<input name="calculo" value="@ViewBag.totalf" />-->
+                </div>
+            </div>
 
+        </div>
+    </footer>
 </body>
 </html>
 
@@ -361,20 +372,16 @@
     initPayPalButton();
 </script>
 
-
-
-
 <script>
-    window.localStorage.clear();
-
-    window.localStorage.setItem("nombre",'@ViewBag.nombre')
-    window.localStorage.setItem("toneladas", '@ViewBag.toneladas')
-    window.localStorage.setItem("telefono", '@ViewBag.telefono')
-    window.localStorage.setItem("empresa", '@ViewBag.empresa')
-    window.localStorage.setItem("pais", '@ViewBag.pais')
-    window.localStorage.setItem("email", '@ViewBag.email')
-    window.localStorage.setItem("total", '@ViewBag.total')
-    window.localStorage.setItem("id",'@ViewBag.id')
-    window.localStorage.setItem("token","@ViewBag.token")
-
+        window.localStorage.clear();
+        window.localStorage.setItem("nombre",'@ViewBag.nombre')
+        window.localStorage.setItem("toneladas", '@ViewBag.toneladas')
+        window.localStorage.setItem("telefono", '@ViewBag.telefono')
+        window.localStorage.setItem("empresa", '@ViewBag.empresa')
+        window.localStorage.setItem("pais", '@ViewBag.pais')
+        window.localStorage.setItem("email", '@ViewBag.email')
+        window.localStorage.setItem("total", '@ViewBag.total')
+        window.localStorage.setItem("id",'@ViewBag.id')
+        window.localStorage.setItem("token","@ViewBag.token")
 </script>
+
