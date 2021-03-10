@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -39,7 +38,7 @@
     </script>
 
     <div id="moto1ES">
-        <input name="motoES" onclick="mostrarDiv();" style="margin-left:5px" class="es boton-color" type="button" value="English">
+
         <div class="container-fluid">
             <div class="row" style="padding:1%">
                 <div class="col-sm-3" style="background-color:transparent;">
@@ -84,7 +83,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3" style="background-color:transparent;">
+                <div class="col-md-3" style="background-color:transparent; padding-top:2.7%; ">
+                    <input name="motoES" onclick="mostrarDiv();" style="margin-left:5px" class="traducir boton-color" type="button" value="English">
                 </div>
             </div>
         </div>
@@ -111,7 +111,7 @@
                                         <tr>
                                             <th>
                                                 <div>
-                                                    <spam class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspKilómetros recorridos&nbsp&nbsp</spam>
+                                                    <spam class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspKilómetros recorridos&nbsp&nbsp&nbsp&nbsp</spam>
                                                 </div>
                                             </th>
                                             <th>
@@ -256,14 +256,13 @@
     </div>
 
     <div id="moto1EN" style="display:none;">
-        <input onclick="ocultarDiv();" style="margin-left:5px; position: relative;" class="en boton-color" name="" type="button" value="Español">
 
         <div class="container-fluid">
             <div class="row" style="padding:1%">
                 <div class="col-sm-3" style="background-color:transparent;">
                     <div class="row">
                         <div class="col-sm-3" style="background-color:transparent;">
-                            <img style="padding:2%" src="~/Content/Img/Vector.png">
+                            <img style="padding:2%" src="/Content/Img/Vector.png">
                         </div>
                         <div class="col-sm-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
                             <p style="font-size:15px;">
@@ -302,7 +301,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3" style="background-color:transparent;">
+                <div class="col-md-3" style="background-color:transparent;  padding-top:2.5%; ">
+                    <input onclick="ocultarDiv();" style="margin:5px; position:relative;" class="traducir boton-color" name="traducir" type="button" value="Español">
                 </div>
             </div>
         </div>
@@ -336,7 +336,7 @@
                                                 <input name="kilometros" style="margin-left:-23%;" class="input2" onkeypress="return validaNumericos(event)"
                                                        type="text"
                                                        min="1"
-                                                       placeholder="Write your traveled kilometers"
+                                                       placeholder="Type your traveled kms"
                                                        step="0.1"
                                                        required
                                                        autocomplete="off" />
@@ -346,7 +346,7 @@
                                         </tr>
                                         <tr>
                                             <th style="width:50%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCC</span>
+                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCC</span>
                                             </th>
                                             <th>
                                                 <select name="cilindrada" style="margin-left:-23%" class="w-100 col-md-12 col-sm-10 input" required>
@@ -363,7 +363,7 @@
 
                                         <tr>
                                             <th style="width:50%">
-                                                <span>&nbsp&nbsp&nbspNow enter your info</span>
+                                                <span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNow enter your info</span>
                                             </th>
 
 

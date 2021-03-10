@@ -24,6 +24,15 @@ body {
     line-height: 41px;
 }
 
+.traducir {
+    color: #fff;
+    background-color: transparent;
+    height: auto;
+    width: 130px;
+    border-radius: 3em;
+    border: 3px solid #fff;
+}
+
 
 .padre {
     background: #117394;
