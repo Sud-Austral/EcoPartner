@@ -66,3 +66,13 @@ $("#texto2").keyup(function () {
     lista = mostrarLista("#texto2", "#Lista2");
 
 }); 
+
+$("#texto1_ingles").keyup(function () {
+    mostrarLista("#texto1_ingles", "#Lista_ingles");
+});
+
+
+$("#texto2_ingles").keyup(function () {
+    lista = mostrarLista("#texto2_ingles", "#Lista2_ingles");
+
+}); 
