@@ -192,7 +192,7 @@ namespace AplicacionLogin.Controllers
             configuration.Password = "a";
             configuration.WebpayCertPath = Configuration.GetProductionPublicCertPath();
             var transaction = new Webpay(configuration).NormalTransaction;    //.NormalTransaction;
-            */
+            
             //*********************************************************************************
             //                                     Ambiente de prueba
             //*********************************************************************************

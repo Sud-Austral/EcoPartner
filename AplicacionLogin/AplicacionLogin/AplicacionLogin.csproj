@@ -384,9 +384,8 @@
     <Content Include="Models\Model11.edmx.diagram">
       <DependentUpon>Model11.edmx</DependentUpon>
     </Content>
-    <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - ReadOnly - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\AplicacionBlancoServidorPrueba - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\EcoPartnerBank - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\EcoPartnerBank - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\EcoPartnerBank - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />

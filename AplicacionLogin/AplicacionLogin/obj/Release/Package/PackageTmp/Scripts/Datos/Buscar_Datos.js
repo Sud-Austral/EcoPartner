@@ -7,7 +7,7 @@ function extraerDato(valor, texto, lista) {
 
 function mostrarLista(texto, lista) {
     var cont = false;
-    $.get("https://raw.githubusercontent.com/Sud-Austral/Calculadora/master/BaseDatos/airports.dat", function (data) {
+    $.get("https://raw.githubusercontent.com/Sud-Austral/Calculadora/master/BaseDatos/airports2.dat", function (data) {
 
         $(lista).empty();
 
@@ -20,6 +20,7 @@ function mostrarLista(texto, lista) {
 
         $.each(lines, function (n, elem) {
             var col = elem.split(',"');
+        
             if (col[1] != "" && typeof col[1] != 'undefined' && col[2] != "" && typeof col[2] != 'undefined' && col[4] != "" && typeof col[4] != 'undefined') {
                 var column = col[1].replace('"', '');
                 var column2 = col[2].replace('"', '');
@@ -27,15 +28,15 @@ function mostrarLista(texto, lista) {
                 var columna = column.toLowerCase();
                 var columna2 = column2.toLowerCase();
                 var columna4 = column4.toLowerCase();
-
-
+   
                 if ($(texto).val().length >= 1 && columna != valor) {
                     if (columna.startsWith(valor) || columna2.startsWith(valor) || columna4.startsWith(valor)) {
                         $(lista).show();
 
                         //$(lista).append('<option value="' + column + '">');
-                        $(lista).append('<p onclick=\'extraerDato("' + column + '","' + texto2 + '","' + lista + '")\'>' + column + '</p>');
-
+                        $(lista).append('<p onclick=\'extraerDato("' + column + '","' + texto2 + '","' + lista + '")\'>' + column4 + " " + column + '</p>');
+                        //$(lista).append('<p onclick=\'extraerDato("' + column + '","' + texto2 + '","' + lista + '")\'>' + col + '</p>');
+                      
 
 
                     }
@@ -63,5 +64,15 @@ $("#texto1").keyup(function () {
 
 $("#texto2").keyup(function () {
     lista = mostrarLista("#texto2", "#Lista2");
+
+}); 
+
+$("#texto1_ingles").keyup(function () {
+    mostrarLista("#texto1_ingles", "#Lista_ingles");
+});
+
+
+$("#texto2_ingles").keyup(function () {
+    lista = mostrarLista("#texto2_ingles", "#Lista2_ingles");
 
 }); 
