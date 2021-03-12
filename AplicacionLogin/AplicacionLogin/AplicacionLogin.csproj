@@ -610,6 +610,9 @@
     <Content Include="Views\Camion\ErrorEN.cshtml" />
     <Content Include="Views\Camion\Retorno_camionEN.cshtml" />
     <Content Include="Views\Moto\Retorno_motoEN.cshtml" />
+    <Content Include="Views\Prueba\PantallaDinamica.cshtml" />
+    <Content Include="Views\Prueba\auto_pagina1Prueba.cshtml" />
+    <Content Include="Views\Prueba\media.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

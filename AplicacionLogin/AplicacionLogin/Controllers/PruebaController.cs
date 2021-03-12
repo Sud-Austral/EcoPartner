@@ -106,5 +106,24 @@ namespace AplicacionLogin.Controllers
         {
             return View();
         }
+
+        public ActionResult PantallaDinamica()
+        {
+            return View();
+        }
+
+        public ActionResult auto_pagina1Prueba()
+        {
+            return View();
+        }
+
+        public ActionResult media()
+        {
+            return View();
+        }
+
+
+
+
     }
 }
