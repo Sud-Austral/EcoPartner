@@ -334,6 +334,7 @@
     <Content Include="Content\Img\webpay img.svg" />
     <Content Include="Content\Img\webpay.png" />
     <Content Include="Content\Img\webpay.svg" />
+    <Content Include="Content\Img\webpay_en.svg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
