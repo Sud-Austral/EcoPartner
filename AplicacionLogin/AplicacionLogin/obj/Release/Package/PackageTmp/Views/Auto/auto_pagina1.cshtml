@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
@@ -147,22 +148,6 @@
                                             </th>
 
 
-                                <tr>
-                                    <th style="width:50%">
-                                        <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbspKilómetros recorridos&nbsp&nbsp</span>
-                                    </th>
-                                    <th>
-                                        <input name="kilometros" class="w-100 col-md-12 col-sm-10   input2" onkeypress="return validaNumericos(event)"
-                                               type="text"
-                                               min="1"
-                                               placeholder="Ingrese los kilómetros"
-                                               step="0.1"
-                                               autocomplete="off"
-                                               required />
-
-                                    </th>¨
-                                    
-
 
                                         </tr>
                                         <tr>
@@ -239,7 +224,6 @@
                                         </tr>
                                     </table>
 
-                                @*    <td></td>*@
 
                                 </div>
                             </div>
@@ -348,7 +332,7 @@
         </div>
         <!--/////////////////////////////////////////////////////////////////////////-->
         <div class="container-fluid">
-            <form action="/Auto/CalculosAuto" method="post">
+            <form action="/Auto/CalculosAutoEN" method="post">
                 <div class="row" style="margin-top: -2%; background-color:#117394">
                     <div class="col-sm-1" style="background-color:transparent;">
 
@@ -374,7 +358,7 @@
                                                 <input name="kilometros" class="w-100 col-md-12 col-sm-10   input2" onkeypress="return validaNumericos(event)"
                                                        type="text"
                                                        min="1"
-                                                       placeholder="Type your traveled kms"
+                                                       placeholder="WRITE YOUR TRAVELLED KILOMETERS"
                                                        step="0.1"
                                                        autocomplete="off"
                                                        required />
