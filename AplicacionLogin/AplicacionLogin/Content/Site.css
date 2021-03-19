@@ -17,11 +17,11 @@ body {
     color: #A0A0A0;
 }
 
-#num {
+#num{
     font-style: normal;
     font-weight: bold;
-    font-size: 64px;
-    line-height: 41px;
+    font-size: 50px;
+    line-height: 60px;
 }
 
 .traducir {
@@ -226,5 +226,237 @@ body {
         cursor: pointer;
     }
 
+/* VIVIAN y GUSTAVO */
+#logo:before {
+    content:"ECOPARTNERSBANK";
+}
+
+#estilo1:before {
+    content: "CALCULADORA";
+}
+
+#estilo2cab:before {
+    content: "Cuéntanos sobre tu";
+}
+#estilo2texto:before {
+    content: "Automóvil";
+}
 
 
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    #num {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    #logo:before {
+        content: "ECOPARTNERSBANK";
+        font-size:95%;
+        font-weight:bold;
+        padding-top:5%;
+    }
+
+    #estilo1:before {
+        content: "CALCULADORA";
+        color: #FFFF;
+        padding-top: 5%;
+        padding-left: 15%;
+        padding-right: 50%;
+        margin-right: 10px;
+        font-size:70%;
+    }
+
+    #estilo2cab:before {
+        content: "";
+    }
+
+    #estilo2texto:before {
+        content: "";
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .autoimg {
+        padding-top: 5%;
+    }
+
+    .calcular {
+        color: #fff;
+        background-color: transparent;
+        height: 60px;
+        width: 100px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+    .traducirsm{
+        color: #fff;
+        background-color: transparent;
+        height: auto;
+        width: 100%;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+    .traducir{
+        color: #fff;
+        background-color: transparent;
+        height: auto;
+        width: 130px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
+    .input{
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        text-align: right;
+        width: 300px;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #num{
+        font-style:normal;
+        font-weight:bold;
+        font-size:35px;
+        line-height:35px;
+    }
+
+    #logo:before{
+        content: "ECOPARTNERSBANK";
+        font-size:25px;
+        font-weight:bold;   
+    }
+
+    .estilo1:before {
+        content: "CALCULADORA";
+        color: #ffff;
+        padding-left: 45px;
+        font-size: 15px;
+        padding-top:10%;
+    }
+
+    #estilo2cab:before {
+        content: "Cuéntanos sobre tu";
+    }
+
+    #estilo2texto:before {
+        content: "Automóvil";
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .estilo1 {
+        color: #ffff;
+        padding-top: 5%;
+        padding-left: 5%;
+        margin-right: 50px;
+        font-size: 50px;
+    }
+
+
+    .calcular {
+        color: #fff;
+        background-color: transparent;
+        height: auto;
+        width: 90px;
+        border-radius: 2em;
+        border: 3px solid #fff;
+    }
+
+    .colnom1 {
+        padding-left: 0%;
+    }
+
+    .input {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        text-align: right;
+        width: 300px;
+    }
+}
+
+#num {
+    padding-top: 20%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 41px;
+}
+
+.colnom1 {
+    padding-left: 25%;
+}
+
+.input {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    text-align: right;
+    margin-left: 20px;
+    width: 290px;
+}
+
+.calcular {
+    color: #fff;
+    background-color: transparent;
+    height: auto;
+    width: 90px;
+    border-radius: 2em;
+    border: 3px solid #fff;
+}
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .colnom1 {
+        padding-left: 25%;
+    }
+
+    .calcular {
+        color: #fff;
+        background-color: transparent;
+        height: auto;
+        width: 90px;
+        border-radius: 2em;
+        border: 3px solid #fff;
+    }
+
+    .input {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        text-align: right;
+        margin-left: 20px;
+        width: 290px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .colnom1 {
+        padding-left: 25%;
+    }
+
+    .calcular {
+        color: #fff;
+        background-color: transparent;
+        height: auto;
+        width: 90px;
+        border-radius: 2em;
+        border: 3px solid #fff;
+    }
+
+    .input {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        text-align: right;
+        margin-left: 20px;
+        width: 290px;
+    }
+}

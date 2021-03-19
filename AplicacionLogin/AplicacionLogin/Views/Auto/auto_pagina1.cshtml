@@ -50,58 +50,59 @@
     <div id="auto1ES">
         <div class="container-fluid">
             <div class="row" style="padding:1%">
-                <div class="col-sm-3" style="background-color:transparent;">
+                <div class="col-12 col-md-3" style="background-color:transparent;">
                     <div class="row">
-                        <div class="col-sm-3" style="background-color:transparent;">
-                            <img style="padding:2%" src="~/Content/Img/Vector.png">
+                        <div class="col-3 col-sm-2 col-md-3" style="background-color:transparent;">
+                            <img src="/Content/Img/Vector.png" class="img-fluid" alt="Responsive Image">
                         </div>
-                        <div class="col-sm-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
-                            <p style="font-size:15px;">
-                                CALCULADORA
-                                <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                        <div class="col-8 col-sm-2 col-md-9" style="background-color:transparent; color:#ffff; padding-left:8%;">
+                            <p id="estilo1" class="estilo1">
+                                <span id="logo"></span>
                             </p>
+                        </div>
+                        <div class="col-12" style="background-color:transparent; padding-top:2.7%; ">
+                            <input name="autoES" onclick="mostrarDiv();" style="margin-left:5px" class="traducirsm boton-color" type="button" value="English">
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6" style="background-color:transparent;">
+                <div class="col-12 col-md-6" style="background-color:transparent;">
                     <div class="row" style="padding:2%;">
-                        <div class="col-sm-6" style="background-color:#117394;">
+                        <div class="col-6 col-md-6" style="background-color:#117394;">
                             <div class="row">
-                                <div class="col-sm-2" style="background-color:transparent;">
-                                    <p id="num" style="padding-top:45%; padding-left:22%;">1</p>
+                                <div class="col-3 col-md-2" style="background-color:transparent;">
+                                    <p class="text-center" id="num">1</p>
                                 </div>
-                                <div class="col-sm-3" style="background-color:transparent;  padding-top:5%;">
-                                    <img src="~/Content/Img/Auto.png" alt="Auto" />
+                                <div class="col-9 col-md-3" style="background-color:transparent; padding-top:2%;">
+                                    <img class="text-center" src="~/Content/Img/Auto.png" lass="img-fluid" alt="Responsive Image" />
                                 </div>
-                                <div class="col-sm-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
-                                    <p>
-                                        Cuéntanos sobre tu
-                                        <span style="font-size:20px; font-weight: bold;">Automóvil</span>
+                                <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
+                                    <p id="estilo2cab">
+                                        <span id="estilo2texto"></span>
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-2" style="background-color:#02AFC1;">
-                            <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+                        <div class="col-2 col-md-2" style="background-color:#02AFC1;">
+                            <p class="text-center" id="num">2</p>
                         </div>
-                        <div class="col-sm-2" style="background-color:#04C3D7">
-                            <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
+                        <div class="col-2 col-md-2" style="background-color:#04C3D7">
+                            <p class="text-center" id="num">3</p>
                         </div>
-                        <div class="col-sm-2" style="background-color:#0BEDBF">
-                            <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
+                        <div class="col-2 col-md-2" style="background-color:#0BEDBF">
+                            <p class="text-center" id="num">4</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3" style="background-color:transparent; padding-top:2.7%; ">
-                    <input name="motoES" onclick="mostrarDiv();" style="margin-left:5px" class="traducir boton-color" type="button" value="English">
-                </div>
+                <div class="col-12 col-md-3" style="background-color:transparent; padding-top:2.7%; ">
+                    <input name="autoES" onclick="mostrarDiv();" style="margin-left:5px" class="traducir boton-color" type="button" value="English">
+                </div><br />
             </div>
         </div>
         <!--/////////////////////////////////////////////////////////////////////////-->
         <div class="container-fluid">
             <form action="/Auto/CalculosAuto" method="post">
                 <div class="row" style="margin-top: -2%; background-color:#117394">
-                    <div class="col-sm-1" style="background-color:transparent;">
+                    <div class="col-md-1" style="background-color:transparent;">
 
                     </div>
                     <div class="col-sm-10" style="background-color:transparent;">
@@ -110,7 +111,7 @@
                             <div class="col-sm-2" style="background-color:#117394">
 
                             </div>
-                            <div class="col-sm-8" style="background-color:#117394;">
+                            <div class="col-sm-10" style="background-color:#117394;">
 
                                 <div class="hijo">
 
@@ -119,10 +120,10 @@
 
                                         <tr>
                                             <th style="width:50%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbspKilómetros recorridos&nbsp&nbsp</span>
+                                                <span class="spam">Kilómetros recorridos</span>
                                             </th>
                                             <th>
-                                                <input name="kilometros" class="w-100 col-md-12 col-sm-10   input2" onkeypress="return validaNumericos(event)"
+                                                <input name="kilometros" class="w-100 col-md-12 col-sm-12 input2" onkeypress="return validaNumericos(event)"
                                                        type="text"
                                                        min="1"
                                                        placeholder="Ingrese los kilómetros"
@@ -135,10 +136,10 @@
                                         </tr>
                                         <tr>
                                             <th style="width:50%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTipo de automóvil</span>
+                                                <span class="spam">Tipo de automóvil</span>
                                             </th>
                                             <th>
-                                                <select name="tipoAuto" class="w-100 col-md-12 col-sm-10    input2">
+                                                <select name="tipoAuto" class="w-100 col-md-12 col-sm-12    input2">
                                                     <option style="color:#fff; background:#117394;" value="peque">Pequeño</option>
                                                     <option style="color:#fff; background:#117394;" value="mediano">Mediano</option>
                                                     <option style="color:#fff; background:#117394;" value="grande">Grande</option>
@@ -150,10 +151,10 @@
                                         </tr>
                                         <tr>
                                             <th style="width:50%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTipo de combustible</span>
+                                                <span class="spam">Tipo de combustible</span>
                                             </th>
                                             <th>
-                                                <select name="tipoCombustible" class="w-100 col-md-12 col-sm-10    input2">
+                                                <select name="tipoCombustible" class="w-100 col-md-12 col-sm-12    input2">
                                                     <option style="color:#fff; background:#117394;" value="gasolina">Gasolina</option>
                                                     <option style="color:#fff; background:#117394;" value="diesel">Diesel</option>
                                                 </select>
@@ -165,7 +166,7 @@
 
                                         <tr>
                                             <th style="width:50%">
-                                                <span>&nbspAhora ingresa tus datos</span>
+                                                <span>Ahora ingresa tus datos</span>
                                             </th>
                                             <th></th>
 
@@ -176,71 +177,70 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-2" style="background-color:#117394">
+                            <div class="col-md-2" style="background-color:#117394">
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-1" style="background-color:transparent;">
+                    <div class="col-md-1" style="background-color:transparent;">
 
                     </div>
                 </div>
 
-                <!-///////////////////////////////////////////////////////////////////////////->
+                <!--///////////////////////////////////////////////////////////////////////////-->
 
-                <div class="row" style="margin-top: -33px; background-color:#117394">
-                    <div class="col-sm-2" style="background-color:transparent;">
+                <div class="row" style="background-color:#117394">
+                    <div class="col-md-2" style="background-color:transparent;">
 
                     </div>
-                    <div class="col-sm-8" style="background-color:transparent;">
-                        <div class="row" style="padding:2%;">
-                            <div class="col-sm-2" style="background-color:#117394">
+                    <!--<div class="col-sm-8" style="background-color:transparent;">-->
+                    <!--<div class="row" style="padding:2%;">-->
+                    <div class="col-sm-2 col-md-2" style="background-color:#117394">
 
-                            </div>
-                            <div class="col-sm-8" style="background-color:#117394;">
-                                <div class="hijo">
-
-
-                                    <table>
-
-                                        <tr>
-                                            <th style="width:43%">
-                                                <span class="spam">Nombre Completo</span>
-                                            </th>
-                                            <th><input type="text" name="nombre" class="w-100 col-md-12 col-sm-10    input" required /></th>
-
-                                        </tr>
-                                        <tr>
-                                            <th style="width:18%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</span>
-                                            </th>
-                                            <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-10    input" required /></th>
-
-                                            <td>
-                                            </td>
-
-                                        </tr>
-                                    </table>
+                    </div>
+                    <div class="col-sm-10 col-md-10 colnom1" style="background-color:#117394;">
+                        <div class="hijo">
 
 
-                                </div>
-                            </div>
+                            <table>
 
-                            <div class="col-sm-2" style="background-color:#117394">
+                                <tr>
+                                    <th style="width:46%">
+                                        <span class="spam">Nombre Completo</span>
+                                    </th>
+                                    <th><input type="text" name="nombre" class="w-100 col-md-12 col-sm-12    input" required /></th>
 
-                            </div>
+                                </tr>
+                                <tr>
+                                    <th style="width:46%">
+                                        <span class="spam">E-mail</span>
+                                    </th>
+                                    <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-12   input" required /></th>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                            </table>
+
+
                         </div>
                     </div>
-                    <div class="col-sm-2" style="background-color:transparent;">
+
+                    <div class="col-md-2" style="background-color:#117394">
 
                     </div>
+                </div>
+
+                <div class="col-md-2" style="background-color:transparent;">
+
                 </div>
                 <br>
 
 
-                <!-///////////////////////////////////////////////////////////////////////////->
+                <!--///////////////////////////////////////////////////////////////////////////-->
                 <div class="row" style="margin-top: -33px; background-color:#117394">
-                    <div class="col-sm-2" style="background-color:transparent;">
+                    <div class="col-sm-2 col-md-2" style="background-color:transparent;">
 
                     </div>
                     <div class="col-sm-8" style="background-color:transparent;">
@@ -270,7 +270,7 @@
 
                         </div>
                     </div>
-                    <div class="col-sm-2" style="background-color:transparent;">
+                    <div class="col-sm-2 col-md-2" style="background-color:transparent;">
 
                     </div>
                 </div>
@@ -508,12 +508,7 @@
             </form>
         </div>
     </div>
-
-
-
 </div>
-
-
 
 
 <script>

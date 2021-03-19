@@ -17,11 +17,11 @@ body {
     color: #A0A0A0;
 }
 
-#num {
+#num{
     font-style: normal;
     font-weight: bold;
-    font-size: 64px;
-    line-height: 41px;
+    font-size: 50px;
+    line-height: 60px;
 }
 
 .traducir {
@@ -226,5 +226,104 @@ body {
         cursor: pointer;
     }
 
+/* VIVIAN */
+#logo:before {
+    content:"ECOPARTNERSBANK";
+}
+
+#estilo1:before {
+    content: "CALCULADORA";
+}
+
+#estilo2cab:before {
+    content: "Cuéntanos sobre tu";
+}
+#estilo2texto:before {
+    content: "Automóvil";
+}
 
 
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+
+    #logo:before {
+        content: "ECOPARTNERSBANK";
+        font-size: 28px;
+        font-weight: bold;
+        padding-top: 5%;
+    }
+
+    #estilo1:before {
+        content: "CALCULADORA";
+        color: #FFFF;
+        padding-top: 5%;
+        padding-left: 15%;
+        padding-right: 500%;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    #estilo2cab:before {
+        content: "Cuéntanos sobre tu";
+    }
+
+    #estilo2texto:before {
+        content: "Automóvil";
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .autoimg {
+        padding-top: 5%;
+    }
+
+    .calcular {
+        color: #fff;
+        background-color: transparent;
+        height: 60px;
+        width: 100px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #num{
+        font-style:normal;
+        font-weight:bold;
+        font-size:35px;
+        line-height:35px;
+    }
+
+    #logo:before{
+        content: "ECOPARTNERSBANK";
+        font-size:25px;
+        font-weight:bold;   
+    }
+
+    .estilo1:before {
+        content: "CALCULADORA";
+        color: #ffff;
+        padding-left: 45px;
+        font-size: 15px;
+        padding-top:10%;
+    }
+
+    #estilo2cab:before {
+        content: "Cuéntanos sobre tu";
+    }
+
+    #estilo2texto:before {
+        content: "Automóvil";
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 1200px) {
+}
