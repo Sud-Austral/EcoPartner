@@ -17,12 +17,12 @@ body {
     color: #A0A0A0;
 }
 
-#num{
+/*#num{
     font-style: normal;
     font-weight: bold;
     font-size: 50px;
     line-height: 60px;
-}
+}*/
 
 .traducir {
     color: #fff;
@@ -94,18 +94,10 @@ body {
     text-align: right;
 }
 
-.spam {
+.spam{
     font-weight: 400;
 }
 
-.calcular {
-    color: #fff;
-    background-color: transparent;
-    height: auto;
-    width: 130px;
-    border-radius: 3em;
-    border: 3px solid #fff;
-}
 
 .boton-color:hover {
     background: #fff;
@@ -235,6 +227,10 @@ body {
     content: "CALCULADORA";
 }
 
+#estilo1en:before {
+    content: "CALCULATOR";
+}
+
 #estilo2cab:before {
     content: "Cuéntanos sobre tu";
 }
@@ -242,53 +238,65 @@ body {
     content: "Automóvil";
 }
 
+#estilo2cabEN:before {
+    content: "Tell us about your";
+}
 
+#estilo2textoEN:before {
+    content: "CAR";
+}
+ /*Pag2Auto*/
+#estilo2cabAU2:before {
+    content: "El uso de tu auto genera";
+}
 
-@media screen and (min-width: 0px) and (max-width: 576px) {
-    #num {
+#estilo2textoAU2:before {
+    content: "Resultado";
+}
+
+@media screen and (min-width: 0px) and (max-width: 575px) {
+  
+    .car{
+        padding-top:15% !important;
+    }
+    .prueba {
+        padding-left: 8%;
+        padding-top: 2%;
+    }
+   /*Número encabezado*/
+    #num{
         font-style: normal;
         font-weight: bold;
-        font-size: 35px;
+        font-size:45px !important;
     }
-
+    /*Encabezado*/
     #logo:before {
         content: "ECOPARTNERSBANK";
-        font-size:95%;
+        font-size:100%;
         font-weight:bold;
         padding-top:5%;
     }
-
+    /*Encabezado*/
     #estilo1:before {
         content: "CALCULADORA";
         color: #FFFF;
         padding-top: 5%;
-        padding-left: 15%;
+        padding-left:10%;
         padding-right: 50%;
-        margin-right: 10px;
-        font-size:70%;
+        padding-top:25%;
+        font-size:80%;
     }
 
-    #estilo2cab:before {
-        content: "";
-    }
-
-    #estilo2texto:before {
-        content: "";
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .autoimg {
-        padding-top: 5%;
-    }
-
+  /* BOTÓN CALCULAR*/
     .calcular {
         color: #fff;
         background-color: transparent;
-        height: 60px;
+        height:auto;
         width: 100px;
         border-radius: 3em;
         border: 3px solid #fff;
     }
+    /* BOTÓN TRADUCIR*/
     .traducirsm{
         color: #fff;
         background-color: transparent;
@@ -297,15 +305,8 @@ body {
         border-radius: 3em;
         border: 3px solid #fff;
     }
-    .traducir{
-        color: #fff;
-        background-color: transparent;
-        height: auto;
-        width: 130px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
 
+    /* */
     .input{
         color: #fff;
         background-color: transparent;
@@ -314,27 +315,84 @@ body {
         text-align: right;
         width: 300px;
     }
+    .input2 {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        width: 300px;
+        text-align: right;
+    }
+
+        .input2:-ms-input-placeholder {
+            color: white;
+        }
+
+    /*Encabezado EN*/
+    #estilo1en:before{
+        content: "CALCULATOR";
+        color: #FFFF;
+        padding-top: 5%;
+        padding-left:10%;
+        padding-right: 50%;
+        font-size:80%;
+    }
+    .colnom1{
+        padding-left:10% !important;
+    }
+
+    /* PAGINA 2 AUTO*/
+    /* CARRITO */
+    .car2 {
+        padding-top:20% !important;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
-    #num{
-        font-style:normal;
-        font-weight:bold;
-        font-size:35px;
-        line-height:35px;
+    /* CARRITO */
+    .car {
+        padding-top: 20% !important;
     }
 
-    #logo:before{
+    /* DIV CALCU Y ECOPART*/
+    .prueba {
+        padding-top:3%;
+    }
+
+    
+    .colnom1 {
+        padding-left: 25%;
+    }
+
+    /*Número encabezado*/
+    #num {
+        padding-top: 20%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 41px;
+    }
+
+    /*Encabezado*/
+    #logo:before {
         content: "ECOPARTNERSBANK";
         font-size:25px;
-        font-weight:bold;   
+        font-weight: bold;
     }
-
-    .estilo1:before {
+    /*Encabezado*/
+    #estilo1:before {
         content: "CALCULADORA";
-        color: #ffff;
-        padding-left: 45px;
-        font-size: 15px;
-        padding-top:10%;
+        color: #FFFF;
+        padding-top:50% !important;
+        padding-right: 40%;
+        font-size:15px;
+    }
+    /*Encabezado EN*/
+    #estilo1en:before {
+        content: "CALCULATOR";
+        color: #FFFF;
+        padding-top: 5%;
+        padding-right: 50%;
+        font-size:15px;
     }
 
     #estilo2cab:before {
@@ -346,6 +404,17 @@ body {
         font-size: 20px;
         font-weight: bold;
     }
+
+    #estilo2cabEN:before {
+        content: "Tell us about your";
+    }
+
+    #estilo2textoEN:before {
+        content: "CAR";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
     .estilo1 {
         color: #ffff;
         padding-top: 5%;
@@ -364,9 +433,6 @@ body {
         border: 3px solid #fff;
     }
 
-    .colnom1 {
-        padding-left: 0%;
-    }
 
     .input {
         color: #fff;
@@ -376,42 +442,209 @@ body {
         text-align: right;
         width: 300px;
     }
+
+    /* BOTÓN TRADUCIR*/
+    .traducirsm {
+        color: #fff;
+        background-color: transparent;
+        height: auto;
+        width: 100%;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
+    /* PAGINA 2 AUTO */
+    #estilo2cabAU2:before {
+        content: "El uso de tu auto genera";
+        font-size: 0.7rem;
+    }
+
+    #estilo2textoAU2:before {
+        content: "Resultado";
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .num2{
+        padding-top:70% !important;
+    }
+    /* CARRITO */
+    .car2 {
+        padding-top:30% !important;
+    }
 }
 
-#num {
-    padding-top: 20%;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 64px;
-    line-height: 41px;
-}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /* CARRITO */
+    .car {
+        padding-top: 20% !important;
+    }
 
-.colnom1 {
-    padding-left: 25%;
-}
+    .prueba {
+        padding-top:2%;
+    }
 
-.input {
-    color: #fff;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #fff;
-    text-align: right;
-    margin-left: 20px;
-    width: 290px;
-}
+    /*Encabezado*/
+    #logo:before {
+        content: "ECOPARTNERSBANK";
+        font-size: 30px;
+        font-weight: bold;
+    }
+    /*Encabezado*/
+    #estilo1:before {
+        content: "CALCULADORA";
+        color: #FFFF;
+        padding-top: 40% !important;
+        padding-right: 40%;
+        font-size:20px;
+    }
 
-.calcular {
-    color: #fff;
-    background-color: transparent;
-    height: auto;
-    width: 90px;
-    border-radius: 2em;
-    border: 3px solid #fff;
-}
+    /* BOTÓN TRADUCIR*/
+    .traducirsm {
+        color: #fff;
+        background-color: transparent;
+        height: auto;
+        width: 100%;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
+    #num{
+        padding-top: 20%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 41px;
+    }
+
+    .colnom1 {
+        padding-left: 25%;
+    }
+
+    .input {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        text-align: right;
+        margin-left: 20px;
+        width: 290px;
+    }
+
+    .calcular {
+        color: #fff;
+        background-color: transparent;
+        height: auto;
+        width: 90px;
+        border-radius: 2em;
+        border: 3px solid #fff;
+    }
+    #estilo2cab:before {
+        content: "Cuéntanos sobre tu";
+    }
+
+    #estilo2texto:before {
+        content: "Automóvil";
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #estilo2cabEN:before {
+        content: "Tell us about your";
+        font-size: 1.3rem;
+    }
+
+    #estilo2textoEN:before {
+        content: "CAR";
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .spam {
+        font-weight: 400;
+        padding-right: 10%;
+    }
+
+    /* PAGINA 2 AUTO */
+    #estilo2cabAU2:before {
+        content: "El uso de tu auto genera";
+        font-size: 0.9rem;
+    }
+
+    #estilo2textoAU2:before {
+        content: "Resultado";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .num2 {
+        padding-top:50% !important;
+    }
+
+    /* CARRITO */
+    .car2 {
+        padding-top: 12% !important;
+    }
 
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+    /* CARRITO */
+    .car {
+        padding-top: 12% !important;
+    }
+
+    /*Encabezado*/
+    #logo:before{
+        content:"ECOPARTNERSBANK";
+        font-size:35px;
+        font-weight:bold;
+    }
+    /*Encabezado*/
+    #estilo1:before {
+        content: "CALCULADORA";
+        color: #FFFF;
+        padding-top: 50% !important;
+        font-size: 25px;
+    }
+
+    /* BOTÓN TRADUCIR*/
+    .traducirsm{
+        color: #fff;
+        background-color:transparent;
+        height:auto;
+        width: 100%;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
+    #num{
+        padding-top:10%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 65px;
+        line-height: 41px;
+    }
+
+    #estilo2cab:before {
+        content: "Cuéntanos sobre tu";
+        font-size: 1rem;
+    }
+
+    #estilo2texto:before {
+        content: "Automóvil";
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    #estilo2cabEN:before {
+        content: "Tell us about your";
+        font-size: 1.5rem;
+    }
+
+    #estilo2textoEN:before {
+        content: "CAR";
+        font-size: 25px;
+        font-weight: bold;
+    }
+
     .colnom1 {
         padding-left: 25%;
     }
@@ -433,10 +666,85 @@ body {
         text-align: right;
         margin-left: 20px;
         width: 290px;
+    }
+    .spam {
+        font-weight: 400;
+        padding-right: 10%;
+    }
+    /* PAGINA 2 AUTO */
+    #estilo2cabAU2:before {
+        content: "El uso de tu auto genera";
+    }
+
+    #estilo2textoAU2:before {
+        content: "Resultado";
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .num2 {
+        padding-top: 25% !important;
+    }
+
+    /* CARRITO */
+    .car2 {
+        padding-top: 12% !important;
     }
 }
 
+
 @media screen and (min-width: 1200px) {
+    .prueba {
+        padding-top:3%;
+    }
+
+    .logoclass{
+        padding-top:4% !important;
+    }
+
+    /* CARRITO */
+    .car {
+        padding-top:15% !important;
+    }
+    
+    .divencabezado{
+        padding:4% !important;
+    }
+    /*Encabezado*/
+    #logo:before {
+        content: "ECOPARTNERSBANK";
+        font-size: 23px;
+        font-weight: bold;
+    }
+    /*Encabezado*/
+    #estilo1:before {
+        content: "CALCULADORA";
+        color: #FFFF;
+        padding-top: 50% !important;
+        padding-right: 40%;
+        font-size: 18px;
+    }
+
+    #estilo2cab:before {
+        content: "Cuéntanos sobre tu";
+        font-size: 0.8rem;
+    }
+
+    #estilo2texto:before {
+        content: "Automóvil";
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #estilo2cabEN:before {
+        content: "Tell us about your";
+        font-size: 0.8rem;
+    }
+
+    #estilo2textoEN:before {
+        content: "CAR";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
     .colnom1 {
         padding-left: 25%;
     }
@@ -458,5 +766,46 @@ body {
         text-align: right;
         margin-left: 20px;
         width: 290px;
+    }
+
+    #num {
+        padding-top:5%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 41px;
+    }
+    .traducirsm {
+        color: #fff;
+        background-color: transparent;
+        height: 35%;
+        width: 42%;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
+    .spam {
+        font-weight: 400;
+        padding-right: 10%;
+    }
+
+    /* PAGINA 2 AUTO */
+    #estilo2cabAU2:before {
+        content: "El uso de tu auto genera";
+        font-size:0.7rem;
+    }
+
+    #estilo2textoAU2:before {
+        content: "Resultado";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .num2{
+        padding-top:25% !important;
+    }
+    /* CARRITO */
+    .car2 {
+        padding-top: 20% !important;
     }
 }
