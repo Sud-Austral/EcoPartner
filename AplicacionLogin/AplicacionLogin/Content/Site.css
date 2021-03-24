@@ -143,17 +143,6 @@ body {
 }
 
 
-
-
-.calcular2 {
-    color: #fff;
-    background-color: transparent;
-    font-size: 14px;
-    width: 200px;
-    border-radius: 3em;
-    border: 3px solid #fff;
-}
-
 .calcular3 {
     color: #fff;
     background: linear-gradient(90deg, #0BEDBF, #07D0C2, #05B3C6, #028FCB );
@@ -254,8 +243,25 @@ body {
     content: "Resultado";
 }
 
+#estilo2cabAU2EN:before {
+    content: "The use of your car generates";
+}
+
+#estilo2textoAU2EN:before {
+    content: "Results";
+}
+
+
 @media screen and (min-width: 0px) and (max-width: 575px) {
-  
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
     .car{
         padding-top:15% !important;
     }
@@ -348,6 +354,14 @@ body {
     }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
     /* CARRITO */
     .car {
         padding-top: 20% !important;
@@ -464,6 +478,16 @@ body {
         font-size: 18px;
         font-weight: bold;
     }
+    #estilo2cabAU2EN:before {
+        content: "The use of your car generates";
+        font-size: 0.7rem;
+    }
+
+    #estilo2textoAU2EN:before {
+        content: "Results";
+        font-size: 18px;
+        font-weight: bold;
+    }
     .num2{
         padding-top:70% !important;
     }
@@ -474,6 +498,14 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
     /* CARRITO */
     .car {
         padding-top: 20% !important;
@@ -570,6 +602,17 @@ body {
 
     #estilo2textoAU2:before {
         content: "Resultado";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU2EN:before {
+        content: "The use of your car generates";
+        font-size: 0.9rem;
+    }
+
+    #estilo2textoAU2EN:before {
+        content: "Results";
         font-size: 20px;
         font-weight: bold;
     }
@@ -681,6 +724,16 @@ body {
         font-size: 20px;
         font-weight: bold;
     }
+
+    #estilo2cabAU2EN:before {
+        content: "The use of your car generates";
+    }
+
+    #estilo2textoAU2EN:before {
+        content: "Results";
+        font-size: 20px;
+        font-weight: bold;
+    }
     .num2 {
         padding-top: 25% !important;
     }
@@ -689,6 +742,23 @@ body {
     .car2 {
         padding-top: 12% !important;
     }
+    /* Boton calcular*/
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 10%;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+    /* Textos */
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
+    }
+
 }
 
 
@@ -801,11 +871,40 @@ body {
         font-weight: bold;
     }
 
+    #estilo2cabAU2EN:before {
+        content: "The use of your car generates";
+        font-size: 0.7rem;
+    }
+
+    #estilo2textoAU2EN:before {
+        content: "Results";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
     .num2{
         padding-top:25% !important;
     }
     /* CARRITO */
     .car2 {
-        padding-top: 20% !important;
+        padding-top:40% !important;
     }
+    /* Boton calcular*/
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 12%;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+    /* Textos*/
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
+    }
+
+
 }
