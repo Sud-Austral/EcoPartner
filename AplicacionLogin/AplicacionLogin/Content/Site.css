@@ -142,18 +142,6 @@ body {
     text-align: right;
 }
 
-
-
-
-.calcular2 {
-    color: #fff;
-    background-color: transparent;
-    font-size: 14px;
-    width: 200px;
-    border-radius: 3em;
-    border: 3px solid #fff;
-}
-
 .calcular3 {
     color: #fff;
     background: linear-gradient(90deg, #0BEDBF, #07D0C2, #05B3C6, #028FCB );
@@ -346,6 +334,15 @@ body {
     .car2 {
         padding-top:20% !important;
     }
+    /* Boton calcular*/
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
     /* CARRITO */
@@ -471,6 +468,16 @@ body {
     .car2 {
         padding-top:30% !important;
     }
+
+    /* Boton calcular*/
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -582,7 +589,15 @@ body {
     .car2 {
         padding-top: 12% !important;
     }
-
+    /* Boton calcular*/
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -688,6 +703,27 @@ body {
     /* CARRITO */
     .car2 {
         padding-top: 12% !important;
+    }
+
+    /* Boton calcular*/
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 10%;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+    /* Textos */
+    .textos1 {
+        font-size: x-large;
+        font-weight: bold;
+    }
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
     }
 }
 
@@ -807,5 +843,25 @@ body {
     /* CARRITO */
     .car2 {
         padding-top: 20% !important;
+    }
+
+    /* Boton calcular*/
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bold;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+    /* Textos*/
+    .textos1 {
+        font-size:xx-large;
+        font-weight: bold;
+    }
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
     }
 }
