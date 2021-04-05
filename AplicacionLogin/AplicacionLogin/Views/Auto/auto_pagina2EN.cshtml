@@ -70,150 +70,79 @@
     <!-- CUERPO DE LA PÁGINA -->
     <div class="container-fluid">
         <div class="row" style="margin-top: -2%; background-color:#02AFC1">
-            <div class="col-sm-2" style="background-color:transparent;">
+            <div class="col-12" style="background-color:transparent;">
 
             </div>
-            <div class="col-sm-8" style="background-color:transparent;">
-                <div class="row" style="padding:2%;">
-
-                    <div class="col-sm-2" style="background-color:#02AFC1">
-
+            <div class="col-12" style="background-color:transparent;">
+                <div class="hijo row" style="padding:2%;">
+                    <!--  SE AGREGAN COLUMNAS XL  -->
+                    <div align="right" class="col-4 col-md-5 col-xl-5">
+                        <img class="img-fluid text-right" style="padding:2%" src="~/Content/Img/nube.png" alt="Responsive Image">
                     </div>
-                    <div class="col-sm-8" style="background-color:#02AFC1;">
-                        <div class="hijo">
-                            <table style="width:100%">
-                                <tr>
-                                    <th> &nbsp&nbsp&nbsp</th>
-                                    <th> <img style="padding:2%" src="~/Content/Img/nube.png"> </th>
-                                    <th> <h2>@ViewBag.carbono</h2></th>
-                                    <th> <h2>tons of CO2</h2> </th>
-
-                                </tr>
-
-                            </table>
-
-                        </div>
+                    <div class="textos1 col-8 col-md-7 col-xl-7">
+                        @ViewBag.carbono
+                        Tons de CO2
                     </div>
-
-                    <div class="col-sm-2" style="background-color:#02AFC1">
+                    <div class="col-12 text-center">
 
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3" style="background-color:transparent;">
+            <div class="col-12" style="background-color:transparent;">
 
             </div>
         </div>
 
-        <!-///////////////////////////////////////////////////////////////////////////->
-
+        <!--SEGUNDA FILA-->
 
         <div class="row" style="margin-top: -20px; background-color:#02AFC1">
-            <div class="col-sm-2" style="background-color:transparent;">
+            <div class="col-lg-3" style="background-color:transparent;">
 
             </div>
-            <div class="col-sm-8" style="background-color:transparent;">
+            <div class="col-12 col-lg-6" style="background-color:transparent;">
                 <div class="row" style="padding:2%;">
-
-                    <div class="col-sm-2" style="background-color:#02AFC1">
-
+                    <div class="textos2 col-12 text-center col-lg-5 text-lg-right col-xl-4" style="background-color:#02AFC1">
+                        Off  @ViewBag.kilometros
                     </div>
-                    <div class="col-sm-8" style="background-color:#02AFC1;">
-                        <div class="hijo">
-                            <table style="width:100%">
-
-                                <tr>
-                                    <th><p class="spam" align="right"> off &nbsp&nbsp</p></th>
-                                    <th> <p> <img style="padding:2%" src="~/Content/Img/Recorrido.png"></p> </th>
-                                    <th>&nbsp&nbsp&nbsp</th>
-                                    <th> <p class="spam">@ViewBag.kilometros travelled km  </p> </th>
-                                    <th>&nbsp&nbsp&nbsp</th>
-
-                                </tr>
-
-                            </table>
-                        </div>
+                    <div class="col-12 col-lg-2 col-xl-3 " align="center" style="background-color:#02AFC1;">
+                        <img class="img-fluid" style="padding:2%" src="~/Content/Img/Recorrido.png" alt="responsive image">
                     </div>
-
-                    <div class="col-sm-2" style="background-color:#02AFC1">
-
+                    <div class="textos2 col-12 text-center col-lg-5 text-lg-left col-xl-5 text-xl-left  " style="background-color:#02AFC1">
+                         Travelled kms
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3" style="background-color:transparent;">
+            <div class="col-lg-3" style="background-color:transparent;">
 
             </div>
         </div>
 
-        <!-///////////////////////////////////////////////////////////////////////////->
+        <!--Botones-->
 
 
-        <div class="row" style="margin-top: -20px; background-color:#02AFC1">
-            <div class="col-md-1" style="background-color:transparent;">
+        <div class="row" style="margin-top:-5px; background-color:#02AFC1">
 
+
+            <div class="col-5 col-md-3 col-lg-4 col-xl-4 " style="background-color:#02AFC1">
+                <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Go Back"></a>
             </div>
-            <div class="col-md-3" style="background-color:transparent;">
-                <table style="width:100%">
+            <div class="col-7 col-md-9 text-right col-lg-8 text-lg-left col-xl-7 pl-xl-8 " style="background-color:#02AFC1;">
+                <div class="hijo">
+                    <form method="post" action="/Auto/Auto_pagina3EN">
+                        <input type="hidden" name="recorrido" value="@ViewBag.kilometros" />
+                        <input type="hidden" name="toneladas" value="@ViewBag.carbono" />
+                        <input type="hidden" name="total" value="@ViewBag.total" />
+                        <input type="hidden" name="nombre" value="@ViewBag.nombre" />
+                        <input type="hidden" name="correo" value="@ViewBag.correo" />
 
-                    <tr>
-                        <th>&nbsp&nbsp&nbsp</th>
-
-
-                    </tr>
-                    <tr>
-                        <th>&nbsp&nbsp&nbsp</th>
-                        <th>
-                            <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Go back"></a>
-
-                        </th>
-
-                    </tr>
-
-                </table>
-            </div>
-            <div class="col-md-4" style="background-color:transparent;">
-                <div class="row" style="padding:2%;">
-
-                    <div class="col-md-2" style="background-color:#02AFC1">
-
-                    </div>
-                    <div class="col-md-8" style="background-color:#02AFC1;">
-                        <div class="hijo">
-                            <table style="width:100%">
-
-                                <tr>
-                                    <th>
-                                        <form method="post" action="/Auto/Auto_pagina3EN">
-                                            <input type="hidden" name="recorrido" value="@ViewBag.kilometros" />
-                                            <input type="hidden" name="toneladas" value="@ViewBag.carbono" />
-                                            <input type="hidden" name="total" value="@ViewBag.total" />
-                                            <input type="hidden" name="nombre" value="@ViewBag.nombre" />
-                                            <input type="hidden" name="correo" value="@ViewBag.correo" />
-
-                                            <input class="calcular2 boton-color" name="actualizar" type="submit" value="CALCULATE COMPENSATION">
-                                        </form>
-                                    </th>
-
-                                </tr>
-
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2" style="background-color:#02AFC1">
-
-                    </div>
+                        <input class="calcular2EN boton-color" name="actualizar" type="submit" value="CALCULATE COMPENSATION">
+                    </form>
                 </div>
-            </div>
-            <div class="col-md-3" style="background-color:transparent;">
-
             </div>
         </div>
     </div>
-    <!-///////////////////////////////////////////////////////////////////////////->
 
-
-    <!-- FOOTER -->
+    <!--FOOTER-->
     <footer>
         <div class="container-fluid">
             <div class="row">

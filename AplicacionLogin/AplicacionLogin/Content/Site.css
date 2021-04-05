@@ -959,17 +959,17 @@ body {
         border-radius: 3em;
         border: 3px solid #fff;
     }
-
-    /* Boton calcular*/
-    .calcular2 {
+    .calcular2EN {
         color: #fff;
         background-color: transparent;
         font-size: 14px;
         font-weight: bold;
+        margin-left: 14%;
         width: 200px;
         border-radius: 3em;
         border: 3px solid #fff;
     }
+
     /* Textos*/
     .textos1 {
         font-size:xx-large;
