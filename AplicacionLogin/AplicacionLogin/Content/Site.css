@@ -263,7 +263,7 @@ body {
     }
 
     .car{
-        padding-top:15% !important;
+        padding-top:5% !important;
     }
     .prueba {
         padding-left: 8%;
@@ -350,7 +350,15 @@ body {
     /* PAGINA 2 AUTO*/
     /* CARRITO */
     .car2 {
-        padding-top:20% !important;
+        padding-top:8% !important;
+    }
+
+    #num {
+        padding-top:10%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 41px;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -379,7 +387,7 @@ body {
 
     /*Número encabezado*/
     #num {
-        padding-top: 20%;
+        padding-top: 16%;
         font-style: normal;
         font-weight: bold;
         font-size: 64px;
@@ -470,7 +478,7 @@ body {
     /* PAGINA 2 AUTO */
     #estilo2cabAU2:before {
         content: "El uso de tu auto genera";
-        font-size: 0.7rem;
+        font-size: 10.5px;
     }
 
     #estilo2textoAU2:before {
@@ -480,7 +488,7 @@ body {
     }
     #estilo2cabAU2EN:before {
         content: "The use of your car generates";
-        font-size: 0.7rem;
+        font-size: 10px;
     }
 
     #estilo2textoAU2EN:before {
@@ -489,12 +497,14 @@ body {
         font-weight: bold;
     }
     .num2{
-        padding-top:70% !important;
+        padding-top:50% !important;
     }
     /* CARRITO */
-    .car2 {
-        padding-top:30% !important;
+    .car2{
+        padding-top:22% !important;
     }
+
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -528,6 +538,14 @@ body {
         padding-top: 40% !important;
         padding-right: 40%;
         font-size:20px;
+    }
+    /*Encabezado EN*/
+    #estilo1en:before {
+        content: "CALCULATOR";
+        color: #FFFF;
+        padding-top: 5%;
+        padding-right: 40%;
+        font-size: 20px;
     }
 
     /* BOTÓN TRADUCIR*/
@@ -581,12 +599,12 @@ body {
     }
     #estilo2cabEN:before {
         content: "Tell us about your";
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     #estilo2textoEN:before {
         content: "CAR";
-        font-size: 25px;
+        font-size: 20px;
         font-weight: bold;
     }
     .spam {
@@ -608,7 +626,7 @@ body {
 
     #estilo2cabAU2EN:before {
         content: "The use of your car generates";
-        font-size: 0.9rem;
+        font-size: 0.83rem;
     }
 
     #estilo2textoAU2EN:before {
@@ -622,8 +640,8 @@ body {
     }
 
     /* CARRITO */
-    .car2 {
-        padding-top: 12% !important;
+    .car2{
+        padding-top: 20% !important;
     }
 
 }
@@ -647,6 +665,13 @@ body {
         padding-top: 50% !important;
         font-size: 25px;
     }
+    /*Encabezado EN*/
+    #estilo1en:before {
+        content: "CALCULATOR";
+        color: #FFFF;
+        padding-top:5%;
+        font-size: 25px;
+    }
 
     /* BOTÓN TRADUCIR*/
     .traducirsm{
@@ -668,7 +693,7 @@ body {
 
     #estilo2cab:before {
         content: "Cuéntanos sobre tu";
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     #estilo2texto:before {
@@ -679,7 +704,7 @@ body {
 
     #estilo2cabEN:before {
         content: "Tell us about your";
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     #estilo2textoEN:before {
@@ -793,6 +818,13 @@ body {
         padding-right: 40%;
         font-size: 18px;
     }
+    #estilo1en:before {
+        content: "CALCULATOR";
+        color: #FFFF;
+        padding-top: 5%;
+        padding-right: 50%;
+        font-size: 18px;
+    }
 
     #estilo2cab:before {
         content: "Cuéntanos sobre tu";
@@ -873,7 +905,7 @@ body {
 
     #estilo2cabAU2EN:before {
         content: "The use of your car generates";
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
     #estilo2textoAU2EN:before {
@@ -886,8 +918,8 @@ body {
         padding-top:25% !important;
     }
     /* CARRITO */
-    .car2 {
-        padding-top:40% !important;
+    .car2{
+        padding-top:20% !important;
     }
     /* Boton calcular*/
     .calcular2 {

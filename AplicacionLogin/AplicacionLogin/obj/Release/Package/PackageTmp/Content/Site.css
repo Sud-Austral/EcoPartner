@@ -98,14 +98,6 @@ body {
     font-weight: 400;
 }
 
-.calcular {
-    color: #fff;
-    background-color: transparent;
-    height: auto;
-    width: 130px;
-    border-radius: 3em;
-    border: 3px solid #fff;
-}
 
 .boton-color:hover {
     background: #fff;
@@ -150,17 +142,6 @@ body {
     text-align: right;
 }
 
-
-
-
-.calcular2 {
-    color: #fff;
-    background-color: transparent;
-    font-size: 14px;
-    width: 200px;
-    border-radius: 3em;
-    border: 3px solid #fff;
-}
 
 .calcular3 {
     color: #fff;
@@ -246,15 +227,43 @@ body {
     content: "Automóvil";
 }
 
-.spam {
-    font-weight: 400;
-    padding-right: 10%;
+#estilo2cabEN:before {
+    content: "Tell us about your";
+}
+
+#estilo2textoEN:before {
+    content: "CAR";
+}
+ /*Pag2Auto*/
+#estilo2cabAU2:before {
+    content: "El uso de tu auto genera";
+}
+
+#estilo2textoAU2:before {
+    content: "Resultado";
+}
+
+#estilo2cabAU2EN:before {
+    content: "The use of your car generates";
+}
+
+#estilo2textoAU2EN:before {
+    content: "Results";
 }
 
 
 @media screen and (min-width: 0px) and (max-width: 575px) {
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
     .car{
-        padding-top:15% !important;
+        padding-top:5% !important;
     }
     .prueba {
         padding-left: 8%;
@@ -330,15 +339,37 @@ body {
         content: "CALCULATOR";
         color: #FFFF;
         padding-top: 5%;
-        padding-left:20%;
+        padding-left:10%;
         padding-right: 50%;
         font-size:80%;
     }
     .colnom1{
         padding-left:10% !important;
     }
+
+    /* PAGINA 2 AUTO*/
+    /* CARRITO */
+    .car2 {
+        padding-top:8% !important;
+    }
+
+    #num {
+        padding-top:10%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 41px;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
     /* CARRITO */
     .car {
         padding-top: 20% !important;
@@ -356,7 +387,7 @@ body {
 
     /*Número encabezado*/
     #num {
-        padding-top: 20%;
+        padding-top: 16%;
         font-style: normal;
         font-weight: bold;
         font-size: 64px;
@@ -374,8 +405,15 @@ body {
         content: "CALCULADORA";
         color: #FFFF;
         padding-top:50% !important;
-        padding-left: 10%;
         padding-right: 40%;
+        font-size:15px;
+    }
+    /*Encabezado EN*/
+    #estilo1en:before {
+        content: "CALCULATOR";
+        color: #FFFF;
+        padding-top: 5%;
+        padding-right: 50%;
         font-size:15px;
     }
 
@@ -388,6 +426,17 @@ body {
         font-size: 20px;
         font-weight: bold;
     }
+
+    #estilo2cabEN:before {
+        content: "Tell us about your";
+    }
+
+    #estilo2textoEN:before {
+        content: "CAR";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
     .estilo1 {
         color: #ffff;
         padding-top: 5%;
@@ -425,9 +474,48 @@ body {
         border-radius: 3em;
         border: 3px solid #fff;
     }
+
+    /* PAGINA 2 AUTO */
+    #estilo2cabAU2:before {
+        content: "El uso de tu auto genera";
+        font-size: 10.5px;
+    }
+
+    #estilo2textoAU2:before {
+        content: "Resultado";
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #estilo2cabAU2EN:before {
+        content: "The use of your car generates";
+        font-size: 10px;
+    }
+
+    #estilo2textoAU2EN:before {
+        content: "Results";
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .num2{
+        padding-top:50% !important;
+    }
+    /* CARRITO */
+    .car2{
+        padding-top:22% !important;
+    }
+
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
     /* CARRITO */
     .car {
         padding-top: 20% !important;
@@ -450,6 +538,14 @@ body {
         padding-top: 40% !important;
         padding-right: 40%;
         font-size:20px;
+    }
+    /*Encabezado EN*/
+    #estilo1en:before {
+        content: "CALCULATOR";
+        color: #FFFF;
+        padding-top: 5%;
+        padding-right: 40%;
+        font-size: 20px;
     }
 
     /* BOTÓN TRADUCIR*/
@@ -501,6 +597,53 @@ body {
         font-size: 20px;
         font-weight: bold;
     }
+    #estilo2cabEN:before {
+        content: "Tell us about your";
+        font-size: 1rem;
+    }
+
+    #estilo2textoEN:before {
+        content: "CAR";
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .spam {
+        font-weight: 400;
+        padding-right: 10%;
+    }
+
+    /* PAGINA 2 AUTO */
+    #estilo2cabAU2:before {
+        content: "El uso de tu auto genera";
+        font-size: 0.9rem;
+    }
+
+    #estilo2textoAU2:before {
+        content: "Resultado";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU2EN:before {
+        content: "The use of your car generates";
+        font-size: 0.83rem;
+    }
+
+    #estilo2textoAU2EN:before {
+        content: "Results";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .num2 {
+        padding-top:50% !important;
+    }
+
+    /* CARRITO */
+    .car2{
+        padding-top: 20% !important;
+    }
+
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -520,6 +663,13 @@ body {
         content: "CALCULADORA";
         color: #FFFF;
         padding-top: 50% !important;
+        font-size: 25px;
+    }
+    /*Encabezado EN*/
+    #estilo1en:before {
+        content: "CALCULATOR";
+        color: #FFFF;
+        padding-top:5%;
         font-size: 25px;
     }
 
@@ -543,11 +693,22 @@ body {
 
     #estilo2cab:before {
         content: "Cuéntanos sobre tu";
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     #estilo2texto:before {
         content: "Automóvil";
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    #estilo2cabEN:before {
+        content: "Tell us about your";
+        font-size: 1.2rem;
+    }
+
+    #estilo2textoEN:before {
+        content: "CAR";
         font-size: 25px;
         font-weight: bold;
     }
@@ -574,6 +735,55 @@ body {
         margin-left: 20px;
         width: 290px;
     }
+    .spam {
+        font-weight: 400;
+        padding-right: 10%;
+    }
+    /* PAGINA 2 AUTO */
+    #estilo2cabAU2:before {
+        content: "El uso de tu auto genera";
+    }
+
+    #estilo2textoAU2:before {
+        content: "Resultado";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU2EN:before {
+        content: "The use of your car generates";
+    }
+
+    #estilo2textoAU2EN:before {
+        content: "Results";
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .num2 {
+        padding-top: 25% !important;
+    }
+
+    /* CARRITO */
+    .car2 {
+        padding-top: 12% !important;
+    }
+    /* Boton calcular*/
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 10%;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+    /* Textos */
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
+    }
+
 }
 
 
@@ -588,7 +798,7 @@ body {
 
     /* CARRITO */
     .car {
-        padding-top: 15% !important;
+        padding-top:15% !important;
     }
     
     .divencabezado{
@@ -608,6 +818,13 @@ body {
         padding-right: 40%;
         font-size: 18px;
     }
+    #estilo1en:before {
+        content: "CALCULATOR";
+        color: #FFFF;
+        padding-top: 5%;
+        padding-right: 50%;
+        font-size: 18px;
+    }
 
     #estilo2cab:before {
         content: "Cuéntanos sobre tu";
@@ -619,7 +836,16 @@ body {
         font-size: 20px;
         font-weight: bold;
     }
+    #estilo2cabEN:before {
+        content: "Tell us about your";
+        font-size: 0.8rem;
+    }
 
+    #estilo2textoEN:before {
+        content: "CAR";
+        font-size: 20px;
+        font-weight: bold;
+    }
 
     .colnom1 {
         padding-left: 25%;
@@ -651,4 +877,66 @@ body {
         font-size: 50px;
         line-height: 41px;
     }
+    .traducirsm {
+        color: #fff;
+        background-color: transparent;
+        height: 35%;
+        width: 42%;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
+    .spam {
+        font-weight: 400;
+        padding-right: 10%;
+    }
+
+    /* PAGINA 2 AUTO */
+    #estilo2cabAU2:before {
+        content: "El uso de tu auto genera";
+        font-size:0.7rem;
+    }
+
+    #estilo2textoAU2:before {
+        content: "Resultado";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU2EN:before {
+        content: "The use of your car generates";
+        font-size: 0.6rem;
+    }
+
+    #estilo2textoAU2EN:before {
+        content: "Results";
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .num2{
+        padding-top:25% !important;
+    }
+    /* CARRITO */
+    .car2{
+        padding-top:20% !important;
+    }
+    /* Boton calcular*/
+    .calcular2 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 12%;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+    /* Textos*/
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
+    }
+
+
 }
