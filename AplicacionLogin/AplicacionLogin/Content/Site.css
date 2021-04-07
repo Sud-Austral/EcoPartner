@@ -252,15 +252,6 @@ body {
 
 
 @media screen and (min-width: 0px) and (max-width: 575px) {
-    .calcular2 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
     .car{
         padding-top:5% !important;
     }
@@ -363,18 +354,17 @@ body {
     .calcular2 {
         color: #fff;
         background-color: transparent;
-        font-size: 14px;
-        width: 200px;
+        font-size: 10px;
+        width: 150px;
         border-radius: 3em;
         border: 3px solid #fff;
     }
     .calcular2EN {
         color: #fff;
         background-color: transparent;
-        font-size: 14px;
+        font-size: 10px;
+        width: 150px;
         font-weight: bold;
-        margin-left: 14%;
-        width: 200px;
         border-radius: 3em;
         border: 3px solid #fff;
     }
