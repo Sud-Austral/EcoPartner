@@ -169,31 +169,6 @@ body {
     border: 3px solid #fff;
 }
 
-#pregunta input {
-    display: none;
-    background-color: transparent;
-    border-radius: 3em;
-}
-
-#pregunta label {
-    border: solid 2px #ffffff;
-    border-radius: 3em;
-    margin: 5px;
-    padding: 5px;
-    background: #04C3D7;
-    color: #FAFAFA;
-    font-size: 12px;
-    font-family: Open Sans;
-}
-
-    #pregunta label:hover {
-        background: #117394;
-    }
-
-#pregunta input[type=radio]:checked + label {
-    background: #FAFAFA;
-    color: #04C3D7;
-}
 
 /*Mario*/
 #Lista p, #Lista2 p {
@@ -248,6 +223,23 @@ body {
 
 #estilo2textoAU2EN:before {
     content: "Results";
+}
+
+/*Pag3Auto*/
+#estilo2cabAU3:before {
+    content: "Tu emisión de CO2";
+}
+
+#estilo2textoAU3:before {
+    content: "Compensa";
+}
+
+#estilo2cabAU2EN:before {
+    content: "Your CO2 emition";
+}
+
+#estilo2textoAU2EN:before {
+    content: "Compensate";
 }
 
 
@@ -531,6 +523,29 @@ body {
         border-radius: 3em;
         border: 3px solid #fff;
     }
+
+    /* PAGINA 3 AUTO */
+    #estilo2cabAU3:before {
+        content: "Tu emisión de CO2";
+        font-size: 14px;
+    }
+
+    #estilo2textoAU3:before {
+        content: "Compensa";
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU3EN:before {
+        content: "Your CO2 emition";
+        font-size: 14px;
+    }
+
+    #estilo2textoAU3EN:before {
+        content: "Compensate";
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -688,6 +703,29 @@ body {
         border-radius: 3em;
         border: 3px solid #fff;
     }
+
+    /* PAGINA 3 AUTO */
+    #estilo2cabAU3:before {
+        content: "Tu emisión de CO2";
+        font-size: 1.1rem;
+    }
+
+    #estilo2textoAU3:before {
+        content: "Compensa";
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU3EN:before {
+        content: "Your CO2 emition";
+        font-size: 1.1rem;
+    }
+
+    #estilo2textoAU3EN:before {
+        content: "Compensate";
+        font-size: 22px;
+        font-weight: bold;
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -841,7 +879,28 @@ body {
         font-size: larger;
         font-weight: bold;
     }
+    /* PAGINA 3 AUTO */
+    #estilo2cabAU3:before {
+        content: "Tu emisión de CO2";
+        font-size: 1.2rem;
+    }
 
+    #estilo2textoAU3:before {
+        content: "Compensa";
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU3EN:before {
+        content: "Your CO2 emition";
+        font-size: 1.2rem;
+    }
+
+    #estilo2textoAU3EN:before {
+        content: "Compensate";
+        font-size: 24px;
+        font-weight: bold;
+    }
 }
 
 
@@ -1009,5 +1068,81 @@ body {
         font-size: larger;
         font-weight: bold;
     }
+    /* PAGINA 3 AUTO */
+    #estilo2cabAU3:before {
+        content: "Tu emisión de CO2";
+        font-size: 0.9rem;
+    }
 
+    #estilo2textoAU3:before {
+        content: "Compensa";
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU3EN:before {
+        content: "Your CO2 emition";
+        font-size: 0.9rem;
+    }
+
+    #estilo2textoAU3EN:before {
+        content: "Compensate";
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .TextosPag3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 21px;
+        /* identical to box height, or 45% */
+
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+
+    .textos2Pag3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 33px;
+        color: #FFFFFF;
+    }
+
+    .textos3Pag3 {
+        font-family: Karla;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        /* or 125% */
+
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+    #pregunta input {
+        display: none;
+        background-color: transparent;
+        border-radius: 3em;
+    }
+
+    #pregunta label {
+        border: solid 2.8px #ffffff;
+        border-radius: 3em;
+        background: #04C3D7;
+        color: #FAFAFA;
+        font-size: 16px;
+        font-family: Open Sans;
+    }
+
+        #pregunta label:hover {
+            background: #117394;
+        }
+
+    #pregunta input[type=radio]:checked + label {
+        background: #FAFAFA;
+        color: #04C3D7;
+    }
 }

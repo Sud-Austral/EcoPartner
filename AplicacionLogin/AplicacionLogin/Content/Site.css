@@ -360,6 +360,62 @@ body {
         border-radius: 3em;
         border: 3px solid #fff;
     }
+    /* PÁGINA 3 Auto*/
+    .TextosPag3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        /* identical to box height, or 45% */
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+
+    .textos2Pag3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 33px;
+        color: #FFFFFF;
+    }
+
+    .textos3Pag3 {
+        font-family: Karla;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 20px;
+        /* or 125% */
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+    #pregunta input {
+        display: none;
+        background-color: transparent;
+        border-radius: 3em;
+    }
+
+    #pregunta label {
+        border: solid 2px #ffffff;
+        border-radius: 3em;
+        background: #04C3D7;
+        color: #FAFAFA;
+        font-size: 12px;
+        font-family: Open Sans;
+    }
+
+        #pregunta label:hover {
+            background: #117394;
+        }
+
+    #pregunta input[type=radio]:checked + label {
+        background: #FAFAFA;
+        color: #04C3D7;
+    }
+    .textop3 {
+        font-size: 13px;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
     .calcular2 {
@@ -546,6 +602,61 @@ body {
         font-size: 18px;
         font-weight: bold;
     }
+    .TextosPag3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 21px;
+        /* identical to box height, or 45% */
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+
+    .textos2Pag3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 33px;
+        color: #FFFFFF;
+    }
+
+    .textos3Pag3 {
+        font-family: Karla;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        /* or 125% */
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+    #pregunta input {
+        display: none;
+        background-color: transparent;
+        border-radius: 3em;
+    }
+
+    #pregunta label {
+        border: solid 2px #ffffff;
+        border-radius: 3em;
+        background: #04C3D7;
+        color: #FAFAFA;
+        font-size: 13px;
+        font-family: Open Sans;
+    }
+
+        #pregunta label:hover {
+            background: #117394;
+        }
+
+    #pregunta input[type=radio]:checked + label {
+        background: #FAFAFA;
+        color: #04C3D7;
+    }
+    .textop3 {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -726,6 +837,62 @@ body {
         font-size: 22px;
         font-weight: bold;
     }
+    .TextosPag3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 21px;
+        /* identical to box height, or 45% */
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+
+    .textos2Pag3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 33px;
+        color: #FFFFFF;
+    }
+
+    .textos3Pag3 {
+        font-family: Karla;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16.5px;
+        line-height: 20px;
+        /* or 125% */
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+    #pregunta input {
+        display: none;
+        background-color: transparent;
+        border-radius: 3em;
+    }
+
+    #pregunta label {
+        border: solid 2px #ffffff;
+        border-radius: 3em;
+        background: #04C3D7;
+        color: #FAFAFA;
+        font-size: 16px;
+        font-family: Open Sans;
+    }
+
+        #pregunta label:hover {
+            background: #117394;
+        }
+
+    #pregunta input[type=radio]:checked + label {
+        background: #FAFAFA;
+        color: #04C3D7;
+    }
+
+    .textop3 {
+        font-size: 16.5px;
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -900,6 +1067,62 @@ body {
         content: "Compensate";
         font-size: 24px;
         font-weight: bold;
+    }
+    .TextosPag3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 21px;
+        /* identical to box height, or 45% */
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+
+    .textos2Pag3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 33px;
+        color: #FFFFFF;
+    }
+
+    .textos3Pag3 {
+        font-family: Karla;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 20px;
+        /* or 125% */
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+    #pregunta input {
+        display: none;
+        background-color: transparent;
+        border-radius: 3em;
+    }
+
+    #pregunta label {
+        border: solid 2px #ffffff;
+        border-radius: 3em;
+        background: #04C3D7;
+        color: #FAFAFA;
+        font-size: 15px;
+        font-family: Open Sans;
+    }
+
+        #pregunta label:hover {
+            background: #117394;
+        }
+
+    #pregunta input[type=radio]:checked + label {
+        background: #FAFAFA;
+        color: #04C3D7;
+    }
+
+    .textop3 {
+        font-size: 17.5px;
     }
 }
 
