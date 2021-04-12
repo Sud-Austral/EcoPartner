@@ -389,6 +389,16 @@ body {
         letter-spacing: -0.02em;
         color: #FFFFFF;
     }
+
+    .calcular4 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 12px;
+        font-weight: bold;
+        width: 150px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
     /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
     #pregunta input {
         display: none;
@@ -630,6 +640,17 @@ body {
         letter-spacing: -0.02em;
         color: #FFFFFF;
     }
+
+    .calcular4 {
+        margin-left: 70px;
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bold;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
     /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
     #pregunta input {
         display: none;
@@ -865,6 +886,18 @@ body {
         letter-spacing: -0.02em;
         color: #FFFFFF;
     }
+
+    .calcular4 {
+        margin-left: 45px;
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bold;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
     /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
     #pregunta input {
         display: none;
@@ -1096,6 +1129,18 @@ body {
         letter-spacing: -0.02em;
         color: #FFFFFF;
     }
+
+    .calcular4 {
+        margin-left: 75px;
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bold;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
     /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
     #pregunta input {
         display: none;
@@ -1344,6 +1389,17 @@ body {
         letter-spacing: -0.02em;
         color: #FFFFFF;
     }
+
+    .calcular4 {
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: bold;
+        width: 200px;
+        border-radius: 3em;
+        border: 3px solid #fff;
+    }
+
     /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
     #pregunta input {
         display: none;
