@@ -20,6 +20,12 @@ namespace AplicacionLogin.Controllers
             return View();
         }
 
+        public ActionResult auto_pag1()
+        {
+            ViewBag.Title = "Compensación de carbono para Autos";
+            return View();
+        }
+
         public ActionResult auto_pagina2()
         {
             ViewBag.Title = "Compensación de carbono para Autos";
