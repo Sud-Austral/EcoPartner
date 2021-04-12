@@ -1094,7 +1094,7 @@ body {
     .TextosPag3 {
         font-style: normal;
         font-weight: bold;
-        font-size: 48px;
+        font-size: 35px;
         line-height: 21px;
         /* identical to box height, or 45% */
 
@@ -1105,7 +1105,7 @@ body {
     .textos2Pag3 {
         font-style: normal;
         font-weight: normal;
-        font-size: 27px;
+        font-size: 24px;
         line-height: 33px;
         color: #FFFFFF;
     }
@@ -1129,11 +1129,11 @@ body {
     }
 
     #pregunta label {
-        border: solid 3px #ffffff;
+        border: solid 2.8px #ffffff;
         border-radius: 3em;
         background: #04C3D7;
         color: #FAFAFA;
-        font-size: 18px;
+        font-size: 16px;
         font-family: Open Sans;
     }
 
