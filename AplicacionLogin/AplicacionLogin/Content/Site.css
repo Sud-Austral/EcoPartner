@@ -169,29 +169,6 @@ body {
     border: 3px solid #fff;
 }
 
-#pregunta input {
-    display: none;
-    background-color: transparent;
-    border-radius: 3em;
-}
-
-#pregunta label {
-    border: solid 2px #ffffff;
-    border-radius: 3em;
-    background: #04C3D7;
-    color: #FAFAFA;
-    font-size: 12px;
-    font-family: Open Sans;
-}
-
-    #pregunta label:hover {
-        background: #117394;
-    }
-
-#pregunta input[type=radio]:checked + label {
-    background: #FAFAFA;
-    color: #04C3D7;
-}
 
 /*Mario*/
 #Lista p, #Lista2 p {
@@ -1112,5 +1089,60 @@ body {
         content: "Compensate";
         font-size: 22px;
         font-weight: bold;
+    }
+
+    .TextosPag3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 21px;
+        /* identical to box height, or 45% */
+
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+
+    .textos2Pag3 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 27px;
+        line-height: 33px;
+        color: #FFFFFF;
+    }
+
+    .textos3Pag3 {
+        font-family: Karla;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        /* or 125% */
+
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+    #pregunta input {
+        display: none;
+        background-color: transparent;
+        border-radius: 3em;
+    }
+
+    #pregunta label {
+        border: solid 3px #ffffff;
+        border-radius: 3em;
+        background: #04C3D7;
+        color: #FAFAFA;
+        font-size: 18px;
+        font-family: Open Sans;
+    }
+
+        #pregunta label:hover {
+            background: #117394;
+        }
+
+    #pregunta input[type=radio]:checked + label {
+        background: #FAFAFA;
+        color: #04C3D7;
     }
 }
