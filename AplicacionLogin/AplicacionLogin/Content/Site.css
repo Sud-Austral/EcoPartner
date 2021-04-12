@@ -178,8 +178,6 @@ body {
 #pregunta label {
     border: solid 2px #ffffff;
     border-radius: 3em;
-    margin: 5px;
-    padding: 5px;
     background: #04C3D7;
     color: #FAFAFA;
     font-size: 12px;
@@ -248,6 +246,23 @@ body {
 
 #estilo2textoAU2EN:before {
     content: "Results";
+}
+
+/*Pag3Auto*/
+#estilo2cabAU3:before {
+    content: "Tu emisión de CO2";
+}
+
+#estilo2textoAU3:before {
+    content: "Compensa";
+}
+
+#estilo2cabAU2EN:before {
+    content: "Your CO2 emition";
+}
+
+#estilo2textoAU2EN:before {
+    content: "Compensate";
 }
 
 
@@ -531,6 +546,29 @@ body {
         border-radius: 3em;
         border: 3px solid #fff;
     }
+
+    /* PAGINA 3 AUTO */
+    #estilo2cabAU3:before {
+        content: "Tu emisión de CO2";
+        font-size: 14px;
+    }
+
+    #estilo2textoAU3:before {
+        content: "Compensa";
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU3EN:before {
+        content: "Your CO2 emition";
+        font-size: 14px;
+    }
+
+    #estilo2textoAU3EN:before {
+        content: "Compensate";
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -688,6 +726,29 @@ body {
         border-radius: 3em;
         border: 3px solid #fff;
     }
+
+    /* PAGINA 3 AUTO */
+    #estilo2cabAU3:before {
+        content: "Tu emisión de CO2";
+        font-size: 1.1rem;
+    }
+
+    #estilo2textoAU3:before {
+        content: "Compensa";
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU3EN:before {
+        content: "Your CO2 emition";
+        font-size: 1.1rem;
+    }
+
+    #estilo2textoAU3EN:before {
+        content: "Compensate";
+        font-size: 22px;
+        font-weight: bold;
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -841,7 +902,28 @@ body {
         font-size: larger;
         font-weight: bold;
     }
+    /* PAGINA 3 AUTO */
+    #estilo2cabAU3:before {
+        content: "Tu emisión de CO2";
+        font-size: 1.2rem;
+    }
 
+    #estilo2textoAU3:before {
+        content: "Compensa";
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU3EN:before {
+        content: "Your CO2 emition";
+        font-size: 1.2rem;
+    }
+
+    #estilo2textoAU3EN:before {
+        content: "Compensate";
+        font-size: 24px;
+        font-weight: bold;
+    }
 }
 
 
@@ -1009,5 +1091,26 @@ body {
         font-size: larger;
         font-weight: bold;
     }
+    /* PAGINA 3 AUTO */
+    #estilo2cabAU3:before {
+        content: "Tu emisión de CO2";
+        font-size: 0.9rem;
+    }
 
+    #estilo2textoAU3:before {
+        content: "Compensa";
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU3EN:before {
+        content: "Your CO2 emition";
+        font-size: 0.9rem;
+    }
+
+    #estilo2textoAU3EN:before {
+        content: "Compensate";
+        font-size: 22px;
+        font-weight: bold;
+    }
 }

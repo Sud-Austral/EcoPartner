@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-xl-3" style="background-color:transparent;">
                 <div class="row">
-                    <div class="logoclass col-3 col-sm-2 col-lg-2 col-xl-3" style="background-color:transparent;">
+                    <div class="logo class col-3 col-sm-2 col-lg-2 col-xl-3" style="background-color:transparent;">
                         <img src="/Content/Img/Vector.png" class="img-fluid" alt="Responsive Image">
                     </div>
                     <div class="prueba col-8 col-sm-6 col-lg-8 col-xl-9 text-md-left text-lg-center text-xl-left" style="background-color:transparent; color:#ffff;">
@@ -45,13 +45,14 @@
                                 <img src="~/Content/Img/Auto.png" class="car2 img-fluid" alt="Responsive Image" />
                             </div>
                             <div class="text-left d-none d-sm-block col-sm-6 col-xl-6" style="background-color:transparent; color:#ffff; padding-top:2%;">
-                                <p id="estilo2textoAU2"><br>
+                                <p id="estilo2textoAU2">
+                                    <br>
                                     <span id="estilo2cabAU2"></span>
                                 </p>
                             </div>
                         </div>
                     </div>
-                   
+
                     <div class="col-2 " style="background-color:#04C3D7">
                         <p class="text-center" id="num">3</p>
                     </div>
@@ -61,12 +62,12 @@
                 </div>
             </div>
             <div class="d-none d-xl-block col-xl-3" style="background-color:transparent; padding-top:2.7%; ">
-                
+
                 <br>
             </div><br />
         </div>
     </div>
-    
+
     <!-- CUERPO DE LA PÁGINA -->
     <div class="container-fluid">
         <div class="row" style="margin-top: -2%; background-color:#02AFC1">
@@ -75,16 +76,16 @@
             </div>
             <div class="col-12" style="background-color:transparent;">
                 <div class="hijo row" style="padding:2%;">
-
-                    <div align="right" class="col-4 col-md-5">
-                        <img  class="img-fluid text-right" style="padding:2%" src="~/Content/Img/nube.png" alt="Responsive Image">
+                    <!--  SE AGREGAN COLUMNAS XL  -->
+                    <div align="right" class="col-4 col-md-5 col-xl-5">
+                        <img class="img-fluid text-right" style="padding:2%" src="~/Content/Img/nube.png" alt="Responsive Image">
                     </div>
-                    <div class="textos2 col-8 col-md-7">
-                       @ViewBag.carbono 
+                    <div class="textos1 col-8 col-md-7 col-xl-7">
+                        @ViewBag.carbono
                         Toneladas de CO2
                     </div>
                     <div class="col-12 text-center">
-                        
+
                     </div>
                 </div>
             </div>
@@ -95,20 +96,19 @@
 
         <!-- SEGUNDA FILA -->
 
-
         <div class="row" style="margin-top: -20px; background-color:#02AFC1">
             <div class="col-lg-3" style="background-color:transparent;">
 
             </div>
             <div class="col-12 col-lg-6" style="background-color:transparent;">
                 <div class="row" style="padding:2%;">
-                    <div class="col-12 text-center col-lg-5 text-lg-right " style="background-color:#02AFC1">
+                    <div class="textos2 col-12 text-center col-lg-5 text-lg-right col-xl-5" style="background-color:#02AFC1">
                         De acuerdo a los
                     </div>
-                    <div class="col-12 col-lg-2" align="center" style="background-color:#02AFC1;">
+                    <div class="col-12 col-lg-2 col-xl-2 " align="center" style="background-color:#02AFC1;">
                         <img class="img-fluid" style="padding:2%" src="~/Content/Img/Recorrido.png" alt="responsive image">
                     </div>
-                    <div class="textos2 col-12 text-center col-lg-5 text-lg-left" style="background-color:#02AFC1">
+                    <div class="textos2 col-12 text-center col-lg-5 text-lg-left col-xl-5 text-xl-left  " style="background-color:#02AFC1">
                         @ViewBag.kilometros km recorridos
                     </div>
                 </div>
@@ -124,10 +124,10 @@
         <div class="row" style="margin-top:-5px; background-color:#02AFC1">
 
 
-            <div class="col-5 col-md-3 col-lg-4" style="background-color:#02AFC1">
+            <div class="col-5 col-md-3 col-lg-4 col-xl-5 " style="background-color:#02AFC1">
                 <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
             </div>
-            <div class="col-7 col-md-9 text-right col-lg-8 text-lg-left" style="background-color:#02AFC1;">
+            <div class="col-7 col-md-9 text-right col-lg-8 text-lg-left col-xl-7 pl-xl-5 " style="background-color:#02AFC1;">
                 <div class="hijo">
                     <form method="post" action="/Auto/Auto_pagina3">
                         <input type="hidden" name="recorrido" value="@ViewBag.kilometros" />
@@ -142,7 +142,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- FOOTER -->
     <footer>
         <div class="container-fluid">
