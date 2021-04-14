@@ -242,6 +242,23 @@ body {
     content: "Compensate";
 }
 
+/*Pag4Auto*/
+#estilo2cabAU3:before {
+    content: "Compensa lo contaminado";
+}
+
+#estilo2textoAU3:before {
+    content: "Pago";
+}
+
+#estilo2cabAU2EN:before {
+    content: "Compensate your pollution";
+}
+
+#estilo2textoAU2EN:before {
+    content: "Payment";
+}
+
 
 @media screen and (min-width: 0px) and (max-width: 575px) {
     .car{
@@ -677,6 +694,28 @@ body {
     .textop3 {
         font-size: 14px;
     }
+    /* Pagina4Auto*/
+    #estilo2cabAU4:before {
+        content: "Compensa";
+        font-size: 13px;
+    }
+
+    #estilo2textoAU4:before {
+        content: "Pago";
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU4EN:before {
+        content: "Compensate";
+        font-size: 13px;
+    }
+
+    #estilo2textoAU4EN:before {
+        content: "Payment";
+        font-size: 17px;
+        font-weight: bold;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -924,6 +963,28 @@ body {
     .textop3 {
         font-size: 16.5px;
     }
+    /* PAGINA 4 AUTO */
+    #estilo2cabAU4:before {
+        content: "Compensa lo contaminado";
+        font-size: 0.88rem;
+    }
+
+    #estilo2textoAU4:before {
+        content: "Pago";
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU4EN:before {
+        content: "Compensate your pollution";
+        font-size: 0.84rem;
+    }
+
+    #estilo2textoAU4EN:before {
+        content: "Payment";
+        font-size: 22px;
+        font-weight: bold;
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -1166,6 +1227,28 @@ body {
 
     .textop3 {
         font-size: 17.5px;
+    }
+    /* PAGINA 4 AUTO */
+    #estilo2cabAU4:before {
+        content: "Compensa lo contaminado";
+        font-size: 1.1rem;
+    }
+
+    #estilo2textoAU4:before {
+        content: "Pago";
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU4EN:before {
+        content: "Compensate your pollution";
+        font-size: 1.1rem;
+    }
+
+    #estilo2textoAU4EN:before {
+        content: "Payment";
+        font-size: 24px;
+        font-weight: bold;
     }
 }
 
@@ -1421,5 +1504,27 @@ body {
     #pregunta input[type=radio]:checked + label {
         background: #FAFAFA;
         color: #04C3D7;
+    }
+    /* PAGINA 4 AUTO */
+    #estilo2cabAU4:before {
+        content: "Compensa lo contaminado";
+        font-size: 0.67rem;
+    }
+
+    #estilo2textoAU4:before {
+        content: "Pago";
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    #estilo2cabAU4EN:before {
+        content: "Compensate your pollution";
+        font-size: 0.65rem;
+    }
+
+    #estilo2textoAU4EN:before {
+        content: "Payment";
+        font-size: 22px;
+        font-weight: bold;
     }
 }

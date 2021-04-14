@@ -69,244 +69,61 @@
     <!-- CUERPO DE LA PÁGINA -->
     <div class="container-fluid">
         <div class="row" style="margin-top: -2%; background-color:#04C3D7">
-            <div class="col-md-2" style="background-color:transparent;">
-
-            </div>
-            <div class="col-md-8" style="background-color:transparent;">
-                <div class="row" style="padding:2%;">
-
-                    <div class="col-md-2" style="background-color:#04C3D7">
-
-                    </div>
-                    <!--
-                                  <div class="row">
-                        <div class="columna col d-block d-sm-none"></div>
-                        <div class="columna col d-none d-sm-block d-md-none">SM - Small</div>
-                        <div class="columna col d-none d-md-block d-lg-none">MD - Medium</div>
-                        <div class="columna col d-none d-lg-block d-xl-none">LG - Large</div>
-                        <div class="columna col d-none d-xl-block">XL - Extra Large</div>
-                    </div>-->
-
-                    <div class="col-md-8 d-none d-xl-block" style="background-color:#04C3D7;">
-                        <div class="hijo">
-                            <table style="width:100%">
-                                <tr>
-                                    <th> &nbsp&nbsp&nbsp</th>
-                                    <th> <img style="padding:2%" src="~/Content/Img/nube.png"> </th>
-                                    <th> <h3> @ViewBag.toneladas</h3></th>
-                                    <th> <h3>T of CO2 = $ @ViewBag.total USD</h3> </th>
-
-                                </tr>
-
-                            </table>
-                            <table style="width:90%">
-                                <tr>
-                                    <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                                    <th><spam class="spam">@ViewBag.recorrido travelled km</spam></th>
-
-                                </tr>
-
-                            </table>
-
-                        </div>
-                        <table>
-                            <tr>
-                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                                <th><spam class="spam">I want to compensate</spam></th>
-                            </tr>
-                        </table>
-                    </div>
-
-
-                    <div class="col-md-8 d-block d-xl-none" style="background-color:#04C3D7;">
-                        <div class="hijo">
-                            <table style="width:100%">
-                                <tr>
-                                    <th> </th>
-                                    <th> <img style="" src="~/Content/Img/nube.png"> </th>
-                                    <th> <h4> @ViewBag.toneladas</h4></th>
-                                    <th> <h4>T de CO2 = $ @ViewBag.total USD</h4> </th>
-
-                                </tr>
-
-                            </table>
-                            <table style="width:90%">
-                                <tr>
-                                    <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                                    <th><spam class="spam">@ViewBag.recorrido travelled km</spam></th>
-
-                                </tr>
-
-                            </table>
-
-                        </div>
-                        <table>
-                            <tr>
-                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-                                <th><spam class="spam">I want to compensate</spam></th>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col-md-2" style="background-color:#04C3D7">
-
+            <div class="col-12 text-center" style="background-color:transparent;">
+                <div class="row" style="padding-top:2%;">
+                    <div class="TextosPag3 col-12 text-center">
+                        <a>
+                            <img src="~/Content/Img/nube.png">
+                        </a>
+                        <a> @ViewBag.toneladas</a>
+                        <a>t of CO2 = $ @ViewBag.total USD</a>
+                        <p class="textos2Pag3">@ViewBag.recorrido travelled km</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-2" style="background-color:transparent;">
-
             </div>
         </div>
     </div>
-    <!-///////////////////////////////////////////////////////////////////////////->
-
+    <!-- BOTONES PORCENTAJE-->
     <form name="calculos" method="post" action="/Auto/Auto_pagina4EN">
-        <div class="container-fluid">
-            <div class="row" style="margin-top: -20px; background-color:#04C3D7">
-
-                <div class="col-md-3" style="background-color:transparent;">
-
-                </div>
-                <div class="col-md-6" style="background-color:transparent;">
-                    <div class="row" style="padding:2%;">
-
-                        <div class="col-md-2" style="background-color:#04C3D7">
-
-                        </div>
-                        <div class="col-md-8" style="background-color:#04C3D7;">
-
-
-                            <table style="width:100%">
-
-                                <tr>
-                                    <th>
-                                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                                    </th>
-                                    <th>
-                                        <div id="pregunta">
-                                            <img src="~/Content/Img/Frame1.png" alt="hoja">
-                                            <input type="radio" name="porsentaje" value="1" id="pregunta1" checked>
-                                            <label for="pregunta1">&nbsp&nbsp10%&nbsp </label>
-                                            <img src="~/Content/Img/Frame2.png" alt="hoja">
-                                            <input type="radio" name="porsentaje" value="2" id="pregunta2">
-                                            <label for="pregunta2">&nbsp&nbsp50%&nbsp </label>
-                                            <img src="~/Content/Img/Frame3.png" alt="hoja">
-                                            <input type="radio" name="porsentaje" value="3" id="pregunta3">
-                                            <label for="pregunta3">&nbsp100%&nbsp</label>
-                                            <input name="total" type="hidden" value="@ViewBag.total" />
-
-
-                                        </div>
-                                    </th>
-
-                                </tr>
-
-                            </table>
-                        </div>
-                        <div class="col-md-2" style="background-color:#04C3D7">
-
+        <div class="container-fluid text-center">
+            <div class="row" style="margin-top:-2px; background-color:#04C3D7">
+                <div class="col-12 text-center" style="background-color:transparent;">
+                    <div class="row">
+                        <div class="col-12 text-center" id="pregunta" style="background-color:#04C3D7;">
+                            <p class="textos3Pag3">I want to compensate</p>
+                            <img src="~/Content/Img/Frame1.png" alt="hoja">
+                            <input type="radio" name="porsentaje" value="1" id="pregunta1" checked>
+                            <label for="pregunta1">&nbsp&nbsp10%&nbsp </label>
+                            <img src="~/Content/Img/Frame2.png" alt="hoja">
+                            <input type="radio" name="porsentaje" value="2" id="pregunta2">
+                            <label for="pregunta2">&nbsp&nbsp50%&nbsp </label>
+                            <img src="~/Content/Img/Frame3.png" alt="hoja">
+                            <input type="radio" name="porsentaje" value="3" id="pregunta3">
+                            <label for="pregunta3">&nbsp100%&nbsp</label>
+                            <input name="total" type="hidden" value="@ViewBag.total" />
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3" style="background-color:#04C3D7">
-
+            </div>
+            <div class="row">
+                <div class="col-12 text-center" style="background-color:#04C3D7">
+                    <p class="text-center textop3">Remember we work with fair prices for the <br>  management and conservation of the natural resources</p>
                 </div>
+
             </div>
         </div>
 
-        <!-///////////////////////////////////////////////////////////////////////////->
+        <!-- Texto y Botones -->
         <div class="container-fluid">
-            <div class="row" style="margin-top: -20px; background-color:#04C3D7">
-
-                <div class="col-md-3" style="background-color:transparent;">
-
+            <div class="row" style="margin-top: -2px; background-color:#04C3D7">
+                <div class="col-5 pl-1 col-sm-3 col-md-4 col-lg-4 col-xl-5" style="background-color:transparent;">
+                    <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
                 </div>
-                <div class="col-md-6" style="background-color:transparent;">
-                    <div class="row" style="padding:2%;">
-
-                        <div class="col-md-2" style="background-color:#04C3D7">
-
-                        </div>
-                        <div class="col-md-8" style="background-color:#04C3D7;">
-
-
-                            <table style="width:100%">
-
-                                <tr>
-
-                                    <th>
-                                        <p class="spam" align="center">Remember we work with fair prices for the management and conservation of the natural resources</p>
-                                    </th>
-
-                                </tr>
-
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2" style="background-color:#04C3D7">
-
-                    </div>
-                </div>
-
-                <div class="col-md-3" style="background-color:transparent;">
-
-                </div>
-            </div>
-        </div>
-        <!-///////////////////////////////////////////////////////////////////////////->
-
-        <!-///////////////////////////////////////////////////////////////////////////->
-        <div class="container-fluid">
-            <div class="row" style="margin-top: -20px; background-color:#04C3D7">
-                <div class="col-md-1" style="background-color:transparent;">
-
-                </div>
-                <div class="col-md-3" style="background-color:transparent;">
-                    <table style="width:100%">
-
-                        <tr>
-                            <th>&nbsp&nbsp&nbsp</th>
-                            <th>
-                                <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Go back"></a>
-
-                            </th>
-
-                        </tr>
-
-                    </table>
-                </div>
-                <div class="col-md-4" style="background-color:transparent;">
-                    <div class="row" style="padding:2%;">
-
-                        <div class="col-md-2" style="background-color:#04C3D7">
-
-                        </div>
-                        <div class="col-md-8" style="background-color:#04C3D7;">
-                            <div class="hijo">
-                                <table style="width:100%">
-
-                                    <tr>
-                                        <th>&nbsp&nbsp&nbsp</th>
-                                        <th>
-                                            <input name="ton" type="hidden" value="@ViewBag.toneladas" />
-                                            <input name="nombre" type="hidden" value="@ViewBag.nombre">
-                                            <input name="correo" type="hidden" value="@ViewBag.correo">
-                                            <input class="calcular2 boton-color" name="Refresh" type="submit" value="I want to compensate">
-                                        </th>
-
-                                    </tr>
-
-                                </table>
-
-                            </div>
-                        </div>
-
-                        <div class="col-md-2" style="background-color:#04C3D7">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3" style="background-color:transparent;">
+                <div class="hijo col-7 text-right col-sm-9 col-md-8  col-lg-8 text-lg-left col-xl-7" style="background-color:#04C3D7;">
+                    <input name="ton" type="hidden" value="@ViewBag.toneladas" />
+                    <input name="nombre" type="hidden" value="@ViewBag.nombre">
+                    <input name="correo" type="hidden" value="@ViewBag.correo">
+                    <input class="calcular4 boton-color" name="actualizar" type="submit" value="I want to compensate">
                 </div>
             </div>
         </div>
