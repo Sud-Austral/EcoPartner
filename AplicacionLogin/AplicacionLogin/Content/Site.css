@@ -359,11 +359,21 @@ body {
         font-size: 50px;
         line-height: 41px;
     }
+    .textos1 {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
+    }
     /* Boton calcular*/
     .calcular2 {
         color: #fff;
         background-color: transparent;
         font-size: 10px;
+        font-weight: bold;
         width: 150px;
         border-radius: 3em;
         border: 3px solid #fff;
@@ -595,12 +605,22 @@ body {
     .car2{
         padding-top:22% !important;
     }
+    .textos1 {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
+    }
 
     /* Boton calcular*/
     .calcular2 {
         color: #fff;
         background-color: transparent;
         font-size: 14px;
+        font-weight: bold;
         width: 200px;
         border-radius: 3em;
         border: 3px solid #fff;
@@ -871,11 +891,22 @@ body {
     .car2{
         padding-top: 20% !important;
     }
+
+    .textos1 {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
+    }
     /* Boton calcular*/
     .calcular2 {
         color: #fff;
         background-color: transparent;
         font-size: 14px;
+        font-weight: bold;
         width: 200px;
         border-radius: 3em;
         border: 3px solid #fff;
