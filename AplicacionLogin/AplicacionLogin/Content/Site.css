@@ -133,7 +133,7 @@ body {
 }
 
 
-.input3 {
+.input3{
     color: #117394;
     background-color: transparent;
     border: none;
@@ -443,6 +443,15 @@ body {
     .textop3 {
         font-size: 13px;
     }
+    /* Auto Pagina4 */
+    .input3 {
+        color: #117394;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #117394;
+        width: 180px;
+        text-align: right;
+    }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
     .calcular2 {
@@ -716,6 +725,14 @@ body {
         font-size: 17px;
         font-weight: bold;
     }
+    .input3{
+        color: #117394;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #117394;
+        width: 230px;
+        text-align: right;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -985,6 +1002,14 @@ body {
         font-size: 22px;
         font-weight: bold;
     }
+    .input3 {
+        color: #117394;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #117394;
+        width: 230px;
+        text-align: right;
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -1248,6 +1273,14 @@ body {
         content: "Payment";
         font-size: 24px;
         font-weight: bold;
+    }
+    .input3 {
+        color: #117394;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #117394;
+        width: 300px;
+        text-align: right;
     }
 }
 
@@ -1525,5 +1558,13 @@ body {
         content: "Payment";
         font-size: 22px;
         font-weight: bold;
+    }
+    .input3 {
+        color: #117394;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #117394;
+        width: 300px;
+        text-align: right;
     }
 }
