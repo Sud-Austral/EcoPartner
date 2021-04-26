@@ -69,19 +69,9 @@
     <!-- CUERPO DE LA PÁGINA -->
     <div class="container-fluid" style="background-color: #0BEDBF; margin-top:-2%; ">
         <div class="row">
-            <div class="col-6 col-md-6 col-lg-6 " style="background-color:transparent;  margin-top:2%;">
+            <div class="col-12 d-block d-sm-none" style="background-color:transparent;  margin-top:2%; color:#117394">
                 <div class="row">
-                    <div class="col-6 col-md-6 text-right font-weight-bold" style="background-color:transparent; color:#117394">
-                        <img class="img-fluid" src="~/Content/Img/nube.png" alt="nube">
-                    </div>
-                    <div class="col-6 col-md-6 text-left" style="background-color:transparent;">
-                        <p style="padding-top:5%;">Producto</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 text-center col-md-6 col-lg-6" style="background-color:transparent;  margin-top:2%; color:#117394">
-                <div class="row">
-                    <div class="col-12 text-center col-md-12 font-weight-bold" style="background-color:transparent;">
+                    <div class="col-12 text-center font-weight-bold" style="background-color:transparent;">
 
                         <script type="text/javascript">
 
@@ -142,8 +132,99 @@
                             }
 
                         </script>
-                        <div><span>&nbsp&nbsp</span></div>
+                        <div id="mclp">
+                            <span style="font-weight: bold;">Elige tu moneda</span>
+                            <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
 
+                        </div>
+                        <div id="musd" style="display:none;">
+                            <span style="font-weight: bold;">Elige tu moneda</span>
+                            <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
+                        </div>
+
+
+                        <form action="/Moto/moto_pagina4_paypal" method="post">
+                            <input type="hidden" name="total" value="@ViewBag.total" />
+                            <input type="hidden" name="ton" value="@ViewBag.toneladas" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            @* producto y elige moneda *@
+            <div class="col-4 col-md-6 col-lg-6 " style="background-color:transparent;  margin-top:2%;">
+                <div class="row">
+                    <div class="d-none d-sm-block col-6 col-md-6 text-right font-weight-bold" style="background-color:transparent; color:#117394">
+                        <img class="img-fluid" src="~/Content/Img/nube.png" alt="nube">
+                    </div>
+                    <div class="col-12 col-md-6 text-left font-weight-bold" style="background-color:transparent; color:#117394">
+                        <p style="padding-top:3%;">Producto:</p>
+                    </div>
+                </div>
+            </div>
+            @* SUB TOTAL Y TOTAL *@
+            <div class="d-none d-sm-block text-center col-md-6 col-lg-6" style="background-color:transparent;  margin-top:2%; color:#117394">
+                <div class="row">
+                    <div class="col-12 text-right col-md-12 text-md-center font-weight-bold" style="background-color:transparent;">
+
+                        <script type="text/javascript">
+
+                            $('#mclp').Click(function () {
+                                if ($('#musd').css('display') == none) {
+                                    $('#musd').css('display', 'block');
+                                }
+                                else {
+                                    $('#musd').css('display', 'none');
+                                }
+                            })
+
+                        </script>
+                        <script type="text/javascript">
+                            function mostrarDiv() {
+                                document.getElementById('musd').style.display = "block";
+                                document.getElementById('mclp').style.display = "none";
+                                //document.getElementById('menos').style.display = "block";
+                                document.getElementById('clpm').style.display = "none";
+                                document.getElementById('usdm').style.display = "block";
+
+                            }
+
+                            function ocultarDiv() {
+                                document.getElementById('mclp').style.display = "block";
+                                document.getElementById('musd').style.display = "none";
+                                //document.getElementById('menos').style.display = "none";
+                                document.getElementById('clpm').style.display = "block";
+                                document.getElementById('usdm').style.display = "none";
+
+                            }
+
+
+                        </script>
+                        <script type="text/javascript">
+                            function monedaclp() {
+
+                                var valor = (document.convertidor.usd.value) * 1;
+                                var tot = valor * 800;
+                                tot = tot.toFixed(2);
+
+                                document.convertidor.clp.value = tot;
+                                document.convertidor.clptot.value = tot;
+
+                            }
+
+                        </script>
+                        <script type="text/javascript">
+                            function monedausd() {
+
+                                var valor = (document.convertidor.clp.value) * 1;
+                                var tot = valor / 800;
+                                tot = tot.toFixed(2);
+
+                                document.convertidor.usd.value = tot;
+                                document.convertidor.usdtot.value = tot;
+
+                            }
+
+                        </script>
                         <div id="mclp">
                             <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
                             <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
@@ -154,7 +235,7 @@
                             <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
                         </div>
 
-                        
+
                         <form action="/Moto/moto_pagina4_paypal" method="post">
                             <input type="hidden" name="total" value="@ViewBag.total" />
                             <input type="hidden" name="ton" value="@ViewBag.toneladas" />
@@ -165,106 +246,95 @@
 
         </div>
     </div>
-        <div class="container-fluid" style="background-color: #0BEDBF; margin-top:-2%; ">
-            <div class="row">
-                <div class="col-12 col-md-6 col-lg-6 " style="background-color:transparent;  margin-top:2%;">
-                    <div class="row">
-                        <div class="col-5 col-md-6 text-right font-weight-bold" style="background-color:transparent; color:#117394">
-                        </div>
-                        <div class="col-7 col-md-6 text-left" style="background-color:transparent;">
-                            <span>Carbono x @ViewBag.toneladas T</span>
-                        </div>
+    <div class="container-fluid" style="background-color: #0BEDBF; margin-top:-2%; ">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6 " style="background-color:transparent;  margin-top:2%;">
+                <div class="row">
+                    <div class="col-md-6 text-right font-weight-bold" style="background-color:transparent; color:#117394">
+                    </div>
+                    <div class="col-12 col-md-6 text-left" style="background-color:transparent;">
+                        <span>Carbono x @ViewBag.toneladas T</span>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-6" style="background-color:transparent;  margin-top:2%; color:#117394">
-                    <div class="row">
-                        <div class="col-5 col-md-12  text-center font-weight-bold" style="background-color:transparent;">
-                            <form name="convertidor">
-                                <div id="clpm">
-
-                                    <div><span>&nbsp&nbsp</span></div>
-                                    <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="usd" value="@ViewBag.total" /> USD</span></div>
-                                    <div><span>&nbsp&nbsp</span></div>
-                                    <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" disabled="disabled" name="usdtot" value="@ViewBag.total" />  USD</span></div>
-                                    <div><span>&nbsp&nbsp</span></div>
-                                    <div><span>&nbsp&nbsp</span></div>
-
-
-
-                                </div>
-                                <div id="usdm" style="display:none">
-
-                                    <div><span>&nbsp&nbsp</span></div>
-                                    <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="clp" /> CLP</span></div>
-                                    <div><span>&nbsp&nbsp</span></div>
-                                    <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" disabled="disabled" name="clptot" />  CLP</span></div>
-                                    <div><span>&nbsp&nbsp</span></div>
-                                    <div><span>&nbsp&nbsp</span></div>
-
-
-
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
+            <div class="col-12 col-md-6 col-lg-6" style="background-color:transparent;  margin-top:2%; color:#117394">
+                <div class="row">
+                    <div class="offset-4 col-8 col-md-12  text-center font-weight-bold" style="background-color:transparent;">
+                        <form name="convertidor">
+                            <div id="clpm">
 
-        <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
- 
-            <div class="col-sm-8" style="background-color:transparent; ">
-                <div class="row" style="padding:2%;">
+                                <div><span>&nbsp&nbsp</span></div>
+                                <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="usd" value="@ViewBag.total" /> USD</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
+                                <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" disabled="disabled" name="usdtot" value="@ViewBag.total" />  USD</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
 
-                    <div class="col-sm-3" style=" background-color: #0BEDBF; color:#117394">
-
-                        <!--    <span>
-                        <img src="~/Content/Img/Frame1.png" alt="hoja">
-                        <img src="~/Content/Img/frames.gif" alt="hoja">
-                    </span>-->
-                        <p style="font-weight: bold; margin-left:-25%">Elige tu método de pago</p>
-                        <div id="smart-button-container" style="margin-top:-70%; margin-left:-55%">
-                            <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
-                            <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
-                            <div style="text-align: center"><label for="amount"> </label><input hidden name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
-                            <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
-                            <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
-                            <p id="invoiceidError" style=" visibility: hidden; color: red; text-align: center;">Please enter an Invoice ID</p>
-                            <div style="text-align: center; margin-top: 1.625rem;" id="paypal-button-container"></div>
-
-
-                            <div style="margin-left:-2%">
-
-                                <form action="@ViewBag.form" method="post">
-                                    <input hidden type="text" name="token_ws" value="@ViewBag.token" />
-                                    <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
-
-                                    <input type="image" src="~/Content/Img/webpay.svg" height="150" width="300" />
-                                </form>
-                                <!--4051885600446623-->
 
 
                             </div>
+                            <div id="usdm" style="display:none">
 
-                        </div>
+                                <div><span>&nbsp&nbsp</span></div>
+                                <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="clp" /> CLP</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
+                                <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" disabled="disabled" name="clptot" />  CLP</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
 
 
 
-
-
+                            </div>
+                        </form>
                     </div>
-
-
-
                 </div>
             </div>
-            <div class="col-sm-2" style="background-color:transparent;">
 
-            </div>
+        </div>
+    </div>
+
+    @*TEXTO ELIGE TU MÉTODO DE PAGO, BÓTONES PAYPAL Y WEB PAY  *@
+    <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
+        <div class="col-sm-7">
+
         </div>
 
+        <div class="col-sm-3 text-right" style="background-color:transparent; ">
 
+            <!--    <span>
+                <img src="~/Content/Img/Frame1.png" alt="hoja">
+                <img src="~/Content/Img/frames.gif" alt="hoja">
+            </span>-->
+
+            <div id="smart-button-container">
+
+                <div class="d-none" style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
+                <p class="d-none" id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+                <div class="d-none" style="text-align: center"><label for="amount"> </label><input hidden name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
+                <p class="d-none" id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+                <div class="d-none" id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
+                <p class="d-none" id="invoiceidError" style=" visibility: hidden; color: red; text-align: center;">Please enter an Invoice ID</p>
+                <p style="font-weight: bold; text-align:center;">Elige tu método de pago</p>
+                <div style="text-align: center; margin-top: 1.625rem;" id="paypal-button-container"></div>
+
+
+                <div style="margin-left:-2%; text-align:center;">
+
+                    <form action="@ViewBag.form" method="post">
+                        <input hidden type="text" name="token_ws" value="@ViewBag.token" />
+                        <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
+
+                        <input type="image" src="~/Content/Img/webpay.svg" height="150" width="300" />
+                    </form>
+                    <!--4051885600446623-->
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
 </body>
 </html>
 
