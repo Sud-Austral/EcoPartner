@@ -15,85 +15,6 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-        /*    $('#mclp').Click(function () {
-                if ($('#musd').css('display') == none) {
-                    $('#musd').css('display', 'block');
-                }
-                else {
-                    $('#musd').css('display', 'none');
-                }
-            }) */
-    </script>
-    <script type="text/javascript">
-        function mostrarDiv() {
-            alert('hola5');
-            document.getElementById('musd').style.display = "block";
-            document.getElementById('mclp').style.display = "none";
-            //document.getElementById('menos').style.display = "block";
-            document.getElementById('clpm').style.display = "none";
-            document.getElementById('usdm').style.display = "block";
-            alert('hola6');
-        }
-        function ocultarDiv() {
-            document.getElementById('mclp').style.display = "block";
-            document.getElementById('musd').style.display = "none";
-            //document.getElementById('menos').style.display = "none";
-            document.getElementById('clpm').style.display = "block";
-            document.getElementById('usdm').style.display = "none";
-        }
-        function monedaclp() {
-            var valor = (document.convertidor.usd.value) * 1;
-            alert(valor);
-            var tot = valor * 800;
-            tot = tot.toFixed(2);
-            document.convertidor.clp.value = tot;
-            document.convertidor.clptot.value = tot;
-            alert('hola3');
-        }
-        function monedausd() {
-            var valor = (document.convertidor.clp.value) * 1;
-            var tot = valor / 800;
-            tot = tot.toFixed(2);
-            document.convertidor.usd.value = tot;
-            document.convertidor.usdtot.value = tot;
-        }
-    </script>
-    <script type="text/javascript">
-        function mostrarDiv2() {
-            alert('hola52');
-            document.getElementById('musd2').style.display = "block";
-            document.getElementById('mclp2').style.display = "none";
-            //document.getElementById('menos').style.display = "block";
-            document.getElementById('clpm').style.display = "none";
-            document.getElementById('usdm').style.display = "block";
-            alert('hola62');
-        }
-        function ocultarDiv() {
-            document.getElementById('mclp2').style.display = "block";
-            document.getElementById('musd2').style.display = "none";
-            //document.getElementById('menos').style.display = "none";
-            document.getElementById('clpm').style.display = "block";
-            document.getElementById('usdm').style.display = "none";
-        }
-        function monedaclp() {
-            var valor = (document.convertidor.usd.value) * 1;
-            alert(valor);
-            var tot = valor * 800;
-            tot = tot.toFixed(2);
-            document.convertidor.clp.value = tot;
-            document.convertidor.clptot.value = tot;
-            alert('hola3');
-        }
-        function monedausd() {
-            var valor = (document.convertidor.clp.value) * 1;
-            var tot = valor / 800;
-            tot = tot.toFixed(2);
-            document.convertidor.usd.value = tot;
-            document.convertidor.usdtot.value = tot;
-        }
-    </script>
-
 
     <div class="container-fluid">
         <div class="row">
@@ -152,66 +73,65 @@
             <div class="col-12 d-block d-sm-none" style="background-color:transparent;  margin-top:2%; color:#117394">
                 <div class="row">
                     <div class="col-12 text-center font-weight-bold" style="background-color:transparent;">
-                        @*
-                            <script type="text/javascript">
+                        <script type="text/javascript">
 
-                                $('#mclp').Click(function () {
-                                    if ($('#musd').css('display') == none) {
-                                        $('#musd').css('display', 'block');
-                                    }
-                                    else {
-                                        $('#musd').css('display', 'none');
-                                    }
-                                })
-
-                            </script>
-                            <script type="text/javascript">
-                                function mostrarDiv() {
-                                    document.getElementById('musd').style.display = "block";
-                                    document.getElementById('mclp').style.display = "none";
-                                    //document.getElementById('menos').style.display = "block";
-                                    document.getElementById('clpm').style.display = "none";
-                                    document.getElementById('usdm').style.display = "block";
-
+                            $('#mclp').Click(function () {
+                                if ($('#musd').css('display') == none) {
+                                    $('#musd').css('display', 'block');
                                 }
-
-                                function ocultarDiv() {
-                                    document.getElementById('mclp').style.display = "block";
-                                    document.getElementById('musd').style.display = "none";
-                                    //document.getElementById('menos').style.display = "none";
-                                    document.getElementById('clpm').style.display = "block";
-                                    document.getElementById('usdm').style.display = "none";
-
+                                else {
+                                    $('#musd').css('display', 'none');
                                 }
+                            })
+
+                        </script>
+                        <script type="text/javascript">
+                            function mostrarDiv() {
+                                document.getElementById('musd').style.display = "block";
+                                document.getElementById('mclp').style.display = "none";
+                                //document.getElementById('menos').style.display = "block";
+                                document.getElementById('clpm').style.display = "none";
+                                document.getElementById('usdm').style.display = "block";
+
+                            }
+
+                            function ocultarDiv() {
+                                document.getElementById('mclp').style.display = "block";
+                                document.getElementById('musd').style.display = "none";
+                                //document.getElementById('menos').style.display = "none";
+                                document.getElementById('clpm').style.display = "block";
+                                document.getElementById('usdm').style.display = "none";
+
+                            }
 
 
-                            </script>
-                            <script type="text/javascript">
-                                function monedaclp() {
+                        </script>
+                        <script type="text/javascript">
+                            function monedaclp() {
 
-                                    var valor = (document.convertidor.usd.value) * 1;
-                                    var tot = valor * 800;
-                                    tot = tot.toFixed(2);
+                                var valor = (document.convertidor.usd.value) * 1;
+                                var tot = valor * 800;
+                                tot = tot.toFixed(2);
 
-                                    document.convertidor.clp.value = tot;
-                                    document.convertidor.clptot.value = tot;
+                                document.convertidor.clp.value = tot;
+                                document.convertidor.clptot.value = tot;
 
-                                }
+                            }
 
-                            </script>
-                            <script type="text/javascript">
-                                function monedausd() {
+                        </script>
+                        <script type="text/javascript">
+                            function monedausd() {
 
-                                    var valor = (document.convertidor.clp.value) * 1;
-                                    var tot = valor / 800;
-                                    tot = tot.toFixed(2);
+                                var valor = (document.convertidor.clp.value) * 1;
+                                var tot = valor / 800;
+                                tot = tot.toFixed(2);
 
-                                    document.convertidor.usd.value = tot;
-                                    document.convertidor.usdtot.value = tot;
+                                document.convertidor.usd.value = tot;
+                                document.convertidor.usdtot.value = tot;
 
-                                }
+                            }
 
-                            </script>*@
+                        </script>
                         <div id="mclp">
                             <span style="font-weight: bold;">Elige tu moneda</span>
                             <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
@@ -231,7 +151,7 @@
                 </div>
             </div>
             @* producto y elige moneda *@
-            <div class="col-4 col-sm-6 col-lg-6 " style="background-color:transparent;  margin-top:2%;">
+            <div class="col-4 offset-sm-1 col-sm-5 offset-md-2 col-md-4 col-lg-4  " style="background-color:transparent;  margin-top:2%;">
                 <div class="row">
                     <div class="d-none d-sm-block col-6 col-sm-3 text-right font-weight-bold" style="background-color:transparent; color:#117394">
                         <img class="img-fluid" src="~/Content/Img/nube.png" alt="nube">
@@ -242,61 +162,52 @@
                 </div>
             </div>
 
-            <div class="d-none d-sm-block text-center col-sm-6 text-sm-center col-lg-6" style="background-color:transparent;  margin-top:2%; color:#117394">
+            <div class="d-none d-sm-block text-center  col-sm-6 text-sm-center col-md-4 col-lg-4 " style="background-color:transparent;  margin-top:2%; color:#117394">
                 <div class="row">
                     <div class="col-12 text-center font-weight-bold" style="background-color:transparent;">
-                        @* <script type="text/javascript">
-                                $('#mclp').Click(function () {
-                                    if ($('#musd').css('display') == none) {
-                                        $('#musd').css('display', 'block');
-                                    }
-                                    else {
-                                        $('#musd').css('display', 'none');
-                                    }
-                                })
-                            </script>
-                            <script type="text/javascript">
-                                function mostrarDiv() {
-                                    document.getElementById('musd').style.display = "block";
-                                    document.getElementById('mclp').style.display = "none";
-                                    //document.getElementById('menos').style.display = "block";
-                                    document.getElementById('clpm').style.display = "none";
-                                    document.getElementById('usdm').style.display = "block";
-                                }
-                                function ocultarDiv() {
-                                    document.getElementById('mclp').style.display = "block";
-                                    document.getElementById('musd').style.display = "none";
-                                    //document.getElementById('menos').style.display = "none";
-                                    document.getElementById('clpm').style.display = "block";
-                                    document.getElementById('usdm').style.display = "none";
-                                }
-                            </script>
-                            <script type="text/javascript">
-                                function monedaclp() {
-                                    var valor = (document.convertidor.usd.value) * 1;
-                                    var tot = valor * 800;
-                                    tot = tot.toFixed(2);
-                                    document.convertidor.clp.value = tot;
-                                    document.convertidor.clptot.value = tot;
-                                }
-                            </script>
-                            <script type="text/javascript">
-                                function monedausd() {
-                                    var valor = (document.convertidor.clp.value) * 1;
-                                    var tot = valor / 800;
-                                    tot = tot.toFixed(2);
-                                    document.convertidor.usd.value = tot;
-                                    document.convertidor.usdtot.value = tot;
-                                }
-                            </script> *@
+
+                        <script type="text/javascript">
+                            function mostrarDiv2() {
+                                document.getElementById('musd2').style.display = "block";
+                                document.getElementById('mclp2').style.display = "none";
+                                //document.getElementById('menos').style.display = "block";
+                                document.getElementById('clpm').style.display = "none";
+                                document.getElementById('usdm').style.display = "block";
+                            }
+                            function ocultarDiv2() {
+                                document.getElementById('mclp2').style.display = "block";
+                                document.getElementById('musd2').style.display = "none";
+                                //document.getElementById('menos').style.display = "none";
+                                document.getElementById('clpm').style.display = "block";
+                                document.getElementById('usdm').style.display = "none";
+                            }
+                        </script>
+                        <script type="text/javascript">
+                            function monedaclp() {
+                                var valor = (document.convertidor.usd.value) * 1;
+                                var tot = valor * 800;
+                                tot = tot.toFixed(2);
+                                document.convertidor.clp.value = tot;
+                                document.convertidor.clptot.value = tot;
+                            }
+                        </script>
+                        <script type="text/javascript">
+                            function monedausd() {
+                                var valor = (document.convertidor.clp.value) * 1;
+                                var tot = valor / 800;
+                                tot = tot.toFixed(2);
+                                document.convertidor.usd.value = tot;
+                                document.convertidor.usdtot.value = tot;
+                            }
+                        </script>
                         <div id="mclp2">
                             <span style="font-weight: bold;">Elige tu moneda</span>
-                            <input name="mclp" onclick="alert('Hola'); monedaclp(); alert('Hola2'); mostrarDiv2();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP12">
+                            <input name="mclp" onclick=" monedaclp(); mostrarDiv2();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
 
                         </div>
                         <div id="musd2" style="display:none;">
                             <span style="font-weight: bold;">Elige tu moneda</span>
-                            <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
+                            <input onclick="monedausd(); ocultarDiv2();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
                         </div>
                         <form action="/Moto/moto_pagina4_paypal" method="post">
                             <input type="hidden" name="total" value="@ViewBag.total" />
@@ -311,39 +222,36 @@
     @* Sub total, total *@
     <div class="container-fluid" style="background-color: #0BEDBF; margin-top:-2%; ">
         <div class="row">
-            <div class="col-12 col-sm-6 col-lg-6 " style="background-color:transparent;  margin-top:2%;">
+            <div class="col-12 offset-sm-1 col-sm-5 offset-md-2 col-md-4 " style="background-color:transparent;  margin-top:2%;">
                 <div class="row">
-                    <div class="col-sm-3 text-right font-weight-bold" style="background-color:transparent; color:#117394">
+                    <div class=" col-sm-3 text-right font-weight-bold" style="background-color:transparent; color:#117394">
                     </div>
-                    <div class="col-12 col-sm-9 text-left" style="background-color:transparent;">
+                    <div class="col-12 col-sm-9 text-left" style="background-color:transparent; color:#117394">
                         <span>Carbono x @ViewBag.toneladas T</span>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-6" style="background-color:transparent;  margin-top:2%; color:#117394">
+            <div class="col-12 col-sm-6 col-md-4" style="background-color:transparent;  margin-top:2%; color:#117394">
                 <div class="row">
-                    <div class="col-4 d-block d-sm-none  font-weight-bold" style="background-color:transparent;">
+                    <div class="col-2 d-block d-sm-none  font-weight-bold" style="background-color:transparent;">
 
                     </div>
-                    <div class="col-8 col-sm-12 text-center font-weight-bold" style="background-color:transparent;">
+                    <div class="col-10 col-sm-12 text-center font-weight-bold" style="background-color:transparent;">
                         <form name="convertidor">
                             <div id="clpm">
 
-                                <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="usd" value="@ViewBag.total" /> USD</span></div>
+                                <div><span style="font-weight: bold; ">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="usd" value="@ViewBag.total" /> USD</span></div>
                                 <div><span>&nbsp&nbsp</span></div>
-                                <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" disabled="disabled" name="usdtot" value="@ViewBag.total" />  USD</span></div>
+                                <div><span style="font-weight: bold; ">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" disabled="disabled" name="usdtot" value="@ViewBag.total" />  USD</span></div>
                                 <div><span>&nbsp&nbsp</span></div>
                                 <div><span>&nbsp&nbsp</span></div>
                             </div>
                             <div id="usdm" style="display:none">
-                                <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="clp" /> CLP</span></div>
+                                <div><span style="font-weight: bold; ">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="clp" /> CLP</span></div>
                                 <div><span>&nbsp&nbsp</span></div>
-                                <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" disabled="disabled" name="clptot" />  CLP</span></div>
+                                <div><span style="font-weight: bold; ">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" disabled="disabled" name="clptot" />  CLP</span></div>
                                 <div><span>&nbsp&nbsp</span></div>
                                 <div><span>&nbsp&nbsp</span></div>
-
-
-
                             </div>
                         </form>
                     </div>
@@ -354,47 +262,42 @@
     </div>
 
     @*TEXTO ELIGE TU MÉTODO DE PAGO, BÓTONES PAYPAL Y WEB PAY  *@
-    <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
-        <div class="col-sm-7">
-
+<div class="container-fluid">
+    <div class="row" style="margin-top:-2px; background-color:#0BEDBF">
+        <div class="col-5 offset-md-1 col-sm-5 col-xl-5" style="background-color:transparent;">
+            <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
         </div>
+        <div class="col-7 text-center col-sm-4 col-xl-4" style="background-color:transparent; color:#117394">
+            <p style="font-weight: bold; text-align:center;">Elige tu método de pago</p>
+        </div>
+    </div>
+    <div class="row" style="margin-top:-2px; background-color:#0BEDBF">
+        <div id="smart-button-container" class="col-12 text-right" style="background-color:transparent; ">
+            <div class="row">
+                <div class="col-12 offset-sm-4 col-sm-4 offset-md-5 col-md-3 text-right">
+                    <div class="d-none" style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
+                    <p class="d-none" id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+                    <div class="d-none" style="text-align: center"><label for="amount"> </label><input hidden name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
+                    <p class="d-none" id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+                    <div class="d-none" id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
+                    <p class="d-none" id="invoiceidError" style=" visibility: hidden; color: red; text-align: center;">Please enter an Invoice ID</p>
+                    <div style="text-align: center; margin-top: 1.625rem;" id="paypal-button-container"></div>
 
-        <div class="col-sm-3 text-right" style="background-color:transparent; ">
-
-            <!--    <span>
-                <img src="~/Content/Img/Frame1.png" alt="hoja">
-                <img src="~/Content/Img/frames.gif" alt="hoja">
-            </span>-->
-
-            <div id="smart-button-container">
-                <br />
-                <div class="d-none" style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
-                <p class="d-none" id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
-                <div class="d-none" style="text-align: center"><label for="amount"> </label><input hidden name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
-                <p class="d-none" id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
-                <div class="d-none" id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
-                <p class="d-none" id="invoiceidError" style=" visibility: hidden; color: red; text-align: center;">Please enter an Invoice ID</p>
-                <p style="font-weight: bold; text-align:center;">Elige tu método de pago</p>
-                <div style="text-align: center; margin-top: 1.625rem;" id="paypal-button-container"></div>
-
-
-                <div style="margin-left:-2%; text-align:center;">
+                </div>
+                <div class="col-12  col-sm-4 col-md-3" text-align:center;">
 
                     <form action="@ViewBag.form" method="post">
                         <input hidden type="text" name="token_ws" value="@ViewBag.token" />
-                        <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
-
-                        <input type="image" src="~/Content/Img/webpay.svg" height="150" width="300" />
+                        <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" /><br />
+                        <input class="img-fluid" type="image" src="~/Content/Img/webpay.svg" height="150" width="300" />
                     </form>
-                    <!--4051885600446623-->
                 </div>
             </div>
         </div>
-        <div class="col-sm-2">
-
-        </div>
-
     </div>
+</div>
+
+
 </body>
 </html>
 

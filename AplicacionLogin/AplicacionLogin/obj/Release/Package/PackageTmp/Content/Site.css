@@ -133,12 +133,12 @@ body {
 }
 
 
-.input3 {
+.input3{
     color: #117394;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #117394;
-    width: 250px;
+    width: 150px;
     text-align: right;
 }
 
@@ -359,11 +359,21 @@ body {
         font-size: 50px;
         line-height: 41px;
     }
+    .textos1 {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
+    }
     /* Boton calcular*/
     .calcular2 {
         color: #fff;
         background-color: transparent;
         font-size: 10px;
+        font-weight: bold;
         width: 150px;
         border-radius: 3em;
         border: 3px solid #fff;
@@ -442,6 +452,15 @@ body {
     }
     .textop3 {
         font-size: 13px;
+    }
+    /* Auto Pagina4 */
+    .input3 {
+        color: #117394;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #117394;
+        width: 180px;
+        text-align: right;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 768px) {
@@ -586,12 +605,22 @@ body {
     .car2{
         padding-top:22% !important;
     }
+    .textos1 {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
+    }
 
     /* Boton calcular*/
     .calcular2 {
         color: #fff;
         background-color: transparent;
         font-size: 14px;
+        font-weight: bold;
         width: 200px;
         border-radius: 3em;
         border: 3px solid #fff;
@@ -715,6 +744,14 @@ body {
         content: "Payment";
         font-size: 17px;
         font-weight: bold;
+    }
+    .input3{
+        color: #117394;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #117394;
+        width: 230px;
+        text-align: right;
     }
 }
 
@@ -854,11 +891,22 @@ body {
     .car2{
         padding-top: 20% !important;
     }
+
+    .textos1 {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .textos2 {
+        font-size: larger;
+        font-weight: bold;
+    }
     /* Boton calcular*/
     .calcular2 {
         color: #fff;
         background-color: transparent;
         font-size: 14px;
+        font-weight: bold;
         width: 200px;
         border-radius: 3em;
         border: 3px solid #fff;
@@ -984,6 +1032,14 @@ body {
         content: "Payment";
         font-size: 22px;
         font-weight: bold;
+    }
+    .input3 {
+        color: #117394;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #117394;
+        width: 230px;
+        text-align: right;
     }
 }
 
@@ -1190,7 +1246,6 @@ body {
     }
 
     .calcular4 {
-        margin-left: 75px;
         color: #fff;
         background-color: transparent;
         font-size: 14px;
@@ -1249,6 +1304,14 @@ body {
         content: "Payment";
         font-size: 24px;
         font-weight: bold;
+    }
+    .input3 {
+        color: #117394;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #117394;
+        width: 300px;
+        text-align: right;
     }
 }
 
@@ -1526,5 +1589,13 @@ body {
         content: "Payment";
         font-size: 22px;
         font-weight: bold;
+    }
+    .input3 {
+        color: #117394;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #117394;
+        width: 300px;
+        text-align: right;
     }
 }

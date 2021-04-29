@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
-    .columna{
+    .columna {
         background: #2191fb;
         color: #fff;
         padding: 20px;
@@ -42,6 +42,47 @@
 
         }
     </script>
+    <script>
+        /*$("#calcular").click(function () { // el id del boton calcular */
+        function calcularES() {
+            alert('hola');
+            var reque = $("input[name=kilometros]");
+            var requenombre = $("input[name=nombre]");
+            var requemail = $("input[name=correo]");
+
+            
+            if (reque.val() == "") {
+                $("#reque").attr("required", true);
+                document.getElementById("reque").style.border = "2px solid red";
+                document.getElementById("reque").focus();
+                return false;
+            } else {
+                $("#reque").attr("required", false);
+                document.getElementById("reque").style.border = "";
+            }
+            /**/
+            if (requenombre.val() == "") {
+                $("#requenombre").attr("required", true);
+                document.getElementById("requenombre").style.border = "2px solid red";
+                document.getElementById("requenombre").focus();
+                return false;
+            } else {
+                $("#requenombre").attr("required", false);
+                document.getElementById("requenombre").style.border = "";
+            }
+            /**/
+            if (reque.val() == "") {
+                $("#requemail").attr("required", true);
+                document.getElementById("requemail").style.border = "2px solid red";
+                document.getElementById("requemail").focus();
+                return false;
+            } else {
+                $("#requemail").attr("required", false);
+                document.getElementById("requemail").style.border = "";
+            }
+        }
+        /*});*/
+    </script>
     <div id="auto1ES">
         <div class="container-fluid">
             <div class="row">
@@ -51,7 +92,8 @@
                             <img src="/Content/Img/Vector.png" class="img-fluid" alt="Responsive Image">
                         </div>
                         <div class="prueba col-8 col-sm-6 col-lg-8 col-xl-9 text-md-left text-lg-center text-xl-left" style="background-color:transparent; color:#ffff;">
-                            <p id="estilo1"> <br>
+                            <p id="estilo1">
+                                <br>
                                 <span id="logo"></span>
                             </p>
                         </div>
@@ -112,7 +154,7 @@
                                                 <span class="spam">Kilómetros recorridos</span>
                                             </th>
                                             <th>
-                                                <input name="kilometros" class="w-100 col-md-12 col-sm-12 input2" autocomplete="off" onkeypress="return validaNumericos(event)" />
+                                                <input id="reque" name="kilometros" class="w-100 col-md-12 col-sm-12 input2" autocomplete="off" onkeypress="return validaNumericos(event)" />
                                             </th>
                                         </tr>
                                         <tr>
@@ -172,14 +214,14 @@
                                                 <span class="spam">Nombre Completo</span>
                                             </th>
                                             <th>
-                                                <input name="nombre" class="w-100 col-md-12 col-sm-12 input2" required />
+                                                <input id="requenombre" name="nombre" class="w-100 col-md-12 col-sm-12 input2"  />
                                             </th>
                                         </tr>
                                         <tr>
                                             <th style="width:50%">
                                                 <span class="spam">E-mail</span>
                                             </th>
-                                            <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-12   input2" required /></th>
+                                            <th><input id="requemail" type="email" name="correo" class="w-100 col-md-12 col-sm-12   input2"  /></th>
 
                                         </tr>
 
@@ -205,7 +247,7 @@
 
                             </div>
                             <div class="col-4" style="background-color:#117394; padding-top:2%;">
-                                <input type="submit" name="calcular" class="calcular" value="Calcular">
+                                <input type="submit" onclick="calcularES();" name="calcular" class="calcular" value="Calcular">
 
                             </div>
                         </div>
@@ -250,7 +292,8 @@
                                     <img class="car" src="~/Content/Img/Auto.png" lass="img-fluid" alt="Responsive Image" />
                                 </div>
                                 <div class="d-none d-sm-block col-sm-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
-                                    <p id="estilo2cabEN"><br />
+                                    <p id="estilo2cabEN">
+                                        <br />
                                         <span id="estilo2textoEN"></span>
                                     </p>
                                 </div>
@@ -291,7 +334,7 @@
                                                 <span class="spam">Kilometers travelled</span>
                                             </th>
                                             <th>
-                                                <input name="kilometros" class="w-100 col-md-12 col-sm-12 input2" autocomplete="off" onkeypress="return validaNumericos(event)" />
+                                                <input name="kilometrosen" class=" sw-100 col-md-12 col-sm-12 input2" autocomplete="off" onkeypress="return validaNumericos(event)" />
                                             </th>
                                         </tr>
                                         <tr>
@@ -353,14 +396,14 @@
                                                 <span class="spam">Full Name</span>
                                             </th>
                                             <th>
-                                                <input name="nombre" class="w-100 col-md-12 col-sm-12 input2" required />
+                                                <input name="nombreEN" class="w-100 col-md-12 col-sm-12 input2"  />
                                             </th>
                                         </tr>
                                         <tr>
                                             <th style="width:50%">
                                                 <span class="spam">E-mail</span>
                                             </th>
-                                            <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-12   input2" required /></th>
+                                            <th><input type="email" name="correoEN" class="w-100 col-md-12 col-sm-12   input2"  /></th>
 
                                         </tr>
 
@@ -386,7 +429,7 @@
 
                             </div>
                             <div class="col-4" style="background-color:#117394; padding-top:2%;">
-                                <input type="submit" name="calcular" class="calcular" value="Calculate">
+                                <input type="submit" onclick="calcular();" id="calcular" name="calcular" class="calcular" value="Calculate">
 
                             </div>
                         </div>

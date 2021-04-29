@@ -69,185 +69,52 @@
 
     <!-- CUERPO DE LA PÁGINA -->
     <form name="calculos" method="post" action="/Auto/auto_pagina4_1EN">
-        <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
-            <div class="col-sm-1" style="background-color:transparent;">
-
-            </div>
-            <div class="col-sm-10" style="background-color:transparent; ">
-                <div class="row" style="padding:2%;">
-
-                    <div class="col-sm-3" style=" background-color: #0BEDBF; border-top-left-radius: 1em; color:#117394">
-
-                        <table style="width:100%; margin-top:10%">
-                            <tr>
-                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName*</th>
-
-                            </tr>
-                            <tr>
-                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPhone number*</th>
-
-                            </tr>
-                            <tr>
-                                <th> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBusiness name</th>
-
-                            </tr>
-                            <tr>
-                                <th> <span>&nbsp</span></th>
-
-                            </tr>
-
-                        </table>
-
-                    </div>
-                    <div class="col-sm-3" style="background-color:#0BEDBF; color:#117394">
-                        <table style="width:100%; margin-top:8%">
-                            <tr>
-                                <th> <input type="text" required name="nombre" value="@ViewBag.nombre" class="    input3" autocomplete="off" readonly /></th>
-
-                            </tr>
-                            <tr>
-                                <th> <input type="text" name="telefono" class=" input3" autocomplete="off" onkeypress="return validaNumericos(event)" required /></th>
-
-                            </tr>
-                            <tr>
-                                <th> <input type="text" name="empresa" class="    input3" autocomplete="off" /></th>
-
-                            </tr>
-                            <tr>
-                                <th> <span>&nbsp</span></th>
-
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div class="col-sm-3" style="background-color:#0BEDBF; color:#117394">
-
-                        <table style="width:100%; margin-top:10%">
-                            <tr>
-                                <th> &nbsp&nbspCountry/Region*</th>
-
-                            </tr>
-
-                            <tr>
-                                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail*</th>
-
-                            </tr>
-                            <tr>
-                                <th> <span>&nbsp</span></th>
-
-                            </tr>
-
-                        </table>
-
-                    </div>
-                    <div class="col-sm-3" style="background-color: #0BEDBF; border-top-right-radius: 1em; color:#117394">
-
-                        <table style="width:100%; margin-top:8%">
-                            <tr>
-                                <th> <input type="text" name="pais" style="margin-left:-65%" class="input3" autocomplete="off" required /></th>
-
-                            </tr>
-
-                            <tr>
-                                <th> <input type="text" name="email" value="@ViewBag.correo" style="margin-left:-65%" class="input3" autocomplete="off" readonly /></th>
-
-                            </tr>
-                            <tr>
-                                <th> <span>&nbsp</span></th>
-
-                            </tr>
-
-                        </table>
-
+        <div class="container-fluid" style="background-color: #0BEDBF; margin-top:-2%; ">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6" style="background-color:transparent;  margin-top:2%;">
+                    <div class="row">
+                        <div class="col-5 col-md-5 text-right font-weight-bold" style="background-color:transparent; color:#117394">
+                            <p class="">Name*</p>
+                            <p class="">Phone nomber*</p>
+                            <p class="">Business name</p>
+                        </div>
+                        <div class="col-7 col-md-7" style="background-color:transparent;">
+                            <input type="text" required name="nombre" value="@ViewBag.nombre" class="input3" autocomplete="off" readonly />
+                            <input type="text" style="margin-top:3%;" name="telefono" class="input3" autocomplete="off" onkeypress="return validaNumericos(event)" required />
+                            <input type="text" style="margin-top:5%;" name="empresa" class="input3" autocomplete="off" />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-1" style="background-color:transparent;">
+                <div class="col-12 col-md-6 col-lg-6" style="background-color:transparent;  margin-top:2%; color:#117394">
+                    <div class="row">
+                        <div class="col-5 col-md-4 col-lg-3 text-right text-right font-weight-bold" style="background-color:transparent;">
+                            <p class="">Country/Region*</p>
+                            <p class="">E-mail*</p>
+                        </div>
+                        <div class="col-7 col-md-8 col-lg-9 " style="background-color:transparent;">
+                            <input type="text" name="pais" class="input3" autocomplete="off" required /><br />
+                            <input type="text" style="margin-top:3%;" name="email" value="@ViewBag.correo" class="input3" autocomplete="off" readonly />
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
 
-        <!-- ///////////////////////////////////////////////////////////////////////////////////-->
-        <!-- ///////////////////////////////////////////////////////////////////////////////////-->
-
-        <div class="row w-100" style=" margin-top: -3.5%; background-color: #0BEDBF; ">
-            <div class="col-sm-1" style="background-color:transparent;">
-
-            </div>
-            <div class="col-sm-10" style=" background-color: transparent;">
-                <div class="row" style="padding:2%;">
-
-                    <div class="col-sm-5" style=" background-color: #0BEDBF; color:#117394">
-                        <table>
-                            <tr>
-                                <th>
-                                    <span>&nbsp&nbsp</span>
-
-                                </th>
-                            </tr>
-                            <tr>
-
-                                <th>
-                                    <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Go back"></a>
-
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <span>&nbsp&nbsp</span>
-                                </th>
-                            </tr>
-
-
-                        </table>
-
-
-                    </div>
-                    <div class="col-sm-2" style=" background-color: #0BEDBF; color:#117394">
-
-                        <table>
-                            <tr>
-                                <th>
-                                    <span>&nbsp&nbsp</span>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <input class="calcular3 boton-color" name="actualizar" type="submit" value="GO AHEAD">
-                                    <input type="hidden" name="calculo" value="@ViewBag.totalf" />
-                                    <input type="hidden" name="ton" value="@ViewBag.toneladas" />
-
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <span>&nbsp&nbsp</span>
-                                </th>
-                            </tr>
-
-
-                        </table>
-
-
-
-                    </div>
-                    <div class="col-sm-5" style=" background-color: #0BEDBF; color:#117394">
-
-
-
-                    </div>
-
+        <!--  Botones -->
+        <div class="container-fluid">
+            <div class="row" style="padding-top:4px; background-color:#0BEDBF">
+                <div class="col-5 pl-1 col-sm-3 col-md-4 col-lg-4 col-xl-5" style="background-color:transparent;">
+                    <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Go Back"></a>
+                </div>
+                <div class="hijo col-7 text-right col-sm-9 col-md-8  col-lg-8 text-lg-left col-xl-7" style="background-color:#0BEDBF;">
+                    <input class="calcular3 boton-color" name="actualizar" type="submit" value="GO AHEAD">
+                    <input type="hidden" name="calculo" value="@ViewBag.totalf" />
+                    <input type="hidden" name="ton" value="@ViewBag.toneladas" />
                 </div>
             </div>
-            <div class="col-sm-1" style="background-color:transparent;">
-
-            </div>
         </div>
-
-
     </form>
-
 
 
     <!--<input name="calculo" value="@ViewBag.totalf" />-->
