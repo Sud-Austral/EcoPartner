@@ -630,6 +630,7 @@
     <Content Include="Views\Prueba\auto_pagina1Prueba.cshtml" />
     <Content Include="Views\Prueba\media.cshtml" />
     <Content Include="Views\Auto\auto_pag1.cshtml" />
+    <Content Include="Views\Auto\ErrorTEN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

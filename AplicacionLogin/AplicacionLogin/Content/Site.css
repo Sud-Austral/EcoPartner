@@ -255,11 +255,6 @@ body {
     content: "Compensate your pollution";
 }
 
-#estilo2textoAU2EN:before {
-    content: "Payment";
-}
-
-
 @media screen and (min-width: 0px) and (max-width: 575px) {
     .car{
         padding-top:5% !important;

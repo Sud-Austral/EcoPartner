@@ -42,46 +42,21 @@
 
         }
     </script>
-    <script>
-        /*$("#calcular").click(function () { // el id del boton calcular */
-        function calcularES() {
-            alert('hola');
-            var reque = $("input[name=kilometros]");
-            var requenombre = $("input[name=nombre]");
-            var requemail = $("input[name=correo]");
 
-            
-            if (reque.val() == "") {
-                $("#reque").attr("required", true);
-                document.getElementById("reque").style.border = "2px solid red";
-                document.getElementById("reque").focus();
-                return false;
-            } else {
-                $("#reque").attr("required", false);
-                document.getElementById("reque").style.border = "";
-            }
-            /**/
-            if (requenombre.val() == "") {
-                $("#requenombre").attr("required", true);
-                document.getElementById("requenombre").style.border = "2px solid red";
-                document.getElementById("requenombre").focus();
-                return false;
-            } else {
-                $("#requenombre").attr("required", false);
-                document.getElementById("requenombre").style.border = "";
-            }
-            /**/
-            if (reque.val() == "") {
-                $("#requemail").attr("required", true);
-                document.getElementById("requemail").style.border = "2px solid red";
-                document.getElementById("requemail").focus();
-                return false;
-            } else {
-                $("#requemail").attr("required", false);
-                document.getElementById("requemail").style.border = "";
-            }
-        }
-        /*});*/
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var form = document.getElementById('needs-validation');
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
     </script>
     <div id="auto1ES">
         <div class="container-fluid">
@@ -138,7 +113,7 @@
         </div>
         <!-- DATOS A CALCULAR -->
         <div class="container-fluid">
-            <form action="/Auto/CalculosAuto" method="post">
+            <form id="needs-validation" novalidate action="/Auto/CalculosAuto" method="post">
                 <div class="row" style="margin-top: -2%; background-color:#117394">
                     <div class="col-md-1" style="background-color:transparent;">
                     </div>
@@ -154,7 +129,10 @@
                                                 <span class="spam">Kilómetros recorridos</span>
                                             </th>
                                             <th>
-                                                <input id="reque" name="kilometros" class="w-100 col-md-12 col-sm-12 input2" autocomplete="off" onkeypress="return validaNumericos(event)" />
+                                                <input type="text" name="kilometros" class="w-100 col-md-12 col-sm-12 input2" autocomplete="off" onkeypress="return validaNumericos(event)" aria-describedby="inputGroupPrepend" required />
+                                                <div class="invalid-feedback">
+                                                    Complete los kilómetros recorridos
+                                                </div>
                                             </th>
                                         </tr>
                                         <tr>
@@ -214,14 +192,22 @@
                                                 <span class="spam">Nombre Completo</span>
                                             </th>
                                             <th>
-                                                <input id="requenombre" name="nombre" class="w-100 col-md-12 col-sm-12 input2"  />
+                                                <input type="text" name="nombre" class="w-100 col-md-12 col-sm-12 input2" required aria-describedby="inputGroupPrepend" />
+                                                <div class="invalid-feedback">
+                                                    Complete con su nombre
+                                                </div>
                                             </th>
                                         </tr>
                                         <tr>
                                             <th style="width:50%">
                                                 <span class="spam">E-mail</span>
                                             </th>
-                                            <th><input id="requemail" type="email" name="correo" class="w-100 col-md-12 col-sm-12   input2"  /></th>
+                                            <th>
+                                                <input type="email" name="correo" class="w-100 col-md-12 col-sm-12   input2" required aria-describedby="inputGroupPrepend" />
+                                                <div class="invalid-feedback">
+                                                    Complete con su correo
+                                                </div>
+                                            </th>
 
                                         </tr>
 
@@ -247,7 +233,7 @@
 
                             </div>
                             <div class="col-4" style="background-color:#117394; padding-top:2%;">
-                                <input type="submit" onclick="calcularES();" name="calcular" class="calcular" value="Calcular">
+                                <input type="submit" name="calcular" class="calcular" value="Calcular">
 
                             </div>
                         </div>
@@ -334,7 +320,8 @@
                                                 <span class="spam">Kilometers travelled</span>
                                             </th>
                                             <th>
-                                                <input name="kilometrosen" class=" sw-100 col-md-12 col-sm-12 input2" autocomplete="off" onkeypress="return validaNumericos(event)" />
+                                                 <input name="kilometros" class=" sw-100 col-md-12 col-sm-12 input2" autocomplete="off" onkeypress="return validaNumericos(event)" required pattern="[0-9]"/>
+                                            
                                             </th>
                                         </tr>
                                         <tr>
@@ -396,14 +383,14 @@
                                                 <span class="spam">Full Name</span>
                                             </th>
                                             <th>
-                                                <input name="nombreEN" class="w-100 col-md-12 col-sm-12 input2"  />
+                                                <input name="nombre" class="w-100 col-md-12 col-sm-12 input2" />
                                             </th>
                                         </tr>
                                         <tr>
                                             <th style="width:50%">
                                                 <span class="spam">E-mail</span>
                                             </th>
-                                            <th><input type="email" name="correoEN" class="w-100 col-md-12 col-sm-12   input2"  /></th>
+                                            <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-12   input2" /></th>
 
                                         </tr>
 
@@ -429,7 +416,7 @@
 
                             </div>
                             <div class="col-4" style="background-color:#117394; padding-top:2%;">
-                                <input type="submit" onclick="calcular();" id="calcular" name="calcular" class="calcular" value="Calculate">
+                                <input type="submit" name="calcular" class="calcular" value="Calculate">
 
                             </div>
                         </div>
