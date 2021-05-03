@@ -6,15 +6,37 @@
 <!doctype html>
 <html>
 <head>
+
     <title>Prueba de Bootstrap 4</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <LINK rel="StyleSheet" href="~/Content/Site.css" type="text/css">
     <link rel="shortcut icon" href="~/Content/Img/favicon-32x32.png">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var form = document.getElementById('needs-validation');
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-12 col-xl-3" style="background-color:transparent;">
@@ -67,7 +89,7 @@
     </div>
 
     <!-- CUERPO DE LA PÁGINA -->
-    <form name="calculos" method="post" action="/Auto/auto_pagina4_1">
+    <form id="needs-validation" novalidate name="calculos" method="post" action="/Auto/auto_pagina4_1">
         <div class="container-fluid" style="background-color: #0BEDBF; margin-top:-2%; ">
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-6 " style="background-color:transparent;  margin-top:2%;">
@@ -79,7 +101,10 @@
                         </div>
                         <div class="col-7 col-md-7" style="background-color:transparent;">
                             <input type="text" required name="nombre" value="@ViewBag.nombre" class="input3" autocomplete="off" readonly />
-                            <input type="text" style="margin-top:3%;" name="telefono" class="input3" autocomplete="off" onkeypress="return validaNumericos(event)" required />
+                            <input type="text" style="margin-top:3%;" name="telefono" class="form-control input3" autocomplete="off" onkeypress="return validaNumericos(event)" aria-describedby="inputGroupPrepend" required />
+                            <div class="invalid-feedback">
+                                Complete con la información solicitada
+                            </div>
                             <input type="text" style="margin-top:5%;" name="empresa" class="input3" autocomplete="off" />
                         </div>
                     </div>
@@ -91,7 +116,11 @@
                             <p class="">E-mail*</p>
                         </div>
                         <div class="col-7 col-md-8 col-lg-10 " style="background-color:transparent;">
-                            <input type="text" name="pais" class="input3" autocomplete="off" required /><br />
+                            <input type="text" name="pais" class="form-control input3" autocomplete="off" aria-describedby="inputGroupPrepend" required />
+                            <div class="none invalid-feedback">
+                                Complete con la información solicitada
+                            </div>
+
                             <input type="text" style="margin-top:3%;" name="email" value="@ViewBag.correo" class="input3" autocomplete="off" readonly />
                         </div>
                     </div>
@@ -111,7 +140,7 @@
                     <input type="hidden" name="calculo" value="@ViewBag.totalf" />
                     <input type="hidden" name="ton" value="@ViewBag.toneladas" />
                 </div>
-                <div class="col-lg-4 col-xl-4" >
+                <div class="col-lg-4 col-xl-4">
 
                 </div>
 
@@ -150,5 +179,3 @@
         return false;
     }
 </script>
-
-

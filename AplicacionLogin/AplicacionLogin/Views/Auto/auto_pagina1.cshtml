@@ -58,6 +58,21 @@
             }, false);
         })();
     </script>
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var form = document.getElementById('needs-validation2');
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
     <div id="auto1ES">
         <div class="container-fluid">
             <div class="row">
@@ -304,7 +319,7 @@
         </div>
         <!-- DATOS A CALCULAR -->
         <div class="container-fluid">
-            <form action="/Auto/CalculosAutoEN" method="post">
+            <form id="needs-validation2" novalidate action="/Auto/CalculosAutoEN" method="post">
                 <div class="row" style="margin-top: -2%; background-color:#117394">
                     <div class="col-md-1" style="background-color:transparent;">
                     </div>
@@ -320,8 +335,10 @@
                                                 <span class="spam">Kilometers travelled</span>
                                             </th>
                                             <th>
-                                                 <input name="kilometros" class=" sw-100 col-md-12 col-sm-12 input2" autocomplete="off" onkeypress="return validaNumericos(event)" required pattern="[0-9]"/>
-                                            
+                                                <input type="text" name="kilometros" class=" sw-100 col-md-12 col-sm-12 input2" autocomplete="off" onkeypress="return validaNumericos(event)" aria-describedby="inputGroupPrepend" required />
+                                                <div class="invalid-feedback">
+                                                    Complete the kilometers traveled
+                                                </div>
                                             </th>
                                         </tr>
                                         <tr>
@@ -383,14 +400,22 @@
                                                 <span class="spam">Full Name</span>
                                             </th>
                                             <th>
-                                                <input name="nombre" class="w-100 col-md-12 col-sm-12 input2" />
+                                                <input name="nombre" class="w-100 col-md-12 col-sm-12 input2" aria-describedby="inputGroupPrepend" required />
+                                                <div class="invalid-feedback">
+                                                    Fill with your name
+                                                </div>
                                             </th>
                                         </tr>
                                         <tr>
                                             <th style="width:50%">
                                                 <span class="spam">E-mail</span>
                                             </th>
-                                            <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-12   input2" /></th>
+                                            <th>
+                                                <input type="email" name="correo" class="w-100 col-md-12 col-sm-12   input2" aria-describedby="inputGroupPrepend" required />
+                                                <div class="invalid-feedback">
+                                                    Fill with your email
+                                                </div>
+                                            </th>
 
                                         </tr>
 
