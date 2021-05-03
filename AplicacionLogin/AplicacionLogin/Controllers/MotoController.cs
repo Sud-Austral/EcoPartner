@@ -508,5 +508,10 @@ namespace AplicacionLogin.Controllers
         {
             return View();
         }
+        public ActionResult ErrorTEN()
+        {
+            return View();
+        }
+
     }
 }

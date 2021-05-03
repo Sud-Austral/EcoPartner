@@ -631,6 +631,9 @@
     <Content Include="Views\Prueba\media.cshtml" />
     <Content Include="Views\Auto\auto_pag1.cshtml" />
     <Content Include="Views\Auto\ErrorTEN.cshtml" />
+    <Content Include="Views\Avion\ErrorTEN.cshtml" />
+    <Content Include="Views\Camion\ErrorTEN.cshtml" />
+    <Content Include="Views\Moto\ErrorTEN.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
