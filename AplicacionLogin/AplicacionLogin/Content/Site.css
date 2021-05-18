@@ -634,8 +634,8 @@ body {
         }
 
         #estilo2cabAU2EN:before {
-            content: "The use of your car generates";
-            font-size: 10px;
+            content: "Its use generates";
+            font-size: 10.5px;
         }
 
         #estilo2textoAU2EN:before {
@@ -852,8 +852,8 @@ body {
         }
 
         #estilo2cabCM2EN:before {
-            content: "The use of your truck generates";
-            font-size: 10px;
+            content: "Its use generates";
+            font-size: 10.5px;
         }
 
         #estilo2cabAV2:before {
@@ -862,8 +862,8 @@ body {
         }
 
         #estilo2cabAV2EN:before {
-            content: "Your plane flight generates";
-            font-size: 10px;
+            content: " Its use generates";
+            font-size: 10.5px;
         }
 
     }
@@ -989,8 +989,8 @@ body {
         }
 
         #estilo2cabAU2EN:before {
-            content: "The use of your car generates";
-            font-size: 0.83rem;
+            content: " Its use generates";
+            font-size: 0.9rem;
         }
 
         #estilo2textoAU2EN:before {
@@ -1210,8 +1210,8 @@ body {
         }
 
         #estilo2cabCM2EN:before {
-            content: "The use of your truck generates";
-            font-size: 0.83rem;
+            content: " Its use generates";
+            font-size: 0.9rem;
         }
 
         #estilo2cabAV2:before {
@@ -1220,8 +1220,8 @@ body {
         }
 
         #estilo2cabAV2EN:before {
-            content: "Your plane flight generates";
-            font-size: 0.83rem;
+            content: " Its use generates";
+            font-size: 0.9rem;
         }
 
     }
@@ -1332,7 +1332,7 @@ body {
         }
 
         #estilo2cabAU2EN:before {
-            content: "The use of your car generates";
+            content: "Its use generates";
         }
 
         #estilo2textoAU2EN:before {
@@ -1549,7 +1549,7 @@ body {
         }
 
         #estilo2cabCM2EN:before {
-            content: "The use of your truck generates";
+            content: "Its use generates";
         }
 
         #estilo2cabAV2:before {
@@ -1557,7 +1557,7 @@ body {
         }
 
         #estilo2cabAV2EN:before {
-            content: "Your plane flight generates";
+            content: "Its use generates";
         }
     }
 
@@ -1682,8 +1682,8 @@ body {
         }
 
         #estilo2cabAU2EN:before {
-            content: "The use of your car generates";
-            font-size: 0.6rem;
+            content: "Its use generates";
+            font-size: 0.8rem;
         }
 
         #estilo2textoAU2EN:before {
@@ -1899,8 +1899,8 @@ body {
         }
 
         #estilo2cabCM2EN:before {
-            content: "The use of your truck generates";
-            font-size: 0.6rem;
+            content: "Its use generates";
+            font-size: 0.8rem;
         }
 
         #estilo2cabAV2:before {
@@ -1909,7 +1909,7 @@ body {
         }
 
         #estilo2cabAV2EN:before {
-            content: "Your plane flight generates";
-            font-size: 0.6rem;
+            content: "Its use generates";
+            font-size: 0.8rem;
         }
     }
