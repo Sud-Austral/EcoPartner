@@ -50,247 +50,197 @@
 
 
     </script>
-
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var form = document.getElementById('needs-validation');
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
+    <script type="text/javascript">
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var form = document.getElementById('needs-validation2');
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }, false);
+        })();
+    </script>
 
     <div id="camion1ES">
-
         <div class="container-fluid">
-            <div class="row" style="padding:1%">
-                <div class="col-md-3" style="background-color:transparent;">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-xl-3" style="background-color:transparent;">
                     <div class="row">
-                        <div class="col-md-3" style="background-color:transparent;">
-                            <img style="padding:2%" src="~/Content/Img/Vector.png">
+                        <div class="logoclass col-3 col-sm-2 col-lg-2 col-xl-3" style="background-color:transparent;">
+                            <img src="/Content/Img/Vector.png" class="img-fluid" alt="Responsive Image">
                         </div>
-                        <div class="col-md-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
-                            <p style="font-size:15px;">
-                                CALCULADORA
-                                <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                        <div class="prueba col-8 col-sm-6 col-lg-8 col-xl-9 text-md-left text-lg-center text-xl-left" style="background-color:transparent; color:#ffff;">
+                            <p id="estilo1">
+                                <br>
+                                <span id="logo"></span>
                             </p>
+                        </div>
+                        <div class="d-block d-xl-none col-12 col-sm-4 col-lg-2" style="background-color:transparent; padding-top:2%;">
+                            <input name="autoES" onclick="mostrarDiv();" style="margin-left:5px" class="traducirsm boton-color" type="button" value="English">
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6" style="background-color:transparent;">
-                    <div class="row" style="padding:2%;">
-                        <div class="col-md-6" style="background-color:#117394">
+                <div class="col-12 col-xl-6" style="background-color:transparent;">
+                    <div class="row divencabezado" style="padding:2%;">
+                        <div class="col-6 " style="background-color:#117394;">
                             <div class="row">
-                                <div class="col-md-2" style="background-color:transparent;">
-                                    <p id="num" style="padding-top:45%; padding-left:22%;">1</p>
+                                <div class="col-3 col-sm-2 col-xl-2 " style="background-color:transparent;">
+                                    <p class="text-center" id="num">1</p>
                                 </div>
-                                <div class="col-md-3" style="background-color:transparent; padding-top:5%;">
-                                    <img src="~/Content/Img/Camion.png" alt="Camión" />
+                                <div class="col-9 col-sm-3 col-xl-3" style="background-color:transparent;">
+                                    <img class="car" src="~/Content/Img/Camion.png" lass="img-fluid" alt="Responsive Image" />
                                 </div>
-                                <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:10%;">
-                                    <p>
-                                        Cuéntanos sobre tu
-                                        <span style="font-size:20px; font-weight: bold;">Camión</span>
+                                <div class="d-none d-sm-block col-sm-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
+                                    <p id="estilo2cab">
+                                        <span id="estilo2textoC"></span>
                                     </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2" style="background-color:#02AFC1;">
-                            <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+                        <div class="col-2 " style="background-color:#02AFC1;">
+                            <p class="text-center" id="num">2</p>
                         </div>
-                        <div class="col-md-2" style="background-color:#04C3D7">
-                            <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
+                        <div class="col-2 " style="background-color:#04C3D7">
+                            <p class="text-center" id="num">3</p>
                         </div>
-                        <div class="col-md-2" style="background-color:#0BEDBF">
-                            <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
+                        <div class="col-2" style="background-color:#0BEDBF">
+                            <p class="text-center" id="num">4</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3" style="background-color:transparent; padding-top:2.7%; ">
-                    <input name="camionES" onclick="mostrarDiv();" style="margin-left:5px" class="traducir boton-color" type="button" value="English">
-                </div>
+                <div class="d-none d-xl-block col-xl-3" style="background-color:transparent; padding-top:2.7%; ">
+                    <input name="autoES" onclick="mostrarDiv();" style="margin-left:5px" class="traducir boton-color" type="button" value="English">
+                    <br>
+                </div><br />
             </div>
         </div>
-        <!--/////////////////////////////////////////////////////////////////////////-->
+        <!-- DATOS A CALCULAR -->
         <div class="container-fluid">
-            <form action="/Camion/CalculosCamion" method="post">
-                <div class="row" style="margin-top: -1.9%; background-color:#117394">
-                    <div class="col-sm-1" style="background-color:transparent;">
+            <form id="needs-validation" novalidate action="/camion/CalculosCamion" method="post">
+                <div class="row" style="margin-top: -2%; background-color:#117394">
+                    <div class="col-md-1" style="background-color:transparent;">
+
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+
+                                $('#kilometros').change(function () {
+                                    var valor = $(this).val();
+                                    $(this).val(valor + ' km');
+                                });
+
+                                $('#toneladas').change(function () {
+                                    var valor = $(this).val();
+                                    $(this).val(valor + ' T');
+                                });
+                            });
+                        </script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
                     </div>
-                    <div class="col-sm-10" style="background-color:transparent;">
-
+                    <div class="col-12 col-md-10" style="background-color:transparent;">
                         <div class="row" style="padding:2%;">
-                            <div class="col-sm-2" style="background-color:#117394">
-
+                            <div class="col-md-1" style="background-color:#117394">
                             </div>
-                            <div class="col-sm-8" style="background-color:#117394;">
-                                <style>
-                                    km:-ms-input-placeholder {
-                                        color: #ffff;
-                                    }
-                                </style>
-
-                                <script type="text/javascript">
-                                    $(document).ready(function () {
-
-
-
-                                        $('#kilometros').change(function () {
-                                            var valor = $(this).val();
-                                            $(this).val(valor + ' km');
-                                        });
-
-                                        $('#toneladas').change(function () {
-                                            var valor = $(this).val();
-                                            $(this).val(valor + ' T');
-                                        });
-
-
-
-                                    });
-                                </script>
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-                                <div class="hijo">
-
-                                    <table>
-
-                                        <tr>
-                                            <th style="width:50%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbspKilómetros recorridos</span>
-                                            </th>
-                                            <th>
-                                                <input id="" class="w-100 col-md-12 col-sm-10    input2" onkeypress="return validaNumericos(event)"
-                                                       type="text"
-                                                       min="1"
-                                                       placeholder="Ingresa los kilómetros"
-                                                       step="0.1"
-                                                       name="kilometros" autocomplete="off" style="max-width: 500px !important;">
-
-                                            </th>
-
-                                        </tr>
-                                        <tr>
-                                            <th style="width:50%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPeso de la carga</span>
-                                            </th>
-                                            <th>
-                                                <input id="" onkeypress="return validaNumericos(event)"
-                                                       type="text"
-                                                       min="0"
-                                                       placeholder="Ingresar toneladas"
-                                                       step="0.001"
-                                                       name="toneladasCarga" class="w-100 col-md-12 col-sm-10    input2" autocomplete="off" style="max-width: 500px !important;" />
-
-                                            </th>
-
-
-
-                                        </tr>
-
-                                        <tr>
-                                            <th style="width:50%">
-                                                <span>Ahora ingresa tus datos</span>
-                                            </th>
-                                            <th></th>
-
-
-
-                                        </tr>
-                                    </table>
-
+                            <div class="col-md-10" style="background-color:#117394;">
+                                <div class="row" style="padding:1%;">
+                                    <div class="col-6 text-right" style="background-color:#117394">
+                                        <span class="spam">Kilómetros recorridos</span>
+                                    </div>
+                                    <div class="col-6 col-sm-4  text-left" style="background-color:#117394;">
+                                        <input type="text" name="kilometros" class="form-control w-100 col-md-12 col-sm-12 input2" min="1" placeholder="Ingresa los kilómetros"
+                                                       step="0.1" autocomplete="off"  onkeypress="return validaNumericos(event)" aria-describedby="inputGroupPrepend" required />
+                                        <div class="font-weight-normal  invalid-feedback">
+                                            Complete los kilómetros recorridos
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="col-sm-2" style="background-color:#117394">
-
+                                <div class="row" style="padding:1%;">
+                                    <div class="col-6 text-right" style="background-color:#117394">
+                                        <span class="spam">Peso de la carga</span>
+                                    </div>
+                                    <div class="col-6 col-sm-4  text-left" style="background-color:#117394;">
+                                        <input  onkeypress="return validaNumericos(event)" type="text" min="0" placeholder="Ingresar toneladas" step="0.001"
+                                               name="toneladasCarga" class="w-100 col-md-12 col-sm-10 input2" autocomplete="off" style="max-width: 500px !important;" aria-describedby="inputGroupPrepend" required />
+                                        <div class="font-weight-normal  invalid-feedback">
+                                            Complete el peso de la carga
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding:1%;">
+                                    <div class="col-8 text-center font-weight-bold" style="background-color:#117394">
+                                        <span>Ahora ingresa tus datos</span>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding:1%;">
+                                    <div class="col-6 text-right" style="background-color:#117394">
+                                        <span class="spam">Nombre Completo</span>
+                                    </div>
+                                    <div class="col-6 col-sm-4  text-left" style="background-color:#117394;">
+                                        <input type="text" name="nombre" class="form-control w-100 col-md-12 col-sm-12 input2" required aria-describedby="inputGroupPrepend" />
+                                        <div class="invalid-feedback font-weight-normal">
+                                            Complete con su nombre
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="padding:1%;">
+                                    <div class="col-6 text-right" style="background-color:#117394">
+                                        <span class="spam">E-mail</span>
+                                    </div>
+                                    <div class="col-6 col-sm-4 text-left" style="background-color:#117394;">
+                                        <input type="email" name="correo" class="form-control w-100 col-md-12 col-sm-12   input2" required aria-describedby="inputGroupPrepend" />
+                                        <div class="invalid-feedback font-weight-normal">
+                                            Complete con su correo
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1" style="background-color:#117394">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-1" style="background-color:transparent;">
-
+                    <div class="col-md-1" style="background-color:transparent;">
                     </div>
-                </div>
+                </div><br />
 
-                <!-///////////////////////////////////////////////////////////////////////////->
-
+                <!-- DATOS DEL VISITANTE-->
+                <!--  BOTÓN CALCULAR -->
                 <div class="row" style="margin-top: -33px; background-color:#117394">
-                    <div class="col-sm-2" style="background-color:transparent;">
+                    <div class="col-sm-2 col-md-2" style="background-color:transparent;">
 
                     </div>
                     <div class="col-sm-8" style="background-color:transparent;">
-                        <div class="row" style="padding:2%;">
-                            <div class="col-sm-1" style="background-color:#117394">
+                        <div class="row">
+                            <div class="col-8" style="background-color:#117394">
 
                             </div>
-                            <div class="col-sm-10" style="background-color:#117394;">
-                                <div class="hijo">
-
-
-                                    <table>
-
-                                        <tr>
-                                            <th style="width:50%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNombre Completo</span>
-                                            </th>
-                                            <th><input type="text" name="nombre" class="w-100 col-md-12 col-sm-10    input" required /></th>
-
-                                        </tr>
-                                        <tr>
-                                            <th style="width:18%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</span>
-                                            </th>
-                                            <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-10    input" required /></th>
-
-                                            <td>
-                                            </td>
-
-                                        </tr>
-                                    </table>
-
-
-                                </div>
-                            </div>
-
-                            <div class="col-sm-1" style="background-color:#117394">
+                            <div class="col-4" style="background-color:#117394; padding-top:2%;">
+                                <input type="submit" name="calcular" class="calcular" value="Calcular">
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-2" style="background-color:transparent;">
-
-                    </div>
-                </div>
-                <br>
-
-
-                <!-///////////////////////////////////////////////////////////////////////////->
-                <div class="row" style="margin-top: -33px; background-color:#117394">
-                    <div class="col-sm-2" style="background-color:transparent;">
-
-                    </div>
-                    <div class="col-sm-8" style="background-color:transparent;">
-                        <div class="row" style="padding:2%;">
-                            <div class="col-sm-2" style="background-color:#117394">
-
-                            </div>
-                            <div class="col-sm-8" style="background-color:#117394;">
-                                <div class="hijo">
-                                    <table>
-
-                                        <tr>
-                                            <th style="width:80%">
-                                                <SAMP>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</SAMP>
-                                            </th>
-                                            <th>
-                                                <input type="submit" name="calcular" class="calcular" value="Calcular" ">
-                                            </th>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-2" style="background-color:#117394">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-2" style="background-color:transparent;">
+                    <div class="col-sm-2 col-md-2" style="background-color:transparent;">
 
                     </div>
                 </div>
@@ -298,250 +248,177 @@
         </div>
     </div>
 
-    <div id="camion1EN" style="display:none;">
-        <div class="container-fluid">
-            <div class="row" style="padding:1%">
-                <div class="col-md-3" style="background-color:transparent;">
-                    <div class="row">
-                        <div class="col-md-3" style="background-color:transparent;">
-                            <img style="padding:2%" src="/Content/Img/Vector.png">
-                        </div>
-                        <div class="col-md-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
-                            <p style="font-size:15px;">
-                                CALCULATOR
-                                <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
-                            </p>
-                        </div>
+   @*EN*@
+<div id="camion1EN" style="display:none;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-xl-3" style="background-color:transparent;">
+                <div class="row">
+                    <div class="logoclass col-3 col-sm-2 col-lg-2 col-xl-3" style="background-color:transparent;">
+                        <img src="/Content/Img/Vector.png" class="img-fluid" alt="Responsive Image">
                     </div>
-                </div>
-                <div class="col-md-6" style="background-color:transparent;">
-                    <div class="row" style="padding:2%;">
-                        <div class="col-md-6" style="background-color:#117394">
-                            <div class="row">
-                                <div class="col-md-2" style="background-color:transparent;">
-                                    <p id="num" style="padding-top:45%; padding-left:22%;">1</p>
-                                </div>
-                                <div class="col-md-3" style="background-color:transparent; padding-top:5%;">
-                                    <img src="~/Content/Img/Camion.png" alt="Camión" />
-                                </div>
-                                <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:10%;">
-                                    <p>
-                                        Tell us about your
-                                        <span style="font-size:20px; font-weight: bold;">Truck</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2" style="background-color:#02AFC1;">
-                            <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
-                        </div>
-                        <div class="col-md-2" style="background-color:#04C3D7">
-                            <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
-                        </div>
-                        <div class="col-md-2" style="background-color:#0BEDBF">
-                            <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
-                        </div>
+                    <div class="prueba col-8 col-sm-6 col-lg-8 col-xl-9 text-md-left text-lg-center text-xl-left" style="background-color:transparent; color:#ffff;">
+                        <p id="estilo1en">
+                            <br>
+                            <span id="logo"></span>
+                        </p>
                     </div>
-                </div>
-                <div class="col-md-3" style="background-color:transparent;  padding-top:2.5%; ">
-                    <input onclick="ocultarDiv();" style="margin:5px; position:relative;" class="traducir boton-color" name="traducir" type="button" value="Español">
+                    <div class="d-block d-xl-none col-12 col-sm-4 col-lg-2" style="background-color:transparent; padding-top:2%;">
+                        <input onclick="ocultarDiv();" style="margin-left:5px;" class="traducirsm boton-color" name="traducir" type="button" value="Español">
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--/////////////////////////////////////////////////////////////////////////-->
-        <div class="container-fluid">
-            <form action="/Camion/CalculosCamionEN" method="post">
-                <div class="row" style="margin-top: -1.9%; background-color:#117394">
-                    <div class="col-sm-1" style="background-color:transparent;">
-
-                    </div>
-                    <div class="col-sm-10" style="background-color:transparent;">
-
-                        <div class="row" style="padding:2%;">
-                            <div class="col-sm-2" style="background-color:#117394">
-
+            <div class="col-12 col-xl-6" style="background-color:transparent;">
+                <div class="row divencabezado" style="padding:2%;">
+                    <div class="col-6 " style="background-color:#117394;">
+                        <div class="row">
+                            <div class="col-3 col-sm-2 col-xl-2 " style="background-color:transparent;">
+                                <p class="text-center" id="num">1</p>
                             </div>
-                            <div class="col-sm-8" style="background-color:#117394;">
-                                <style>
-                                    km:-ms-input-placeholder {
-                                        color: #ffff;
-                                    }
-                                </style>
-
-                                <script type="text/javascript">
-                                    $(document).ready(function () {
-
-
-
-                                        $('#kilometros').change(function () {
-                                            var valor = $(this).val();
-                                            $(this).val(valor + ' km');
-                                        });
-
-                                        $('#toneladas').change(function () {
-                                            var valor = $(this).val();
-                                            $(this).val(valor + ' T');
-                                        });
-
-
-
-                                    });
-                                </script>
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-                                <div class="hijo">
-
-                                    <table>
-
-                                        <tr>
-                                            <th style="width:50%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspKm traveled</span>
-                                            </th>
-                                            <th>
-                                                <input id="" class="w-100 col-md-12 col-sm-10    input2" onkeypress="return validaNumericos(event)"
-                                                       type="text"
-                                                       min="1"
-                                                       placeholder="Type your traveled kms"
-                                                       step="0.1"
-                                                       name="kilometros" autocomplete="off" style="max-width: 500px !important;">
-
-                                            </th>
-
-                                        </tr>
-                                        <tr>
-                                            <th style="width:50%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeight of the load</span>
-                                            </th>
-                                            <th>
-                                                <input id="" onkeypress="return validaNumericos(event)"
-                                                       type="text"
-                                                       min="0"
-                                                       placeholder="Type the amount of tons"
-                                                       step="0.001"
-                                                       name="toneladasCarga" class="w-100 col-md-12 col-sm-10    input2" autocomplete="off" style="max-width: 500px !important;" />
-
-                                            </th>
-
-
-
-                                        </tr>
-
-                                        <tr>
-                                            <th style="width:50%">
-                                                <span>&nbspNow enter your info</span>
-                                            </th>
-                                            <th></th>
-
-
-
-                                        </tr>
-                                    </table>
-
-                                </div>
+                            <div class="col-9 col-sm-3 col-xl-3" style="background-color:transparent;">
+                                <img class="car" src="~/Content/Img/Camion.png" lass="img-fluid" alt="Responsive Image" />
                             </div>
-
-                            <div class="col-sm-2" style="background-color:#117394">
-
+                            <div class="d-none d-sm-block col-sm-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
+                                <p id="estilo2cabEN">
+                                    <br />
+                                    <span id="estilo2textoENC"></span>
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-1" style="background-color:transparent;">
-
+                    <div class="col-2 " style="background-color:#02AFC1;">
+                        <p class="text-center" id="num">2</p>
+                    </div>
+                    <div class="col-2 " style="background-color:#04C3D7">
+                        <p class="text-center" id="num">3</p>
+                    </div>
+                    <div class="col-2" style="background-color:#0BEDBF">
+                        <p class="text-center" id="num">4</p>
                     </div>
                 </div>
-
-                <!-///////////////////////////////////////////////////////////////////////////->
-
-                <div class="row" style="margin-top: -33px; background-color:#117394">
-                    <div class="col-sm-2" style="background-color:transparent;">
-
-                    </div>
-                    <div class="col-sm-8" style="background-color:transparent;">
-                        <div class="row" style="padding:2%;">
-                            <div class="col-sm-2" style="background-color:#117394">
-
-                            </div>
-                            <div class="col-sm-10" style="background-color:#117394;">
-                                <div class="hijo">
-
-
-                                    <table>
-
-                                        <tr>
-                                            <th style="width:43%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFull name</span>
-                                            </th>
-                                            <th><input type="text" name="nombre" class="w-100 col-md-12 col-sm-10    input" required /></th>
-
-                                        </tr>
-                                        <tr>
-                                            <th style="width:18%">
-                                                <span class="spam">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspE-mail</span>
-                                            </th>
-                                            <th><input type="email" name="correo" class="w-100 col-md-12 col-sm-10    input" required /></th>
-
-                                            <td>
-                                            </td>
-
-                                        </tr>
-                                    </table>
-
-
-                                </div>
-                            </div>
-
-                            <div class="col-sm-2" style="background-color:#117394">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-2" style="background-color:transparent;">
-
-                    </div>
-                </div>
+            </div>
+            <div class="d-none d-xl-block col-xl-3" style="background-color:transparent; padding-top:2.7%; ">
+                <input onclick="ocultarDiv();" style="margin-left:5px;" class="traducirsm boton-color" name="traducir" type="button" value="Español">
                 <br>
-
-
-                <!-///////////////////////////////////////////////////////////////////////////->
-                <div class="row" style="margin-top: -33px; background-color:#117394">
-                    <div class="col-sm-2" style="background-color:transparent;">
-
-                    </div>
-                    <div class="col-sm-8" style="background-color:transparent;">
-                        <div class="row" style="padding:2%;">
-                            <div class="col-sm-2" style="background-color:#117394">
-
-                            </div>
-                            <div class="col-sm-8" style="background-color:#117394;">
-                                <div class="hijo">
-                                    <table>
-
-                                        <tr>
-                                            <th style="width:80%">
-                                                <SAMP>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</SAMP>
-                                            </th>
-                                            <th>
-                                                <input type="submit" name="calcular" class="calcular" value="Calculate">
-                                            </th>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-2" style="background-color:#117394">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-2" style="background-color:transparent;">
-
-                    </div>
-                </div>
-            </form>
+            </div><br />
         </div>
     </div>
+    <!-- DATOS A CALCULAR -->
+    <div class="container-fluid">
+        <form id="needs-validation2" novalidate action="/camion/CalculosCamion" method="post">
+            <div class="row" style="margin-top: -2%; background-color:#117394">
+                <div class="col-md-1" style="background-color:transparent;">
+                </div>
+                <div class="col-12 col-md-10" style="background-color:transparent;">
+                    <div class="row" style="padding:2%;">
+                        <div class="col-md-1" style="background-color:#117394">
+                            <script type="text/javascript">
+                                $(document).ready(function () {
+
+
+
+                                    $('#kilometros').change(function () {
+                                        var valor = $(this).val();
+                                        $(this).val(valor + ' km');
+                                    });
+
+                                    $('#toneladas').change(function () {
+                                        var valor = $(this).val();
+                                        $(this).val(valor + ' T');
+                                    });
+
+
+
+                                });
+                            </script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+                        </div>
+                        <div class="col-md-10" style="background-color:#117394;">
+                            <div class="row" style="padding:1%;">
+                                <div class="col-6 text-right" style="background-color:#117394">
+                                    <span class="spam">Kilometers travelled</span>
+                                </div>
+                                <div class="col-6 col-sm-4  text-left" style="background-color:#117394;">
+                                    <input type="text" name="kilometros" class="form-control sw-100 col-md-12 col-sm-12 input2" autocomplete="off" min="1" placeholder="Type your traveled kms" step="0.1" onkeypress="return validaNumericos(event)" aria-describedby="inputGroupPrepend" required />
+                                    <div class="invalid-feedback font-weight-normal">
+                                        Complete the kilometers traveled
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="padding:1%;">
+                                <div class="col-6 text-right" style="background-color:#117394">
+                                    <span class="spam">Weight of the load</span>
+                                </div>
+                                <div class="col-6 col-sm-4  text-left" style="background-color:#117394;">
+                                    <input id="" onkeypress="return validaNumericos(event)" type="text" min="0" placeholder="Type the amount of tons"
+                                           step="0.001" name="toneladasCarga" class="w-100 col-md-12 col-sm-10 input2" autocomplete="off" aria-describedby="inputGroupPrepend" required />
+                                    <div class="invalid-feedback font-weight-normal">
+                                        Complete the weight of the load
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="padding:1%;">
+                                <div class="col-8 text-center font-weight-bold" style="background-color:#117394">
+                                    <span> Now enter your info</span>
+                                </div>
+                            </div>
+                            <div class="row" style="padding:1%;">
+                                <div class="col-6 text-right" style="background-color:#117394">
+                                    <span class="spam">Full Name</span>
+                                </div>
+                                <div class="col-6 col-sm-4  text-left" style="background-color:#117394;">
+                                    <input name="nombre" class="form-control w-100 col-md-12 col-sm-12 input2" aria-describedby="inputGroupPrepend" required />
+                                    <div class="invalid-feedback font-weight-normal">
+                                        Fill in your name
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="padding:1%;">
+                                <div class="col-6 text-right" style="background-color:#117394">
+                                    <span class="spam">E-mail</span>
+                                </div>
+                                <div class="col-6 col-sm-4 text-left" style="background-color:#117394;">
+                                    <input type="email" name="correo" class="form-control w-100 col-md-12 col-sm-12   input2" aria-describedby="inputGroupPrepend" required />
+                                    <div class="invalid-feedback font-weight-normal">
+                                        Fill in your email
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1" style="background-color:#117394">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1" style="background-color:transparent;">
+                </div>
+            </div><br />
+
+            <!-- DATOS DEL VISITANTE-->
+            <!--  BOTÓN CALCULAR -->
+            <div class="row" style="margin-top: -33px; background-color:#117394">
+                <div class="col-sm-2 col-md-2" style="background-color:transparent;">
+
+                </div>
+                <div class="col-sm-8" style="background-color:transparent;">
+                    <div class="row">
+                        <div class="col-8" style="background-color:#117394">
+
+                        </div>
+                        <div class="col-4" style="background-color:#117394; padding-top:2%;">
+                            <input type="submit" name="calcular" class="calcular" value="Calculate">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-md-2" style="background-color:transparent;">
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 </div>
 
 <script>

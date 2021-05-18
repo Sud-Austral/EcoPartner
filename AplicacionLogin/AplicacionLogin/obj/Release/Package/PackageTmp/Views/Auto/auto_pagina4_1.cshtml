@@ -4,7 +4,7 @@
 }
 
 <!doctype html>
-<html>
+<html >
 <head>
     <title>Prueba de Bootstrap 4</title>
     <meta charset="utf-8">
@@ -202,7 +202,7 @@
                         </script>
                         <div id="mclp2">
                             <span style="font-weight: bold;">Elige tu moneda</span>
-                            <input name="mclp" onclick="; monedaclp(); mostrarDiv2();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
+                            <input name="mclp" onclick=" monedaclp(); mostrarDiv2();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
 
                         </div>
                         <div id="musd2" style="display:none;">
@@ -411,7 +411,7 @@
 
 <script>
     window.localStorage.clear();
-    
+
     window.localStorage.setItem("nombre",'@ViewBag.nombre')
     window.localStorage.setItem("toneladas", '@ViewBag.toneladas')
     window.localStorage.setItem("telefono", '@ViewBag.telefono')
@@ -421,5 +421,5 @@
     window.localStorage.setItem("total", '@ViewBag.total')
     window.localStorage.setItem("id",'@ViewBag.id')
     window.localStorage.setItem("token","@ViewBag.token")
-        
+    window.localStorage.setItem("idioma","español")
 </script>

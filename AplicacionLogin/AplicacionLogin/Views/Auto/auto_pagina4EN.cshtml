@@ -96,16 +96,28 @@
                     <div class="row">
                         <div class="col-5 col-md-5 text-right font-weight-bold" style="background-color:transparent; color:#117394">
                             <p class="">Name*</p>
-                            <p class="">Phone nomber*</p>
-                            <p class="">Business name</p>
                         </div>
                         <div class="col-7 col-md-7" style="background-color:transparent;">
                             <input type="text" required name="nombre" value="@ViewBag.nombre" class="input3" autocomplete="off" readonly />
-                            <input type="text" style="margin-top:3%;" name="telefono" class="form-control input3" autocomplete="off" onkeypress="return validaNumericos(event)" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-5 text-right font-weight-bold" style="background-color:transparent; color:#117394">
+                            <p class="">Phone nomber*</p>
+                        </div>
+                        <div class="col-7 col-md-7" style="background-color:transparent;">
+                            <input type="text" style="margin-top:-3%;" name="telefono" class="form-control input3" autocomplete="off" onkeypress="return validaNumericos(event)" aria-describedby="inputGroupPrepend" required />
                             <div class="invalid-feedback">
                                 Fill with the requested information
                             </div>
-                            <input type="text" style="margin-top:5%;" name="empresa" class="input3" autocomplete="off" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-5 text-right font-weight-bold" style="background-color:transparent; color:#117394">
+                            <p class="">Business name</p>
+                        </div>
+                        <div class="col-7 col-md-7" style="background-color:transparent;">
+                            <input type="text" style="margin-top:1%;" name="empresa" class="input3" autocomplete="off" />
                         </div>
                     </div>
                 </div>
@@ -113,14 +125,20 @@
                     <div class="row">
                         <div class="col-5 col-md-4 col-lg-3 text-right text-right font-weight-bold" style="background-color:transparent;">
                             <p class="">Country/Region*</p>
-                            <p class="">E-mail*</p>
                         </div>
                         <div class="col-7 col-md-8 col-lg-9 " style="background-color:transparent;">
-                            <input type="text" name="pais" class="input3" autocomplete="off" aria-describedby="inputGroupPrepend" required /><br />
+                            <input type="text" name="pais"  style="margin-top:-2%;" class="form-control input3" autocomplete="off" aria-describedby="inputGroupPrepend" required />
                             <div class="invalid-feedback">
                                 Fill with the requested information
                             </div>
-                            <input type="text" style="margin-top:3%;" name="email" value="@ViewBag.correo" class="input3" autocomplete="off" readonly />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-4 col-lg-3 text-right text-right font-weight-bold" style="background-color:transparent;">
+                            <p class="">E-mail*</p>
+                        </div>
+                        <div class="col-7 col-md-8 col-lg-9 " style="background-color:transparent;">
+                            <input type="text" style="margin-top:-4%;" name="email" value="@ViewBag.correo" class="input3" autocomplete="off" readonly />
                         </div>
                     </div>
                 </div>

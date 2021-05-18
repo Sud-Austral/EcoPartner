@@ -255,1347 +255,1520 @@ body {
     content: "Compensate your pollution";
 }
 
-#estilo2textoAU2EN:before {
-    content: "Payment";
+/*Pag1 moto - camión - avion*/
+#estilo2textoM:before {
+    content: "Motocicleta";
+}
+#estilo2textoA:before {
+    content: "Avion";
+}
+#estilo2textoC:before {
+    content: "Camión";
 }
 
-
-@media screen and (min-width: 0px) and (max-width: 575px) {
-    .car{
-        padding-top:5% !important;
-    }
-    .prueba {
-        padding-left: 8%;
-        padding-top: 2%;
-    }
-   /*Número encabezado*/
-    #num{
-        font-style: normal;
-        font-weight: bold;
-        font-size:45px !important;
-    }
-    /*Encabezado*/
-    #logo:before {
-        content: "ECOPARTNERSBANK";
-        font-size:100%;
-        font-weight:bold;
-        padding-top:5%;
-    }
-    /*Encabezado*/
-    #estilo1:before {
-        content: "CALCULADORA";
-        color: #FFFF;
-        padding-top: 5%;
-        padding-left:10%;
-        padding-right: 50%;
-        padding-top:25%;
-        font-size:80%;
-    }
-
-  /* BOTÓN CALCULAR*/
-    .calcular {
-        color: #fff;
-        background-color: transparent;
-        height:auto;
-        width: 100px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    /* BOTÓN TRADUCIR*/
-    .traducirsm{
-        color: #fff;
-        background-color: transparent;
-        height: auto;
-        width: 100%;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    /* */
-    .input{
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #fff;
-        text-align: right;
-        width: 300px;
-    }
-    .input2 {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #fff;
-        width: 300px;
-        text-align: right;
-    }
-
-        .input2:-ms-input-placeholder {
-            color: white;
-        }
-
-    /*Encabezado EN*/
-    #estilo1en:before{
-        content: "CALCULATOR";
-        color: #FFFF;
-        padding-top: 5%;
-        padding-left:10%;
-        padding-right: 50%;
-        font-size:80%;
-    }
-    .colnom1{
-        padding-left:10% !important;
-    }
-
-    /* PAGINA 2 AUTO*/
-    /* CARRITO */
-    .car2 {
-        padding-top:8% !important;
-    }
-
-    #num {
-        padding-top:10%;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 50px;
-        line-height: 41px;
-    }
-    .textos1 {
-        font-size: x-large;
-        font-weight: bold;
-    }
-
-    .textos2 {
-        font-size: larger;
-        font-weight: bold;
-    }
-    /* Boton calcular*/
-    .calcular2 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 10px;
-        font-weight: bold;
-        width: 150px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    .calcular2EN {
-        color: #fff;
-        background-color: transparent;
-        font-size: 10px;
-        width: 150px;
-        font-weight: bold;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    /* PÁGINA 3 Auto*/
-    .TextosPag3 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 21px;
-        /* identical to box height, or 45% */
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
-    }
-
-    .textos2Pag3 {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 33px;
-        color: #FFFFFF;
-    }
-
-    .textos3Pag3 {
-        font-family: Karla;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 13px;
-        line-height: 20px;
-        /* or 125% */
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
-    }
-
-    .calcular4 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 12px;
-        font-weight: bold;
-        width: 150px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
-    #pregunta input {
-        display: none;
-        background-color: transparent;
-        border-radius: 3em;
-    }
-
-    #pregunta label {
-        border: solid 2px #ffffff;
-        border-radius: 3em;
-        background: #04C3D7;
-        color: #FAFAFA;
-        font-size: 12px;
-        font-family: Open Sans;
-    }
-
-        #pregunta label:hover {
-            background: #117394;
-        }
-
-    #pregunta input[type=radio]:checked + label {
-        background: #FAFAFA;
-        color: #04C3D7;
-    }
-    .textop3 {
-        font-size: 13px;
-    }
-    /* Auto Pagina4 */
-    .input3 {
-        color: #117394;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #117394;
-        width: 180px;
-        text-align: right;
-    }
+#estilo2textoENM:before {
+    content: "Motorcycle";
 }
-@media screen and (min-width: 576px) and (max-width: 768px) {
-    .calcular2 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    /* CARRITO */
-    .car {
-        padding-top: 20% !important;
-    }
-
-    /* DIV CALCU Y ECOPART*/
-    .prueba {
-        padding-top:3%;
-    }
-
-    
-    .colnom1 {
-        padding-left: 25%;
-    }
-
-    /*Número encabezado*/
-    #num {
-        padding-top: 16%;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 64px;
-        line-height: 41px;
-    }
-
-    /*Encabezado*/
-    #logo:before {
-        content: "ECOPARTNERSBANK";
-        font-size:25px;
-        font-weight: bold;
-    }
-    /*Encabezado*/
-    #estilo1:before {
-        content: "CALCULADORA";
-        color: #FFFF;
-        padding-top:50% !important;
-        padding-right: 40%;
-        font-size:15px;
-    }
-    /*Encabezado EN*/
-    #estilo1en:before {
-        content: "CALCULATOR";
-        color: #FFFF;
-        padding-top: 5%;
-        padding-right: 50%;
-        font-size:15px;
-    }
-
-    #estilo2cab:before {
-        content: "Cuéntanos sobre tu";
-    }
-
-    #estilo2texto:before {
-        content: "Automóvil";
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    #estilo2cabEN:before {
-        content: "Tell us about your";
-    }
-
-    #estilo2textoEN:before {
-        content: "CAR";
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .estilo1 {
-        color: #ffff;
-        padding-top: 5%;
-        padding-left: 5%;
-        margin-right: 50px;
-        font-size: 50px;
-    }
-
-
-    .calcular {
-        color: #fff;
-        background-color: transparent;
-        height: auto;
-        width: 90px;
-        border-radius: 2em;
-        border: 3px solid #fff;
-    }
-
-
-    .input {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #fff;
-        text-align: right;
-        width: 300px;
-    }
-
-    /* BOTÓN TRADUCIR*/
-    .traducirsm {
-        color: #fff;
-        background-color: transparent;
-        height: auto;
-        width: 100%;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    /* PAGINA 2 AUTO */
-    #estilo2cabAU2:before {
-        content: "El uso de tu auto genera";
-        font-size: 10.5px;
-    }
-
-    #estilo2textoAU2:before {
-        content: "Resultado";
-        font-size: 18px;
-        font-weight: bold;
-    }
-    #estilo2cabAU2EN:before {
-        content: "The use of your car generates";
-        font-size: 10px;
-    }
-
-    #estilo2textoAU2EN:before {
-        content: "Results";
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .num2{
-        padding-top:50% !important;
-    }
-    /* CARRITO */
-    .car2{
-        padding-top:22% !important;
-    }
-    .textos1 {
-        font-size: x-large;
-        font-weight: bold;
-    }
-
-    .textos2 {
-        font-size: larger;
-        font-weight: bold;
-    }
-
-    /* Boton calcular*/
-    .calcular2 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    .calcular2EN {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        margin-left: 14%;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    /* PAGINA 3 AUTO */
-    #estilo2cabAU3:before {
-        content: "Tu emisión de CO2";
-        font-size: 14px;
-    }
-
-    #estilo2textoAU3:before {
-        content: "Compensa";
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    #estilo2cabAU3EN:before {
-        content: "Your CO2 emition";
-        font-size: 14px;
-    }
-
-    #estilo2textoAU3EN:before {
-        content: "Compensate";
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .TextosPag3 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 21px;
-        /* identical to box height, or 45% */
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
-    }
-
-    .textos2Pag3 {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 33px;
-        color: #FFFFFF;
-    }
-
-    .textos3Pag3 {
-        font-family: Karla;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 20px;
-        /* or 125% */
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
-    }
-
-    .calcular4 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
-    #pregunta input {
-        display: none;
-        background-color: transparent;
-        border-radius: 3em;
-    }
-
-    #pregunta label {
-        border: solid 2px #ffffff;
-        border-radius: 3em;
-        background: #04C3D7;
-        color: #FAFAFA;
-        font-size: 13px;
-        font-family: Open Sans;
-    }
-
-        #pregunta label:hover {
-            background: #117394;
-        }
-
-    #pregunta input[type=radio]:checked + label {
-        background: #FAFAFA;
-        color: #04C3D7;
-    }
-    .textop3 {
-        font-size: 14px;
-    }
-    /* Pagina4Auto*/
-    #estilo2cabAU4:before {
-        content: "Compensa";
-        font-size: 13px;
-    }
-
-    #estilo2textoAU4:before {
-        content: "Pago";
-        font-size: 17px;
-        font-weight: bold;
-    }
-
-    #estilo2cabAU4EN:before {
-        content: "Compensate";
-        font-size: 13px;
-    }
-
-    #estilo2textoAU4EN:before {
-        content: "Payment";
-        font-size: 17px;
-        font-weight: bold;
-    }
-    .input3{
-        color: #117394;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #117394;
-        width: 230px;
-        text-align: right;
-    }
+#estilo2textoENA:before {
+    content: "Plane";
+}
+#estilo2textoENC:before {
+    content: "Truck";
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    .calcular2 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    /* CARRITO */
-    .car {
-        padding-top: 20% !important;
-    }
-
-    .prueba {
-        padding-top:2%;
-    }
-
-    /*Encabezado*/
-    #logo:before {
-        content: "ECOPARTNERSBANK";
-        font-size: 30px;
-        font-weight: bold;
-    }
-    /*Encabezado*/
-    #estilo1:before {
-        content: "CALCULADORA";
-        color: #FFFF;
-        padding-top: 40% !important;
-        padding-right: 40%;
-        font-size:20px;
-    }
-    /*Encabezado EN*/
-    #estilo1en:before {
-        content: "CALCULATOR";
-        color: #FFFF;
-        padding-top: 5%;
-        padding-right: 40%;
-        font-size: 20px;
-    }
-
-    /* BOTÓN TRADUCIR*/
-    .traducirsm {
-        color: #fff;
-        background-color: transparent;
-        height: auto;
-        width: 100%;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    #num{
-        padding-top: 20%;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 64px;
-        line-height: 41px;
-    }
-
-    .colnom1 {
-        padding-left: 25%;
-    }
-
-    .input {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #fff;
-        text-align: right;
-        margin-left: 20px;
-        width: 290px;
-    }
-
-    .calcular {
-        color: #fff;
-        background-color: transparent;
-        height: auto;
-        width: 90px;
-        border-radius: 2em;
-        border: 3px solid #fff;
-    }
-    #estilo2cab:before {
-        content: "Cuéntanos sobre tu";
-    }
-
-    #estilo2texto:before {
-        content: "Automóvil";
-        font-size: 20px;
-        font-weight: bold;
-    }
-    #estilo2cabEN:before {
-        content: "Tell us about your";
-        font-size: 1rem;
-    }
-
-    #estilo2textoEN:before {
-        content: "CAR";
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .spam {
-        font-weight: 400;
-        padding-right: 10%;
-    }
-
-    /* PAGINA 2 AUTO */
-    #estilo2cabAU2:before {
-        content: "El uso de tu auto genera";
-        font-size: 0.9rem;
-    }
-
-    #estilo2textoAU2:before {
-        content: "Resultado";
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    #estilo2cabAU2EN:before {
-        content: "The use of your car generates";
-        font-size: 0.83rem;
-    }
-
-    #estilo2textoAU2EN:before {
-        content: "Results";
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .num2 {
-        padding-top:50% !important;
-    }
-
-    /* CARRITO */
-    .car2{
-        padding-top: 20% !important;
-    }
-
-    .textos1 {
-        font-size: x-large;
-        font-weight: bold;
-    }
-
-    .textos2 {
-        font-size: larger;
-        font-weight: bold;
-    }
-    /* Boton calcular*/
-    .calcular2 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    .calcular2EN {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        margin-left: 14%;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    /* PAGINA 3 AUTO */
-    #estilo2cabAU3:before {
-        content: "Tu emisión de CO2";
-        font-size: 1.1rem;
-    }
-
-    #estilo2textoAU3:before {
-        content: "Compensa";
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    #estilo2cabAU3EN:before {
-        content: "Your CO2 emition";
-        font-size: 1.1rem;
-    }
-
-    #estilo2textoAU3EN:before {
-        content: "Compensate";
-        font-size: 22px;
-        font-weight: bold;
-    }
-    .TextosPag3 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 21px;
-        /* identical to box height, or 45% */
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
-    }
-
-    .textos2Pag3 {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 20px;
-        line-height: 33px;
-        color: #FFFFFF;
-    }
-
-    .textos3Pag3 {
-        font-family: Karla;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16.5px;
-        line-height: 20px;
-        /* or 125% */
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
-    }
-
-    .calcular4 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
-    #pregunta input {
-        display: none;
-        background-color: transparent;
-        border-radius: 3em;
-    }
-
-    #pregunta label {
-        border: solid 2px #ffffff;
-        border-radius: 3em;
-        background: #04C3D7;
-        color: #FAFAFA;
-        font-size: 16px;
-        font-family: Open Sans;
-    }
-
-        #pregunta label:hover {
-            background: #117394;
+    @media screen and (min-width: 0px) and (max-width: 575px) {
+        .car {
+            padding-top: 5% !important;
         }
 
-    #pregunta input[type=radio]:checked + label {
-        background: #FAFAFA;
-        color: #04C3D7;
-    }
-
-    .textop3 {
-        font-size: 16.5px;
-    }
-    /* PAGINA 4 AUTO */
-    #estilo2cabAU4:before {
-        content: "Compensa lo contaminado";
-        font-size: 0.88rem;
-    }
-
-    #estilo2textoAU4:before {
-        content: "Pago";
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    #estilo2cabAU4EN:before {
-        content: "Compensate your pollution";
-        font-size: 0.84rem;
-    }
-
-    #estilo2textoAU4EN:before {
-        content: "Payment";
-        font-size: 22px;
-        font-weight: bold;
-    }
-    .input3 {
-        color: #117394;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #117394;
-        width: 230px;
-        text-align: right;
-    }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-    /* CARRITO */
-    .car {
-        padding-top: 12% !important;
-    }
-
-    /*Encabezado*/
-    #logo:before{
-        content:"ECOPARTNERSBANK";
-        font-size:35px;
-        font-weight:bold;
-    }
-    /*Encabezado*/
-    #estilo1:before {
-        content: "CALCULADORA";
-        color: #FFFF;
-        padding-top: 50% !important;
-        font-size: 25px;
-    }
-    /*Encabezado EN*/
-    #estilo1en:before {
-        content: "CALCULATOR";
-        color: #FFFF;
-        padding-top:5%;
-        font-size: 25px;
-    }
-
-    /* BOTÓN TRADUCIR*/
-    .traducirsm{
-        color: #fff;
-        background-color:transparent;
-        height:auto;
-        width: 100%;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    #num{
-        padding-top:10%;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 65px;
-        line-height: 41px;
-    }
-
-    #estilo2cab:before {
-        content: "Cuéntanos sobre tu";
-        font-size: 1.2rem;
-    }
-
-    #estilo2texto:before {
-        content: "Automóvil";
-        font-size: 25px;
-        font-weight: bold;
-    }
-
-    #estilo2cabEN:before {
-        content: "Tell us about your";
-        font-size: 1.2rem;
-    }
-
-    #estilo2textoEN:before {
-        content: "CAR";
-        font-size: 25px;
-        font-weight: bold;
-    }
-
-    .colnom1 {
-        padding-left: 25%;
-    }
-
-    .calcular {
-        color: #fff;
-        background-color: transparent;
-        height: auto;
-        width: 90px;
-        border-radius: 2em;
-        border: 3px solid #fff;
-    }
-
-    .input {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #fff;
-        text-align: right;
-        margin-left: 20px;
-        width: 290px;
-    }
-    .spam {
-        font-weight: 400;
-        padding-right: 10%;
-    }
-    /* PAGINA 2 AUTO */
-    #estilo2cabAU2:before {
-        content: "El uso de tu auto genera";
-    }
-
-    #estilo2textoAU2:before {
-        content: "Resultado";
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    #estilo2cabAU2EN:before {
-        content: "The use of your car generates";
-    }
-
-    #estilo2textoAU2EN:before {
-        content: "Results";
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .num2 {
-        padding-top: 25% !important;
-    }
-
-    /* CARRITO */
-    .car2 {
-        padding-top: 12% !important;
-    }
-    /* Boton calcular*/
-    .calcular2 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        margin-left: 10%;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    .calcular2EN {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        margin-left: 14%;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    /* Textos */
-    .textos1 {
-        font-size: x-large;
-        font-weight: bold;
-    }
-    .textos2 {
-        font-size: larger;
-        font-weight: bold;
-    }
-    /* PAGINA 3 AUTO */
-    #estilo2cabAU3:before {
-        content: "Tu emisión de CO2";
-        font-size: 1.2rem;
-    }
-
-    #estilo2textoAU3:before {
-        content: "Compensa";
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    #estilo2cabAU3EN:before {
-        content: "Your CO2 emition";
-        font-size: 1.2rem;
-    }
-
-    #estilo2textoAU3EN:before {
-        content: "Compensate";
-        font-size: 24px;
-        font-weight: bold;
-    }
-    .TextosPag3 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 28px;
-        line-height: 21px;
-        /* identical to box height, or 45% */
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
-    }
-
-    .textos2Pag3 {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 33px;
-        color: #FFFFFF;
-    }
-
-    .textos3Pag3 {
-        font-family: Karla;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 20px;
-        /* or 125% */
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
-    }
-
-    .calcular4 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
-    #pregunta input {
-        display: none;
-        background-color: transparent;
-        border-radius: 3em;
-    }
-
-    #pregunta label {
-        border: solid 2px #ffffff;
-        border-radius: 3em;
-        background: #04C3D7;
-        color: #FAFAFA;
-        font-size: 15px;
-        font-family: Open Sans;
-    }
-
-        #pregunta label:hover {
-            background: #117394;
+        .prueba {
+            padding-left: 8%;
+            padding-top: 2%;
+        }
+        /*Número encabezado*/
+        #num {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 45px !important;
+        }
+        /*Encabezado*/
+        #logo:before {
+            content: "ECOPARTNERSBANK";
+            font-size: 100%;
+            font-weight: bold;
+            padding-top: 5%;
+        }
+        /*Encabezado*/
+        #estilo1:before {
+            content: "CALCULADORA";
+            color: #FFFF;
+            padding-top: 5%;
+            padding-left: 10%;
+            padding-right: 50%;
+            padding-top: 25%;
+            font-size: 80%;
         }
 
-    #pregunta input[type=radio]:checked + label {
-        background: #FAFAFA;
-        color: #04C3D7;
-    }
-
-    .textop3 {
-        font-size: 17.5px;
-    }
-    /* PAGINA 4 AUTO */
-    #estilo2cabAU4:before {
-        content: "Compensa lo contaminado";
-        font-size: 1.1rem;
-    }
-
-    #estilo2textoAU4:before {
-        content: "Pago";
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    #estilo2cabAU4EN:before {
-        content: "Compensate your pollution";
-        font-size: 1.1rem;
-    }
-
-    #estilo2textoAU4EN:before {
-        content: "Payment";
-        font-size: 24px;
-        font-weight: bold;
-    }
-    .input3 {
-        color: #117394;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #117394;
-        width: 300px;
-        text-align: right;
-    }
-}
-
-
-@media screen and (min-width: 1200px) {
-    .prueba {
-        padding-top:3%;
-    }
-
-    .logoclass{
-        padding-top:4% !important;
-    }
-
-    /* CARRITO */
-    .car {
-        padding-top:15% !important;
-    }
-    
-    .divencabezado{
-        padding:4% !important;
-    }
-    /*Encabezado*/
-    #logo:before {
-        content: "ECOPARTNERSBANK";
-        font-size: 23px;
-        font-weight: bold;
-    }
-    /*Encabezado*/
-    #estilo1:before {
-        content: "CALCULADORA";
-        color: #FFFF;
-        padding-top: 50% !important;
-        padding-right: 40%;
-        font-size: 18px;
-    }
-    #estilo1en:before {
-        content: "CALCULATOR";
-        color: #FFFF;
-        padding-top: 5%;
-        padding-right: 50%;
-        font-size: 18px;
-    }
-
-    #estilo2cab:before {
-        content: "Cuéntanos sobre tu";
-        font-size: 0.8rem;
-    }
-
-    #estilo2texto:before {
-        content: "Automóvil";
-        font-size: 20px;
-        font-weight: bold;
-    }
-    #estilo2cabEN:before {
-        content: "Tell us about your";
-        font-size: 0.8rem;
-    }
-
-    #estilo2textoEN:before {
-        content: "CAR";
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .colnom1 {
-        padding-left: 25%;
-    }
-
-    .calcular {
-        color: #fff;
-        background-color: transparent;
-        height: auto;
-        width: 90px;
-        border-radius: 2em;
-        border: 3px solid #fff;
-    }
-
-    .input {
-        color: #fff;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #fff;
-        text-align: right;
-        margin-left: 20px;
-        width: 290px;
-    }
-
-    #num {
-        padding-top:5%;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 50px;
-        line-height: 41px;
-    }
-    .traducirsm {
-        color: #fff;
-        background-color: transparent;
-        height: 35%;
-        width: 42%;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    .spam {
-        font-weight: 400;
-        padding-right: 10%;
-    }
-
-    /* PAGINA 2 AUTO */
-    #estilo2cabAU2:before {
-        content: "El uso de tu auto genera";
-        font-size:0.7rem;
-    }
-
-    #estilo2textoAU2:before {
-        content: "Resultado";
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    #estilo2cabAU2EN:before {
-        content: "The use of your car generates";
-        font-size: 0.6rem;
-    }
-
-    #estilo2textoAU2EN:before {
-        content: "Results";
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .num2{
-        padding-top:25% !important;
-    }
-    /* CARRITO */
-    .car2{
-        padding-top:20% !important;
-    }
-    /* Boton calcular*/
-    .calcular2 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-    .calcular2EN {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        margin-left: 14%;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    /* Textos*/
-    .textos1 {
-        font-size:xx-large;
-        font-weight: bold;
-    }
-    .textos2 {
-        font-size: larger;
-        font-weight: bold;
-    }
-    /* PAGINA 3 AUTO */
-    #estilo2cabAU3:before {
-        content: "Tu emisión de CO2";
-        font-size: 0.9rem;
-    }
-
-    #estilo2textoAU3:before {
-        content: "Compensa";
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    #estilo2cabAU3EN:before {
-        content: "Your CO2 emition";
-        font-size: 0.9rem;
-    }
-
-    #estilo2textoAU3EN:before {
-        content: "Compensate";
-        font-size: 22px;
-        font-weight: bold;
-    }
-
-    .TextosPag3 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 35px;
-        line-height: 21px;
-        /* identical to box height, or 45% */
-
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
-    }
-
-    .textos2Pag3 {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 33px;
-        color: #FFFFFF;
-    }
-
-    .textos3Pag3 {
-        font-family: Karla;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
-        /* or 125% */
-
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
-    }
-
-    .calcular4 {
-        color: #fff;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: bold;
-        width: 200px;
-        border-radius: 3em;
-        border: 3px solid #fff;
-    }
-
-    /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
-    #pregunta input {
-        display: none;
-        background-color: transparent;
-        border-radius: 3em;
-    }
-
-    #pregunta label {
-        border: solid 2.8px #ffffff;
-        border-radius: 3em;
-        background: #04C3D7;
-        color: #FAFAFA;
-        font-size: 16px;
-        font-family: Open Sans;
-    }
-
-        #pregunta label:hover {
-            background: #117394;
+        /* BOTÓN CALCULAR*/
+        .calcular {
+            color: #fff;
+            background-color: transparent;
+            height: auto;
+            width: 100px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+        /* BOTÓN TRADUCIR*/
+        .traducirsm {
+            color: #fff;
+            background-color: transparent;
+            height: auto;
+            width: 100%;
+            border-radius: 3em;
+            border: 3px solid #fff;
         }
 
-    #pregunta input[type=radio]:checked + label {
-        background: #FAFAFA;
-        color: #04C3D7;
-    }
-    /* PAGINA 4 AUTO */
-    #estilo2cabAU4:before {
-        content: "Compensa lo contaminado";
-        font-size: 0.64rem;
+        /* */
+        .input {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            text-align: right;
+            width: 300px;
+        }
+
+        .input2 {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            width: 140px;
+            text-align: right;
+        }
+
+            .input2:-ms-input-placeholder {
+                color: white;
+            }
+
+        /*Encabezado EN*/
+        #estilo1en:before {
+            content: "CALCULATOR";
+            color: #FFFF;
+            padding-top: 5%;
+            padding-left: 10%;
+            padding-right: 50%;
+            font-size: 80%;
+        }
+
+        .colnom1 {
+            padding-left: 10% !important;
+        }
+
+        /* PAGINA 2 AUTO*/
+        /* CARRITO */
+        .car2 {
+            padding-top: 8% !important;
+        }
+
+        #num {
+            padding-top: 10%;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 41px;
+        }
+
+        .textos1 {
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .textos2 {
+            font-size: larger;
+            font-weight: bold;
+        }
+        /* Boton calcular*/
+        .calcular2 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 10px;
+            font-weight: bold;
+            width: 150px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        .calcular2EN {
+            color: #fff;
+            background-color: transparent;
+            font-size: 10px;
+            width: 150px;
+            font-weight: bold;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+        /* PÁGINA 3 Auto*/
+        .TextosPag3 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            /* identical to box height, or 45% */
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .textos2Pag3 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 33px;
+            color: #FFFFFF;
+        }
+
+        .textos3Pag3 {
+            font-family: Karla;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 13px;
+            line-height: 20px;
+            /* or 125% */
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .calcular4 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 12px;
+            font-weight: bold;
+            width: 150px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+        /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+        #pregunta input {
+            display: none;
+            background-color: transparent;
+            border-radius: 3em;
+        }
+
+        #pregunta label {
+            border: solid 2px #ffffff;
+            border-radius: 3em;
+            background: #04C3D7;
+            color: #FAFAFA;
+            font-size: 12px;
+            font-family: Open Sans;
+        }
+
+            #pregunta label:hover {
+                background: #117394;
+            }
+
+        #pregunta input[type=radio]:checked + label {
+            background: #FAFAFA;
+            color: #04C3D7;
+        }
+
+        .textop3 {
+            font-size: 13px;
+        }
+        /* Auto Pagina4 */
+        .input3 {
+            color: #117394;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #117394;
+            width: 180px;
+            text-align: right;
+        }
     }
 
-    #estilo2textoAU4:before {
-        content: "Pago";
-        font-size: 21px;
-        font-weight: bold;
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+        .calcular2 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+        /* CARRITO */
+        .car {
+            padding-top: 20% !important;
+        }
+
+        /* DIV CALCU Y ECOPART*/
+        .prueba {
+            padding-top: 3%;
+        }
+        .colnom1 {
+            padding-left: 25%;
+        }
+
+        /*Número encabezado*/
+        #num {
+            padding-top: 16%;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 41px;
+        }
+
+        /*Encabezado*/
+        #logo:before {
+            content: "ECOPARTNERSBANK";
+            font-size: 25px;
+            font-weight: bold;
+        }
+        /*Encabezado*/
+        #estilo1:before {
+            content: "CALCULADORA";
+            color: #FFFF;
+            padding-top: 50% !important;
+            padding-right: 40%;
+            font-size: 15px;
+        }
+        /*Encabezado EN*/
+        #estilo1en:before {
+            content: "CALCULATOR";
+            color: #FFFF;
+            padding-top: 5%;
+            padding-right: 50%;
+            font-size: 15px;
+        }
+
+        #estilo2cab:before {
+            content: "Cuéntanos sobre tu";
+        }
+
+        #estilo2texto:before {
+            content: "Automóvil";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #estilo2cabEN:before {
+            content: "Tell us about your";
+        }
+
+        #estilo2textoEN:before {
+            content: "CAR";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .estilo1 {
+            color: #ffff;
+            padding-top: 5%;
+            padding-left: 5%;
+            margin-right: 50px;
+            font-size: 50px;
+        }
+
+
+        .calcular {
+            color: #fff;
+            background-color: transparent;
+            height: auto;
+            width: 90px;
+            border-radius: 2em;
+            border: 3px solid #fff;
+        }
+
+
+        .input {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            text-align: right;
+            width: 300px;
+        }
+
+        /* BOTÓN TRADUCIR*/
+        .traducirsm {
+            color: #fff;
+            background-color: transparent;
+            height: auto;
+            width: 100%;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        /* PAGINA 2 AUTO */
+        #estilo2cabAU2:before {
+            content: "El uso de tu auto genera";
+            font-size: 10.5px;
+        }
+
+        #estilo2textoAU2:before {
+            content: "Resultado";
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU2EN:before {
+            content: "The use of your car generates";
+            font-size: 10px;
+        }
+
+        #estilo2textoAU2EN:before {
+            content: "Results";
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .num2 {
+            padding-top: 50% !important;
+        }
+        /* CARRITO */
+        .car2 {
+            padding-top: 22% !important;
+        }
+
+        .textos1 {
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .textos2 {
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        /* Boton calcular*/
+        .calcular2 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        .calcular2EN {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 14%;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        /* PAGINA 3 AUTO */
+        #estilo2cabAU3:before {
+            content: "Tu emisión de CO2";
+            font-size: 14px;
+        }
+
+        #estilo2textoAU3:before {
+            content: "Compensa";
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU3EN:before {
+            content: "Your CO2 emition";
+            font-size: 14px;
+        }
+
+        #estilo2textoAU3EN:before {
+            content: "Compensate";
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .TextosPag3 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 21px;
+            /* identical to box height, or 45% */
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .textos2Pag3 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 33px;
+            color: #FFFFFF;
+        }
+
+        .textos3Pag3 {
+            font-family: Karla;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 20px;
+            /* or 125% */
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .calcular4 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+        /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+        #pregunta input {
+            display: none;
+            background-color: transparent;
+            border-radius: 3em;
+        }
+
+        #pregunta label {
+            border: solid 2px #ffffff;
+            border-radius: 3em;
+            background: #04C3D7;
+            color: #FAFAFA;
+            font-size: 13px;
+            font-family: Open Sans;
+        }
+
+            #pregunta label:hover {
+                background: #117394;
+            }
+
+        #pregunta input[type=radio]:checked + label {
+            background: #FAFAFA;
+            color: #04C3D7;
+        }
+
+        .textop3 {
+            font-size: 14px;
+        }
+        /* Pagina4Auto*/
+        #estilo2cabAU4:before {
+            content: "Compensa";
+            font-size: 13px;
+        }
+
+        #estilo2textoAU4:before {
+            content: "Pago";
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU4EN:before {
+            content: "Compensate";
+            font-size: 13px;
+        }
+
+        #estilo2textoAU4EN:before {
+            content: "Payment";
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .input3 {
+            color: #117394;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #117394;
+            width: 230px;
+            text-align: right;
+        }
+        /* PAG1 */
+        #estilo2textoA:before {
+            content: "Avión";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoENA:before {
+            content: "Plane";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoC:before {
+            content: "Camión";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoCNC:before {
+            content: "Truck";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoM:before {
+            content: "Motocicleta";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoENM:before {
+            content: "Motorcycle";
+            font-size: 20px;
+            font-weight: bold;
+        }
     }
 
-    #estilo2cabAU4EN:before {
-        content: "Compensate your pollution";
-        font-size: 0.64rem;
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        .calcular2 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+        /* CARRITO */
+        .car {
+            padding-top: 20% !important;
+        }
+
+        .prueba {
+            padding-top: 2%;
+        }
+
+        /*Encabezado*/
+        #logo:before {
+            content: "ECOPARTNERSBANK";
+            font-size: 30px;
+            font-weight: bold;
+        }
+        /*Encabezado*/
+        #estilo1:before {
+            content: "CALCULADORA";
+            color: #FFFF;
+            padding-top: 40% !important;
+            padding-right: 40%;
+            font-size: 20px;
+        }
+        /*Encabezado EN*/
+        #estilo1en:before {
+            content: "CALCULATOR";
+            color: #FFFF;
+            padding-top: 5%;
+            padding-right: 40%;
+            font-size: 20px;
+        }
+
+        /* BOTÓN TRADUCIR*/
+        .traducirsm {
+            color: #fff;
+            background-color: transparent;
+            height: auto;
+            width: 100%;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        #num {
+            padding-top: 20%;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 41px;
+        }
+
+        .colnom1 {
+            padding-left: 25%;
+        }
+
+        .input {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            text-align: right;
+            margin-left: 20px;
+            width: 290px;
+        }
+
+        .calcular {
+            color: #fff;
+            background-color: transparent;
+            height: auto;
+            width: 90px;
+            border-radius: 2em;
+            border: 3px solid #fff;
+        }
+
+        #estilo2cab:before {
+            content: "Cuéntanos sobre tu";
+        }
+
+        #estilo2texto:before {
+            content: "Automóvil";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #estilo2cabEN:before {
+            content: "Tell us about your";
+            font-size: 1rem;
+        }
+
+        #estilo2textoEN:before {
+            content: "CAR";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .spam {
+            font-weight: 400;
+            padding-right: 10%;
+        }
+
+        /* PAGINA 2 AUTO */
+        #estilo2cabAU2:before {
+            content: "El uso de tu auto genera";
+            font-size: 0.9rem;
+        }
+
+        #estilo2textoAU2:before {
+            content: "Resultado";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU2EN:before {
+            content: "The use of your car generates";
+            font-size: 0.83rem;
+        }
+
+        #estilo2textoAU2EN:before {
+            content: "Results";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .num2 {
+            padding-top: 50% !important;
+        }
+
+        /* CARRITO */
+        .car2 {
+            padding-top: 20% !important;
+        }
+
+        .textos1 {
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .textos2 {
+            font-size: larger;
+            font-weight: bold;
+        }
+        /* Boton calcular*/
+        .calcular2 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        .calcular2EN {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 14%;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        /* PAGINA 3 AUTO */
+        #estilo2cabAU3:before {
+            content: "Tu emisión de CO2";
+            font-size: 1.1rem;
+        }
+
+        #estilo2textoAU3:before {
+            content: "Compensa";
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU3EN:before {
+            content: "Your CO2 emition";
+            font-size: 1.1rem;
+        }
+
+        #estilo2textoAU3EN:before {
+            content: "Compensate";
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .TextosPag3 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 21px;
+            /* identical to box height, or 45% */
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .textos2Pag3 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 33px;
+            color: #FFFFFF;
+        }
+
+        .textos3Pag3 {
+            font-family: Karla;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16.5px;
+            line-height: 20px;
+            /* or 125% */
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .calcular4 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+        #pregunta input {
+            display: none;
+            background-color: transparent;
+            border-radius: 3em;
+        }
+
+        #pregunta label {
+            border: solid 2px #ffffff;
+            border-radius: 3em;
+            background: #04C3D7;
+            color: #FAFAFA;
+            font-size: 16px;
+            font-family: Open Sans;
+        }
+
+            #pregunta label:hover {
+                background: #117394;
+            }
+
+        #pregunta input[type=radio]:checked + label {
+            background: #FAFAFA;
+            color: #04C3D7;
+        }
+
+        .textop3 {
+            font-size: 16.5px;
+        }
+        /* PAGINA 4 AUTO */
+        #estilo2cabAU4:before {
+            content: "Compensa lo contaminado";
+            font-size: 0.88rem;
+        }
+
+        #estilo2textoAU4:before {
+            content: "Pago";
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU4EN:before {
+            content: "Compensate your pollution";
+            font-size: 0.84rem;
+        }
+
+        #estilo2textoAU4EN:before {
+            content: "Payment";
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .input3 {
+            color: #117394;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #117394;
+            width: 230px;
+            text-align: right;
+        }
+        /*PAGINA1*/
+        #estilo2textoA:before {
+            content: "Avion";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoENA:before {
+            content: "Plane";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoM:before {
+            content: "Motocicleta";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoENM:before {
+            content: "Motorcycle";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoC:before {
+            content: "Camión";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #estilo2textoENC:before {
+            content: "Truck";
+            font-size: 20px;
+            font-weight: bold;
+        }
     }
 
-    #estilo2textoAU4EN:before {
-        content: "Payment";
-        font-size: 22px;
-        font-weight: bold;
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+        /* CARRITO */
+        .car {
+            padding-top: 12% !important;
+        }
+
+        /*Encabezado*/
+        #logo:before {
+            content: "ECOPARTNERSBANK";
+            font-size: 35px;
+            font-weight: bold;
+        }
+        /*Encabezado*/
+        #estilo1:before {
+            content: "CALCULADORA";
+            color: #FFFF;
+            padding-top: 50% !important;
+            font-size: 25px;
+        }
+        /*Encabezado EN*/
+        #estilo1en:before {
+            content: "CALCULATOR";
+            color: #FFFF;
+            padding-top: 5%;
+            font-size: 25px;
+        }
+
+        /* BOTÓN TRADUCIR*/
+        .traducirsm {
+            color: #fff;
+            background-color: transparent;
+            height: auto;
+            width: 100%;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        #num {
+            padding-top: 10%;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 65px;
+            line-height: 41px;
+        }
+
+        #estilo2cab:before {
+            content: "Cuéntanos sobre tu";
+            font-size: 1.2rem;
+        }
+
+        #estilo2texto:before {
+            content: "Automóvil";
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #estilo2cabEN:before {
+            content: "Tell us about your";
+            font-size: 1.2rem;
+        }
+
+        #estilo2textoEN:before {
+            content: "CAR";
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .colnom1 {
+            padding-left: 25%;
+        }
+
+        .calcular {
+            color: #fff;
+            background-color: transparent;
+            height: auto;
+            width: 90px;
+            border-radius: 2em;
+            border: 3px solid #fff;
+        }
+
+        .input {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            text-align: right;
+            margin-left: 20px;
+            width: 290px;
+        }
+
+        .spam {
+            font-weight: 400;
+            padding-right: 10%;
+        }
+        /* PAGINA 2 AUTO */
+        #estilo2cabAU2:before {
+            content: "El uso de tu auto genera";
+        }
+
+        #estilo2textoAU2:before {
+            content: "Resultado";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU2EN:before {
+            content: "The use of your car generates";
+        }
+
+        #estilo2textoAU2EN:before {
+            content: "Results";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .num2 {
+            padding-top: 25% !important;
+        }
+
+        /* CARRITO */
+        .car2 {
+            padding-top: 12% !important;
+        }
+        /* Boton calcular*/
+        .calcular2 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 10%;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        .calcular2EN {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 14%;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+        /* Textos */
+        .textos1 {
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .textos2 {
+            font-size: larger;
+            font-weight: bold;
+        }
+        /* PAGINA 3 AUTO */
+        #estilo2cabAU3:before {
+            content: "Tu emisión de CO2";
+            font-size: 1.2rem;
+        }
+
+        #estilo2textoAU3:before {
+            content: "Compensa";
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU3EN:before {
+            content: "Your CO2 emition";
+            font-size: 1.2rem;
+        }
+
+        #estilo2textoAU3EN:before {
+            content: "Compensate";
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .TextosPag3 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 21px;
+            /* identical to box height, or 45% */
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .textos2Pag3 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 33px;
+            color: #FFFFFF;
+        }
+
+        .textos3Pag3 {
+            font-family: Karla;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 20px;
+            /* or 125% */
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .calcular4 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+        #pregunta input {
+            display: none;
+            background-color: transparent;
+            border-radius: 3em;
+        }
+
+        #pregunta label {
+            border: solid 2px #ffffff;
+            border-radius: 3em;
+            background: #04C3D7;
+            color: #FAFAFA;
+            font-size: 15px;
+            font-family: Open Sans;
+        }
+
+            #pregunta label:hover {
+                background: #117394;
+            }
+
+        #pregunta input[type=radio]:checked + label {
+            background: #FAFAFA;
+            color: #04C3D7;
+        }
+
+        .textop3 {
+            font-size: 17.5px;
+        }
+        /* PAGINA 4 AUTO */
+        #estilo2cabAU4:before {
+            content: "Compensa lo contaminado";
+            font-size: 1.1rem;
+        }
+
+        #estilo2textoAU4:before {
+            content: "Pago";
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU4EN:before {
+            content: "Compensate your pollution";
+            font-size: 1.1rem;
+        }
+
+        #estilo2textoAU4EN:before {
+            content: "Payment";
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .input3 {
+            color: #117394;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #117394;
+            width: 300px;
+            text-align: right;
+        }
+        /*PAGINA1*/
+        #estilo2textoA:before {
+            content: "Avión";
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #estilo2textoENA:before {
+            content: "Plane";
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #estilo2textoC:before {
+            content: "Camión";
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #estilo2textoENC:before {
+            content: "Truck";
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #estilo2textoM:before {
+            content: "Motocicleta";
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #estilo2textoENM:before {
+            content: "Motorcycle";
+            font-size: 25px;
+            font-weight: bold;
+        }
     }
-    .input3 {
-        color: #117394;
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #117394;
-        width: 300px;
-        text-align: right;
+
+
+    @media screen and (min-width: 1200px) {
+        .prueba {
+            padding-top: 3%;
+        }
+
+        .logoclass {
+            padding-top: 4% !important;
+        }
+
+        /* CARRITO */
+        .car {
+            padding-top: 15% !important;
+        }
+
+        .divencabezado {
+            padding: 4% !important;
+        }
+        /*Encabezado*/
+        #logo:before {
+            content: "ECOPARTNERSBANK";
+            font-size: 23px;
+            font-weight: bold;
+        }
+        /*Encabezado*/
+        #estilo1:before {
+            content: "CALCULADORA";
+            color: #FFFF;
+            padding-top: 50% !important;
+            padding-right: 40%;
+            font-size: 18px;
+        }
+
+        #estilo1en:before {
+            content: "CALCULATOR";
+            color: #FFFF;
+            padding-top: 5%;
+            padding-right: 50%;
+            font-size: 18px;
+        }
+
+        #estilo2cab:before {
+            content: "Cuéntanos sobre tu";
+            font-size: 0.8rem;
+        }
+
+        #estilo2texto:before {
+            content: "Automóvil";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #estilo2cabEN:before {
+            content: "Tell us about your";
+            font-size: 0.8rem;
+        }
+
+        #estilo2textoEN:before {
+            content: "CAR";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .colnom1 {
+            padding-left: 25%;
+        }
+
+        .calcular {
+            color: #fff;
+            background-color: transparent;
+            height: auto;
+            width: 90px;
+            border-radius: 2em;
+            border: 3px solid #fff;
+        }
+
+        .input {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            text-align: right;
+            margin-left: 20px;
+            width: 290px;
+        }
+
+        #num {
+            padding-top: 5%;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 41px;
+        }
+
+        .traducirsm {
+            color: #fff;
+            background-color: transparent;
+            height: 35%;
+            width: 42%;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        .spam {
+            font-weight: 400;
+            padding-right: 10%;
+        }
+
+        /* PAGINA 2 AUTO */
+        #estilo2cabAU2:before {
+            content: "El uso de tu auto genera";
+            font-size: 0.7rem;
+        }
+
+        #estilo2textoAU2:before {
+            content: "Resultado";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU2EN:before {
+            content: "The use of your car generates";
+            font-size: 0.6rem;
+        }
+
+        #estilo2textoAU2EN:before {
+            content: "Results";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .num2 {
+            padding-top: 25% !important;
+        }
+        /* CARRITO */
+        .car2 {
+            padding-top: 20% !important;
+        }
+        /* Boton calcular*/
+        .calcular2 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        .calcular2EN {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 14%;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        /* Textos*/
+        .textos1 {
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        .textos2 {
+            font-size: larger;
+            font-weight: bold;
+        }
+        /* PAGINA 3 AUTO */
+        #estilo2cabAU3:before {
+            content: "Tu emisión de CO2";
+            font-size: 0.9rem;
+        }
+
+        #estilo2textoAU3:before {
+            content: "Compensa";
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU3EN:before {
+            content: "Your CO2 emition";
+            font-size: 0.9rem;
+        }
+
+        #estilo2textoAU3EN:before {
+            content: "Compensate";
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .TextosPag3 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 35px;
+            line-height: 21px;
+            /* identical to box height, or 45% */
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .textos2Pag3 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 33px;
+            color: #FFFFFF;
+        }
+
+        .textos3Pag3 {
+            font-family: Karla;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            /* or 125% */
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+
+        .calcular4 {
+            color: #fff;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: bold;
+            width: 200px;
+            border-radius: 3em;
+            border: 3px solid #fff;
+        }
+
+        /* BOTONES DE PORCENTAJE DE COMPENSACIÓN*/
+        #pregunta input {
+            display: none;
+            background-color: transparent;
+            border-radius: 3em;
+        }
+
+        #pregunta label {
+            border: solid 2.8px #ffffff;
+            border-radius: 3em;
+            background: #04C3D7;
+            color: #FAFAFA;
+            font-size: 16px;
+            font-family: Open Sans;
+        }
+
+            #pregunta label:hover {
+                background: #117394;
+            }
+
+        #pregunta input[type=radio]:checked + label {
+            background: #FAFAFA;
+            color: #04C3D7;
+        }
+        /* PAGINA 4 AUTO */
+        #estilo2cabAU4:before {
+            content: "Compensa lo contaminado";
+            font-size: 0.64rem;
+        }
+
+        #estilo2textoAU4:before {
+            content: "Pago";
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        #estilo2cabAU4EN:before {
+            content: "Compensate your pollution";
+            font-size: 0.64rem;
+        }
+
+        #estilo2textoAU4EN:before {
+            content: "Payment";
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .input3 {
+            color: #117394;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #117394;
+            width: 300px;
+            text-align: right;
+        }
+        /*PAGINA1*/
+        #estilo2textoA:before {
+            content: "Avión";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoENA:before {
+            content: "Plane";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoM:before {
+            content: "Motocicleta";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #estilo2textoENM:before {
+            content: "Motorcycle";
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #estilo2textoC:before {
+            content: "Camión";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #estilo2textoENC:before {
+            content: "Truck";
+            font-size: 20px;
+            font-weight: bold;
+        }
     }
-}
