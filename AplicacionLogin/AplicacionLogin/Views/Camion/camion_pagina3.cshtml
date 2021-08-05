@@ -17,76 +17,80 @@
 <body>
 
     <div class="container-fluid">
-        <div class="row" style="padding:1%">
-            <div class="col-md-3" style="background-color:transparent;">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-xl-3" style="background-color:transparent;">
                 <div class="row">
-                    <div class="col-md-3" style="background-color:transparent;">
-                        <img style="padding:2%" src="~/Content/Img/Vector.png">
+                    <div class="logoclass col-3 col-sm-2 col-lg-2 col-xl-3" style="background-color:transparent;">
+                        <img src="/Content/Img/Vector.png" class="img-fluid" alt="Responsive Image">
                     </div>
-                    <div class="col-md-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
-                        <p style="font-size:15px;">
-                            CALCULADORA
-                            <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                    <div class="prueba col-8 col-sm-6 col-lg-8 col-xl-9 text-md-left text-lg-center text-xl-left" style="background-color:transparent; color:#ffff;">
+                        <p id="estilo1">
+                            <br>
+                            <span id="logo"></span>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6" style="background-color:transparent;">
-                <div class="row" style="padding:2%;">
-                    <div class="col-md-2" style="background-color:#117394;">
-                        <p id="num" style="padding-top:18%; padding-left:22%;">1</p>
+            <div class="col-12 col-xl-6" style="background-color:transparent;">
+                <div class="row divencabezado" style="padding:2%;">
+                    <div class="col-2 " style="background-color:#117394;">
+                        <p class="text-center" id="num">1</p>
                     </div>
-                    <div class="col-md-2" style="background-color:#02AFC1;">
-                        <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+                    <div class="col-2 " style="background-color:#02AFC1">
+                        <p class="text-center" id="num">2</p>
                     </div>
-                    <div class="col-md-6" style="background-color:#04C3D7;">
+                    <div class="col-6 " style="background-color:#04C3D7;">
                         <div class="row">
-                            <div class="col-md-2" style="background-color:transparent;">
-                                <p id="num" style="padding-top:45%; padding-left:22%;">3</p>
+                            <div class="col-4 col-sm-2 col-xl-2 " style="background-color:transparent;">
+                                <p class="num2 text-center" id="num">3</p>
                             </div>
-                            <div class="col-md-3" style="background-color:transparent;  padding-top:5%;">
-                                <img src="~/Content/Img/Camion.png" alt="Camion" />
+                            <div class="col-8 col-sm-4 col-xl-4" style="background-color:transparent;">
+                                <img src="~/Content/Img/Camion.png" class="car2 img-fluid" alt="Responsive Image" />
                             </div>
-                            <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:2%; padding-left:10%;">
-                                <p style="font-size:12px;">
-                                    <span style="font-size:30px; font-weight: bold;">Compensa</span>
-                                    Tu emisión de CO2
-
+                            <div class="text-left d-none d-sm-block col-sm-6 col-xl-6" style="background-color:transparent; color:#ffff; padding-top:2%;">
+                                <p id="estilo2textoAU3">
+                                    <br>
+                                    <span id="estilo2cabAU3"></span>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2" style="background-color:#0BEDBF">
-                        <p id="num" style="padding-top:18%; padding-left:22%;">4</p>
+
+
+                    <div class="col-2" style="background-color:#0BEDBF">
+                        <p class="text-center" id="num">4</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3" style="background-color:transparent;">
-            </div>
-        </div>
-    </div>
-    <!-- CUERPO DE LA PÁGINA -->
-    <div class="container-fluid">
-        <div class="row" style="margin-top: -2%; background-color:#04C3D7">
-            <div class="col-md-12" style="background-color:transparent;">
-                <div class="row" style="padding-top:2%;">
-                    <div class="TextosPag3 col-12 col-12 text-center" style="background-color:#04C3D7;">
-                        <a>
-                            <img style="padding:2%" src="~/Content/Img/nube.png">
-                        </a>
-                        <a> @ViewBag.toneladas</a>
-                        <a>T de CO2 = $ @ViewBag.total USD</a>
-                        <p class="spam " style="padding-left:10%;" >@ViewBag.recorrido km recorridos</p>
-                    </div>
-                </div>
-            </div>
+            <div class="d-none d-xl-block col-xl-3" style="background-color:transparent; padding-top:2.7%; ">
+
+                <br>
+            </div><br />
         </div>
     </div>
 
-    <!-///////////////////////////////////////////////////////////////////////////->
-    <form name="calculos" method="post" action="/Camion/camion_pagina4">
+
+    <!-- CUERPO DE LA PÁGINA -->
+    <div class="container-fluid">
+        <div class="row" style="margin-top: -2%; background-color:#04C3D7">
+            <div class="col-12 text-center" style="background-color:transparent;">
+                <div class="row" style="padding-top:2%;">
+                    <div class="TextosPag3 col-12 text-center">
+                        <a>
+                            <img src="~/Content/Img/nube.png">
+                        </a>
+                        <a> @ViewBag.toneladas</a>
+                        <a>t de CO2 = $ @ViewBag.total USD</a>
+                        <p class="textos2Pag3">@ViewBag.recorrido km recorridos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BOTONES PORCENTAJE-->
+    <form name="calculos" method="post" action="/camion/camion_pagina4">
         <div class="container-fluid text-center">
-            <div class="row" style="margin-top: -2px; background-color:#04C3D7">
+            <div class="row" style="margin-top:-2px; background-color:#04C3D7">
                 <div class="col-12 text-center" style="background-color:transparent;">
                     <div class="row">
                         <div class="col-12 text-center" id="pregunta" style="background-color:#04C3D7;">
@@ -100,19 +104,20 @@
                             <img src="~/Content/Img/Frame3.png" alt="hoja">
                             <input type="radio" name="porsentaje" value="3" id="pregunta3">
                             <label for="pregunta3">&nbsp100%&nbsp</label>
+                            <input name="total" type="hidden" value="@ViewBag.total" />
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 text-center" style="background-color:#04C3D7">
-                    <p class="text-center textop3">Recuerda que trabajamos con precios justos para la <br> gestión y conservación de los recursos naturales
-                    </p>
+                    <p class="text-center textop3">Recuerda que trabajamos con precios justos para la <br> gestión y conservación de los recursos naturales</p>
                 </div>
+
             </div>
         </div>
 
-        <!--Botones-->
+        <!--  Botones -->
         <div class="container-fluid">
             <div class="row" style="margin-top: -2px; background-color:#04C3D7">
                 <div class="col-5 pl-1 col-sm-3 col-md-4 col-lg-4 col-xl-4" style="background-color:transparent;">

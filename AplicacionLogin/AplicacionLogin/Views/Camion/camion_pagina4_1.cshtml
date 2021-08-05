@@ -1,7 +1,8 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <!doctype html>
 <html>
@@ -16,254 +17,288 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row" style="padding:1%">
-            <div class="col-md-3" style="background-color:transparent;">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-xl-3" style="background-color:transparent;">
                 <div class="row">
-                    <div class="col-md-3" style="background-color:transparent;">
-                        <img style="padding:2%" src="~/Content/Img/Vector.png">
+                    <div class="logo class col-3 col-sm-2 col-lg-2 col-xl-3" style="background-color:transparent;">
+                        <img src="/Content/Img/Vector.png" class="img-fluid" alt="Responsive Image">
                     </div>
-                    <div class="col-md-9" style="background-color:transparent; color:#ffff; padding-top:5%; padding-left:8%;">
-                        <p style="font-size:15px;">
-                            CALCULADORA
-                            <span style="font-size:22px; font-weight: bold;">ECOPARTNERSBANK</span>
+                    <div class="prueba col-8 col-sm-6 col-lg-8 col-xl-9 text-md-left text-lg-center text-xl-left" style="background-color:transparent; color:#ffff;">
+                        <p id="estilo1">
+                            <br>
+                            <span id="logo"></span>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6" style="background-color:transparent;">
-                <div class="row" style="padding:2%;">
-                    <div class="col-md-2" style="background-color:#117394;">
-                        <p id="num" style="padding-top:18%; padding-left:22%;">1</p>
+            <div class="col-12 col-xl-6" style="background-color:transparent;">
+                <div class="row divencabezado" style="padding:2%;">
+                    <div class="col-2 " style="background-color:#117394;">
+                        <p class="text-center" id="num">1</p>
                     </div>
-                    <div class="col-md-2" style="background-color:#02AFC1">
-                        <p id="num" style="padding-top:18%; padding-left:22%;">2</p>
+                    <div class="col-2 " style="background-color:#02AFC1">
+                        <p class="text-center" id="num">2</p>
                     </div>
-                    <div class="col-md-2" style="background-color:#04C3D7">
-                        <p id="num" style="padding-top:18%; padding-left:22%;">3</p>
+                    <div class="col-2" style="background-color:#04C3D7">
+                        <p class="text-center" id="num">3</p>
                     </div>
-                    <div class="col-md-6" style="background-color:#0BEDBF">
+                    <div class="col-6 " style="background-color:#0BEDBF;">
                         <div class="row">
-                            <div class="col-md-2" style="background-color:transparent;">
-                                <p id="num" style="padding-top:45%; padding-left:22%;">4</p>
+                            <div class="col-4 col-sm-2 col-xl-2 " style="background-color:transparent;">
+                                <p class="num2 text-center" id="num">4</p>
                             </div>
-                            <div class="col-md-3" style="background-color:transparent;  padding-top:5%;">
-                                <img src="~/Content/Img/Camion.png" alt="Camion" />
+                            <div class="col-8 col-sm-4 col-xl-4" style="background-color:transparent;">
+                                <img src="~/Content/Img/Camion.png" class="car2 img-fluid" alt="Responsive Image" />
                             </div>
-                            <div class="col-md-7" style="background-color:transparent; color:#ffff; padding-top:1%; padding-left:10%;">
-                                <p style="font-size:11px; padding-left:3px; padding-top:1px;">
-                                    <span style="font-size:28px; font-weight: bold;">Pago</span> <br>
-                                    Compensa lo contaminado
+                            <div class="text-left d-none d-sm-block col-sm-6 col-xl-6" style="background-color:transparent; color:#ffff; padding-top:2%;">
+                                <p id="estilo2textoAU4">
+                                    <br>
+                                    <span id="estilo2cabAU4"></span>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3" style="background-color:transparent;">
+            <div class="d-none d-xl-block col-xl-3" style="background-color:transparent; padding-top:2.7%; ">
+
+                <br>
+            </div><br />
+        </div>
+    </div>
+
+
+    <!-- CUERPO DE LA PÁGINA -->
+    <div class="container-fluid" style="background-color: #0BEDBF; margin-top:-2%; ">
+        <div class="row">
+            <div class="col-12 d-block d-sm-none" style="background-color:transparent;  margin-top:2%; color:#117394">
+                <div class="row">
+                    <div class="col-12 text-center font-weight-bold" style="background-color:transparent;">
+                        <script type="text/javascript">
+
+                            $('#mclp').Click(function () {
+                                if ($('#musd').css('display') == none) {
+                                    $('#musd').css('display', 'block');
+                                }
+                                else {
+                                    $('#musd').css('display', 'none');
+                                }
+                            })
+
+                        </script>
+                        <script type="text/javascript">
+                            function mostrarDiv() {
+                                document.getElementById('musd').style.display = "block";
+                                document.getElementById('mclp').style.display = "none";
+                                //document.getElementById('menos').style.display = "block";
+                                document.getElementById('clpm').style.display = "none";
+                                document.getElementById('usdm').style.display = "block";
+
+                            }
+
+                            function ocultarDiv() {
+                                document.getElementById('mclp').style.display = "block";
+                                document.getElementById('musd').style.display = "none";
+                                //document.getElementById('menos').style.display = "none";
+                                document.getElementById('clpm').style.display = "block";
+                                document.getElementById('usdm').style.display = "none";
+
+                            }
+
+
+                        </script>
+                        <script type="text/javascript">
+                            function monedaclp() {
+
+                                var valor = (document.convertidor.usd.value) * 1;
+                                var tot = valor * 800;
+                                tot = tot.toFixed(2);
+
+                                document.convertidor.clp.value = tot;
+                                document.convertidor.clptot.value = tot;
+
+                            }
+
+                        </script>
+                        <script type="text/javascript">
+                            function monedausd() {
+
+                                var valor = (document.convertidor.clp.value) * 1;
+                                var tot = valor / 800;
+                                tot = tot.toFixed(2);
+
+                                document.convertidor.usd.value = tot;
+                                document.convertidor.usdtot.value = tot;
+
+                            }
+
+                        </script>
+                        <div id="mclp">
+                            <span style="font-weight: bold;">Elige tu moneda</span>
+                            <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
+
+                        </div>
+                        <div id="musd" style="display:none;">
+                            <span style="font-weight: bold;">Elige tu moneda</span>
+                            <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
+                        </div>
+
+
+                        <form action="/Moto/moto_pagina4_paypal" method="post">
+                            <input type="hidden" name="total" value="@ViewBag.total" />
+                            <input type="hidden" name="ton" value="@ViewBag.toneladas" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            @* producto y elige moneda *@
+            <div class="col-4 offset-sm-1 col-sm-5 offset-md-2 col-md-4 col-lg-4  " style="background-color:transparent;  margin-top:2%;">
+                <div class="row">
+                    <div class="d-none d-sm-block col-6 col-sm-3 text-right font-weight-bold" style="background-color:transparent; color:#117394">
+                        <img class="img-fluid" src="~/Content/Img/nube.png" alt="nube">
+                    </div>
+                    <div class="col-12 col-sm-9 text-left font-weight-bold" style="background-color:transparent; color:#117394">
+                        <p style="padding-top:3%;">Producto:</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-none d-sm-block text-center  col-sm-6 text-sm-center col-md-4 col-lg-4 " style="background-color:transparent;  margin-top:2%; color:#117394">
+                <div class="row">
+                    <div class="col-12 text-center font-weight-bold" style="background-color:transparent;">
+
+                        <script type="text/javascript">
+                            function mostrarDiv2() {
+                                document.getElementById('musd2').style.display = "block";
+                                document.getElementById('mclp2').style.display = "none";
+                                //document.getElementById('menos').style.display = "block";
+                                document.getElementById('clpm').style.display = "none";
+                                document.getElementById('usdm').style.display = "block";
+                            }
+                            function ocultarDiv2() {
+                                document.getElementById('mclp2').style.display = "block";
+                                document.getElementById('musd2').style.display = "none";
+                                //document.getElementById('menos').style.display = "none";
+                                document.getElementById('clpm').style.display = "block";
+                                document.getElementById('usdm').style.display = "none";
+                            }
+                        </script>
+                        <script type="text/javascript">
+                            function monedaclp() {
+                                var valor = (document.convertidor.usd.value) * 1;
+                                var tot = valor * 800;
+                                tot = tot.toFixed(2);
+                                document.convertidor.clp.value = tot;
+                                document.convertidor.clptot.value = tot;
+                            }
+                        </script>
+                        <script type="text/javascript">
+                            function monedausd() {
+                                var valor = (document.convertidor.clp.value) * 1;
+                                var tot = valor / 800;
+                                tot = tot.toFixed(2);
+                                document.convertidor.usd.value = tot;
+                                document.convertidor.usdtot.value = tot;
+                            }
+                        </script>
+                        <div id="mclp2">
+                            <span style="font-weight: bold;">Elige tu moneda</span>
+                            <input name="mclp" onclick=" monedaclp(); mostrarDiv2();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
+
+                        </div>
+                        <div id="musd2" style="display:none;">
+                            <span style="font-weight: bold;">Elige tu moneda</span>
+                            <input onclick="monedausd(); ocultarDiv2();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
+                        </div>
+                        <form action="/Moto/moto_pagina4_paypal" method="post">
+                            <input type="hidden" name="total" value="@ViewBag.total" />
+                            <input type="hidden" name="ton" value="@ViewBag.toneladas" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    @* Sub total, total *@
+    <div class="container-fluid" style="background-color: #0BEDBF; margin-top:-2%; ">
+        <div class="row">
+            <div class="col-12 offset-sm-1 col-sm-5 offset-md-2 col-md-4 " style="background-color:transparent;  margin-top:2%;">
+                <div class="row">
+                    <div class=" col-sm-3 text-right font-weight-bold" style="background-color:transparent; color:#117394">
+                    </div>
+                    <div class="col-12 col-sm-9 text-left" style="background-color:transparent; color:#117394">
+                        <span>Carbono x @ViewBag.toneladas T</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4" style="background-color:transparent;  margin-top:2%; color:#117394">
+                <div class="row">
+                    <div class="col-2 d-block d-sm-none  font-weight-bold" style="background-color:transparent;">
+
+                    </div>
+                    <div class="col-10 col-sm-12 text-center font-weight-bold" style="background-color:transparent;">
+                        <form name="convertidor">
+                            <div id="clpm">
+
+                                <div><span style="font-weight: bold; ">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="usd" value="@ViewBag.total" /> USD</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
+                                <div><span style="font-weight: bold; ">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" disabled="disabled" name="usdtot" value="@ViewBag.total" />  USD</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
+                            </div>
+                            <div id="usdm" style="display:none">
+                                <div><span style="font-weight: bold; ">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="clp" /> CLP</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
+                                <div><span style="font-weight: bold; ">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" class="inputmoneda" disabled="disabled" name="clptot" />  CLP</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
+                                <div><span>&nbsp&nbsp</span></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    @*TEXTO ELIGE TU MÉTODO DE PAGO, BÓTONES PAYPAL Y WEB PAY  *@
+    <div class="container-fluid">
+        <div class="row" style="margin-top:-2px; background-color:#0BEDBF">
+            <div class="col-5 offset-md-1 col-sm-5 col-xl-5" style="background-color:transparent;">
+                <a href="javascript: history.go(-1)"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
+            </div>
+            <div class="col-7 text-center col-sm-4 col-xl-4" style="background-color:transparent; color:#117394">
+                <p style="font-weight: bold; text-align:center;">Elige tu método de pago</p>
+            </div>
+        </div>
+        <div class="row" style="margin-top:-2px; background-color:#0BEDBF">
+            <div id="smart-button-container" class="col-12 text-right" style="background-color:transparent; ">
+                <div class="row">
+                    <div class="col-12 offset-sm-4 col-sm-4 offset-md-5 col-md-3 text-right">
+                        <div class="d-none" style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
+                        <p class="d-none" id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
+                        <div class="d-none" style="text-align: center"><label for="amount"> </label><input hidden name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
+                        <p class="d-none" id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
+                        <div class="d-none" id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
+                        <p class="d-none" id="invoiceidError" style=" visibility: hidden; color: red; text-align: center;">Please enter an Invoice ID</p>
+                        <div style="text-align: center; margin-top: 1.625rem;" id="paypal-button-container"></div>
+
+                    </div>
+                    <div class="col-12  col-sm-4 col-md-3" text-align:center;">
+
+                        <form action="@ViewBag.form" method="post">
+                            <input hidden type="text" name="token_ws" value="@ViewBag.token" />
+                            <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" /><br />
+                            <input class="img-fluid" type="image" src="~/Content/Img/webpay.svg" height="150" width="300" />
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- ///////////////////////////////////////////////////////////////////////////////////-->
 
-    <div class="row w-100" style=" margin-top: -2%; background-color: #0BEDBF; ">
-        <div class="col-sm-2" style="background-color:transparent;">
-
-        </div>
-        <div class="col-sm-8" style="background-color:transparent; ">
-            <div class="row" style="padding:2%;">
-
-                <div class="col-sm-2" style=" background-color: #0BEDBF; padding-top:3%; padding-left:8%; color:#117394">
-                    <img src="~/Content/Img/nube.png" alt="nube">
-                </div>
-                <div class="col-sm-5" style="background-color: #0BEDBF; color: #117394">
-                    <div><span>&nbsp&nbsp</span></div>
-                    <span style="font-weight: bold;">Producto</span>
-                    <div><span>&nbsp&nbsp</span></div>
-                    <span>Carbono x @ViewBag.toneladas T</span>
-                    <div><span>&nbsp&nbsp</span></div>
-                    <div><span>&nbsp&nbsp</span></div>
-                    <div><span>&nbsp&nbsp</span></div>
-                    <div><span>&nbsp&nbsp</span></div>
-                    <div><span>&nbsp&nbsp</span></div>
-                    <div><span>&nbsp&nbsp</span></div>
-
-                    <a href="javascript: history.go(-1)" style="margin-left:-40%"><input class="calcular3 boton-color" name="" type="button" value="<-- Atrás"></a>
-
-
-
-                </div>
-
-                <div class="col-sm-2" style=" background-color: #0BEDBF; color:#117394">
-
-
-
-                </div>
-
-                <div class="col-sm-3" style=" background-color: #0BEDBF; color:#117394">
-
-                    <script type="text/javascript">
-
-                        $('#mclp').Click(function () {
-                            if ($('#musd').css('display') == none) {
-                                $('#musd').css('display', 'block');
-                            }
-                            else {
-                                $('#musd').css('display', 'none');
-                            }
-                        })
-
-                    </script>
-                    <script type="text/javascript">
-                        function mostrarDiv() {
-                            document.getElementById('musd').style.display = "block";
-                            document.getElementById('mclp').style.display = "none";
-                            //document.getElementById('menos').style.display = "block";
-                            document.getElementById('clpm').style.display = "none";
-                            document.getElementById('usdm').style.display = "block";
-
-                        }
-
-                        function ocultarDiv() {
-                            document.getElementById('mclp').style.display = "block";
-                            document.getElementById('musd').style.display = "none";
-                            //document.getElementById('menos').style.display = "none";
-                            document.getElementById('clpm').style.display = "block";
-                            document.getElementById('usdm').style.display = "none";
-
-                        }
-
-
-                    </script>
-                    <script type="text/javascript">
-                        function monedaclp() {
-
-                            var valor = (document.convertidor.usd.value) * 1;
-                            var tot = valor * 800;
-                            tot = tot.toFixed(2);
-
-                            document.convertidor.clp.value = tot;
-                            document.convertidor.clptot.value = tot;
-
-                        }
-
-                    </script>
-                    <script type="text/javascript">
-                        function monedausd() {
-
-                            var valor = (document.convertidor.clp.value) * 1;
-                            var tot = valor / 800;
-                            tot = tot.toFixed(2);
-
-                            document.convertidor.usd.value = tot;
-                            document.convertidor.usdtot.value = tot;
-
-                        }
-
-                    </script>
-                    <div><span>&nbsp&nbsp</span></div>
-
-                    <div id="mclp">
-                        <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
-                        <input name="mclp" onclick="monedaclp(); mostrarDiv();" style="margin-left:5px" class="moneda boton-color" type="button" value="CLP">
-
-                    </div>
-                    <div id="musd" style="display:none;">
-                        <span style="font-weight: bold; margin-left:-25%">Elige tu moneda</span>
-                        <input onclick="monedausd(); ocultarDiv();" style="margin-left:5px; position: relative;" class="moneda boton-color" name="" type="button" value="USD">
-                    </div>
-                    <form name="convertidor">
-                        <div id="clpm">
-
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" disabled="disabled" type="text" class="inputmoneda" name="usd" value="@ViewBag.total" /> USD</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$<input id="" type="text" class="inputmoneda" disabled="disabled" name="usdtot" value="@ViewBag.total" />  USD</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-
-
-
-                        </div>
-                        <div id="usdm" style="display:none">
-
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Subtotal</span><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input id="" type="text" class="inputmoneda" disabled="disabled" name="clp" /> CLP</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span style="font-weight: bold; margin-left:-30%">Total</span><span style="font-weight: bold">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp$ <input type="text" disabled="disabled" class="inputmoneda" name="clptot" />  CLP</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-                            <div><span>&nbsp&nbsp</span></div>
-
-
-
-                        </div>
-                    </form>
-                    <form action="/Moto/moto_pagina4_paypal" method="post">
-                        <input type="hidden" name="total" value="@ViewBag.total" />
-                        <input type="hidden" name="ton" value="@ViewBag.toneladas" />
-
-                    </form>
-                    <!--    <span>
-                        <img src="~/Content/Img/Frame1.png" alt="hoja">
-                        <img src="~/Content/Img/frames.gif" alt="hoja">
-                    </span>-->
-                    <p style="font-weight: bold; margin-left:-25%">Elige tu método de pago</p>
-                    <div id="smart-button-container" style="margin-top:-70%; margin-left:-55%">
-                        <div style="text-align: center"><label for="description"> </label><input hidden type="text" name="descriptionInput" id="description" maxlength="127" value="@ViewBag.toneladas"></div>
-                        <p id="descriptionError" style="visibility: hidden; color:red; text-align: center;">Please enter a description</p>
-                        <div style="text-align: center"><label for="amount"> </label><input hidden name="amountInput" type="number" id="amount" value="@ViewBag.total"></div>
-                        <p id="priceLabelError" style="visibility: hidden; color:red; text-align: center;">Please enter a price</p>
-                        <div id="invoiceidDiv" style="text-align: center; display: none;"><label for="invoiceid"> </label><input name="invoiceid" maxlength="127" type="text" id="invoiceid" value=""></div>
-                        <p id="invoiceidError" style=" visibility: hidden; color: red; text-align: center;">Please enter an Invoice ID</p>
-                        <div style="text-align: center; margin-top: 0.625rem;" id="paypal-button-container"></div>
-
-
-                        <div style="margin-left: 1%">
-
-                            <form action="@ViewBag.form" method="post">
-                                <input hidden type="text" name="token_ws" value="@ViewBag.token" />
-                                <input hidden type="text" name="toneladas" value="@ViewBag.toneladas" />
-
-                                <input type="image" src="~/Content/Img/webpay.svg" height="150" width="300" />
-                            </form>
-                            <!--4051885600446623-->
-
-
-                        </div>
-
-                    </div>
-
-
-
-
-
-                </div>
-
-
-
-            </div>
-        </div>
-        <div class="col-sm-2" style="background-color:transparent;">
-
-        </div>
-    </div>
-    <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4" style="background-color:transparent">
-                </div>
-                <div class="col-lg-4 text-center" style="background-color:transparent">
-
-                    <img src="~/Content/Img/logooEPB.png" />
-
-                </div>
-                <div class="col-lg-4" style="background-color:transparent">
-
-                </div>
-            </div>
-
-        </div>
-    </footer>
 </body>
 </html>
 

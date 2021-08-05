@@ -275,6 +275,29 @@ body {
 #estilo2textoENC:before {
     content: "Truck";
 }
+/*Pag2 moto - camión - avion*/
+#estilo2cabMT2:before {
+    content: "El uso de tu moto genera";
+}
+
+#estilo2cabMT2EN:before {
+    content: " Its use generates";
+}
+#estilo2cabCM2:before {
+    content: "El uso de tu camión genera";
+}
+
+#estilo2cabCM2EN:before {
+    content: "The use of your truck generates";
+}
+
+#estilo2cabAV2:before {
+    content: "Tu vuelo en avión genera";
+}
+
+#estilo2cabAV2EN:before {
+    content: "Your plane flight generates";
+}
 
     @media screen and (min-width: 0px) and (max-width: 575px) {
         .car {
@@ -611,8 +634,8 @@ body {
         }
 
         #estilo2cabAU2EN:before {
-            content: "The use of your car generates";
-            font-size: 10px;
+            content: "Its use generates";
+            font-size: 10.5px;
         }
 
         #estilo2textoAU2EN:before {
@@ -812,6 +835,37 @@ body {
             font-size: 20px;
             font-weight: bold;
         }
+        /*Pag2 moto - camión - avion*/
+        #estilo2cabMT2:before {
+            content: "El uso de tu moto genera";
+            font-size: 10.5px;
+        }
+
+        #estilo2cabMT2EN:before {
+            content: " Its use generates";
+            font-size: 10.5px;
+        }
+
+        #estilo2cabCM2:before {
+            content: "El uso de tu camión genera";
+            font-size: 10.5px;
+        }
+
+        #estilo2cabCM2EN:before {
+            content: "Its use generates";
+            font-size: 10.5px;
+        }
+
+        #estilo2cabAV2:before {
+            content: "Tu vuelo en avión genera";
+            font-size: 10.5px;
+        }
+
+        #estilo2cabAV2EN:before {
+            content: " Its use generates";
+            font-size: 10.5px;
+        }
+
     }
 
     @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -935,8 +989,8 @@ body {
         }
 
         #estilo2cabAU2EN:before {
-            content: "The use of your car generates";
-            font-size: 0.83rem;
+            content: " Its use generates";
+            font-size: 0.9rem;
         }
 
         #estilo2textoAU2EN:before {
@@ -1138,6 +1192,38 @@ body {
             font-size: 20px;
             font-weight: bold;
         }
+
+        /*Pag2 moto - camión - avion*/
+        #estilo2cabMT2:before {
+            content: "El uso de tu moto genera";
+            font-size: 0.9rem;
+        }
+
+        #estilo2cabMT2EN:before {
+            content: " Its use generates";
+            font-size: 0.9rem;
+        }
+
+        #estilo2cabCM2:before {
+            content: "El uso de tu camión genera";
+            font-size: 0.9rem;
+        }
+
+        #estilo2cabCM2EN:before {
+            content: " Its use generates";
+            font-size: 0.9rem;
+        }
+
+        #estilo2cabAV2:before {
+            content: "Tu vuelo en avión genera";
+            font-size: 0.9rem;
+        }
+
+        #estilo2cabAV2EN:before {
+            content: " Its use generates";
+            font-size: 0.9rem;
+        }
+
     }
 
     @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -1246,7 +1332,7 @@ body {
         }
 
         #estilo2cabAU2EN:before {
-            content: "The use of your car generates";
+            content: "Its use generates";
         }
 
         #estilo2textoAU2EN:before {
@@ -1449,6 +1535,30 @@ body {
             font-size: 25px;
             font-weight: bold;
         }
+        /*Pag2 moto - camión - avion*/
+        #estilo2cabMT2:before {
+            content: "El uso de tu moto genera";
+        }
+
+        #estilo2cabMT2EN:before {
+            content: " Its use generates";
+        }
+
+        #estilo2cabCM2:before {
+            content: "El uso de tu camión genera";
+        }
+
+        #estilo2cabCM2EN:before {
+            content: "Its use generates";
+        }
+
+        #estilo2cabAV2:before {
+            content: "Tu vuelo en avión genera";
+        }
+
+        #estilo2cabAV2EN:before {
+            content: "Its use generates";
+        }
     }
 
 
@@ -1572,8 +1682,8 @@ body {
         }
 
         #estilo2cabAU2EN:before {
-            content: "The use of your car generates";
-            font-size: 0.6rem;
+            content: "Its use generates";
+            font-size: 0.8rem;
         }
 
         #estilo2textoAU2EN:before {
@@ -1770,5 +1880,36 @@ body {
             content: "Truck";
             font-size: 20px;
             font-weight: bold;
+        }
+
+        /*Pag2 moto - camión - avion*/
+        #estilo2cabMT2:before {
+            content: "El uso de tu moto genera";
+            font-size: 0.7rem;
+        }
+
+        #estilo2cabMT2EN:before {
+            content: " Its use generates"; 
+            font-size: 0.8rem;
+        }
+
+        #estilo2cabCM2:before {
+            content: "El uso de tu camión genera";
+            font-size: 0.65rem;
+        }
+
+        #estilo2cabCM2EN:before {
+            content: "Its use generates";
+            font-size: 0.8rem;
+        }
+
+        #estilo2cabAV2:before {
+            content: "Tu vuelo en avión genera";
+            font-size: 0.7rem;
+        }
+
+        #estilo2cabAV2EN:before {
+            content: "Its use generates";
+            font-size: 0.8rem;
         }
     }

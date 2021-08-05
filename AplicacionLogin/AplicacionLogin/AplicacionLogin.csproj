@@ -406,6 +406,15 @@
     <None Include="Properties\PublishProfiles\EcoPrueba - Web Deploy3.pubxml" />
     <None Include="Properties\PublishProfiles\EcoPrueba - Web Deploy4.pubxml" />
     <None Include="Properties\PublishProfiles\EcoPrueba - Web Deploy5.pubxml" />
+    <None Include="Properties\PublishProfiles\entornoPruebaGrafico - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\entornoPruebaGrafico - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\entornoPruebaGrafico - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\entornoPruebaGrafico - ReadOnly - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\entornoPruebaGrafico - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\entornoPruebaGrafico - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\pruebaCalculadora - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\pruebaCalculadora - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\pruebaCalculadora - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
     <Content Include="Scripts\jquery-3.5.1.min.js" />
